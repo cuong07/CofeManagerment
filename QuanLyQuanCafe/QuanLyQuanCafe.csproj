@@ -46,14 +46,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="fBackground.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="fBackground.Designer.cs">
+      <DependentUpon>fBackground.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBill.Designer.cs">
+      <DependentUpon>fBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fMenuFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fMenuFood.Designer.cs">
+      <DependentUpon>fMenuFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRevenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRevenue.Designer.cs">
+      <DependentUpon>fRevenue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTable.Designer.cs">
+      <DependentUpon>fTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fTableManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTableManager.Designer.cs">
+      <DependentUpon>fTableManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fTakeaway.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTakeaway.Designer.cs">
+      <DependentUpon>fTakeaway.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fBackground.resx">
+      <DependentUpon>fBackground.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBill.resx">
+      <DependentUpon>fBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fMenuFood.resx">
+      <DependentUpon>fMenuFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRevenue.resx">
+      <DependentUpon>fRevenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTable.resx">
+      <DependentUpon>fTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTableManager.resx">
+      <DependentUpon>fTableManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTakeaway.resx">
+      <DependentUpon>fTakeaway.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +119,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -75,6 +133,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\revenue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\menu-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\close-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\bg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
