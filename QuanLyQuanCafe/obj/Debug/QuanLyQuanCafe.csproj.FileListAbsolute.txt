@@ -15,3 +15,4 @@ C:\Users\vocuo\Desktop\CofeManagerment\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\Q
 C:\Users\vocuo\Desktop\CofeManagerment\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fRevenue.resources
 C:\Users\vocuo\Desktop\CofeManagerment\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fTakeaway.resources
 C:\Users\vocuo\Desktop\CofeManagerment\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fBackground.resources
+C:\Users\vocuo\Desktop\CofeManagerment\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fLogin.resources

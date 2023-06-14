@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fTableManager));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblMenu = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -43,7 +45,6 @@
             this.btnRevenue = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
-            this.lblMenu = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,6 +76,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(161, 69);
             this.panel1.TabIndex = 0;
+            // 
+            // lblMenu
+            // 
+            this.lblMenu.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblMenu.Location = new System.Drawing.Point(50, 0);
+            this.lblMenu.Name = "lblMenu";
+            this.lblMenu.Size = new System.Drawing.Size(114, 69);
+            this.lblMenu.TabIndex = 5;
+            this.lblMenu.Text = "MENU";
+            this.lblMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel2
             // 
@@ -261,17 +273,6 @@
             this.sidebarTimer.Interval = 10;
             this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
-            // lblMenu
-            // 
-            this.lblMenu.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblMenu.Location = new System.Drawing.Point(50, 0);
-            this.lblMenu.Name = "lblMenu";
-            this.lblMenu.Size = new System.Drawing.Size(114, 69);
-            this.lblMenu.TabIndex = 5;
-            this.lblMenu.Text = "MENU";
-            this.lblMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // fTableManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,9 +283,11 @@
             this.Controls.Add(this.flpSidebar);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.MaximumSize = new System.Drawing.Size(1064, 682);
             this.Name = "fTableManager";
-            this.Text = "fTableManager";
+            this.Text = "Quản Lý Quán Cà Phê";
             this.Load += new System.EventHandler(this.fTableManager_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

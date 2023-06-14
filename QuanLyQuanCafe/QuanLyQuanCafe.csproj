@@ -58,6 +58,12 @@
     <Compile Include="fBill.Designer.cs">
       <DependentUpon>fBill.cs</DependentUpon>
     </Compile>
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="fMenuFood.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fBill.resx">
       <DependentUpon>fBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fMenuFood.resx">
       <DependentUpon>fMenuFood.cs</DependentUpon>
@@ -157,6 +166,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\images\bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\bglogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\user-15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\password-15.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
