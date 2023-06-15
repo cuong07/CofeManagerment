@@ -176,5 +176,14 @@
   <ItemGroup>
     <None Include="assets\images\password-15.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\fTakeAway_background1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\fTakeAway_backGround.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\fTakeAway_background2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
