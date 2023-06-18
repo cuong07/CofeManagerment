@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.btnCloseFormTakeaway = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lsbIDOrder = new System.Windows.Forms.ListBox();
@@ -38,29 +37,16 @@
             this.btnDeleteOrder = new System.Windows.Forms.Button();
             this.rtbNote = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbIdAddress = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.lbIdAddress = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Yellow;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 43);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Bán mang đi";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnCloseFormTakeaway
             // 
             this.btnCloseFormTakeaway.BackColor = System.Drawing.Color.Transparent;
             this.btnCloseFormTakeaway.Image = global::QuanLyQuanCafe.Properties.Resources.close_25;
-            this.btnCloseFormTakeaway.Location = new System.Drawing.Point(1231, 2);
+            this.btnCloseFormTakeaway.Location = new System.Drawing.Point(970, 12);
             this.btnCloseFormTakeaway.Margin = new System.Windows.Forms.Padding(4);
             this.btnCloseFormTakeaway.Name = "btnCloseFormTakeaway";
             this.btnCloseFormTakeaway.Size = new System.Drawing.Size(52, 41);
@@ -169,21 +155,12 @@
             this.groupBox1.Controls.Add(this.btnDone);
             this.groupBox1.Controls.Add(this.lsbIDOrder);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 68);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(938, 665);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Delivery";
-            // 
-            // lbIdAddress
-            // 
-            this.lbIdAddress.BackColor = System.Drawing.Color.White;
-            this.lbIdAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbIdAddress.Location = new System.Drawing.Point(506, 85);
-            this.lbIdAddress.Name = "lbIdAddress";
-            this.lbIdAddress.Size = new System.Drawing.Size(288, 47);
-            this.lbIdAddress.TabIndex = 18;
             // 
             // label5
             // 
@@ -195,14 +172,21 @@
             this.label5.TabIndex = 19;
             this.label5.Text = "ID:\r\nAddress:";
             // 
+            // lbIdAddress
+            // 
+            this.lbIdAddress.BackColor = System.Drawing.Color.White;
+            this.lbIdAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbIdAddress.Location = new System.Drawing.Point(506, 85);
+            this.lbIdAddress.Name = "lbIdAddress";
+            this.lbIdAddress.Size = new System.Drawing.Size(288, 47);
+            this.lbIdAddress.TabIndex = 18;
+            // 
             // fTakeaway
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1307, 745);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCloseFormTakeaway);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -216,8 +200,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCloseFormTakeaway;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox lsbIDOrder;

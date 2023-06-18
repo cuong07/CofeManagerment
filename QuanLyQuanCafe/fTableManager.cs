@@ -18,136 +18,71 @@ namespace QuanLyQuanCafe
         {
             InitializeComponent();
         }
-
-        #region Sidebar
-        private void sidebarTimer_Tick(object sender, EventArgs e)
-        {
-
-            // SET The minimum and Maximum
-
-            if(sidebarExpand) 
-            {
-                flpSidebar.Width -= 10;
-                if(flpSidebar.Width == flpSidebar.MinimumSize.Width ) 
-                {
-                    sidebarExpand= false;
-                    sidebarTimer.Stop();
-                }
-            }
-            else 
-            {
-                flpSidebar.Width += 10;
-                if (flpSidebar.Width == flpSidebar.MaximumSize.Width)
-                {
-                    sidebarExpand = true;
-                    sidebarTimer.Stop();
-                }
-            }
-        }
-
-        private void menuButton_Click(object sender, EventArgs e)
-        {
-            sidebarTimer.Start();
-        }
-
-        #endregion
-
-        
-        private void btnSidebar_Enter(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-            btn.BackColor = Color.Red;
-        }
-        private void btnSidebar_Leave(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-            btn.BackColor = Color.Transparent; // Phục hồi màu nền mặc định của button khi mất kích hoạt
-        }
-
+        //
         private Form currentChildForm; // Biến để lưu trữ form con hiện tại
 
-        private void btnHome_Click(object sender, EventArgs e)
+        private void OpenChildForm(Form childForm)       //hàm mở form con.
         {
             if (currentChildForm != null)
             {
                 currentChildForm.Close(); // Đóng form con hiện tại nếu đã tồn tại
             }
-
-            fTable formTable = new fTable();
-            formTable.MdiParent = this;
-            formTable.Show();
-            formTable.Location = new Point(0, 0);
-            formTable.Width = 988;
-            formTable.Height = 632;
-            formTable.StartPosition = FormStartPosition.Manual;
-            currentChildForm = formTable; // Lưu trữ form con mới là form hiện tại
+            currentChildForm = childForm;       //gán form con hiện tại bằng form truyền vào
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;       //bỏ phần tittle của form
+            childForm.Dock = DockStyle.Fill;        //căn giữa
+            pnBody.Controls.Add(childForm);
+            pnBody.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            //
         }
-
-        private void btnBill_Click(object sender, EventArgs e)
+        // hàm đổi màu button khi nhấn.
+        private void ChangeColorBtn(Button b1, Button b2, Button b3, Button b4, Button b5,Button b6)
         {
-            if (currentChildForm != null)
-            {
-                currentChildForm.Close(); // Đóng form con hiện tại nếu đã tồn tại
-            }
-            fBill formBill = new fBill();
-            formBill.MdiParent = this;
-            formBill.Show();
-            formBill.Location = new Point(0, 0);
-            formBill.Width = 988;
-            formBill.Height = 632;
-            formBill.StartPosition = FormStartPosition.Manual;
-            currentChildForm = formBill;
+            b1.BackColor = Color.SaddleBrown;
+            b2.BackColor = Color.Transparent;
+            b3.BackColor = Color.Transparent;
+            b4.BackColor = Color.Transparent;
+            b5.BackColor = Color.Transparent;
+            b6.BackColor = Color.Transparent;
         }
-
-        private void btnMenu_Click(object sender, EventArgs e)
+        private void btnHome_Click(object sender, EventArgs e)      //nhấn vào button "tại quán"
         {
-            if (currentChildForm != null)
-            {
-                currentChildForm.Close(); // Đóng form con hiện tại nếu đã tồn tại
-            }
-            fMenuFood formMenuFood = new fMenuFood();
-            formMenuFood.MdiParent = this;
-            formMenuFood.Show();
-            formMenuFood.Location = new Point(0, 0);
-            formMenuFood.Width = 988;
-            formMenuFood.Height = 632;
-            formMenuFood.StartPosition = FormStartPosition.Manual;
-            currentChildForm = formMenuFood;
+            OpenChildForm(new fTable());
+            ChangeColorBtn(btnHome, btnBill, btnMenu, btnRevenua, btnTakeAway, btnSetting);
+            lbFormName.Text = "Phục vụ tại quán";
         }
 
-        private void btnTakeaway_Click(object sender, EventArgs e)
+        private void btnBill_Click(object sender, EventArgs e)      //click vào button "Hóa đơn"
         {
-            if (currentChildForm != null)
-            {
-                currentChildForm.Close(); // Đóng form con hiện tại nếu đã tồn tại
-            }
-            fTakeaway formTakeaway = new fTakeaway();
-            formTakeaway.MdiParent = this;
-            formTakeaway.Show();
-            formTakeaway.Location = new Point(0, 0);
-            formTakeaway.Width = 988;
-            formTakeaway.Height = 632;
-            formTakeaway.StartPosition = FormStartPosition.Manual;
-            currentChildForm = formTakeaway;
+            OpenChildForm(new fBill());
+            ChangeColorBtn(btnBill, btnHome, btnMenu, btnRevenua, btnTakeAway, btnSetting);
+            lbFormName.Text = "Hóa đơn đã xuất";
         }
 
-        private void btnRevenue_Click(object sender, EventArgs e)
+        private void btnMenu_Click(object sender, EventArgs e)      //click vào button "Thực đơn"
         {
-            if (currentChildForm != null)
-            {
-                currentChildForm.Close(); // Đóng form con hiện tại nếu đã tồn tại
-            }
-            fRevenue formRevenue = new fRevenue();
-            formRevenue.MdiParent = this;
-            formRevenue.Show();
-            formRevenue.Location = new Point(0, 0);
-            formRevenue.Width = 988;
-            formRevenue.Height = 632;
-            formRevenue.StartPosition = FormStartPosition.Manual;
-            currentChildForm = formRevenue;
+            OpenChildForm(new fMenuFood());
+            ChangeColorBtn(btnMenu, btnBill, btnHome,  btnRevenua, btnTakeAway, btnSetting);
+            lbFormName.Text = "Thực đơn";
         }
 
-        private void fTableManager_Load(object sender, EventArgs e)
+        private void btnTakeaway_Click(object sender, EventArgs e)      //click vào button "Bán mang đi"
+        {
+            OpenChildForm(new fTakeaway());
+            ChangeColorBtn(btnTakeAway, btnBill, btnHome, btnMenu, btnRevenua,  btnSetting);
+            lbFormName.Text = "Phục vụ mang về";
+        }
+
+        private void btnRevenue_Click(object sender, EventArgs e)       //click vào button "doanh thu"
+        {
+            OpenChildForm(new fRevenue());
+            ChangeColorBtn(btnRevenua, btnBill, btnHome, btnMenu,  btnTakeAway, btnSetting);
+            lbFormName.Text = "Doanh thu";
+        }
+
+        private void fTableManager_Load(object sender, EventArgs e)     //load data khi chạy app
         {
             if (currentChildForm != null)
             {
@@ -161,6 +96,22 @@ namespace QuanLyQuanCafe
             formBackground.Height = 632;
             formBackground.StartPosition = FormStartPosition.Manual;
             currentChildForm = formBackground;
+        }
+
+        //hàm mở rộng và thu nhỏ thanh menu (bên trái)
+        bool pnLeft_miniSize = true;
+        private void ptbMenu_Click(object sender, EventArgs e)
+        {
+            if(pnLeft_miniSize)
+            {
+                pnLeft.Size = new Size(199, pnLeft.Size.Height);
+                pnLeft_miniSize = false;
+            }
+            else
+            {
+                pnLeft.Size = new Size(60, pnLeft.Size.Height);
+                pnLeft_miniSize = true;
+            }    
         }
     }
 }
