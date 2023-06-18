@@ -30,291 +30,263 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fTableManager));
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblMenu = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.menuButton = new System.Windows.Forms.PictureBox();
-            this.flpSidebar = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.btnTakeaway = new System.Windows.Forms.Button();
-            this.btnMenu = new System.Windows.Forms.Button();
-            this.btnBill = new System.Windows.Forms.Button();
-            this.btnRevenue = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
-            this.flpSidebar.SuspendLayout();
+            this.pnLeft = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnMenu = new System.Windows.Forms.Button();
+            this.btnTakeAway = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnBill = new System.Windows.Forms.Button();
+            this.btnRevenua = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ptbMenu = new System.Windows.Forms.PictureBox();
+            this.btnSetting = new System.Windows.Forms.Button();
+            this.pnBody = new System.Windows.Forms.Panel();
+            this.pnLeft.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbMenu)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // sidebarTimer
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(45, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "MENU";
+            this.sidebarTimer.Interval = 10;
             // 
-            // panel1
+            // pnLeft
             // 
-            this.panel1.Controls.Add(this.lblMenu);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.menuButton);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(161, 69);
-            this.panel1.TabIndex = 0;
+            this.pnLeft.BackColor = System.Drawing.Color.Black;
+            this.pnLeft.Controls.Add(this.panel7);
+            this.pnLeft.Controls.Add(this.panel4);
+            this.pnLeft.Controls.Add(this.btnSetting);
+            this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnLeft.Location = new System.Drawing.Point(0, 0);
+            this.pnLeft.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
+            this.pnLeft.MaximumSize = new System.Drawing.Size(199, 0);
+            this.pnLeft.MinimumSize = new System.Drawing.Size(60, 0);
+            this.pnLeft.Name = "pnLeft";
+            this.pnLeft.Size = new System.Drawing.Size(60, 608);
+            this.pnLeft.TabIndex = 4;
             // 
-            // lblMenu
+            // panel7
             // 
-            this.lblMenu.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblMenu.Location = new System.Drawing.Point(50, 0);
-            this.lblMenu.Name = "lblMenu";
-            this.lblMenu.Size = new System.Drawing.Size(114, 69);
-            this.lblMenu.TabIndex = 5;
-            this.lblMenu.Text = "MENU";
-            this.lblMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::QuanLyQuanCafe.Properties.Resources.bg;
-            this.panel2.Location = new System.Drawing.Point(164, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(879, 638);
-            this.panel2.TabIndex = 4;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(50, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(993, 639);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(50, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(993, 638);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // menuButton
-            // 
-            this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.menuButton.Image = global::QuanLyQuanCafe.Properties.Resources.menu_30;
-            this.menuButton.Location = new System.Drawing.Point(9, 19);
-            this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(30, 30);
-            this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.menuButton.TabIndex = 0;
-            this.menuButton.TabStop = false;
-            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
-            // 
-            // flpSidebar
-            // 
-            this.flpSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.flpSidebar.Controls.Add(this.panel1);
-            this.flpSidebar.Controls.Add(this.btnHome);
-            this.flpSidebar.Controls.Add(this.btnTakeaway);
-            this.flpSidebar.Controls.Add(this.btnMenu);
-            this.flpSidebar.Controls.Add(this.btnBill);
-            this.flpSidebar.Controls.Add(this.btnRevenue);
-            this.flpSidebar.Controls.Add(this.button8);
-            this.flpSidebar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flpSidebar.Location = new System.Drawing.Point(0, 0);
-            this.flpSidebar.MaximumSize = new System.Drawing.Size(164, 650);
-            this.flpSidebar.MinimumSize = new System.Drawing.Size(51, 621);
-            this.flpSidebar.Name = "flpSidebar";
-            this.flpSidebar.Size = new System.Drawing.Size(164, 639);
-            this.flpSidebar.TabIndex = 2;
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.Transparent;
-            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Image = global::QuanLyQuanCafe.Properties.Resources.home;
-            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(0, 69);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(0);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(163, 44);
-            this.btnHome.TabIndex = 1;
-            this.btnHome.Text = "          Home";
-            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            this.btnHome.Enter += new System.EventHandler(this.btnSidebar_Enter);
-            this.btnHome.Leave += new System.EventHandler(this.btnSidebar_Leave);
-            // 
-            // btnTakeaway
-            // 
-            this.btnTakeaway.BackColor = System.Drawing.Color.Transparent;
-            this.btnTakeaway.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTakeaway.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTakeaway.ForeColor = System.Drawing.Color.White;
-            this.btnTakeaway.Image = global::QuanLyQuanCafe.Properties.Resources.revenue;
-            this.btnTakeaway.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTakeaway.Location = new System.Drawing.Point(0, 113);
-            this.btnTakeaway.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTakeaway.Name = "btnTakeaway";
-            this.btnTakeaway.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnTakeaway.Size = new System.Drawing.Size(163, 44);
-            this.btnTakeaway.TabIndex = 1;
-            this.btnTakeaway.Text = "          Bán mang đi";
-            this.btnTakeaway.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTakeaway.UseVisualStyleBackColor = false;
-            this.btnTakeaway.Click += new System.EventHandler(this.btnTakeaway_Click);
+            this.panel7.Controls.Add(this.btnMenu);
+            this.panel7.Controls.Add(this.btnTakeAway);
+            this.panel7.Controls.Add(this.btnHome);
+            this.panel7.Controls.Add(this.btnBill);
+            this.panel7.Controls.Add(this.btnRevenua);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 88);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(60, 270);
+            this.panel7.TabIndex = 6;
             // 
             // btnMenu
             // 
             this.btnMenu.BackColor = System.Drawing.Color.Transparent;
             this.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenu.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.ForeColor = System.Drawing.Color.White;
             this.btnMenu.Image = global::QuanLyQuanCafe.Properties.Resources.menu;
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.Location = new System.Drawing.Point(0, 157);
+            this.btnMenu.Location = new System.Drawing.Point(0, 108);
             this.btnMenu.Margin = new System.Windows.Forms.Padding(0);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnMenu.Size = new System.Drawing.Size(163, 44);
-            this.btnMenu.TabIndex = 1;
+            this.btnMenu.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnMenu.Size = new System.Drawing.Size(60, 54);
+            this.btnMenu.TabIndex = 3;
             this.btnMenu.Text = "          Thực đơn";
             this.btnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            this.btnMenu.Enter += new System.EventHandler(this.btnSidebar_Enter);
-            this.btnMenu.Leave += new System.EventHandler(this.btnSidebar_Leave);
+            // 
+            // btnTakeAway
+            // 
+            this.btnTakeAway.BackColor = System.Drawing.Color.Transparent;
+            this.btnTakeAway.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTakeAway.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTakeAway.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTakeAway.ForeColor = System.Drawing.Color.White;
+            this.btnTakeAway.Image = global::QuanLyQuanCafe.Properties.Resources.revenue;
+            this.btnTakeAway.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTakeAway.Location = new System.Drawing.Point(0, 54);
+            this.btnTakeAway.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTakeAway.Name = "btnTakeAway";
+            this.btnTakeAway.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnTakeAway.Size = new System.Drawing.Size(60, 54);
+            this.btnTakeAway.TabIndex = 2;
+            this.btnTakeAway.Text = "          Bán mang đi";
+            this.btnTakeAway.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTakeAway.UseVisualStyleBackColor = false;
+            this.btnTakeAway.Click += new System.EventHandler(this.btnTakeaway_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.Transparent;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Image = global::QuanLyQuanCafe.Properties.Resources.home;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(0, 0);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(0);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnHome.Size = new System.Drawing.Size(60, 54);
+            this.btnHome.TabIndex = 2;
+            this.btnHome.Text = "          Tại quán";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnBill
             // 
             this.btnBill.BackColor = System.Drawing.Color.Transparent;
             this.btnBill.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBill.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnBill.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBill.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBill.ForeColor = System.Drawing.Color.White;
             this.btnBill.Image = global::QuanLyQuanCafe.Properties.Resources.bill;
             this.btnBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBill.Location = new System.Drawing.Point(0, 201);
+            this.btnBill.Location = new System.Drawing.Point(0, 162);
             this.btnBill.Margin = new System.Windows.Forms.Padding(0);
             this.btnBill.Name = "btnBill";
-            this.btnBill.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnBill.Size = new System.Drawing.Size(163, 44);
-            this.btnBill.TabIndex = 1;
+            this.btnBill.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnBill.Size = new System.Drawing.Size(60, 54);
+            this.btnBill.TabIndex = 4;
             this.btnBill.Text = "          Hóa đơn";
             this.btnBill.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBill.UseVisualStyleBackColor = false;
             this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
-            this.btnBill.Enter += new System.EventHandler(this.btnSidebar_Enter);
-            this.btnBill.Leave += new System.EventHandler(this.btnSidebar_Leave);
             // 
-            // btnRevenue
+            // btnRevenua
             // 
-            this.btnRevenue.BackColor = System.Drawing.Color.Transparent;
-            this.btnRevenue.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRevenue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRevenue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRevenue.ForeColor = System.Drawing.Color.White;
-            this.btnRevenue.Image = global::QuanLyQuanCafe.Properties.Resources.revenue;
-            this.btnRevenue.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRevenue.Location = new System.Drawing.Point(0, 245);
-            this.btnRevenue.Margin = new System.Windows.Forms.Padding(0);
-            this.btnRevenue.Name = "btnRevenue";
-            this.btnRevenue.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnRevenue.Size = new System.Drawing.Size(163, 44);
-            this.btnRevenue.TabIndex = 1;
-            this.btnRevenue.Text = "          Doanh thu";
-            this.btnRevenue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRevenue.UseVisualStyleBackColor = false;
-            this.btnRevenue.Click += new System.EventHandler(this.btnRevenue_Click);
-            this.btnRevenue.Enter += new System.EventHandler(this.btnSidebar_Enter);
-            this.btnRevenue.Leave += new System.EventHandler(this.btnSidebar_Leave);
+            this.btnRevenua.BackColor = System.Drawing.Color.Transparent;
+            this.btnRevenua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRevenua.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnRevenua.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRevenua.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRevenua.ForeColor = System.Drawing.Color.White;
+            this.btnRevenua.Image = global::QuanLyQuanCafe.Properties.Resources.revenue;
+            this.btnRevenua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRevenua.Location = new System.Drawing.Point(0, 216);
+            this.btnRevenua.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRevenua.Name = "btnRevenua";
+            this.btnRevenua.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnRevenua.Size = new System.Drawing.Size(60, 54);
+            this.btnRevenua.TabIndex = 5;
+            this.btnRevenua.Text = "          Doanh thu";
+            this.btnRevenua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRevenua.UseVisualStyleBackColor = false;
+            this.btnRevenua.Click += new System.EventHandler(this.btnRevenue_Click);
             // 
-            // button8
+            // panel4
             // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Image = global::QuanLyQuanCafe.Properties.Resources.setting;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(0, 589);
-            this.button8.Margin = new System.Windows.Forms.Padding(0, 300, 0, 0);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(164, 49);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "          Cài đặt";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = false;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.ptbMenu);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(60, 88);
+            this.panel4.TabIndex = 5;
             // 
-            // sidebarTimer
+            // label2
             // 
-            this.sidebarTimer.Interval = 10;
-            this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(71, 6);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(124, 80);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "MENU";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ptbMenu
+            // 
+            this.ptbMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ptbMenu.Image = global::QuanLyQuanCafe.Properties.Resources.menu_30;
+            this.ptbMenu.Location = new System.Drawing.Point(13, 24);
+            this.ptbMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.ptbMenu.Name = "ptbMenu";
+            this.ptbMenu.Size = new System.Drawing.Size(30, 30);
+            this.ptbMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbMenu.TabIndex = 6;
+            this.ptbMenu.TabStop = false;
+            this.ptbMenu.Click += new System.EventHandler(this.ptbMenu_Click);
+            // 
+            // btnSetting
+            // 
+            this.btnSetting.BackColor = System.Drawing.Color.Transparent;
+            this.btnSetting.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSetting.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSetting.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetting.ForeColor = System.Drawing.Color.White;
+            this.btnSetting.Image = global::QuanLyQuanCafe.Properties.Resources.setting;
+            this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSetting.Location = new System.Drawing.Point(0, 548);
+            this.btnSetting.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnSetting.Size = new System.Drawing.Size(60, 60);
+            this.btnSetting.TabIndex = 6;
+            this.btnSetting.Text = "          Cài đặt";
+            this.btnSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSetting.UseVisualStyleBackColor = false;
+            // 
+            // pnBody
+            // 
+            this.pnBody.BackgroundImage = global::QuanLyQuanCafe.Properties.Resources.bg;
+            this.pnBody.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnBody.Location = new System.Drawing.Point(60, 0);
+            this.pnBody.Name = "pnBody";
+            this.pnBody.Size = new System.Drawing.Size(1093, 608);
+            this.pnBody.TabIndex = 8;
             // 
             // fTableManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::QuanLyQuanCafe.Properties.Resources.bg;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1044, 639);
-            this.Controls.Add(this.flpSidebar);
+            this.ClientSize = new System.Drawing.Size(1153, 608);
+            this.Controls.Add(this.pnBody);
+            this.Controls.Add(this.pnLeft);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.MaximumSize = new System.Drawing.Size(1064, 682);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fTableManager";
             this.Text = "Quản Lý Quán Cà Phê";
-            this.Load += new System.EventHandler(this.fTableManager_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
-            this.flpSidebar.ResumeLayout(false);
+            this.pnLeft.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbMenu)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox menuButton;
-        private System.Windows.Forms.Button btnTakeaway;
+        private System.Windows.Forms.Timer sidebarTimer;
+        private System.Windows.Forms.Panel pnLeft;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox ptbMenu;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnMenu;
+        private System.Windows.Forms.Button btnSetting;
+        private System.Windows.Forms.Button btnRevenua;
         private System.Windows.Forms.Button btnBill;
-        private System.Windows.Forms.Button btnRevenue;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.FlowLayoutPanel flpSidebar;
-        private System.Windows.Forms.Timer sidebarTimer;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblMenu;
+        private System.Windows.Forms.Button btnTakeAway;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel pnBody;
     }
 }

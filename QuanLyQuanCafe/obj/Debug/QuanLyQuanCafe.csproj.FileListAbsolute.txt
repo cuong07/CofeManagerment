@@ -21,7 +21,6 @@ D:\TLWindForm\CofeManagerment\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.exe
 D:\TLWindForm\CofeManagerment\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.pdb
 D:\TLWindForm\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.AssemblyReference.cache
 D:\TLWindForm\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.SuggestedBindingRedirects.cache
-D:\TLWindForm\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fBackground.resources
 D:\TLWindForm\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fBill.resources
 D:\TLWindForm\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fLogin.resources
 D:\TLWindForm\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fMenuFood.resources
