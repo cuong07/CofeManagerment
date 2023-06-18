@@ -33,23 +33,20 @@
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.pnLeft = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btnMenu = new System.Windows.Forms.Button();
+            this.btnTakeAway = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnBill = new System.Windows.Forms.Button();
-            this.btnTakeAway = new System.Windows.Forms.Button();
-            this.btnMenu = new System.Windows.Forms.Button();
             this.btnRevenua = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.ptbMenu = new System.Windows.Forms.PictureBox();
             this.btnSetting = new System.Windows.Forms.Button();
-            this.lbFormName = new System.Windows.Forms.Label();
-            this.pnTop = new System.Windows.Forms.Panel();
             this.pnBody = new System.Windows.Forms.Panel();
             this.pnLeft.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMenu)).BeginInit();
-            this.pnTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidebarTimer
@@ -58,7 +55,7 @@
             // 
             // pnLeft
             // 
-            this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnLeft.BackColor = System.Drawing.Color.Black;
             this.pnLeft.Controls.Add(this.panel7);
             this.pnLeft.Controls.Add(this.panel4);
             this.pnLeft.Controls.Add(this.btnSetting);
@@ -83,6 +80,47 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(60, 270);
             this.panel7.TabIndex = 6;
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.BackColor = System.Drawing.Color.Transparent;
+            this.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenu.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenu.ForeColor = System.Drawing.Color.White;
+            this.btnMenu.Image = global::QuanLyQuanCafe.Properties.Resources.menu;
+            this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenu.Location = new System.Drawing.Point(0, 108);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnMenu.Size = new System.Drawing.Size(60, 54);
+            this.btnMenu.TabIndex = 3;
+            this.btnMenu.Text = "          Thực đơn";
+            this.btnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
+            // btnTakeAway
+            // 
+            this.btnTakeAway.BackColor = System.Drawing.Color.Transparent;
+            this.btnTakeAway.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTakeAway.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTakeAway.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTakeAway.ForeColor = System.Drawing.Color.White;
+            this.btnTakeAway.Image = global::QuanLyQuanCafe.Properties.Resources.revenue;
+            this.btnTakeAway.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTakeAway.Location = new System.Drawing.Point(0, 54);
+            this.btnTakeAway.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTakeAway.Name = "btnTakeAway";
+            this.btnTakeAway.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnTakeAway.Size = new System.Drawing.Size(60, 54);
+            this.btnTakeAway.TabIndex = 2;
+            this.btnTakeAway.Text = "          Bán mang đi";
+            this.btnTakeAway.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTakeAway.UseVisualStyleBackColor = false;
+            this.btnTakeAway.Click += new System.EventHandler(this.btnTakeaway_Click);
             // 
             // btnHome
             // 
@@ -125,47 +163,6 @@
             this.btnBill.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBill.UseVisualStyleBackColor = false;
             this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
-            // 
-            // btnTakeAway
-            // 
-            this.btnTakeAway.BackColor = System.Drawing.Color.Transparent;
-            this.btnTakeAway.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTakeAway.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTakeAway.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTakeAway.ForeColor = System.Drawing.Color.White;
-            this.btnTakeAway.Image = global::QuanLyQuanCafe.Properties.Resources.revenue;
-            this.btnTakeAway.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTakeAway.Location = new System.Drawing.Point(0, 54);
-            this.btnTakeAway.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTakeAway.Name = "btnTakeAway";
-            this.btnTakeAway.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnTakeAway.Size = new System.Drawing.Size(60, 54);
-            this.btnTakeAway.TabIndex = 2;
-            this.btnTakeAway.Text = "          Bán mang đi";
-            this.btnTakeAway.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTakeAway.UseVisualStyleBackColor = false;
-            this.btnTakeAway.Click += new System.EventHandler(this.btnTakeaway_Click);
-            // 
-            // btnMenu
-            // 
-            this.btnMenu.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMenu.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenu.ForeColor = System.Drawing.Color.White;
-            this.btnMenu.Image = global::QuanLyQuanCafe.Properties.Resources.menu;
-            this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.Location = new System.Drawing.Point(0, 108);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnMenu.Size = new System.Drawing.Size(60, 54);
-            this.btnMenu.TabIndex = 3;
-            this.btnMenu.Text = "          Thực đơn";
-            this.btnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.UseVisualStyleBackColor = false;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // btnRevenua
             // 
@@ -244,37 +241,14 @@
             this.btnSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSetting.UseVisualStyleBackColor = false;
             // 
-            // lbFormName
-            // 
-            this.lbFormName.AutoSize = true;
-            this.lbFormName.BackColor = System.Drawing.Color.Yellow;
-            this.lbFormName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbFormName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbFormName.Location = new System.Drawing.Point(0, 19);
-            this.lbFormName.Name = "lbFormName";
-            this.lbFormName.Size = new System.Drawing.Size(216, 33);
-            this.lbFormName.TabIndex = 0;
-            this.lbFormName.Text = "Nhóm: Tam Mao";
-            // 
-            // pnTop
-            // 
-            this.pnTop.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pnTop.Controls.Add(this.lbFormName);
-            this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnTop.Location = new System.Drawing.Point(60, 0);
-            this.pnTop.Margin = new System.Windows.Forms.Padding(0);
-            this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(1093, 55);
-            this.pnTop.TabIndex = 5;
-            // 
             // pnBody
             // 
             this.pnBody.BackgroundImage = global::QuanLyQuanCafe.Properties.Resources.bg;
             this.pnBody.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnBody.Location = new System.Drawing.Point(60, 55);
+            this.pnBody.Location = new System.Drawing.Point(60, 0);
             this.pnBody.Name = "pnBody";
-            this.pnBody.Size = new System.Drawing.Size(1093, 553);
+            this.pnBody.Size = new System.Drawing.Size(1093, 608);
             this.pnBody.TabIndex = 8;
             // 
             // fTableManager
@@ -283,7 +257,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1153, 608);
             this.Controls.Add(this.pnBody);
-            this.Controls.Add(this.pnTop);
             this.Controls.Add(this.pnLeft);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -292,14 +265,11 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fTableManager";
             this.Text = "Quản Lý Quán Cà Phê";
-            this.Load += new System.EventHandler(this.fTableManager_Load);
             this.pnLeft.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMenu)).EndInit();
-            this.pnTop.ResumeLayout(false);
-            this.pnTop.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -317,8 +287,6 @@
         private System.Windows.Forms.Button btnBill;
         private System.Windows.Forms.Button btnTakeAway;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label lbFormName;
-        private System.Windows.Forms.Panel pnTop;
         private System.Windows.Forms.Panel pnBody;
     }
 }

@@ -44,6 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCloseFormMenuFood = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -57,7 +58,7 @@
             this.groupBox1.Controls.Add(this.cbFindFoodName);
             this.groupBox1.Controls.Add(this.listView1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 72);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(625, 671);
             this.groupBox1.TabIndex = 19;
@@ -148,7 +149,7 @@
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox2.Location = new System.Drawing.Point(637, 99);
+            this.groupBox2.Location = new System.Drawing.Point(637, 159);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(511, 468);
             this.groupBox2.TabIndex = 20;
@@ -202,7 +203,7 @@
             // 
             this.btnCloseFormMenuFood.BackColor = System.Drawing.Color.Transparent;
             this.btnCloseFormMenuFood.Image = global::QuanLyQuanCafe.Properties.Resources.close_25;
-            this.btnCloseFormMenuFood.Location = new System.Drawing.Point(1096, 2);
+            this.btnCloseFormMenuFood.Location = new System.Drawing.Point(1096, 62);
             this.btnCloseFormMenuFood.Margin = new System.Windows.Forms.Padding(4);
             this.btnCloseFormMenuFood.Name = "btnCloseFormMenuFood";
             this.btnCloseFormMenuFood.Size = new System.Drawing.Size(52, 41);
@@ -210,10 +211,24 @@
             this.btnCloseFormMenuFood.UseVisualStyleBackColor = false;
             this.btnCloseFormMenuFood.Click += new System.EventHandler(this.btnCloseFormMenuFood_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Yellow;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(223, 34);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Danh sách món";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // fMenuFood
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1167, 746);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnCloseFormMenuFood);
@@ -226,6 +241,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -246,5 +262,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

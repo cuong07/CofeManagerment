@@ -40,7 +40,7 @@ namespace QuanLyQuanCafe
         // hàm đổi màu button khi nhấn.
         private void ChangeColorBtn(Button b1, Button b2, Button b3, Button b4, Button b5,Button b6)
         {
-            b1.BackColor = Color.SaddleBrown;
+            b1.BackColor = Color.DeepSkyBlue;
             b2.BackColor = Color.Transparent;
             b3.BackColor = Color.Transparent;
             b4.BackColor = Color.Transparent;
@@ -51,38 +51,33 @@ namespace QuanLyQuanCafe
         {
             OpenChildForm(new fTable());
             ChangeColorBtn(btnHome, btnBill, btnMenu, btnRevenua, btnTakeAway, btnSetting);
-            lbFormName.Text = "Phục vụ tại quán";
         }
 
         private void btnBill_Click(object sender, EventArgs e)      //click vào button "Hóa đơn"
         {
             OpenChildForm(new fBill());
             ChangeColorBtn(btnBill, btnHome, btnMenu, btnRevenua, btnTakeAway, btnSetting);
-            lbFormName.Text = "Hóa đơn đã xuất";
         }
 
         private void btnMenu_Click(object sender, EventArgs e)      //click vào button "Thực đơn"
         {
             OpenChildForm(new fMenuFood());
             ChangeColorBtn(btnMenu, btnBill, btnHome,  btnRevenua, btnTakeAway, btnSetting);
-            lbFormName.Text = "Thực đơn";
         }
 
         private void btnTakeaway_Click(object sender, EventArgs e)      //click vào button "Bán mang đi"
         {
             OpenChildForm(new fTakeaway());
             ChangeColorBtn(btnTakeAway, btnBill, btnHome, btnMenu, btnRevenua,  btnSetting);
-            lbFormName.Text = "Phục vụ mang về";
         }
 
         private void btnRevenue_Click(object sender, EventArgs e)       //click vào button "doanh thu"
         {
             OpenChildForm(new fRevenue());
             ChangeColorBtn(btnRevenua, btnBill, btnHome, btnMenu,  btnTakeAway, btnSetting);
-            lbFormName.Text = "Doanh thu";
         }
 
-        private void fTableManager_Load(object sender, EventArgs e)     //load data khi chạy app
+        /*private void fTableManager_Load(object sender, EventArgs e)     //load data khi chạy app
         {
             if (currentChildForm != null)
             {
@@ -96,7 +91,7 @@ namespace QuanLyQuanCafe
             formBackground.Height = 632;
             formBackground.StartPosition = FormStartPosition.Manual;
             currentChildForm = formBackground;
-        }
+        }*/
 
         //hàm mở rộng và thu nhỏ thanh menu (bên trái)
         bool pnLeft_miniSize = true;
