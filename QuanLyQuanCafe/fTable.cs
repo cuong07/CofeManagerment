@@ -22,6 +22,5 @@ namespace QuanLyQuanCafe
             this.Close();
         }
 
-        
     }
 }
