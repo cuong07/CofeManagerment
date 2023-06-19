@@ -179,5 +179,8 @@
   <ItemGroup>
     <None Include="assets\images\fFoodMenu_img_find.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\fFoodMenu_icon_find.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
