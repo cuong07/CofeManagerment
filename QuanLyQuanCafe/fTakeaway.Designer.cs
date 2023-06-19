@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnCloseFormTakeaway = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnLeft = new System.Windows.Forms.Panel();
             this.lsbIDOrder = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -68,20 +68,6 @@
             this.panel1.Size = new System.Drawing.Size(1307, 37);
             this.panel1.TabIndex = 24;
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Arial", 16F);
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1307, 37);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Phục vụ mang về";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // btnCloseFormTakeaway
             // 
             this.btnCloseFormTakeaway.BackColor = System.Drawing.Color.Black;
@@ -96,6 +82,20 @@
             this.btnCloseFormTakeaway.Text = "X";
             this.btnCloseFormTakeaway.UseVisualStyleBackColor = false;
             this.btnCloseFormTakeaway.Click += new System.EventHandler(this.btnCloseFormTakeaway_Click);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Arial", 16F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1307, 37);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Phục vụ mang về";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnLeft
             // 

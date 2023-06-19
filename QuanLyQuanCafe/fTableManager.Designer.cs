@@ -33,16 +33,16 @@
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.pnLeft = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pnBody = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
             this.btnTakeAway = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnBill = new System.Windows.Forms.Button();
             this.btnRevenua = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.ptbMenu = new System.Windows.Forms.PictureBox();
             this.btnSetting = new System.Windows.Forms.Button();
+            this.pnBody = new System.Windows.Forms.Panel();
             this.pnLeft.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -81,41 +81,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(60, 270);
             this.panel7.TabIndex = 6;
-            // 
-            // panel4
-            // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.ptbMenu);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(60, 88);
-            this.panel4.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(71, 6);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 80);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "MENU";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pnBody
-            // 
-            this.pnBody.BackgroundImage = global::QuanLyQuanCafe.Properties.Resources.bg;
-            this.pnBody.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnBody.Location = new System.Drawing.Point(60, 0);
-            this.pnBody.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnBody.Name = "pnBody";
-            this.pnBody.Size = new System.Drawing.Size(1468, 769);
-            this.pnBody.TabIndex = 8;
             // 
             // btnMenu
             // 
@@ -221,6 +186,30 @@
             this.btnRevenua.UseVisualStyleBackColor = false;
             this.btnRevenua.Click += new System.EventHandler(this.btnRevenue_Click);
             // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.ptbMenu);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(60, 88);
+            this.panel4.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(71, 6);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(124, 80);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "MENU";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // ptbMenu
             // 
             this.ptbMenu.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -253,6 +242,18 @@
             this.btnSetting.Text = "          Cài đặt";
             this.btnSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSetting.UseVisualStyleBackColor = false;
+            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
+            // 
+            // pnBody
+            // 
+            this.pnBody.BackgroundImage = global::QuanLyQuanCafe.Properties.Resources.bg;
+            this.pnBody.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnBody.Location = new System.Drawing.Point(60, 0);
+            this.pnBody.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnBody.Name = "pnBody";
+            this.pnBody.Size = new System.Drawing.Size(1468, 769);
+            this.pnBody.TabIndex = 8;
             // 
             // fTableManager
             // 
@@ -265,7 +266,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fTableManager";
             this.Text = "Quản Lý Quán Cà Phê";
             this.pnLeft.ResumeLayout(false);

@@ -76,23 +76,7 @@ namespace QuanLyQuanCafe
             OpenChildForm(new fRevenue());
             ChangeColorBtn(btnRevenua, btnBill, btnHome, btnMenu,  btnTakeAway, btnSetting);
         }
-
-        /*private void fTableManager_Load(object sender, EventArgs e)     //load data khi chạy app
-        {
-            if (currentChildForm != null)
-            {
-                currentChildForm.Close(); // Đóng form con hiện tại nếu đã tồn tại
-            }
-            fBackground formBackground = new fBackground();
-            formBackground.MdiParent = this;
-            formBackground.Show();
-            formBackground.Location = new Point(0, 0);
-            formBackground.Width = 988;
-            formBackground.Height = 632;
-            formBackground.StartPosition = FormStartPosition.Manual;
-            currentChildForm = formBackground;
-        }*/
-
+        
         //hàm mở rộng và thu nhỏ thanh menu (bên trái)
         bool pnLeft_miniSize = true;
         private void ptbMenu_Click(object sender, EventArgs e)
@@ -108,5 +92,18 @@ namespace QuanLyQuanCafe
                 pnLeft_miniSize = true;
             }    
         }
+        //hàm mở form fSetting khi nhấn vào button Setting
+        bool showing_fSetting = false;
+        private void btnSetting_Click(object sender, EventArgs e)
+        {
+            fSetting f = new fSetting();
+            f.TopLevel = false;
+            pnBody.Controls.Add(f);
+            f.BringToFront();
+            f.Location = new Point(5, pnBody.Size.Height - 290);
+            f.Show();
+        }
+
+
     }
 }

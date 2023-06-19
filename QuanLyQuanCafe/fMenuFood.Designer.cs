@@ -29,35 +29,35 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbFilterDishes = new System.Windows.Forms.ComboBox();
-            this.cbFindFoodName = new System.Windows.Forms.ComboBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.clhSTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhFoodName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pnDSMTop = new System.Windows.Forms.Panel();
+            this.cbFilterDishes = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbFindFoodName = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnTop = new System.Windows.Forms.Panel();
+            this.btnCloseFormMenuFood = new System.Windows.Forms.Button();
             this.pnRight = new System.Windows.Forms.Panel();
             this.pnLeft = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCloseFormMenuFood = new System.Windows.Forms.Button();
-            this.pnDSMTop = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
+            this.pnDSMTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.pnTop.SuspendLayout();
             this.pnRight.SuspendLayout();
             this.pnLeft.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnDSMTop.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -76,33 +76,6 @@
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách món ăn";
-            // 
-            // cbFilterDishes
-            // 
-            this.cbFilterDishes.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.cbFilterDishes.Dock = System.Windows.Forms.DockStyle.Left;
-            this.cbFilterDishes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbFilterDishes.FormattingEnabled = true;
-            this.cbFilterDishes.Items.AddRange(new object[] {
-            "Món nước",
-            "Điểm tâm sáng",
-            "Ăn nhẹ",
-            "Topping"});
-            this.cbFilterDishes.Location = new System.Drawing.Point(0, 0);
-            this.cbFilterDishes.Name = "cbFilterDishes";
-            this.cbFilterDishes.Size = new System.Drawing.Size(172, 33);
-            this.cbFilterDishes.TabIndex = 17;
-            // 
-            // cbFindFoodName
-            // 
-            this.cbFindFoodName.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.cbFindFoodName.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbFindFoodName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbFindFoodName.FormattingEnabled = true;
-            this.cbFindFoodName.Location = new System.Drawing.Point(621, 0);
-            this.cbFindFoodName.Name = "cbFindFoodName";
-            this.cbFindFoodName.Size = new System.Drawing.Size(289, 33);
-            this.cbFindFoodName.TabIndex = 16;
             // 
             // listView1
             // 
@@ -138,6 +111,57 @@
             this.clhPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.clhPrice.Width = 150;
             // 
+            // pnDSMTop
+            // 
+            this.pnDSMTop.Controls.Add(this.cbFilterDishes);
+            this.pnDSMTop.Controls.Add(this.pictureBox1);
+            this.pnDSMTop.Controls.Add(this.cbFindFoodName);
+            this.pnDSMTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnDSMTop.Location = new System.Drawing.Point(3, 26);
+            this.pnDSMTop.Name = "pnDSMTop";
+            this.pnDSMTop.Size = new System.Drawing.Size(910, 36);
+            this.pnDSMTop.TabIndex = 25;
+            // 
+            // cbFilterDishes
+            // 
+            this.cbFilterDishes.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.cbFilterDishes.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cbFilterDishes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbFilterDishes.FormattingEnabled = true;
+            this.cbFilterDishes.Items.AddRange(new object[] {
+            "Món nước",
+            "Điểm tâm sáng",
+            "Ăn nhẹ",
+            "Topping"});
+            this.cbFilterDishes.Location = new System.Drawing.Point(0, 0);
+            this.cbFilterDishes.Name = "cbFilterDishes";
+            this.cbFilterDishes.Size = new System.Drawing.Size(172, 33);
+            this.cbFilterDishes.TabIndex = 17;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.Image = global::QuanLyQuanCafe.Properties.Resources.fFoodMenu_icon_find;
+            this.pictureBox1.Location = new System.Drawing.Point(585, 0);
+            this.pictureBox1.MaximumSize = new System.Drawing.Size(36, 33);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
+            // cbFindFoodName
+            // 
+            this.cbFindFoodName.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.cbFindFoodName.Dock = System.Windows.Forms.DockStyle.Right;
+            this.cbFindFoodName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbFindFoodName.FormattingEnabled = true;
+            this.cbFindFoodName.Location = new System.Drawing.Point(621, 0);
+            this.cbFindFoodName.Name = "cbFindFoodName";
+            this.cbFindFoodName.Size = new System.Drawing.Size(289, 33);
+            this.cbFindFoodName.TabIndex = 16;
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(182, 45);
@@ -160,6 +184,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chỉnh sửa";
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.panel1.Location = new System.Drawing.Point(0, 29);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(519, 231);
+            this.panel1.TabIndex = 21;
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.LightSlateGray;
@@ -169,6 +211,16 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Xóa món ăn";
             this.button2.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(45, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tên món ăn:";
             // 
             // button3
             // 
@@ -197,16 +249,6 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Đơn giá vnđ/cái:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(45, 48);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 23);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tên món ăn:";
-            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.SystemColors.Control;
@@ -230,6 +272,21 @@
             this.pnTop.Size = new System.Drawing.Size(1445, 42);
             this.pnTop.TabIndex = 23;
             // 
+            // btnCloseFormMenuFood
+            // 
+            this.btnCloseFormMenuFood.BackColor = System.Drawing.Color.Black;
+            this.btnCloseFormMenuFood.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCloseFormMenuFood.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnCloseFormMenuFood.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnCloseFormMenuFood.Location = new System.Drawing.Point(1384, 0);
+            this.btnCloseFormMenuFood.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCloseFormMenuFood.Name = "btnCloseFormMenuFood";
+            this.btnCloseFormMenuFood.Size = new System.Drawing.Size(59, 40);
+            this.btnCloseFormMenuFood.TabIndex = 4;
+            this.btnCloseFormMenuFood.Text = "X";
+            this.btnCloseFormMenuFood.UseVisualStyleBackColor = false;
+            this.btnCloseFormMenuFood.Click += new System.EventHandler(this.btnCloseFormMenuFood_Click);
+            // 
             // pnRight
             // 
             this.pnRight.Controls.Add(this.groupBox2);
@@ -250,63 +307,6 @@
             this.pnLeft.Size = new System.Drawing.Size(922, 723);
             this.pnLeft.TabIndex = 24;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Image = global::QuanLyQuanCafe.Properties.Resources.fFoodMenu_icon_find;
-            this.pictureBox1.Location = new System.Drawing.Point(585, 0);
-            this.pictureBox1.MaximumSize = new System.Drawing.Size(36, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 33);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnCloseFormMenuFood
-            // 
-            this.btnCloseFormMenuFood.BackColor = System.Drawing.Color.Black;
-            this.btnCloseFormMenuFood.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCloseFormMenuFood.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnCloseFormMenuFood.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnCloseFormMenuFood.Location = new System.Drawing.Point(1384, 0);
-            this.btnCloseFormMenuFood.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCloseFormMenuFood.Name = "btnCloseFormMenuFood";
-            this.btnCloseFormMenuFood.Size = new System.Drawing.Size(59, 40);
-            this.btnCloseFormMenuFood.TabIndex = 4;
-            this.btnCloseFormMenuFood.Text = "X";
-            this.btnCloseFormMenuFood.UseVisualStyleBackColor = false;
-            this.btnCloseFormMenuFood.Click += new System.EventHandler(this.btnCloseFormMenuFood_Click);
-            // 
-            // pnDSMTop
-            // 
-            this.pnDSMTop.Controls.Add(this.cbFilterDishes);
-            this.pnDSMTop.Controls.Add(this.pictureBox1);
-            this.pnDSMTop.Controls.Add(this.cbFindFoodName);
-            this.pnDSMTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnDSMTop.Location = new System.Drawing.Point(3, 26);
-            this.pnDSMTop.Name = "pnDSMTop";
-            this.pnDSMTop.Size = new System.Drawing.Size(910, 36);
-            this.pnDSMTop.TabIndex = 25;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.panel1.Location = new System.Drawing.Point(0, 29);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(519, 231);
-            this.panel1.TabIndex = 21;
-            // 
             // fMenuFood
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -320,14 +320,14 @@
             this.Name = "fMenuFood";
             this.Text = "fMenuFood";
             this.groupBox1.ResumeLayout(false);
+            this.pnDSMTop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.pnTop.ResumeLayout(false);
             this.pnRight.ResumeLayout(false);
             this.pnLeft.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pnDSMTop.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
