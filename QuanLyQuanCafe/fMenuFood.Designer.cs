@@ -89,6 +89,7 @@
             this.cbFilterDishes.Name = "cbFilterDishes";
             this.cbFilterDishes.Size = new System.Drawing.Size(139, 33);
             this.cbFilterDishes.TabIndex = 17;
+            this.cbFilterDishes.SelectedIndexChanged += new System.EventHandler(this.cbFilterDishes_SelectedIndexChanged);
             // 
             // cbFindFoodName
             // 
