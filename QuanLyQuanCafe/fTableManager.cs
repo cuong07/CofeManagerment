@@ -88,7 +88,7 @@ namespace QuanLyQuanCafe
             }
             else
             {
-                pnLeft.Size = new Size(60, pnLeft.Size.Height);
+                pnLeft.Size = new Size(45, pnLeft.Size.Height);
                 pnLeft_miniSize = true;
             }    
         }
@@ -104,6 +104,9 @@ namespace QuanLyQuanCafe
             f.Show();
         }
 
+        private void pnLeft_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 }

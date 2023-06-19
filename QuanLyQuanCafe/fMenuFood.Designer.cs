@@ -77,40 +77,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách món ăn";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::QuanLyQuanCafe.Properties.Resources.fFoodMenu_img_find;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(284, 48);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 33);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            // 
-            // cbFilterDishes
-            // 
-            this.cbFilterDishes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbFilterDishes.FormattingEnabled = true;
-            this.cbFilterDishes.Items.AddRange(new object[] {
-            "Món nước",
-            "Điểm tâm sáng",
-            "Ăn nhẹ",
-            "Topping"});
-            this.cbFilterDishes.Location = new System.Drawing.Point(6, 48);
-            this.cbFilterDishes.Name = "cbFilterDishes";
-            this.cbFilterDishes.Size = new System.Drawing.Size(139, 33);
-            this.cbFilterDishes.TabIndex = 17;
-            // 
-            // cbFindFoodName
-            // 
-            this.cbFindFoodName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbFindFoodName.FormattingEnabled = true;
-            this.cbFindFoodName.Location = new System.Drawing.Point(326, 48);
-            this.cbFindFoodName.Name = "cbFindFoodName";
-            this.cbFindFoodName.Size = new System.Drawing.Size(289, 33);
-            this.cbFindFoodName.TabIndex = 16;
-            // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -120,10 +86,10 @@
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(3, 62);
+            this.listView1.Location = new System.Drawing.Point(3, 58);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(910, 649);
+            this.listView1.Size = new System.Drawing.Size(910, 653);
             this.listView1.TabIndex = 15;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -151,7 +117,7 @@
             this.pnDSMTop.Controls.Add(this.pictureBox1);
             this.pnDSMTop.Controls.Add(this.cbFindFoodName);
             this.pnDSMTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnDSMTop.Location = new System.Drawing.Point(3, 26);
+            this.pnDSMTop.Location = new System.Drawing.Point(3, 22);
             this.pnDSMTop.Name = "pnDSMTop";
             this.pnDSMTop.Size = new System.Drawing.Size(910, 36);
             this.pnDSMTop.TabIndex = 25;
@@ -166,14 +132,19 @@
             "Món nước",
             "Điểm tâm sáng",
             "Ăn nhẹ",
+            "Topping",
+            "Món nước",
+            "Điểm tâm sáng",
+            "Ăn nhẹ",
             "Topping"});
             this.cbFilterDishes.Location = new System.Drawing.Point(0, 0);
             this.cbFilterDishes.Name = "cbFilterDishes";
-            this.cbFilterDishes.Size = new System.Drawing.Size(172, 33);
+            this.cbFilterDishes.Size = new System.Drawing.Size(172, 28);
             this.cbFilterDishes.TabIndex = 17;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = global::QuanLyQuanCafe.Properties.Resources.fFoodMenu_img_find;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = global::QuanLyQuanCafe.Properties.Resources.fFoodMenu_icon_find;
@@ -193,14 +164,14 @@
             this.cbFindFoodName.FormattingEnabled = true;
             this.cbFindFoodName.Location = new System.Drawing.Point(621, 0);
             this.cbFindFoodName.Name = "cbFindFoodName";
-            this.cbFindFoodName.Size = new System.Drawing.Size(289, 33);
+            this.cbFindFoodName.Size = new System.Drawing.Size(289, 28);
             this.cbFindFoodName.TabIndex = 16;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(182, 45);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(319, 30);
+            this.textBox1.Size = new System.Drawing.Size(319, 26);
             this.textBox1.TabIndex = 1;
             // 
             // groupBox2
@@ -252,7 +223,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(45, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 23);
+            this.label2.Size = new System.Drawing.Size(93, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên món ăn:";
             // 
@@ -270,7 +241,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(182, 100);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(319, 30);
+            this.textBox2.Size = new System.Drawing.Size(319, 26);
             this.textBox2.TabIndex = 3;
             // 
             // label3
@@ -279,7 +250,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(15, 103);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 23);
+            this.label3.Size = new System.Drawing.Size(122, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "Đơn giá vnđ/cái:";
             // 
