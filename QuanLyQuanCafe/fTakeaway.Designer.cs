@@ -28,205 +28,317 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnCloseFormTakeaway = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lsbIDOrder = new System.Windows.Forms.ListBox();
-            this.lsbDetail = new System.Windows.Forms.ListBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnDone = new System.Windows.Forms.Button();
-            this.btnDeleteOrder = new System.Windows.Forms.Button();
-            this.rtbNote = new System.Windows.Forms.RichTextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lbIdAddress = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.pnLeft = new System.Windows.Forms.Panel();
+            this.lsbIDOrder = new System.Windows.Forms.ListBox();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pnRight = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.lsbDetail = new System.Windows.Forms.ListBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.lbIdAddress = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.rtbNote = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnDeleteOrder = new System.Windows.Forms.Button();
+            this.btnDone = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            this.pnLeft.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.pnRight.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.btnCloseFormTakeaway);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1307, 37);
+            this.panel1.TabIndex = 24;
             // 
             // btnCloseFormTakeaway
             // 
-            this.btnCloseFormTakeaway.BackColor = System.Drawing.Color.Transparent;
-            this.btnCloseFormTakeaway.Image = global::QuanLyQuanCafe.Properties.Resources.close_25;
-            this.btnCloseFormTakeaway.Location = new System.Drawing.Point(970, 12);
+            this.btnCloseFormTakeaway.BackColor = System.Drawing.Color.Black;
+            this.btnCloseFormTakeaway.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCloseFormTakeaway.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnCloseFormTakeaway.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCloseFormTakeaway.Location = new System.Drawing.Point(1259, 0);
             this.btnCloseFormTakeaway.Margin = new System.Windows.Forms.Padding(4);
             this.btnCloseFormTakeaway.Name = "btnCloseFormTakeaway";
-            this.btnCloseFormTakeaway.Size = new System.Drawing.Size(52, 41);
+            this.btnCloseFormTakeaway.Size = new System.Drawing.Size(48, 37);
             this.btnCloseFormTakeaway.TabIndex = 8;
+            this.btnCloseFormTakeaway.Text = "X";
             this.btnCloseFormTakeaway.UseVisualStyleBackColor = false;
             this.btnCloseFormTakeaway.Click += new System.EventHandler(this.btnCloseFormTakeaway_Click);
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Arial", 16F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1307, 37);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Phục vụ mang về";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnLeft
+            // 
+            this.pnLeft.Controls.Add(this.lsbIDOrder);
+            this.pnLeft.Controls.Add(this.tableLayoutPanel5);
+            this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnLeft.Location = new System.Drawing.Point(0, 37);
+            this.pnLeft.Name = "pnLeft";
+            this.pnLeft.Size = new System.Drawing.Size(514, 708);
+            this.pnLeft.TabIndex = 25;
+            // 
+            // lsbIDOrder
+            // 
+            this.lsbIDOrder.BackColor = System.Drawing.Color.White;
+            this.lsbIDOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsbIDOrder.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lsbIDOrder.FormattingEnabled = true;
+            this.lsbIDOrder.ItemHeight = 23;
+            this.lsbIDOrder.Location = new System.Drawing.Point(0, 39);
+            this.lsbIDOrder.Name = "lsbIDOrder";
+            this.lsbIDOrder.Size = new System.Drawing.Size(514, 669);
+            this.lsbIDOrder.TabIndex = 11;
+            this.lsbIDOrder.SelectedIndexChanged += new System.EventHandler(this.lsbIDOrder_SelectedIndexChanged);
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel5.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.comboBox1, 1, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(514, 39);
+            this.tableLayoutPanel5.TabIndex = 0;
+            // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(39, 35);
+            this.label2.Font = new System.Drawing.Font("Arial", 14F);
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(314, 47);
+            this.label2.Size = new System.Drawing.Size(262, 37);
             this.label2.TabIndex = 10;
             this.label2.Text = "ID đơn hàng đang chờ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lsbIDOrder
+            // comboBox1
             // 
-            this.lsbIDOrder.BackColor = System.Drawing.Color.Silver;
-            this.lsbIDOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lsbIDOrder.FormattingEnabled = true;
-            this.lsbIDOrder.ItemHeight = 25;
-            this.lsbIDOrder.Location = new System.Drawing.Point(16, 85);
-            this.lsbIDOrder.Name = "lsbIDOrder";
-            this.lsbIDOrder.Size = new System.Drawing.Size(366, 554);
-            this.lsbIDOrder.TabIndex = 11;
-            this.lsbIDOrder.SelectedIndexChanged += new System.EventHandler(this.lsbIDOrder_SelectedIndexChanged);
+            this.comboBox1.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.comboBox1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(271, 3);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(243, 34);
+            this.comboBox1.TabIndex = 12;
+            // 
+            // pnRight
+            // 
+            this.pnRight.Controls.Add(this.panel7);
+            this.pnRight.Controls.Add(this.label3);
+            this.pnRight.Controls.Add(this.panel4);
+            this.pnRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnRight.Location = new System.Drawing.Point(514, 37);
+            this.pnRight.Name = "pnRight";
+            this.pnRight.Size = new System.Drawing.Size(793, 708);
+            this.pnRight.TabIndex = 26;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.lsbDetail);
+            this.panel7.Controls.Add(this.panel6);
+            this.panel7.Controls.Add(this.rtbNote);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(0, 37);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(793, 624);
+            this.panel7.TabIndex = 23;
             // 
             // lsbDetail
             // 
-            this.lsbDetail.BackColor = System.Drawing.Color.Silver;
-            this.lsbDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lsbDetail.BackColor = System.Drawing.Color.White;
+            this.lsbDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsbDetail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lsbDetail.FormattingEnabled = true;
-            this.lsbDetail.ItemHeight = 25;
-            this.lsbDetail.Location = new System.Drawing.Point(404, 135);
+            this.lsbDetail.ItemHeight = 23;
+            this.lsbDetail.Location = new System.Drawing.Point(0, 53);
             this.lsbDetail.Name = "lsbDetail";
-            this.lsbDetail.Size = new System.Drawing.Size(390, 429);
+            this.lsbDetail.Size = new System.Drawing.Size(793, 484);
             this.lsbDetail.TabIndex = 13;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.lbIdAddress);
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(793, 53);
+            this.panel6.TabIndex = 20;
+            // 
+            // lbIdAddress
+            // 
+            this.lbIdAddress.BackColor = System.Drawing.Color.White;
+            this.lbIdAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbIdAddress.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbIdAddress.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbIdAddress.Location = new System.Drawing.Point(117, 0);
+            this.lbIdAddress.Name = "lbIdAddress";
+            this.lbIdAddress.Size = new System.Drawing.Size(676, 53);
+            this.lbIdAddress.TabIndex = 18;
+            this.lbIdAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(117, 53);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "ID:\r\nAddress:";
+            // 
+            // rtbNote
+            // 
+            this.rtbNote.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.rtbNote.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rtbNote.Location = new System.Drawing.Point(0, 537);
+            this.rtbNote.Name = "rtbNote";
+            this.rtbNote.Size = new System.Drawing.Size(793, 87);
+            this.rtbNote.TabIndex = 17;
+            this.rtbNote.Text = "Ghi chú:";
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(434, 35);
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.Font = new System.Drawing.Font("Arial", 14F);
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(336, 47);
+            this.label3.Size = new System.Drawing.Size(793, 37);
             this.label3.TabIndex = 12;
             this.label3.Text = "Thông tin chi tiết đơn hàng";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnDone
+            // panel4
             // 
-            this.btnDone.AutoSize = true;
-            this.btnDone.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnDone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnDone.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDone.Location = new System.Drawing.Point(800, 85);
-            this.btnDone.Name = "btnDone";
-            this.btnDone.Size = new System.Drawing.Size(123, 35);
-            this.btnDone.TabIndex = 14;
-            this.btnDone.Text = "Hoàn thành";
-            this.btnDone.UseVisualStyleBackColor = false;
-            this.btnDone.Visible = false;
-            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.btnDeleteOrder);
+            this.panel4.Controls.Add(this.btnDone);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 661);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(793, 47);
+            this.panel4.TabIndex = 22;
             // 
             // btnDeleteOrder
             // 
-            this.btnDeleteOrder.AutoSize = true;
-            this.btnDeleteOrder.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnDeleteOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnDeleteOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteOrder.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnDeleteOrder.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDeleteOrder.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDeleteOrder.Location = new System.Drawing.Point(800, 126);
+            this.btnDeleteOrder.Location = new System.Drawing.Point(646, 2);
             this.btnDeleteOrder.Name = "btnDeleteOrder";
-            this.btnDeleteOrder.Size = new System.Drawing.Size(123, 35);
+            this.btnDeleteOrder.Size = new System.Drawing.Size(135, 45);
             this.btnDeleteOrder.TabIndex = 16;
             this.btnDeleteOrder.Text = "Hủy đơn";
             this.btnDeleteOrder.UseVisualStyleBackColor = false;
             this.btnDeleteOrder.Visible = false;
             this.btnDeleteOrder.Click += new System.EventHandler(this.btnDone_Click);
             // 
-            // rtbNote
+            // btnDone
             // 
-            this.rtbNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rtbNote.Location = new System.Drawing.Point(404, 570);
-            this.rtbNote.Name = "rtbNote";
-            this.rtbNote.Size = new System.Drawing.Size(390, 69);
-            this.rtbNote.TabIndex = 17;
-            this.rtbNote.Text = "Ghi chú:";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.lbIdAddress);
-            this.groupBox1.Controls.Add(this.lsbDetail);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.btnDeleteOrder);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.rtbNote);
-            this.groupBox1.Controls.Add(this.btnDone);
-            this.groupBox1.Controls.Add(this.lsbIDOrder);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox1.Location = new System.Drawing.Point(21, 68);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(938, 665);
-            this.groupBox1.TabIndex = 18;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Delivery";
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Location = new System.Drawing.Point(404, 85);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 47);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "ID:\r\nAddress:";
-            // 
-            // lbIdAddress
-            // 
-            this.lbIdAddress.BackColor = System.Drawing.Color.White;
-            this.lbIdAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbIdAddress.Location = new System.Drawing.Point(506, 85);
-            this.lbIdAddress.Name = "lbIdAddress";
-            this.lbIdAddress.Size = new System.Drawing.Size(288, 47);
-            this.lbIdAddress.TabIndex = 18;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Yellow;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 34);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Phục vụ mang về";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDone.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnDone.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnDone.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDone.Location = new System.Drawing.Point(497, 2);
+            this.btnDone.Name = "btnDone";
+            this.btnDone.Size = new System.Drawing.Size(143, 44);
+            this.btnDone.TabIndex = 14;
+            this.btnDone.Text = "Hoàn thành";
+            this.btnDone.UseVisualStyleBackColor = false;
+            this.btnDone.Visible = false;
+            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // fTakeaway
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1307, 745);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnCloseFormTakeaway);
+            this.Controls.Add(this.pnRight);
+            this.Controls.Add(this.pnLeft);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fTakeaway";
             this.Text = "fTakeaway";
             this.Load += new System.EventHandler(this.fTakeaway_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.pnLeft.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.pnRight.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnCloseFormTakeaway;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox lsbIDOrder;
-        private System.Windows.Forms.ListBox lsbDetail;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnDone;
-        private System.Windows.Forms.Button btnDeleteOrder;
-        private System.Windows.Forms.RichTextBox rtbNote;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lbIdAddress;
+
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnCloseFormTakeaway;
+        private System.Windows.Forms.Panel pnLeft;
+        private System.Windows.Forms.ListBox lsbIDOrder;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel pnRight;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.ListBox lsbDetail;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label lbIdAddress;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RichTextBox rtbNote;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnDeleteOrder;
+        private System.Windows.Forms.Button btnDone;
     }
 }

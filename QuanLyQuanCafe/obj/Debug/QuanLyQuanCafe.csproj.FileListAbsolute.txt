@@ -68,3 +68,4 @@ C:\Users\vocuo\Desktop\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.c
 C:\Users\vocuo\Desktop\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.CoreCompileInputs.cache
 C:\Users\vocuo\Desktop\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.exe
 C:\Users\vocuo\Desktop\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.pdb
+D:\TLWindForm\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fSetting.resources

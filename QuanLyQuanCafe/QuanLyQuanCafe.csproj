@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,6 +71,12 @@
     <Compile Include="fRevenue.Designer.cs">
       <DependentUpon>fRevenue.cs</DependentUpon>
     </Compile>
+    <Compile Include="fSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSetting.Designer.cs">
+      <DependentUpon>fSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="fTable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fRevenue.resx">
       <DependentUpon>fRevenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSetting.resx">
+      <DependentUpon>fSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fTable.resx">
       <DependentUpon>fTable.cs</DependentUpon>
@@ -178,6 +188,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\images\fFoodMenu_img_find.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\fFoodMenu_icon_find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\fSetting_icon_settting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\fSetting_icon_settting_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\fSetting_icon_settting_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\fSetting_icon_profile_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\fSetting_icon_Language_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\fSetting_icon_Exit_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\images\fSetting_icon_Thoat_32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
