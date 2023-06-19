@@ -149,6 +149,7 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "ID đơn hàng đang chờ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // comboBox1
             // 

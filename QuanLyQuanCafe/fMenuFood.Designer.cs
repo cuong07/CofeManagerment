@@ -77,6 +77,40 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách món ăn";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::QuanLyQuanCafe.Properties.Resources.fFoodMenu_img_find;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(284, 48);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
+            // cbFilterDishes
+            // 
+            this.cbFilterDishes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbFilterDishes.FormattingEnabled = true;
+            this.cbFilterDishes.Items.AddRange(new object[] {
+            "Món nước",
+            "Điểm tâm sáng",
+            "Ăn nhẹ",
+            "Topping"});
+            this.cbFilterDishes.Location = new System.Drawing.Point(6, 48);
+            this.cbFilterDishes.Name = "cbFilterDishes";
+            this.cbFilterDishes.Size = new System.Drawing.Size(139, 33);
+            this.cbFilterDishes.TabIndex = 17;
+            // 
+            // cbFindFoodName
+            // 
+            this.cbFindFoodName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbFindFoodName.FormattingEnabled = true;
+            this.cbFindFoodName.Location = new System.Drawing.Point(326, 48);
+            this.cbFindFoodName.Name = "cbFindFoodName";
+            this.cbFindFoodName.Size = new System.Drawing.Size(289, 33);
+            this.cbFindFoodName.TabIndex = 16;
+            // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
