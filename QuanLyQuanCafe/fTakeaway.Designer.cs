@@ -65,19 +65,19 @@
             this.panel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1307, 37);
+            this.panel1.Size = new System.Drawing.Size(1307, 44);
             this.panel1.TabIndex = 24;
             // 
             // btnCloseFormTakeaway
             // 
             this.btnCloseFormTakeaway.BackColor = System.Drawing.Color.Black;
             this.btnCloseFormTakeaway.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCloseFormTakeaway.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnCloseFormTakeaway.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnCloseFormTakeaway.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCloseFormTakeaway.Location = new System.Drawing.Point(1259, 0);
-            this.btnCloseFormTakeaway.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCloseFormTakeaway.Location = new System.Drawing.Point(1248, 0);
+            this.btnCloseFormTakeaway.Margin = new System.Windows.Forms.Padding(0);
             this.btnCloseFormTakeaway.Name = "btnCloseFormTakeaway";
-            this.btnCloseFormTakeaway.Size = new System.Drawing.Size(48, 37);
+            this.btnCloseFormTakeaway.Size = new System.Drawing.Size(59, 44);
             this.btnCloseFormTakeaway.TabIndex = 8;
             this.btnCloseFormTakeaway.Text = "X";
             this.btnCloseFormTakeaway.UseVisualStyleBackColor = false;
@@ -88,11 +88,11 @@
             this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Arial", 16F);
+            this.label1.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1307, 37);
+            this.label1.Size = new System.Drawing.Size(1307, 44);
             this.label1.TabIndex = 19;
             this.label1.Text = "Phục vụ mang về";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -102,9 +102,10 @@
             this.pnLeft.Controls.Add(this.lsbIDOrder);
             this.pnLeft.Controls.Add(this.tableLayoutPanel5);
             this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnLeft.Location = new System.Drawing.Point(0, 37);
+            this.pnLeft.Location = new System.Drawing.Point(0, 44);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(514, 708);
+            this.pnLeft.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.pnLeft.Size = new System.Drawing.Size(514, 701);
             this.pnLeft.TabIndex = 25;
             // 
             // lsbIDOrder
@@ -114,9 +115,9 @@
             this.lsbIDOrder.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lsbIDOrder.FormattingEnabled = true;
             this.lsbIDOrder.ItemHeight = 23;
-            this.lsbIDOrder.Location = new System.Drawing.Point(0, 39);
+            this.lsbIDOrder.Location = new System.Drawing.Point(0, 49);
             this.lsbIDOrder.Name = "lsbIDOrder";
-            this.lsbIDOrder.Size = new System.Drawing.Size(514, 669);
+            this.lsbIDOrder.Size = new System.Drawing.Size(514, 652);
             this.lsbIDOrder.TabIndex = 11;
             this.lsbIDOrder.SelectedIndexChanged += new System.EventHandler(this.lsbIDOrder_SelectedIndexChanged);
             // 
@@ -128,7 +129,7 @@
             this.tableLayoutPanel5.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.comboBox1, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 10);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -167,9 +168,10 @@
             this.pnRight.Controls.Add(this.label3);
             this.pnRight.Controls.Add(this.panel4);
             this.pnRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnRight.Location = new System.Drawing.Point(514, 37);
+            this.pnRight.Location = new System.Drawing.Point(514, 44);
             this.pnRight.Name = "pnRight";
-            this.pnRight.Size = new System.Drawing.Size(793, 708);
+            this.pnRight.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.pnRight.Size = new System.Drawing.Size(793, 701);
             this.pnRight.TabIndex = 26;
             // 
             // panel7
@@ -178,9 +180,9 @@
             this.panel7.Controls.Add(this.panel6);
             this.panel7.Controls.Add(this.rtbNote);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(0, 37);
+            this.panel7.Location = new System.Drawing.Point(10, 47);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(793, 624);
+            this.panel7.Size = new System.Drawing.Size(783, 607);
             this.panel7.TabIndex = 23;
             // 
             // lsbDetail
@@ -192,7 +194,7 @@
             this.lsbDetail.ItemHeight = 23;
             this.lsbDetail.Location = new System.Drawing.Point(0, 53);
             this.lsbDetail.Name = "lsbDetail";
-            this.lsbDetail.Size = new System.Drawing.Size(793, 484);
+            this.lsbDetail.Size = new System.Drawing.Size(783, 467);
             this.lsbDetail.TabIndex = 13;
             // 
             // panel6
@@ -202,7 +204,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(793, 53);
+            this.panel6.Size = new System.Drawing.Size(783, 53);
             this.panel6.TabIndex = 20;
             // 
             // lbIdAddress
@@ -213,7 +215,7 @@
             this.lbIdAddress.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbIdAddress.Location = new System.Drawing.Point(117, 0);
             this.lbIdAddress.Name = "lbIdAddress";
-            this.lbIdAddress.Size = new System.Drawing.Size(676, 53);
+            this.lbIdAddress.Size = new System.Drawing.Size(666, 53);
             this.lbIdAddress.TabIndex = 18;
             this.lbIdAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -228,14 +230,15 @@
             this.label5.Size = new System.Drawing.Size(117, 53);
             this.label5.TabIndex = 19;
             this.label5.Text = "ID:\r\nAddress:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // rtbNote
             // 
             this.rtbNote.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.rtbNote.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rtbNote.Location = new System.Drawing.Point(0, 537);
+            this.rtbNote.Location = new System.Drawing.Point(0, 520);
             this.rtbNote.Name = "rtbNote";
-            this.rtbNote.Size = new System.Drawing.Size(793, 87);
+            this.rtbNote.Size = new System.Drawing.Size(783, 87);
             this.rtbNote.TabIndex = 17;
             this.rtbNote.Text = "Ghi chú:";
             // 
@@ -246,9 +249,9 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.Font = new System.Drawing.Font("Arial", 14F);
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Location = new System.Drawing.Point(10, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(793, 37);
+            this.label3.Size = new System.Drawing.Size(783, 37);
             this.label3.TabIndex = 12;
             this.label3.Text = "Thông tin chi tiết đơn hàng";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -259,9 +262,9 @@
             this.panel4.Controls.Add(this.btnDeleteOrder);
             this.panel4.Controls.Add(this.btnDone);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 661);
+            this.panel4.Location = new System.Drawing.Point(10, 654);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(793, 47);
+            this.panel4.Size = new System.Drawing.Size(783, 47);
             this.panel4.TabIndex = 22;
             // 
             // btnDeleteOrder
@@ -271,13 +274,12 @@
             this.btnDeleteOrder.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnDeleteOrder.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDeleteOrder.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDeleteOrder.Location = new System.Drawing.Point(646, 2);
+            this.btnDeleteOrder.Location = new System.Drawing.Point(636, 2);
             this.btnDeleteOrder.Name = "btnDeleteOrder";
             this.btnDeleteOrder.Size = new System.Drawing.Size(135, 45);
             this.btnDeleteOrder.TabIndex = 16;
             this.btnDeleteOrder.Text = "Hủy đơn";
             this.btnDeleteOrder.UseVisualStyleBackColor = false;
-            this.btnDeleteOrder.Visible = false;
             this.btnDeleteOrder.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // btnDone
@@ -287,13 +289,12 @@
             this.btnDone.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnDone.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDone.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDone.Location = new System.Drawing.Point(497, 2);
+            this.btnDone.Location = new System.Drawing.Point(487, 2);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(143, 44);
             this.btnDone.TabIndex = 14;
             this.btnDone.Text = "Hoàn thành";
             this.btnDone.UseVisualStyleBackColor = false;
-            this.btnDone.Visible = false;
             this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // fTakeaway
