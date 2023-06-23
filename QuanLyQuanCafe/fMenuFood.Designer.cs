@@ -44,21 +44,21 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pnRight = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.pnThemMon = new System.Windows.Forms.GroupBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pnRight = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.pnDSMTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,9 +67,9 @@
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.pnRight.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.pnThemMon.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.pnRight.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -270,49 +270,15 @@
             this.panel1.Size = new System.Drawing.Size(519, 231);
             this.panel1.TabIndex = 21;
             // 
-            // label3
+            // button1
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(15, 103);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 23);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Đơn giá vnđ/cái:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(182, 100);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(319, 30);
-            this.textBox2.TabIndex = 3;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(182, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(319, 30);
-            this.textBox1.TabIndex = 1;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button3.Location = new System.Drawing.Point(182, 167);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 43);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(45, 48);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 23);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tên món ăn:";
+            this.button1.Image = global::QuanLyQuanCafe.Properties.Resources.close_25;
+            this.button1.Location = new System.Drawing.Point(485, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(34, 35);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -324,24 +290,64 @@
             this.button2.Text = "Xóa món ăn";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // label2
             // 
-            this.button1.Image = global::QuanLyQuanCafe.Properties.Resources.close_25;
-            this.button1.Location = new System.Drawing.Point(485, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 35);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(45, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tên món ăn:";
             // 
-            // pnRight
+            // button3
             // 
-            this.pnRight.Controls.Add(this.panel2);
-            this.pnRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnRight.Location = new System.Drawing.Point(922, 42);
-            this.pnRight.Name = "pnRight";
-            this.pnRight.Size = new System.Drawing.Size(523, 723);
-            this.pnRight.TabIndex = 22;
+            this.button3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button3.Location = new System.Drawing.Point(182, 167);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(113, 43);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Update";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(182, 45);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(319, 30);
+            this.textBox1.TabIndex = 1;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(182, 100);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(319, 30);
+            this.textBox2.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(15, 103);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(152, 23);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Đơn giá vnđ/cái:";
+            // 
+            // pnThemMon
+            // 
+            this.pnThemMon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnThemMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnThemMon.Controls.Add(this.panel3);
+            this.pnThemMon.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.pnThemMon.ForeColor = System.Drawing.Color.White;
+            this.pnThemMon.Location = new System.Drawing.Point(0, 6);
+            this.pnThemMon.Name = "pnThemMon";
+            this.pnThemMon.Size = new System.Drawing.Size(519, 260);
+            this.pnThemMon.TabIndex = 20;
+            this.pnThemMon.TabStop = false;
+            this.pnThemMon.Text = "Thêm món ăn";
             // 
             // panel3
             // 
@@ -360,29 +366,15 @@
             this.panel3.Size = new System.Drawing.Size(519, 231);
             this.panel3.TabIndex = 21;
             // 
-            // label5
+            // label4
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(15, 103);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(152, 23);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Đơn giá vnđ/cái:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(182, 100);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(319, 30);
-            this.textBox4.TabIndex = 3;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(182, 45);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(319, 30);
-            this.textBox3.TabIndex = 1;
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(45, 48);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(119, 23);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Tên món ăn:";
             // 
             // button6
             // 
@@ -394,30 +386,38 @@
             this.button6.Text = "Thêm món";
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // label4
+            // textBox3
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(45, 48);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 23);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Tên món ăn:";
+            this.textBox3.Location = new System.Drawing.Point(182, 45);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(319, 30);
+            this.textBox3.TabIndex = 1;
             // 
-            // pnThemMon
+            // textBox4
             // 
-            this.pnThemMon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnThemMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pnThemMon.Controls.Add(this.panel3);
-            this.pnThemMon.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.pnThemMon.ForeColor = System.Drawing.Color.White;
-            this.pnThemMon.Location = new System.Drawing.Point(0, 6);
-            this.pnThemMon.Name = "pnThemMon";
-            this.pnThemMon.Size = new System.Drawing.Size(519, 260);
-            this.pnThemMon.TabIndex = 20;
-            this.pnThemMon.TabStop = false;
-            this.pnThemMon.Text = "Thêm món ăn";
+            this.textBox4.Location = new System.Drawing.Point(182, 100);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(319, 30);
+            this.textBox4.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(15, 103);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(152, 23);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Đơn giá vnđ/cái:";
+            // 
+            // pnRight
+            // 
+            this.pnRight.Controls.Add(this.panel2);
+            this.pnRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnRight.Location = new System.Drawing.Point(922, 42);
+            this.pnRight.Name = "pnRight";
+            this.pnRight.Size = new System.Drawing.Size(523, 723);
+            this.pnRight.TabIndex = 22;
             // 
             // fMenuFood
             // 
@@ -440,10 +440,10 @@
             this.groupBox2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.pnRight.ResumeLayout(false);
+            this.pnThemMon.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.pnThemMon.ResumeLayout(false);
+            this.pnRight.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
