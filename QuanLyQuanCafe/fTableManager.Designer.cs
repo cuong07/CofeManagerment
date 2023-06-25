@@ -78,7 +78,7 @@
             this.panel7.Controls.Add(this.btnRevenua);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 72);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(45, 219);
             this.panel7.TabIndex = 6;
@@ -194,7 +194,7 @@
             this.panel4.Controls.Add(this.ptbMenu);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(45, 72);
             this.panel4.TabIndex = 5;
@@ -249,7 +249,7 @@
             this.pnBody.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnBody.Location = new System.Drawing.Point(45, 0);
-            this.pnBody.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnBody.Margin = new System.Windows.Forms.Padding(2);
             this.pnBody.Name = "pnBody";
             this.pnBody.Size = new System.Drawing.Size(1101, 625);
             this.pnBody.TabIndex = 8;

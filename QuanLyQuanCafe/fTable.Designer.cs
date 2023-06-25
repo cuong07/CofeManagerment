@@ -29,273 +29,77 @@
         private void InitializeComponent()
         {
             this.btnCloseFormTable = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.btnAddFood = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.cbFood = new System.Windows.Forms.ComboBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txtTotalTable = new System.Windows.Forms.ListView();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAddFood = new System.Windows.Forms.Button();
+            this.nmFoodCount = new System.Windows.Forms.NumericUpDown();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.nmDIscount = new System.Windows.Forms.NumericUpDown();
+            this.btnDiscount = new System.Windows.Forms.Button();
+            this.btnCheckOut = new System.Windows.Forms.Button();
+            this.btnSwitchTable = new System.Windows.Forms.Button();
+            this.cbSwitchTable = new System.Windows.Forms.ComboBox();
+            this.txtTotalPrice = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtTableOccupied = new System.Windows.Forms.TextBox();
-            this.txtTableEmpty = new System.Windows.Forms.TextBox();
+            this.lsvBill = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).BeginInit();
+            this.panel11.SuspendLayout();
+            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmDIscount)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCloseFormTable
             // 
             this.btnCloseFormTable.BackColor = System.Drawing.Color.Transparent;
+            this.btnCloseFormTable.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCloseFormTable.Image = global::QuanLyQuanCafe.Properties.Resources.close_25;
-            this.btnCloseFormTable.Location = new System.Drawing.Point(1021, 0);
+            this.btnCloseFormTable.Location = new System.Drawing.Point(1022, 0);
             this.btnCloseFormTable.Name = "btnCloseFormTable";
-            this.btnCloseFormTable.Size = new System.Drawing.Size(39, 33);
+            this.btnCloseFormTable.Size = new System.Drawing.Size(39, 43);
             this.btnCloseFormTable.TabIndex = 0;
             this.btnCloseFormTable.UseVisualStyleBackColor = false;
             this.btnCloseFormTable.Click += new System.EventHandler(this.btnCloseFormTable_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.txtTableEmpty);
-            this.panel1.Controls.Add(this.txtTableOccupied);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Location = new System.Drawing.Point(12, 41);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(605, 595);
-            this.panel1.TabIndex = 2;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 569);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Tổng số bàn:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(427, 569);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Số lượng bàn trống:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(200, 570);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Số lượng bàn có khách:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Danh sách bàn";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 33);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(599, 523);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.numericUpDown1);
-            this.panel2.Controls.Add(this.btnAddFood);
-            this.panel2.Controls.Add(this.cbCategory);
-            this.panel2.Controls.Add(this.cbFood);
-            this.panel2.Location = new System.Drawing.Point(635, 44);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(414, 61);
-            this.panel2.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(308, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 14);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Số lượng:";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(366, 19);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(45, 20);
-            this.numericUpDown1.TabIndex = 2;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // btnAddFood
-            // 
-            this.btnAddFood.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddFood.Location = new System.Drawing.Point(181, 3);
-            this.btnAddFood.Name = "btnAddFood";
-            this.btnAddFood.Size = new System.Drawing.Size(75, 47);
-            this.btnAddFood.TabIndex = 1;
-            this.btnAddFood.Text = "Thêm món";
-            this.btnAddFood.UseVisualStyleBackColor = true;
-            // 
-            // cbCategory
-            // 
-            this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Location = new System.Drawing.Point(4, 30);
-            this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(171, 21);
-            this.cbCategory.TabIndex = 0;
-            // 
-            // cbFood
-            // 
-            this.cbFood.FormattingEnabled = true;
-            this.cbFood.Location = new System.Drawing.Point(4, 4);
-            this.cbFood.Name = "cbFood";
-            this.cbFood.Size = new System.Drawing.Size(171, 21);
-            this.cbFood.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.txtTotalTable);
-            this.panel3.Location = new System.Drawing.Point(635, 105);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(414, 323);
-            this.panel3.TabIndex = 3;
-            // 
-            // txtTotalTable
-            // 
-            this.txtTotalTable.HideSelection = false;
-            this.txtTotalTable.Location = new System.Drawing.Point(4, 4);
-            this.txtTotalTable.Name = "txtTotalTable";
-            this.txtTotalTable.Size = new System.Drawing.Size(407, 316);
-            this.txtTotalTable.TabIndex = 0;
-            this.txtTotalTable.UseCompatibleStateImageBehavior = false;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.comboBox2);
-            this.panel5.Controls.Add(this.numericUpDown2);
-            this.panel5.Controls.Add(this.button2);
-            this.panel5.Controls.Add(this.button3);
-            this.panel5.Controls.Add(this.button1);
-            this.panel5.Location = new System.Drawing.Point(635, 571);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(414, 65);
-            this.panel5.TabIndex = 4;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(14, 41);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(106, 21);
-            this.comboBox2.TabIndex = 0;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(154, 42);
-            this.numericUpDown2.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(77, 20);
-            this.numericUpDown2.TabIndex = 2;
-            this.numericUpDown2.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(15, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 32);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Chuyển bàn";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(276, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(124, 40);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Thanh toán";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(141, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 32);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Giảm giá";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(635, 434);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(414, 131);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin bàn";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Yellow;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Left;
             this.label3.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -305,86 +109,462 @@
             this.label3.Text = "Phục vụ tại cửa hàng";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.Controls.Add(this.tableLayoutPanel1);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1061, 648);
+            this.panel1.TabIndex = 21;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.btnCloseFormTable);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1061, 43);
+            this.panel2.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel5.Location = new System.Drawing.Point(3, 43);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(442, 602);
+            this.panel5.TabIndex = 0;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel6.Location = new System.Drawing.Point(571, 43);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(487, 602);
+            this.panel6.TabIndex = 0;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel4, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 43);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1061, 605);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.panel9);
+            this.panel3.Controls.Add(this.panel8);
+            this.panel3.Controls.Add(this.panel7);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(5, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(624, 594);
+            this.panel3.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.panel12);
+            this.panel4.Controls.Add(this.panel11);
+            this.panel4.Controls.Add(this.panel10);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(640, 5);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(418, 594);
+            this.panel4.TabIndex = 1;
+            // 
+            // panel7
+            // 
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.label1);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Margin = new System.Windows.Forms.Padding(0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(624, 23);
+            this.panel7.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Danh sách bàn";
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.textBox3);
+            this.panel8.Controls.Add(this.label5);
+            this.panel8.Controls.Add(this.textBox2);
+            this.panel8.Controls.Add(this.label4);
+            this.panel8.Controls.Add(this.textBox1);
+            this.panel8.Controls.Add(this.label2);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel8.Location = new System.Drawing.Point(0, 554);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(624, 40);
+            this.panel8.TabIndex = 2;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.flpTable);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(0, 23);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(624, 531);
+            this.panel9.TabIndex = 3;
+            // 
+            // flpTable
+            // 
+            this.flpTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flpTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpTable.Location = new System.Drawing.Point(0, 0);
+            this.flpTable.Name = "flpTable";
+            this.flpTable.Size = new System.Drawing.Size(624, 531);
+            this.flpTable.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(8, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Số bàn:";
+            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(87, 566);
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox1.Location = new System.Drawing.Point(62, 8);
             this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(69, 20);
-            this.textBox1.TabIndex = 4;
+            this.textBox1.Size = new System.Drawing.Size(68, 20);
+            this.textBox1.TabIndex = 1;
             // 
-            // txtTableOccupied
+            // label4
             // 
-            this.txtTableOccupied.Location = new System.Drawing.Point(330, 566);
-            this.txtTableOccupied.Name = "txtTableOccupied";
-            this.txtTableOccupied.ReadOnly = true;
-            this.txtTableOccupied.Size = new System.Drawing.Size(69, 20);
-            this.txtTableOccupied.TabIndex = 4;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(171, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(117, 16);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Số bàn có khách:";
             // 
-            // txtTableEmpty
+            // textBox2
             // 
-            this.txtTableEmpty.Location = new System.Drawing.Point(533, 565);
-            this.txtTableEmpty.Name = "txtTableEmpty";
-            this.txtTableEmpty.ReadOnly = true;
-            this.txtTableEmpty.Size = new System.Drawing.Size(69, 20);
-            this.txtTableEmpty.TabIndex = 4;
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox2.Location = new System.Drawing.Point(286, 10);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(68, 20);
+            this.textBox2.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(408, 14);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 16);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Số bàn trống:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox3.Location = new System.Drawing.Point(503, 11);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(68, 20);
+            this.textBox3.TabIndex = 1;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.nmFoodCount);
+            this.panel10.Controls.Add(this.btnAddFood);
+            this.panel10.Controls.Add(this.cbFood);
+            this.panel10.Controls.Add(this.cbCategory);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(416, 56);
+            this.panel10.TabIndex = 0;
+            // 
+            // cbCategory
+            // 
+            this.cbCategory.ForeColor = System.Drawing.SystemColors.Control;
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Location = new System.Drawing.Point(4, 4);
+            this.cbCategory.MaxDropDownItems = 10;
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(201, 21);
+            this.cbCategory.TabIndex = 0;
+            // 
+            // cbFood
+            // 
+            this.cbFood.FormattingEnabled = true;
+            this.cbFood.Location = new System.Drawing.Point(4, 31);
+            this.cbFood.Name = "cbFood";
+            this.cbFood.Size = new System.Drawing.Size(201, 21);
+            this.cbFood.TabIndex = 0;
+            // 
+            // btnAddFood
+            // 
+            this.btnAddFood.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnAddFood.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnAddFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddFood.ForeColor = System.Drawing.Color.White;
+            this.btnAddFood.Location = new System.Drawing.Point(216, 2);
+            this.btnAddFood.Name = "btnAddFood";
+            this.btnAddFood.Size = new System.Drawing.Size(128, 51);
+            this.btnAddFood.TabIndex = 1;
+            this.btnAddFood.Text = "Thêm món";
+            this.btnAddFood.UseVisualStyleBackColor = false;
+            // 
+            // nmFoodCount
+            // 
+            this.nmFoodCount.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.nmFoodCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nmFoodCount.Location = new System.Drawing.Point(350, 15);
+            this.nmFoodCount.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.nmFoodCount.Name = "nmFoodCount";
+            this.nmFoodCount.Size = new System.Drawing.Size(59, 26);
+            this.nmFoodCount.TabIndex = 2;
+            this.nmFoodCount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.txtTotalPrice);
+            this.panel11.Controls.Add(this.btnSwitchTable);
+            this.panel11.Controls.Add(this.cbSwitchTable);
+            this.panel11.Controls.Add(this.nmDIscount);
+            this.panel11.Controls.Add(this.button1);
+            this.panel11.Controls.Add(this.btnDiscount);
+            this.panel11.Controls.Add(this.btnCheckOut);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel11.Location = new System.Drawing.Point(0, 534);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(416, 58);
+            this.panel11.TabIndex = 1;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.lsvBill);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel12.Location = new System.Drawing.Point(0, 56);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(416, 478);
+            this.panel12.TabIndex = 2;
+            // 
+            // nmDIscount
+            // 
+            this.nmDIscount.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.nmDIscount.Location = new System.Drawing.Point(241, 33);
+            this.nmDIscount.Name = "nmDIscount";
+            this.nmDIscount.Size = new System.Drawing.Size(75, 20);
+            this.nmDIscount.TabIndex = 3;
+            this.nmDIscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnDiscount
+            // 
+            this.btnDiscount.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnDiscount.Location = new System.Drawing.Point(241, 5);
+            this.btnDiscount.Name = "btnDiscount";
+            this.btnDiscount.Size = new System.Drawing.Size(75, 25);
+            this.btnDiscount.TabIndex = 4;
+            this.btnDiscount.Text = "Giảm giá";
+            this.btnDiscount.UseVisualStyleBackColor = true;
+            // 
+            // btnCheckOut
+            // 
+            this.btnCheckOut.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCheckOut.Location = new System.Drawing.Point(333, 5);
+            this.btnCheckOut.Name = "btnCheckOut";
+            this.btnCheckOut.Size = new System.Drawing.Size(75, 48);
+            this.btnCheckOut.TabIndex = 5;
+            this.btnCheckOut.Text = "Thanh toán";
+            this.btnCheckOut.UseVisualStyleBackColor = true;
+            // 
+            // btnSwitchTable
+            // 
+            this.btnSwitchTable.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSwitchTable.Location = new System.Drawing.Point(4, 5);
+            this.btnSwitchTable.Name = "btnSwitchTable";
+            this.btnSwitchTable.Size = new System.Drawing.Size(75, 25);
+            this.btnSwitchTable.TabIndex = 7;
+            this.btnSwitchTable.Text = "Chuyển bàn";
+            this.btnSwitchTable.UseVisualStyleBackColor = true;
+            // 
+            // cbSwitchTable
+            // 
+            this.cbSwitchTable.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbSwitchTable.FormattingEnabled = true;
+            this.cbSwitchTable.Location = new System.Drawing.Point(4, 33);
+            this.cbSwitchTable.Name = "cbSwitchTable";
+            this.cbSwitchTable.Size = new System.Drawing.Size(75, 21);
+            this.cbSwitchTable.TabIndex = 6;
+            // 
+            // txtTotalPrice
+            // 
+            this.txtTotalPrice.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTotalPrice.Location = new System.Drawing.Point(104, 33);
+            this.txtTotalPrice.Name = "txtTotalPrice";
+            this.txtTotalPrice.ReadOnly = true;
+            this.txtTotalPrice.Size = new System.Drawing.Size(101, 20);
+            this.txtTotalPrice.TabIndex = 9;
+            this.txtTotalPrice.Text = "0";
+            this.txtTotalPrice.TextChanged += new System.EventHandler(this.txtTotalPrice_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.Location = new System.Drawing.Point(116, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 25);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Tổng tiền";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // lsvBill
+            // 
+            this.lsvBill.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.lsvBill.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsvBill.GridLines = true;
+            this.lsvBill.HideSelection = false;
+            this.lsvBill.Location = new System.Drawing.Point(0, 0);
+            this.lsvBill.Name = "lsvBill";
+            this.lsvBill.Size = new System.Drawing.Size(416, 478);
+            this.lsvBill.TabIndex = 1;
+            this.lsvBill.UseCompatibleStateImageBehavior = false;
+            this.lsvBill.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tên món";
+            this.columnHeader1.Width = 153;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Số lượng";
+            this.columnHeader2.Width = 73;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Đơn giá";
+            this.columnHeader3.Width = 94;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Thành tiền";
+            this.columnHeader4.Width = 94;
             // 
             // fTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1061, 648);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnCloseFormTable);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fTable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "fTable";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nmDIscount)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button btnCloseFormTable;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Button btnAddFood;
-        private System.Windows.Forms.ComboBox cbCategory;
-        private System.Windows.Forms.ComboBox cbFood;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ListView txtTotalTable;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.FlowLayoutPanel flpTable;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtTableEmpty;
-        private System.Windows.Forms.TextBox txtTableOccupied;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Button btnAddFood;
+        private System.Windows.Forms.ComboBox cbFood;
+        private System.Windows.Forms.ComboBox cbCategory;
+        private System.Windows.Forms.NumericUpDown nmFoodCount;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Button btnSwitchTable;
+        private System.Windows.Forms.ComboBox cbSwitchTable;
+        private System.Windows.Forms.NumericUpDown nmDIscount;
+        private System.Windows.Forms.Button btnDiscount;
+        private System.Windows.Forms.Button btnCheckOut;
+        private System.Windows.Forms.TextBox txtTotalPrice;
+        private System.Windows.Forms.ListView lsvBill;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Button button1;
     }
 }
