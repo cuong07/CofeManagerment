@@ -21,5 +21,41 @@ namespace QuanLyQuanCafe
         {
             this.Close();   
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox cb = new ComboBox();
+            cb = (ComboBox)sender;
+            switch (cb.Text)
+            {
+                case "Xem một ngày":
+                    dateTimePicker1.Visible = true;
+                    dateTimePicker2.Visible = false;
+                    lbDayBegin.Visible = false;
+                    lbDayEnd.Visible = false;
+                    break;
+                case "Xem nhiều ngày":
+                    dateTimePicker1.Visible = true;
+                    dateTimePicker2.Visible = true;
+                    lbDayBegin.Visible = true;
+                    lbDayEnd.Visible = true;
+                    break;                   
+            }
+        }
+
+        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

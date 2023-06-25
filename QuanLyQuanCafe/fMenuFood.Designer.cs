@@ -292,13 +292,10 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(45, 48);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 18);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tên món ăn:";
+            this.textBox1.Location = new System.Drawing.Point(182, 45);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(319, 30);
+            this.textBox1.TabIndex = 1;
             // 
             // button3
             // 
@@ -310,44 +307,44 @@
             this.button3.Text = "Update";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // label2
             // 
-            this.textBox1.Location = new System.Drawing.Point(182, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(319, 26);
-            this.textBox1.TabIndex = 1;
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(45, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tên món ăn:";
             // 
-            // textBox2
+            // button2
             // 
-            this.textBox2.Location = new System.Drawing.Point(182, 100);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(319, 26);
-            this.textBox2.TabIndex = 3;
+            this.button2.BackColor = System.Drawing.Color.LightSlateGray;
+            this.button2.Location = new System.Drawing.Point(351, 167);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(150, 43);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Xóa món ăn";
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // button1
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(15, 103);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 18);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Đơn giá vnđ/cái:";
+            this.button1.Image = global::QuanLyQuanCafe.Properties.Resources.close_25;
+            this.button1.Location = new System.Drawing.Point(485, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(34, 35);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // pnThemMon
+            // pnRight
             // 
-            this.pnThemMon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnThemMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pnThemMon.Controls.Add(this.panel3);
-            this.pnThemMon.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.pnThemMon.ForeColor = System.Drawing.Color.White;
-            this.pnThemMon.Location = new System.Drawing.Point(0, 6);
-            this.pnThemMon.Name = "pnThemMon";
-            this.pnThemMon.Size = new System.Drawing.Size(627, 260);
-            this.pnThemMon.TabIndex = 20;
-            this.pnThemMon.TabStop = false;
-            this.pnThemMon.Text = "Thêm món ăn";
+            this.pnRight.Controls.Add(this.panel2);
+            this.pnRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnRight.Location = new System.Drawing.Point(922, 42);
+            this.pnRight.Name = "pnRight";
+            this.pnRight.Size = new System.Drawing.Size(523, 723);
+            this.pnRight.TabIndex = 22;
             // 
             // panel3
             // 
@@ -366,15 +363,29 @@
             this.panel3.Size = new System.Drawing.Size(627, 231);
             this.panel3.TabIndex = 21;
             // 
-            // label4
+            // label5
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(45, 48);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 18);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Tên món ăn:";
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(15, 103);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(152, 23);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Đơn giá vnđ/cái:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(182, 100);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(319, 30);
+            this.textBox4.TabIndex = 3;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(182, 45);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(319, 30);
+            this.textBox3.TabIndex = 1;
             // 
             // button6
             // 
@@ -386,38 +397,30 @@
             this.button6.Text = "Thêm món";
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // textBox3
+            // label4
             // 
-            this.textBox3.Location = new System.Drawing.Point(182, 45);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(319, 26);
-            this.textBox3.TabIndex = 1;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(182, 100);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(319, 26);
-            this.textBox4.TabIndex = 3;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(15, 103);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(122, 18);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Đơn giá vnđ/cái:";
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(45, 48);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(119, 23);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Tên món ăn:";
             // 
             // pnRight
             // 
-            this.pnRight.Controls.Add(this.panel2);
-            this.pnRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnRight.Location = new System.Drawing.Point(814, 42);
-            this.pnRight.Name = "pnRight";
-            this.pnRight.Size = new System.Drawing.Size(631, 723);
-            this.pnRight.TabIndex = 22;
+            this.pnThemMon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnThemMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnThemMon.Controls.Add(this.panel3);
+            this.pnThemMon.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.pnThemMon.ForeColor = System.Drawing.Color.White;
+            this.pnThemMon.Location = new System.Drawing.Point(0, 6);
+            this.pnThemMon.Name = "pnThemMon";
+            this.pnThemMon.Size = new System.Drawing.Size(519, 260);
+            this.pnThemMon.TabIndex = 20;
+            this.pnThemMon.TabStop = false;
+            this.pnThemMon.Text = "Thêm món ăn";
             // 
             // fMenuFood
             // 
