@@ -11,7 +11,8 @@ namespace QuanLyQuanCafe.DAO
     public class DataProvider
     {
         private static DataProvider instance;
-        private string connectionStringOfCuong = "Data Source=MANH_CUONG;Initial Catalog=COFFEEMANAGER;Integrated Security=True";
+        //private string connectionStringOfCuong = "Data Source=MANH_CUONG;Initial Catalog=COFFEEMANAGER;Integrated Security=True"; //Cường
+        private string connectionStringOfCuong = "Data Source=COONG;Initial Catalog=COFFEEMANAGER;Integrated Security=True";        //Công
 
         public static DataProvider Instance
         {
@@ -52,7 +53,12 @@ namespace QuanLyQuanCafe.DAO
 
             return data;
         }
-        // Phương thức này ExcuteQuery thực thi một câu truy vấn SQL và trả về kết quả dưới dạng một đối tượng DataTable. Nó nhận một chuỗi truy vấn và một mảng các tham số truy vấn (tùy chọn). Bên trong phương thức, nó tạo một đối tượng SqlConnection sử dụng chuỗi kết nối, mở kết nối và tạo một đối tượng SqlCommand để thực thi truy vấn. Nếu có các tham số, nó thêm chúng vào đối tượng lệnh. Sau đó, nó sử dụng một SqlDataAdapter để điền dữ liệu vào một DataTable từ kết quả truy vấn. Cuối cùng, nó đóng kết nối và trả về đối tượng DataTable
+        // Phương thức này ExcuteQuery thực thi một câu truy vấn SQL và trả về kết quả dưới dạng một đối tượng DataTable.
+        // Nó nhận một chuỗi truy vấn và một mảng các tham số truy vấn (tùy chọn). Bên trong phương thức,
+        // nó tạo một đối tượng SqlConnection sử dụng chuỗi kết nối, mở kết nối và tạo một đối tượng SqlCommand để thực thi truy vấn.
+        // Nếu có các tham số, nó thêm chúng vào đối tượng lệnh. Sau đó,
+        // nó sử dụng một SqlDataAdapter để điền dữ liệu vào một DataTable từ kết quả truy vấn. Cuối cùng,
+        // nó đóng kết nối và trả về đối tượng DataTable
 
         public int ExcuteNonQuery(string query, object[] parameter = null)
         {
@@ -113,6 +119,8 @@ namespace QuanLyQuanCafe.DAO
 
             return data;
         }
-        // Phương thức này ExcuteScalar thực thi một câu truy vấn SQL và trả về giá trị đơn (ví dụ: SELECT COUNT(*) FROM...). Nó cũng tương tự như ExcuteQuery, nhưng thay vì sử dụng ExecuteNonQuery, nó sử dụng ExecuteScalar của đối tượng SqlCommand để lấy giá trị đơn duy nhất từ câu truy vấn và gán kết quả vào biến data.
+        // Phương thức này ExcuteScalar thực thi một câu truy vấn SQL và trả về giá trị đơn (ví dụ: SELECT COUNT(*) FROM...).
+        // Nó cũng tương tự như ExcuteQuery, nhưng thay vì sử dụng ExecuteNonQuery,
+        // nó sử dụng ExecuteScalar của đối tượng SqlCommand để lấy giá trị đơn duy nhất từ câu truy vấn và gán kết quả vào biến data.
     }
 }
