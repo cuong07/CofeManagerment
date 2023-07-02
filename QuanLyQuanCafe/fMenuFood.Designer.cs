@@ -82,9 +82,9 @@
             this.groupBox1.Controls.Add(this.pnDSMTop);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(3, 6);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(916, 714);
+            this.groupBox1.Size = new System.Drawing.Size(916, 717);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách món ăn";
@@ -101,7 +101,7 @@
             this.listView1.Location = new System.Drawing.Point(3, 62);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(910, 649);
+            this.listView1.Size = new System.Drawing.Size(910, 652);
             this.listView1.TabIndex = 15;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -231,9 +231,9 @@
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.pnThemMon);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(-108, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(523, 723);
+            this.panel2.Size = new System.Drawing.Size(631, 723);
             this.panel2.TabIndex = 23;
             // 
             // groupBox2
@@ -244,9 +244,9 @@
             this.groupBox2.Controls.Add(this.panel1);
             this.groupBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(0, 302);
+            this.groupBox2.Location = new System.Drawing.Point(1, 281);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(519, 260);
+            this.groupBox2.Size = new System.Drawing.Size(627, 260);
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chỉnh sửa";
@@ -267,7 +267,7 @@
             this.panel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.panel1.Location = new System.Drawing.Point(0, 29);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(519, 231);
+            this.panel1.Size = new System.Drawing.Size(627, 231);
             this.panel1.TabIndex = 21;
             // 
             // button1
@@ -319,20 +319,17 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(182, 100);
+            this.textBox2.Location = new System.Drawing.Point(0, 0);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(319, 30);
-            this.textBox2.TabIndex = 3;
+            this.textBox2.Size = new System.Drawing.Size(100, 30);
+            this.textBox2.TabIndex = 7;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(15, 103);
+            this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 23);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Đơn giá vnđ/cái:";
+            this.label3.Size = new System.Drawing.Size(100, 23);
+            this.label3.TabIndex = 8;
             // 
             // pnThemMon
             // 
@@ -363,7 +360,7 @@
             this.panel3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.panel3.Location = new System.Drawing.Point(0, 29);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(519, 231);
+            this.panel3.Size = new System.Drawing.Size(627, 231);
             this.panel3.TabIndex = 21;
             // 
             // label4

@@ -24,22 +24,32 @@ namespace QuanLyQuanCafe
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ComboBox cb = new ComboBox();
-            cb = (ComboBox)sender;
-            switch (cb.Text)
-            {
-                    case "Xem một ngày":
-                    dateTimePicker1.Visible = true;
-            break;
-                case "Xem nhiều ngày":
-                    dateTimePicker1.Visible = true;
-                    dateTimePicker2.Visible = true;
-                    lbDaybegin.Visible  = true;
-                    lbDayend.Visible = true;
-                    break;
-            }
 
         }
 
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void rbtMale_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fRevenue_Load(object sender, EventArgs e)
+        {
+            cbPosition.Items.AddRange(new string[] { "Thu ngân", "Pha chế", "Phục vụ", "Quản lý" });
+        }
     }
 }
