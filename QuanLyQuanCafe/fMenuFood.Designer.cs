@@ -84,7 +84,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(808, 717);
+            this.groupBox1.Size = new System.Drawing.Size(916, 714);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách món ăn";
@@ -101,7 +101,7 @@
             this.listView1.Location = new System.Drawing.Point(3, 58);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(802, 656);
+            this.listView1.Size = new System.Drawing.Size(910, 649);
             this.listView1.TabIndex = 15;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -231,7 +231,7 @@
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.pnThemMon);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(-108, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(631, 723);
             this.panel2.TabIndex = 23;
@@ -319,23 +319,20 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.LightSlateGray;
-            this.button2.Location = new System.Drawing.Point(351, 167);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 43);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Xóa món ăn";
-            this.button2.UseVisualStyleBackColor = false;
+            this.textBox2.Location = new System.Drawing.Point(182, 100);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(319, 30);
+            this.textBox2.TabIndex = 3;
             // 
             // button1
             // 
-            this.button1.Image = global::QuanLyQuanCafe.Properties.Resources.close_25;
-            this.button1.Location = new System.Drawing.Point(485, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 35);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(15, 103);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(152, 23);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Đơn giá vnđ/cái:";
             // 
             // pnRight
             // 
