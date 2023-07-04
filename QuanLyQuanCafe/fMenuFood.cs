@@ -24,27 +24,25 @@ namespace QuanLyQuanCafe
             this.Close();
         }
         //Đóng form
-        void LoadMenuFood(int id)
+        
+        void LoadLsvMenuFood(int id)
         {
             lsvFood.Items.Clear();      //reset lại data của lsv trước khi load loại mới tránh bị đè dữ liệu cũ.
-            DataTable dataFood = MenuFoodDAO.Instance.GetMenuFoodByCategoryID(id);      //query bảng MenuFood
-            foreach (DataRow row in dataFood.Rows)
+            List<ListViewItem> listViewItems = MenuFoodDAO.Instance.GetListItemsMenuFood(id);
+            foreach (ListViewItem item in listViewItems)    
             {
-                ListViewItem item = new ListViewItem(row[0].ToString());
-                for (int i = 1; i < dataFood.Columns.Count - 1; i++)
-                {
-                    item.SubItems.Add(row[i].ToString());
-                }
                 lsvFood.Items.Add(item);
-            }
+            }    
         }
-        //Load data vào lsvFood
-        
+        //Load items của lsvMenuFood
         private void fMenuFood_Load(object sender, EventArgs e)
         {     
             cbFilterDishes.DataSource = CategoryDAO.Instance.GetListCategory();     //set data cho cbFilterDishes bằng cách gọi hàm query bảng Category.
             cbFilterDishes.DisplayMember = "name";      //hiển thị cột name của Category
             cbFilterDishes.Text = "All";    //hiển thị Category 9 (all) chạy lúc mở form.
+
+            int nextFoodId = MenuFoodDAO.Instance.GetQuantityItemOfTable("SELECT id FROM Food WHERE id=(SELECT max(id) FROM Food)")+1;  //set trước cho id món ăn chuẩn bị thêm vào thực đơn
+            txtNewId.Text = nextFoodId.ToString();
         }
         //Form load
 
@@ -53,8 +51,8 @@ namespace QuanLyQuanCafe
             int id = 9;
             ComboBox cb = (ComboBox)sender;
             Category cate = (Category)cb.SelectedItem;
-            id = cate.Id;
-            LoadMenuFood(id);
+            id = cate.Id;       //lấy Id của item hiện tại của cbFillerDishes
+            LoadLsvMenuFood(id);    //Load items của lsvMenuFood
         }
         //Load lại lsvFood theo category đã chọn.
 
@@ -75,7 +73,6 @@ namespace QuanLyQuanCafe
         private void btnEditExit_Click(object sender, EventArgs e)
         {
             grbEditFood.Visible = false;     //ẩn form chỉnh sửa.
-
         }
 
     }
