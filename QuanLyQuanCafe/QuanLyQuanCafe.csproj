@@ -47,7 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\CategoryDAO.cs" />
+    <Compile Include="DAO\Class1.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\MenuFoodDAO.cs" />
+    <Compile Include="DTO\Category.cs" />
+    <Compile Include="DTO\MenuFood.cs" />
     <Compile Include="fBill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,8 +219,6 @@
   <ItemGroup>
     <None Include="assets\images\fSetting_icon_Thoat_32.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DTO\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
