@@ -87,3 +87,4 @@ D:\PA\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.GenerateRes
 D:\PA\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.CoreCompileInputs.cache
 D:\PA\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.exe
 D:\PA\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.pdb
+D:\TLWindForm\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fSetting.resources

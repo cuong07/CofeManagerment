@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyQuanCafe.DAO;
+using QuanLyQuanCafe.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +14,15 @@ namespace QuanLyQuanCafe
 {
     public partial class fTableManager : Form
     {
-        bool sidebarExpand;
 
         public fTableManager()
         {
             InitializeComponent();
         }
-        //
-        private Form currentChildForm; // Biến để lưu trữ form con hiện tại
 
+        #region các handler sự kiện click
+        bool sidebarExpand;
+        private Form currentChildForm; // Biến để lưu trữ form con hiện tại
         private void OpenChildForm(Form childForm)       //hàm mở form con.
         {
             if (currentChildForm != null)
@@ -103,10 +105,9 @@ namespace QuanLyQuanCafe
             f.Location = new Point(5, pnBody.Size.Height - 290);
             f.Show();
         }
+        #endregion
 
-        private void pnLeft_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
+       
     }
 }
