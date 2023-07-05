@@ -11,8 +11,8 @@ namespace QuanLyQuanCafe.DAO
     public class DataProvider
     {
         private static DataProvider instance;
-        //private string connectionStringOfCuong = "Data Source=MANH_CUONG;Initial Catalog=COFFEEMANAGER;Integrated Security=True"; //Cường
-        private string connectionStringOfCuong = "Data Source=COONG;Initial Catalog=COFFEEMANAGER;Integrated Security=True";        //Công
+        private string connectionStringOfCuong = "Data Source=MANH_CUONG;Initial Catalog=COFFEEMANAGER;Integrated Security=True"; //Cường
+        //private string connectionStringOfCuong = "Data Source=COONG;Initial Catalog=COFFEEMANAGER;Integrated Security=True";        //Công
 
         public static DataProvider Instance
         {

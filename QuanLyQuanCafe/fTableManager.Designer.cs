@@ -67,7 +67,6 @@
             this.pnLeft.Name = "pnLeft";
             this.pnLeft.Size = new System.Drawing.Size(45, 625);
             this.pnLeft.TabIndex = 4;
-            this.pnLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.pnLeft_Paint);
             // 
             // panel7
             // 

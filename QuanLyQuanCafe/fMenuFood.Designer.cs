@@ -106,10 +106,10 @@
             this.lsvFood.FullRowSelect = true;
             this.lsvFood.GridLines = true;
             this.lsvFood.HideSelection = false;
-            this.lsvFood.Location = new System.Drawing.Point(3, 62);
+            this.lsvFood.Location = new System.Drawing.Point(3, 58);
             this.lsvFood.MultiSelect = false;
             this.lsvFood.Name = "lsvFood";
-            this.lsvFood.Size = new System.Drawing.Size(765, 648);
+            this.lsvFood.Size = new System.Drawing.Size(765, 652);
             this.lsvFood.TabIndex = 15;
             this.lsvFood.UseCompatibleStateImageBehavior = false;
             this.lsvFood.View = System.Windows.Forms.View.Details;
@@ -141,7 +141,7 @@
             this.pnDSMTop.Controls.Add(this.pictureBox1);
             this.pnDSMTop.Controls.Add(this.cbFindFoodName);
             this.pnDSMTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnDSMTop.Location = new System.Drawing.Point(3, 26);
+            this.pnDSMTop.Location = new System.Drawing.Point(3, 22);
             this.pnDSMTop.Name = "pnDSMTop";
             this.pnDSMTop.Size = new System.Drawing.Size(765, 36);
             this.pnDSMTop.TabIndex = 25;
@@ -156,7 +156,7 @@
             "All"});
             this.cbFilterDishes.Location = new System.Drawing.Point(0, 0);
             this.cbFilterDishes.Name = "cbFilterDishes";
-            this.cbFilterDishes.Size = new System.Drawing.Size(190, 33);
+            this.cbFilterDishes.Size = new System.Drawing.Size(190, 28);
             this.cbFilterDishes.TabIndex = 17;
             this.cbFilterDishes.SelectedIndexChanged += new System.EventHandler(this.cbFilterDishes_SelectedIndexChanged);
             // 
@@ -181,7 +181,7 @@
             this.cbFindFoodName.FormattingEnabled = true;
             this.cbFindFoodName.Location = new System.Drawing.Point(476, 0);
             this.cbFindFoodName.Name = "cbFindFoodName";
-            this.cbFindFoodName.Size = new System.Drawing.Size(289, 33);
+            this.cbFindFoodName.Size = new System.Drawing.Size(289, 28);
             this.cbFindFoodName.TabIndex = 16;
             // 
             // label1
@@ -278,7 +278,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(92, 45);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(103, 23);
+            this.label7.Size = new System.Drawing.Size(79, 18);
             this.label7.TabIndex = 9;
             this.label7.Text = "Id món ăn:";
             // 
@@ -287,14 +287,14 @@
             this.txtId.Location = new System.Drawing.Point(211, 38);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(319, 30);
+            this.txtId.Size = new System.Drawing.Size(319, 26);
             this.txtId.TabIndex = 10;
             // 
             // txtImageName
             // 
             this.txtImageName.Location = new System.Drawing.Point(211, 126);
             this.txtImageName.Name = "txtImageName";
-            this.txtImageName.Size = new System.Drawing.Size(319, 30);
+            this.txtImageName.Size = new System.Drawing.Size(319, 26);
             this.txtImageName.TabIndex = 8;
             // 
             // label6
@@ -303,7 +303,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(67, 129);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(128, 23);
+            this.label6.Size = new System.Drawing.Size(101, 18);
             this.label6.TabIndex = 7;
             this.label6.Text = "Image Name:";
             // 
@@ -338,7 +338,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(77, 88);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 23);
+            this.label2.Size = new System.Drawing.Size(93, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên món ăn:";
             // 
@@ -356,14 +356,14 @@
             // 
             this.txtFoodName.Location = new System.Drawing.Point(211, 81);
             this.txtFoodName.Name = "txtFoodName";
-            this.txtFoodName.Size = new System.Drawing.Size(319, 30);
+            this.txtFoodName.Size = new System.Drawing.Size(319, 26);
             this.txtFoodName.TabIndex = 1;
             // 
             // txtPrice
             // 
             this.txtPrice.Location = new System.Drawing.Point(211, 172);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(319, 30);
+            this.txtPrice.Size = new System.Drawing.Size(319, 26);
             this.txtPrice.TabIndex = 3;
             // 
             // label3
@@ -372,7 +372,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(44, 175);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 23);
+            this.label3.Size = new System.Drawing.Size(122, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "Đơn giá vnđ/cái:";
             // 
@@ -413,27 +413,30 @@
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(90, 40);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 23);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Id món ăn:";
+            this.btnAdd.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnAdd.Location = new System.Drawing.Point(300, 222);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(113, 43);
+            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Text = "Thêm món";
+            this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // txtNewId
             // 
-            this.txtNewId.Location = new System.Drawing.Point(209, 33);
-            this.txtNewId.Name = "txtNewId";
-            this.txtNewId.ReadOnly = true;
-            this.txtNewId.Size = new System.Drawing.Size(319, 30);
-            this.txtNewId.TabIndex = 18;
+            this.pnRight.Controls.Add(this.grbEditFood);
+            this.pnRight.Controls.Add(this.pnThemMon);
+            this.pnRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnRight.Location = new System.Drawing.Point(771, 42);
+            this.pnRight.Name = "pnRight";
+            this.pnRight.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.pnRight.Size = new System.Drawing.Size(674, 723);
+            this.pnRight.TabIndex = 22;
             // 
             // txtNewImages
             // 
             this.txtNewImages.Location = new System.Drawing.Point(209, 131);
             this.txtNewImages.Name = "txtNewImages";
-            this.txtNewImages.Size = new System.Drawing.Size(319, 30);
+            this.txtNewImages.Size = new System.Drawing.Size(319, 26);
             this.txtNewImages.TabIndex = 16;
             // 
             // label5
@@ -442,7 +445,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(65, 134);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 23);
+            this.label5.Size = new System.Drawing.Size(101, 18);
             this.label5.TabIndex = 15;
             this.label5.Text = "Image Name:";
             // 
@@ -452,7 +455,7 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(74, 89);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(119, 23);
+            this.label8.Size = new System.Drawing.Size(93, 18);
             this.label8.TabIndex = 11;
             this.label8.Text = "Tên món ăn:";
             // 
@@ -460,14 +463,14 @@
             // 
             this.txtNewFoodName.Location = new System.Drawing.Point(209, 82);
             this.txtNewFoodName.Name = "txtNewFoodName";
-            this.txtNewFoodName.Size = new System.Drawing.Size(319, 30);
+            this.txtNewFoodName.Size = new System.Drawing.Size(319, 26);
             this.txtNewFoodName.TabIndex = 12;
             // 
             // txtNewPrice
             // 
             this.txtNewPrice.Location = new System.Drawing.Point(209, 177);
             this.txtNewPrice.Name = "txtNewPrice";
-            this.txtNewPrice.Size = new System.Drawing.Size(319, 30);
+            this.txtNewPrice.Size = new System.Drawing.Size(319, 26);
             this.txtNewPrice.TabIndex = 14;
             // 
             // label9
@@ -476,7 +479,7 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(42, 180);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(152, 23);
+            this.label9.Size = new System.Drawing.Size(122, 18);
             this.label9.TabIndex = 13;
             this.label9.Text = "Đơn giá vnđ/cái:";
             // 
