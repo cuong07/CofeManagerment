@@ -13,7 +13,7 @@ namespace QuanLyQuanCafe.DTO
         public int ID { get; set; }
         public string Name { get; set; }
         public string Image { get; set; }
-        public int Price { get; set; }
+        public float Price { get; set; }
         public MenuFood(int id, string name,string image,int prince) 
         { 
             this.ID = id;
@@ -25,8 +25,8 @@ namespace QuanLyQuanCafe.DTO
         {
             this.ID = (int)row["id"];
             this.Name = row["name"].ToString();
-            this.Image = row["image"].ToString(); ;
-            this.Price = (int)row["prince"];
+            this.Image = row["images"].ToString();
+            this.Price = (float)Convert.ToDouble((row["price"]).ToString());
         }
 
 
