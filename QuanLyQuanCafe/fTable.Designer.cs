@@ -36,11 +36,11 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtTableEmpty = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTableActive = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTableCount = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,8 +53,6 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel11 = new System.Windows.Forms.Panel();
             this.txtTotalPrice = new System.Windows.Forms.TextBox();
-            this.btnSwitchTable = new System.Windows.Forms.Button();
-            this.cbSwitchTable = new System.Windows.Forms.ComboBox();
             this.nmDIscount = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.btnDiscount = new System.Windows.Forms.Button();
@@ -168,11 +166,11 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.textBox3);
+            this.panel8.Controls.Add(this.txtTableEmpty);
             this.panel8.Controls.Add(this.label5);
-            this.panel8.Controls.Add(this.textBox2);
+            this.panel8.Controls.Add(this.txtTableActive);
             this.panel8.Controls.Add(this.label4);
-            this.panel8.Controls.Add(this.textBox1);
+            this.panel8.Controls.Add(this.txtTableCount);
             this.panel8.Controls.Add(this.label2);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel8.Location = new System.Drawing.Point(0, 559);
@@ -180,13 +178,14 @@
             this.panel8.Size = new System.Drawing.Size(630, 40);
             this.panel8.TabIndex = 2;
             // 
-            // textBox3
+            // txtTableEmpty
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox3.Location = new System.Drawing.Point(506, 11);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(68, 20);
-            this.textBox3.TabIndex = 1;
+            this.txtTableEmpty.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTableEmpty.Location = new System.Drawing.Point(506, 11);
+            this.txtTableEmpty.Name = "txtTableEmpty";
+            this.txtTableEmpty.ReadOnly = true;
+            this.txtTableEmpty.Size = new System.Drawing.Size(68, 20);
+            this.txtTableEmpty.TabIndex = 1;
             // 
             // label5
             // 
@@ -199,13 +198,14 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Số bàn trống:";
             // 
-            // textBox2
+            // txtTableActive
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox2.Location = new System.Drawing.Point(289, 10);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(68, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtTableActive.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTableActive.Location = new System.Drawing.Point(289, 10);
+            this.txtTableActive.Name = "txtTableActive";
+            this.txtTableActive.ReadOnly = true;
+            this.txtTableActive.Size = new System.Drawing.Size(68, 20);
+            this.txtTableActive.TabIndex = 1;
             // 
             // label4
             // 
@@ -218,13 +218,14 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Số bàn có khách:";
             // 
-            // textBox1
+            // txtTableCount
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.Location = new System.Drawing.Point(65, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(68, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtTableCount.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTableCount.Location = new System.Drawing.Point(65, 8);
+            this.txtTableCount.Name = "txtTableCount";
+            this.txtTableCount.ReadOnly = true;
+            this.txtTableCount.Size = new System.Drawing.Size(68, 20);
+            this.txtTableCount.TabIndex = 1;
             // 
             // label2
             // 
@@ -320,8 +321,6 @@
             // panel11
             // 
             this.panel11.Controls.Add(this.txtTotalPrice);
-            this.panel11.Controls.Add(this.btnSwitchTable);
-            this.panel11.Controls.Add(this.cbSwitchTable);
             this.panel11.Controls.Add(this.nmDIscount);
             this.panel11.Controls.Add(this.button1);
             this.panel11.Controls.Add(this.btnDiscount);
@@ -335,47 +334,28 @@
             // txtTotalPrice
             // 
             this.txtTotalPrice.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtTotalPrice.Location = new System.Drawing.Point(104, 33);
+            this.txtTotalPrice.Location = new System.Drawing.Point(4, 33);
             this.txtTotalPrice.Name = "txtTotalPrice";
             this.txtTotalPrice.ReadOnly = true;
-            this.txtTotalPrice.Size = new System.Drawing.Size(101, 20);
+            this.txtTotalPrice.Size = new System.Drawing.Size(112, 20);
             this.txtTotalPrice.TabIndex = 9;
             this.txtTotalPrice.Text = "0";
-            // 
-            // btnSwitchTable
-            // 
-            this.btnSwitchTable.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSwitchTable.Location = new System.Drawing.Point(4, 5);
-            this.btnSwitchTable.Name = "btnSwitchTable";
-            this.btnSwitchTable.Size = new System.Drawing.Size(75, 25);
-            this.btnSwitchTable.TabIndex = 7;
-            this.btnSwitchTable.Text = "Chuyển bàn";
-            this.btnSwitchTable.UseVisualStyleBackColor = true;
-            // 
-            // cbSwitchTable
-            // 
-            this.cbSwitchTable.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbSwitchTable.FormattingEnabled = true;
-            this.cbSwitchTable.Location = new System.Drawing.Point(4, 33);
-            this.cbSwitchTable.Name = "cbSwitchTable";
-            this.cbSwitchTable.Size = new System.Drawing.Size(75, 21);
-            this.cbSwitchTable.TabIndex = 6;
             // 
             // nmDIscount
             // 
             this.nmDIscount.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.nmDIscount.Location = new System.Drawing.Point(241, 33);
+            this.nmDIscount.Location = new System.Drawing.Point(161, 32);
             this.nmDIscount.Name = "nmDIscount";
-            this.nmDIscount.Size = new System.Drawing.Size(75, 20);
+            this.nmDIscount.Size = new System.Drawing.Size(109, 20);
             this.nmDIscount.TabIndex = 3;
             this.nmDIscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.Location = new System.Drawing.Point(116, 5);
+            this.button1.Location = new System.Drawing.Point(4, 6);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 25);
+            this.button1.Size = new System.Drawing.Size(112, 25);
             this.button1.TabIndex = 4;
             this.button1.Text = "Tổng tiền";
             this.button1.UseVisualStyleBackColor = true;
@@ -383,22 +363,26 @@
             // btnDiscount
             // 
             this.btnDiscount.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnDiscount.Location = new System.Drawing.Point(241, 5);
+            this.btnDiscount.Location = new System.Drawing.Point(161, 3);
             this.btnDiscount.Name = "btnDiscount";
-            this.btnDiscount.Size = new System.Drawing.Size(75, 25);
+            this.btnDiscount.Size = new System.Drawing.Size(109, 25);
             this.btnDiscount.TabIndex = 4;
             this.btnDiscount.Text = "Giảm giá";
             this.btnDiscount.UseVisualStyleBackColor = true;
             // 
             // btnCheckOut
             // 
-            this.btnCheckOut.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnCheckOut.Location = new System.Drawing.Point(333, 5);
+            this.btnCheckOut.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnCheckOut.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckOut.ForeColor = System.Drawing.Color.White;
+            this.btnCheckOut.Location = new System.Drawing.Point(322, 0);
             this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(75, 48);
+            this.btnCheckOut.Size = new System.Drawing.Size(95, 58);
             this.btnCheckOut.TabIndex = 5;
             this.btnCheckOut.Text = "Thanh toán";
-            this.btnCheckOut.UseVisualStyleBackColor = true;
+            this.btnCheckOut.UseVisualStyleBackColor = false;
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
             // panel10
             // 
@@ -444,6 +428,7 @@
             this.btnAddFood.TabIndex = 1;
             this.btnAddFood.Text = "Thêm món";
             this.btnAddFood.UseVisualStyleBackColor = false;
+            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
             // 
             // cbFood
             // 
@@ -455,7 +440,7 @@
             // 
             // cbCategory
             // 
-            this.cbCategory.ForeColor = System.Drawing.SystemColors.Control;
+            this.cbCategory.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cbCategory.FormattingEnabled = true;
             this.cbCategory.Location = new System.Drawing.Point(4, 4);
             this.cbCategory.MaxDropDownItems = 10;
@@ -504,6 +489,7 @@
             this.Name = "fTable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "fTable";
+            this.Load += new System.EventHandler(this.fTable_Load);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -539,11 +525,11 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.FlowLayoutPanel flpTable;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtTableEmpty;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTableActive;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTableCount;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label1;
@@ -554,8 +540,6 @@
         private System.Windows.Forms.NumericUpDown nmFoodCount;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Button btnSwitchTable;
-        private System.Windows.Forms.ComboBox cbSwitchTable;
         private System.Windows.Forms.NumericUpDown nmDIscount;
         private System.Windows.Forms.Button btnDiscount;
         private System.Windows.Forms.Button btnCheckOut;

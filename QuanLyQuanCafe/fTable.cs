@@ -22,21 +22,27 @@ namespace QuanLyQuanCafe
             LoadCategory();
         }
 
+        #region Các biến dùng chung
+        int tableCount = 0;
+        int tableActive = 0;
+        int tableEmpty = 0;
+        #endregion
+
+
         #region Các phương thức DET PUT POST DELETE data
         void LoadTable()
         {
             flpTable.Controls.Clear();
             List<Table> listTable = TableDAO.Instance.GetTableList();
-
+            tableCount = listTable.Count;
             foreach (Table table in listTable)
             {
                 Button button = new Button() { Width = TableDAO.TableWidth, Height = TableDAO.TableHeight };
-                button.Text = table.Name + Environment.NewLine + (table.Status ? "Có Khách" : "Trống");
+                button.Text = table.Name + Environment.NewLine + (table.Status ? "Có khách" : "Trống");
                 button.Font = new Font("Arial", 10, FontStyle.Regular);
                 button.Tag = table;
-
+                button.Click += table_Click;
                 flpTable.Controls.Add(button);
-
                 if (table.Status)
                 {
                     button.BackColor = Color.Green;
@@ -46,21 +52,47 @@ namespace QuanLyQuanCafe
                 {
                     button.BackColor = Color.White;
                 }
-
+                if(table.Status)
+                {
+                    tableActive++;
+                }
+                else
+                {
+                    tableEmpty++;
+                }
             }
         }
 
         void LoadCategory()
         {
-            List<Category> listCateGory = CategoryDAO.instance.GetListCategory();
-            cbCategory.DataSource = listCateGory;
+            List<Category> listCategories = CategoryDAO.Instance.GetListCategory();
+            cbCategory.DataSource = listCategories;
             cbCategory.DisplayMember= "Name";
         }
         void LoadFoodByCateGory(int id)
         {
-            List<Food> listFood = MenuFoodDAO.instance.GetMenuFoodByCategoryID(id);
-            cbFood.DataSource = listFood;
-            cbFood.DisplayMember = "Name";
+            List<MenuFood> listMenuFood = MenuFoodDAO.Instance.getListFoodByCategory(id);
+            cbFood.DataSource = listMenuFood;
+            cbFood.DisplayMember= "Name";
+        }
+
+        void ShowBill(int id)
+        {
+            lsvBill.Items.Clear();
+            float totalPrice = 0;
+            List<QuanLyQuanCafe.DTO.Menu> listBillInfo = MenuDAO.Instance.getListMenuTable(id);
+            foreach  (QuanLyQuanCafe.DTO.Menu item in listBillInfo)
+            {
+                ListViewItem lsvItem = new ListViewItem(item.FoodName.ToString());
+                lsvItem.SubItems.Add(item.Count.ToString());
+                lsvItem.SubItems.Add(item.Price.ToString("c"));
+                lsvItem.SubItems.Add(item.TotalPrice.ToString("c"));
+                lsvBill.Items.Add(lsvItem);
+                totalPrice += item.TotalPrice;
+            }
+            LoadTable();
+            txtTotalPrice.Text = totalPrice.ToString("c");
+
         }
 
 
@@ -85,7 +117,75 @@ namespace QuanLyQuanCafe
             LoadFoodByCateGory(id);
         }
 
+        void table_Click(object sender, EventArgs e)
+        {
+            int tableID = ((sender as Button).Tag as Table).ID;
+            lsvBill.Tag = (sender as Button).Tag;
+            ShowBill(tableID);
+        }
+
+        private void btnAddFood_Click(object sender, EventArgs e)
+        {
+            Table table = lsvBill.Tag as Table;
+            if (table != null)
+            {
+                int idBill = BillDAO.Instance.getUnCheckBillIDByTableId(table.ID);
+                int idFood = (cbFood.SelectedItem as MenuFood).ID;
+                int count = (int)nmFoodCount.Value;
+
+                int newIdBill = BillDAO.Instance.GetMaxIDBill();
+
+                if (idBill == -1)
+                {
+                    BillDAO.Instance.InsertBill(table.ID);
+                    BillInfoDAO.Instance.InsertBillInfo(newIdBill, idFood, count);
+                }
+                else
+                {
+                    BillInfoDAO.Instance.InsertBillInfo(idBill, idFood, count);
+                }
+                ShowBill(table.ID);
+            }
+            else
+            {
+                MessageBox.Show("Bạn chưa chọn bàn nào!");
+            }
+        }
+
+        private void fTable_Load(object sender, EventArgs e)
+        {
+            txtTableCount.Text = tableCount.ToString();
+            txtTableActive.Text = tableActive.ToString();
+            txtTableEmpty.Text = tableEmpty.ToString();
+        }
+
+        private void btnCheckOut_Click(object sender, EventArgs e)
+        {
+            Table table = lsvBill.Tag as Table;
+            if(table != null)
+            {
+                int idBill = BillDAO.Instance.getUnCheckBillIDByTableId((int)table.ID);
+
+                float totalPrice = float.Parse(txtTotalPrice.Text.Split(',')[0]);
+                float finalTotalPrice = totalPrice;
+                if (idBill != -1)
+                {
+                    if (MessageBox.Show($"Bạn có chắc thanh toán hóa đơn cho bàn {table.Name}. \n Tổng tiền cần thanh toán là {finalTotalPrice}  ", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                    {
+                        BillDAO.Instance.CheckOut(idBill);
+                        ShowBill(table.ID);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bàn không có hóa đơn nào cần thanh toán!");
+            }
+        }
+
+
         #endregion
+
 
     }
 }

@@ -48,6 +48,30 @@ namespace QuanLyQuanCafe.DAO
             }
             return listViewItems;
         }
+        // Get lisFoodbyid của cường
+        public List<MenuFood> getListFoodByCategory(int id = 0)
+        {
+            List<MenuFood> listMenuFood = new List<MenuFood>();
+            string query = "";
+
+            if(id == 0)
+            {
+                query = $"SELECT * FROM Food";
+            }
+            else
+            {
+                query = $"SELECT * FROM Food WHERE idCategory = {id}";
+            }
+
+            DataTable data = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow row in data.Rows)
+            {
+                MenuFood food = new MenuFood(row);
+                listMenuFood.Add(food);
+            }
+            return listMenuFood;
+        }
+        
         //truy vấn dữ liệu bằng Category Id, trả về kiểu dữ liệu List<ListViewItem>.
         public int GetQuantityItemOfTable(string query)
         {
