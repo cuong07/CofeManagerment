@@ -1,5 +1,4 @@
-﻿using QuanLyQuanCafe.DAO;
-using QuanLyQuanCafe.DTO;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,36 +24,7 @@ namespace QuanLyQuanCafe
         }
         //Đóng form
         
-        void LoadLsvMenuFood(int id)
-        {
-            lsvFood.Items.Clear();      //reset lại data của lsv trước khi load loại mới tránh bị đè dữ liệu cũ.
-            List<ListViewItem> listViewItems = MenuFoodDAO.Instance.GetListItemsMenuFood(id);
-            foreach (ListViewItem item in listViewItems)    
-            {
-                lsvFood.Items.Add(item);
-            }    
-        }
-        //Load items của lsvMenuFood
-        private void fMenuFood_Load(object sender, EventArgs e)
-        {     
-            cbFilterDishes.DataSource = CategoryDAO.Instance.GetListCategory();     //set data cho cbFilterDishes bằng cách gọi hàm query bảng Category.
-            cbFilterDishes.DisplayMember = "name";      //hiển thị cột name của Category
-            cbFilterDishes.Text = "All";    //hiển thị Category 9 (all) chạy lúc mở form.
-
-            int nextFoodId = MenuFoodDAO.Instance.GetQuantityItemOfTable("SELECT id FROM Food WHERE id=(SELECT max(id) FROM Food)")+1;  //set trước cho id món ăn chuẩn bị thêm vào thực đơn
-            txtNewId.Text = nextFoodId.ToString();
-        }
-        //Form load
-
-        private void cbFilterDishes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int id = 9;
-            ComboBox cb = (ComboBox)sender;
-            Category cate = (Category)cb.SelectedItem;
-            id = cate.Id;       //lấy Id của item hiện tại của cbFillerDishes
-            LoadLsvMenuFood(id);    //Load items của lsvMenuFood
-        }
-        //Load lại lsvFood theo category đã chọn.
+      
 
         private void lsvFood_SelectedIndexChanged(object sender, EventArgs e)
         {

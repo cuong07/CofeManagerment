@@ -23,16 +23,6 @@ namespace QuanLyQuanCafe
             this.Close();   
         }
 
-        private void fTakeaway_Load(object sender, EventArgs e)
-        {
-            numberOfOrder = 4;
-            string order = string.Empty;
-            for(int i = 1; i <= numberOfOrder; i++)
-            {
-                order = "Dữ liệu từ Database "+i;
-                lsbIDOrder.Items.Add(order);
-            }
-        }
 
         private void lsbIDOrder_SelectedIndexChanged(object sender, EventArgs e)
         {

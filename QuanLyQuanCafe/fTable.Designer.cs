@@ -90,7 +90,6 @@
             this.btnCloseFormTable.Size = new System.Drawing.Size(39, 43);
             this.btnCloseFormTable.TabIndex = 0;
             this.btnCloseFormTable.UseVisualStyleBackColor = false;
-            this.btnCloseFormTable.Click += new System.EventHandler(this.btnCloseFormTable_Click);
             // 
             // label3
             // 
@@ -382,7 +381,6 @@
             this.btnCheckOut.TabIndex = 5;
             this.btnCheckOut.Text = "Thanh toán";
             this.btnCheckOut.UseVisualStyleBackColor = false;
-            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
             // panel10
             // 
@@ -428,7 +426,6 @@
             this.btnAddFood.TabIndex = 1;
             this.btnAddFood.Text = "Thêm món";
             this.btnAddFood.UseVisualStyleBackColor = false;
-            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
             // 
             // cbFood
             // 
@@ -447,7 +444,6 @@
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(201, 21);
             this.cbCategory.TabIndex = 0;
-            this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
             // panel2
             // 
@@ -489,7 +485,6 @@
             this.Name = "fTable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "fTable";
-            this.Load += new System.EventHandler(this.fTable_Load);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

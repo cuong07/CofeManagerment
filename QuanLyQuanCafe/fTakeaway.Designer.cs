@@ -309,7 +309,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fTakeaway";
             this.Text = "fTakeaway";
-            this.Load += new System.EventHandler(this.fTakeaway_Load);
             this.panel1.ResumeLayout(false);
             this.pnLeft.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);

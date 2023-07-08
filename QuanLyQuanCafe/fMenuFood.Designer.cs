@@ -158,7 +158,6 @@
             this.cbFilterDishes.Name = "cbFilterDishes";
             this.cbFilterDishes.Size = new System.Drawing.Size(190, 28);
             this.cbFilterDishes.TabIndex = 17;
-            this.cbFilterDishes.SelectedIndexChanged += new System.EventHandler(this.cbFilterDishes_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -516,7 +515,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fMenuFood";
             this.Text = "fMenuFood";
-            this.Load += new System.EventHandler(this.fMenuFood_Load);
             this.groupBox1.ResumeLayout(false);
             this.pnDSMTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
