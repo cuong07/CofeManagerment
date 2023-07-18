@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="COFFEEMANAGER" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MANH_CUONG;Initial Catalog=COFFEEMANAGER;Integrated Security=True" SettingsObjectName="QuanLyQuanCafe.Properties.Settings" SettingsPropertyName="COFFEEMANAGERConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Account" Member="Accounts">
+    <Type Name="Account">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="admin" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Bill" Member="Bills">
+    <Type Name="Bill">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idTableFood" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCheckIn" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DateCheckOut" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Bill_BillInfo" Member="BillInfos" ThisKey="id" OtherKey="idBill" Type="BillInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BillInfo" Member="BillInfos">
+    <Type Name="BillInfo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idBill" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idFood" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Bill_BillInfo" Member="Bill" ThisKey="idBill" OtherKey="id" Type="Bill" IsForeignKey="true" />
+      <Association Name="Food_BillInfo" Member="Food" ThisKey="idFood" OtherKey="id" Type="Food" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Food" Member="Foods">
+    <Type Name="Food">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="images" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="idCateGory" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Food_BillInfo" Member="BillInfos" ThisKey="id" OtherKey="idFood" Type="BillInfo" />
+    </Type>
+  </Table>
+</Database>
