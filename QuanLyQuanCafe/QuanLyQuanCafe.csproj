@@ -62,6 +62,7 @@
     <Compile Include="Model\BillModel.cs" />
     <Compile Include="Model\CategoryModel.cs" />
     <Compile Include="Model\FoodModel.cs" />
+    <Compile Include="Model\JobModel.cs" />
     <Compile Include="Model\TableModel.cs" />
     <Compile Include="View\fBill.cs">
       <SubType>Form</SubType>

@@ -46,10 +46,5 @@ namespace QuanLyQuanCafe
         {
 
         }
-
-        private void fRevenue_Load(object sender, EventArgs e)
-        {
-            cbPosition.Items.AddRange(new string[] { "Thu ngân", "Pha chế", "Phục vụ", "Quản lý" });
-        }
     }
 }
