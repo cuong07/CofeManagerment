@@ -34,6 +34,7 @@
             this.clhFoodName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhImage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clhIdCategory = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnDSMTop = new System.Windows.Forms.Panel();
             this.cbFilterDishes = new System.Windows.Forms.ComboBox();
             this.cbFindFoodName = new System.Windows.Forms.ComboBox();
@@ -43,29 +44,31 @@
             this.pnLeft = new System.Windows.Forms.Panel();
             this.grbEditFood = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtEditIdCategory = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.txtImageName = new System.Windows.Forms.TextBox();
+            this.txtEditId = new System.Windows.Forms.TextBox();
+            this.txtEditImageName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnEditExit = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.txtFoodName = new System.Windows.Forms.TextBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.txtEditFoodName = new System.Windows.Forms.TextBox();
+            this.txtEditPrice = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pnThemMon = new System.Windows.Forms.GroupBox();
-            this.pnRight = new System.Windows.Forms.Panel();
-            this.txtNewId = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtNewPrice = new System.Windows.Forms.TextBox();
-            this.txtNewFoodName = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtNewImages = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtNewIdCategory = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtNewImages = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtNewFoodName = new System.Windows.Forms.TextBox();
+            this.txtNewPrice = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.pnRight = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.pnDSMTop.SuspendLayout();
             this.pnTop.SuspendLayout();
@@ -73,8 +76,8 @@
             this.grbEditFood.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnThemMon.SuspendLayout();
-            this.pnRight.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.pnRight.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -98,7 +101,8 @@
             this.clhId,
             this.clhFoodName,
             this.clhImage,
-            this.clhPrice});
+            this.clhPrice,
+            this.clhIdCategory});
             this.lsvFood.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lsvFood.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lsvFood.FullRowSelect = true;
@@ -132,6 +136,12 @@
             // 
             this.clhPrice.Text = "Đơn giá vnđ/cái";
             this.clhPrice.Width = 186;
+            // 
+            // clhIdCategory
+            // 
+            this.clhIdCategory.Text = "ID Category";
+            this.clhIdCategory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.clhIdCategory.Width = 120;
             // 
             // pnDSMTop
             // 
@@ -230,7 +240,7 @@
             this.grbEditFood.ForeColor = System.Drawing.Color.White;
             this.grbEditFood.Location = new System.Drawing.Point(8, 347);
             this.grbEditFood.Name = "grbEditFood";
-            this.grbEditFood.Size = new System.Drawing.Size(665, 310);
+            this.grbEditFood.Size = new System.Drawing.Size(665, 364);
             this.grbEditFood.TabIndex = 20;
             this.grbEditFood.TabStop = false;
             this.grbEditFood.Text = "Chỉnh sửa";
@@ -242,22 +252,41 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.txtEditIdCategory);
+            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.txtId);
-            this.panel1.Controls.Add(this.txtImageName);
+            this.panel1.Controls.Add(this.txtEditId);
+            this.panel1.Controls.Add(this.txtEditImageName);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.btnEditExit);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.txtFoodName);
-            this.panel1.Controls.Add(this.txtPrice);
+            this.panel1.Controls.Add(this.btnUpdate);
+            this.panel1.Controls.Add(this.txtEditFoodName);
+            this.panel1.Controls.Add(this.txtEditPrice);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.panel1.Location = new System.Drawing.Point(0, 29);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(665, 281);
+            this.panel1.Size = new System.Drawing.Size(665, 335);
             this.panel1.TabIndex = 21;
+            // 
+            // txtEditIdCategory
+            // 
+            this.txtEditIdCategory.Location = new System.Drawing.Point(211, 221);
+            this.txtEditIdCategory.Name = "txtEditIdCategory";
+            this.txtEditIdCategory.Size = new System.Drawing.Size(319, 30);
+            this.txtEditIdCategory.TabIndex = 12;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(76, 224);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(120, 23);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Id Category:";
             // 
             // label7
             // 
@@ -269,20 +298,21 @@
             this.label7.TabIndex = 9;
             this.label7.Text = "Id món ăn:";
             // 
-            // txtId
+            // txtEditId
             // 
-            this.txtId.Location = new System.Drawing.Point(211, 38);
-            this.txtId.Name = "txtId";
-            this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(319, 30);
-            this.txtId.TabIndex = 10;
+            this.txtEditId.Location = new System.Drawing.Point(211, 38);
+            this.txtEditId.Name = "txtEditId";
+            this.txtEditId.ReadOnly = true;
+            this.txtEditId.Size = new System.Drawing.Size(319, 30);
+            this.txtEditId.TabIndex = 10;
             // 
-            // txtImageName
+            // txtEditImageName
             // 
-            this.txtImageName.Location = new System.Drawing.Point(211, 126);
-            this.txtImageName.Name = "txtImageName";
-            this.txtImageName.Size = new System.Drawing.Size(319, 30);
-            this.txtImageName.TabIndex = 8;
+            this.txtEditImageName.Location = new System.Drawing.Point(211, 126);
+            this.txtEditImageName.Name = "txtEditImageName";
+            this.txtEditImageName.ReadOnly = true;
+            this.txtEditImageName.Size = new System.Drawing.Size(319, 30);
+            this.txtEditImageName.TabIndex = 8;
             // 
             // label6
             // 
@@ -309,15 +339,16 @@
             this.btnEditExit.UseVisualStyleBackColor = false;
             this.btnEditExit.Click += new System.EventHandler(this.btnEditExit_Click);
             // 
-            // button2
+            // btnDelete
             // 
-            this.button2.BackColor = System.Drawing.Color.LightSlateGray;
-            this.button2.Location = new System.Drawing.Point(378, 223);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 43);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Xóa món ăn";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnDelete.Location = new System.Drawing.Point(380, 286);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(150, 43);
+            this.btnDelete.TabIndex = 5;
+            this.btnDelete.Text = "Xóa món";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label2
             // 
@@ -329,29 +360,30 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên món ăn:";
             // 
-            // button3
+            // btnUpdate
             // 
-            this.button3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button3.Location = new System.Drawing.Point(209, 223);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 43);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnUpdate.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnUpdate.Location = new System.Drawing.Point(211, 286);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(113, 43);
+            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // txtFoodName
+            // txtEditFoodName
             // 
-            this.txtFoodName.Location = new System.Drawing.Point(211, 81);
-            this.txtFoodName.Name = "txtFoodName";
-            this.txtFoodName.Size = new System.Drawing.Size(319, 30);
-            this.txtFoodName.TabIndex = 1;
+            this.txtEditFoodName.Location = new System.Drawing.Point(211, 81);
+            this.txtEditFoodName.Name = "txtEditFoodName";
+            this.txtEditFoodName.Size = new System.Drawing.Size(319, 30);
+            this.txtEditFoodName.TabIndex = 1;
             // 
-            // txtPrice
+            // txtEditPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(211, 172);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(319, 30);
-            this.txtPrice.TabIndex = 3;
+            this.txtEditPrice.Location = new System.Drawing.Point(211, 172);
+            this.txtEditPrice.Name = "txtEditPrice";
+            this.txtEditPrice.Size = new System.Drawing.Size(319, 30);
+            this.txtEditPrice.TabIndex = 3;
             // 
             // label3
             // 
@@ -377,24 +409,95 @@
             this.pnThemMon.TabStop = false;
             this.pnThemMon.Text = "Thêm món ăn";
             // 
-            // pnRight
+            // panel3
             // 
-            this.pnRight.Controls.Add(this.grbEditFood);
-            this.pnRight.Controls.Add(this.pnThemMon);
-            this.pnRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnRight.Location = new System.Drawing.Point(771, 42);
-            this.pnRight.Name = "pnRight";
-            this.pnRight.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
-            this.pnRight.Size = new System.Drawing.Size(674, 723);
-            this.pnRight.TabIndex = 22;
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.txtNewIdCategory);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.txtNewImages);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.txtNewFoodName);
+            this.panel3.Controls.Add(this.txtNewPrice);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.btnAdd);
+            this.panel3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.panel3.Location = new System.Drawing.Point(0, 29);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(664, 277);
+            this.panel3.TabIndex = 21;
             // 
-            // txtNewId
+            // txtNewIdCategory
             // 
-            this.txtNewId.Location = new System.Drawing.Point(209, 43);
-            this.txtNewId.Name = "txtNewId";
-            this.txtNewId.ReadOnly = true;
-            this.txtNewId.Size = new System.Drawing.Size(317, 30);
-            this.txtNewId.TabIndex = 1;
+            this.txtNewIdCategory.Location = new System.Drawing.Point(209, 186);
+            this.txtNewIdCategory.Name = "txtNewIdCategory";
+            this.txtNewIdCategory.Size = new System.Drawing.Size(319, 30);
+            this.txtNewIdCategory.TabIndex = 18;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(80, 189);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(114, 23);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "IdCategory:";
+            // 
+            // txtNewImages
+            // 
+            this.txtNewImages.Location = new System.Drawing.Point(209, 103);
+            this.txtNewImages.Name = "txtNewImages";
+            this.txtNewImages.ReadOnly = true;
+            this.txtNewImages.Size = new System.Drawing.Size(319, 30);
+            this.txtNewImages.TabIndex = 16;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(65, 106);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(128, 23);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Image Name:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(74, 61);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(119, 23);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Tên món ăn:";
+            // 
+            // txtNewFoodName
+            // 
+            this.txtNewFoodName.Location = new System.Drawing.Point(209, 54);
+            this.txtNewFoodName.Name = "txtNewFoodName";
+            this.txtNewFoodName.Size = new System.Drawing.Size(319, 30);
+            this.txtNewFoodName.TabIndex = 12;
+            // 
+            // txtNewPrice
+            // 
+            this.txtNewPrice.Location = new System.Drawing.Point(209, 149);
+            this.txtNewPrice.Name = "txtNewPrice";
+            this.txtNewPrice.Size = new System.Drawing.Size(319, 30);
+            this.txtNewPrice.TabIndex = 14;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(42, 152);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(152, 23);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Đơn giá vnđ/cái:";
             // 
             // btnAdd
             // 
@@ -405,87 +508,18 @@
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Thêm món";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // label9
+            // pnRight
             // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(42, 180);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(152, 23);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Đơn giá vnđ/cái:";
-            // 
-            // txtNewPrice
-            // 
-            this.txtNewPrice.Location = new System.Drawing.Point(209, 177);
-            this.txtNewPrice.Name = "txtNewPrice";
-            this.txtNewPrice.Size = new System.Drawing.Size(319, 30);
-            this.txtNewPrice.TabIndex = 14;
-            // 
-            // txtNewFoodName
-            // 
-            this.txtNewFoodName.Location = new System.Drawing.Point(209, 82);
-            this.txtNewFoodName.Name = "txtNewFoodName";
-            this.txtNewFoodName.Size = new System.Drawing.Size(319, 30);
-            this.txtNewFoodName.TabIndex = 12;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(74, 89);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(119, 23);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Tên món ăn:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(65, 134);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(128, 23);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Image Name:";
-            // 
-            // txtNewImages
-            // 
-            this.txtNewImages.Location = new System.Drawing.Point(209, 131);
-            this.txtNewImages.Name = "txtNewImages";
-            this.txtNewImages.Size = new System.Drawing.Size(319, 30);
-            this.txtNewImages.TabIndex = 16;
-            // 
-            // label4
-            // 
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(94, 46);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 23);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Next ID";
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.txtNewImages);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.txtNewFoodName);
-            this.panel3.Controls.Add(this.txtNewPrice);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.btnAdd);
-            this.panel3.Controls.Add(this.txtNewId);
-            this.panel3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.panel3.Location = new System.Drawing.Point(0, 29);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(664, 277);
-            this.panel3.TabIndex = 21;
+            this.pnRight.Controls.Add(this.grbEditFood);
+            this.pnRight.Controls.Add(this.pnThemMon);
+            this.pnRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnRight.Location = new System.Drawing.Point(771, 42);
+            this.pnRight.Name = "pnRight";
+            this.pnRight.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.pnRight.Size = new System.Drawing.Size(674, 723);
+            this.pnRight.TabIndex = 22;
             // 
             // fMenuFood
             // 
@@ -508,9 +542,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnThemMon.ResumeLayout(false);
-            this.pnRight.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.pnRight.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -530,22 +564,21 @@
         private System.Windows.Forms.Panel pnDSMTop;
         private System.Windows.Forms.GroupBox grbEditFood;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox txtFoodName;
-        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.TextBox txtEditFoodName;
+        private System.Windows.Forms.TextBox txtEditPrice;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox pnThemMon;
         private System.Windows.Forms.Panel pnRight;
         private System.Windows.Forms.Button btnEditExit;
         private System.Windows.Forms.ColumnHeader clhImage;
-        private System.Windows.Forms.TextBox txtImageName;
+        private System.Windows.Forms.TextBox txtEditImageName;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtEditId;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNewImages;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
@@ -553,6 +586,10 @@
         private System.Windows.Forms.TextBox txtNewPrice;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox txtNewId;
+        private System.Windows.Forms.TextBox txtNewIdCategory;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtEditIdCategory;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ColumnHeader clhIdCategory;
     }
 }
