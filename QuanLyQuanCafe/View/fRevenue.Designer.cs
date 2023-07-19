@@ -31,22 +31,22 @@
             this.btnCloseFormRevenue = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbName = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.rbtMale = new System.Windows.Forms.RadioButton();
-            this.rbtFemale = new System.Windows.Forms.RadioButton();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.cbPosition = new System.Windows.Forms.ComboBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.cbPosition = new System.Windows.Forms.ComboBox();
+            this.rbtFemale = new System.Windows.Forms.RadioButton();
+            this.rbtMale = new System.Windows.Forms.RadioButton();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.listView1 = new System.Windows.Forms.ListView();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -56,10 +56,9 @@
             this.btnCloseFormRevenue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCloseFormRevenue.BackColor = System.Drawing.Color.Transparent;
             this.btnCloseFormRevenue.Image = global::QuanLyQuanCafe.Properties.Resources.close_25;
-            this.btnCloseFormRevenue.Location = new System.Drawing.Point(1262, 0);
-            this.btnCloseFormRevenue.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCloseFormRevenue.Location = new System.Drawing.Point(946, 0);
             this.btnCloseFormRevenue.Name = "btnCloseFormRevenue";
-            this.btnCloseFormRevenue.Size = new System.Drawing.Size(52, 41);
+            this.btnCloseFormRevenue.Size = new System.Drawing.Size(39, 33);
             this.btnCloseFormRevenue.TabIndex = 6;
             this.btnCloseFormRevenue.UseVisualStyleBackColor = false;
             this.btnCloseFormRevenue.Click += new System.EventHandler(this.btnCloseFormRevenue_Click);
@@ -71,8 +70,9 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1314, 34);
+            this.label1.Size = new System.Drawing.Size(986, 28);
             this.label1.TabIndex = 20;
             this.label1.Text = "Quản lý nhân viên";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -96,178 +96,194 @@
             this.panel1.Controls.Add(this.lbName);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.panel1.Location = new System.Drawing.Point(0, 34);
+            this.panel1.Location = new System.Drawing.Point(0, 28);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(646, 711);
+            this.panel1.Size = new System.Drawing.Size(500, 577);
             this.panel1.TabIndex = 21;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // lbName
+            // btnDelete
             // 
-            this.lbName.AutoSize = true;
-            this.lbName.Location = new System.Drawing.Point(24, 97);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(85, 26);
-            this.lbName.TabIndex = 0;
-            this.lbName.Text = "Họ tên:";
+            this.btnDelete.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(322, 350);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(71, 41);
+            this.btnDelete.TabIndex = 6;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // btnUpdate
             // 
-            this.label2.AutoSize = true;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(146, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(361, 37);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Thông tin nhân viên mới";
+            this.btnUpdate.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(195, 350);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(71, 41);
+            this.btnUpdate.TabIndex = 6;
+            this.btnUpdate.Text = "Sửa";
+            this.btnUpdate.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // btnAdd
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 237);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 26);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Giới tính:";
+            this.btnAdd.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(63, 350);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(71, 41);
+            this.btnAdd.TabIndex = 6;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.UseVisualStyleBackColor = false;
             // 
-            // label4
+            // cbPosition
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 172);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 26);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Ngày sinh:";
+            this.cbPosition.FormattingEnabled = true;
+            this.cbPosition.Location = new System.Drawing.Point(153, 232);
+            this.cbPosition.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbPosition.Name = "cbPosition";
+            this.cbPosition.Size = new System.Drawing.Size(308, 29);
+            this.cbPosition.TabIndex = 4;
+            this.cbPosition.Text = "-Chọn vị trí-";
             // 
-            // label5
+            // rbtFemale
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 289);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 26);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Chức vụ:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(24, 347);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(155, 26);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Ngày vào làm:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(207, 94);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(407, 34);
-            this.txtName.TabIndex = 1;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(204, 341);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(410, 34);
-            this.dateTimePicker1.TabIndex = 2;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(204, 166);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(410, 34);
-            this.dateTimePicker2.TabIndex = 2;
-            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.rbtFemale.AutoSize = true;
+            this.rbtFemale.Location = new System.Drawing.Point(305, 189);
+            this.rbtFemale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbtFemale.Name = "rbtFemale";
+            this.rbtFemale.Size = new System.Drawing.Size(54, 26);
+            this.rbtFemale.TabIndex = 3;
+            this.rbtFemale.TabStop = true;
+            this.rbtFemale.Text = "Nữ";
+            this.rbtFemale.UseVisualStyleBackColor = true;
             // 
             // rbtMale
             // 
             this.rbtMale.AutoSize = true;
-            this.rbtMale.Location = new System.Drawing.Point(224, 233);
+            this.rbtMale.Location = new System.Drawing.Point(168, 189);
+            this.rbtMale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rbtMale.Name = "rbtMale";
-            this.rbtMale.Size = new System.Drawing.Size(81, 30);
+            this.rbtMale.Size = new System.Drawing.Size(67, 26);
             this.rbtMale.TabIndex = 3;
             this.rbtMale.TabStop = true;
             this.rbtMale.Text = "Nam";
             this.rbtMale.UseVisualStyleBackColor = true;
             this.rbtMale.CheckedChanged += new System.EventHandler(this.rbtMale_CheckedChanged);
             // 
-            // rbtFemale
+            // dateTimePicker2
             // 
-            this.rbtFemale.AutoSize = true;
-            this.rbtFemale.Location = new System.Drawing.Point(407, 233);
-            this.rbtFemale.Name = "rbtFemale";
-            this.rbtFemale.Size = new System.Drawing.Size(65, 30);
-            this.rbtFemale.TabIndex = 3;
-            this.rbtFemale.TabStop = true;
-            this.rbtFemale.Text = "Nữ";
-            this.rbtFemale.UseVisualStyleBackColor = true;
+            this.dateTimePicker2.Location = new System.Drawing.Point(153, 135);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(308, 29);
+            this.dateTimePicker2.TabIndex = 2;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // cbPosition
+            // dateTimePicker1
             // 
-            this.cbPosition.FormattingEnabled = true;
-            this.cbPosition.Location = new System.Drawing.Point(204, 286);
-            this.cbPosition.Name = "cbPosition";
-            this.cbPosition.Size = new System.Drawing.Size(410, 34);
-            this.cbPosition.TabIndex = 4;
-            this.cbPosition.Text = "-Chọn vị trí-";
+            this.dateTimePicker1.Location = new System.Drawing.Point(153, 277);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(308, 29);
+            this.dateTimePicker1.TabIndex = 2;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // btnAdd
+            // txtName
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(84, 431);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(95, 50);
-            this.btnAdd.TabIndex = 6;
-            this.btnAdd.Text = "Thêm";
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.txtName.Location = new System.Drawing.Point(155, 76);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(306, 29);
+            this.txtName.TabIndex = 1;
             // 
-            // btnUpdate
+            // label2
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(260, 431);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(95, 50);
-            this.btnUpdate.TabIndex = 6;
-            this.btnUpdate.Text = "Sửa";
-            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.label2.AutoSize = true;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(110, 23);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(299, 31);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Thông tin nhân viên mới";
             // 
-            // btnDelete
+            // label4
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(429, 431);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(95, 50);
-            this.btnDelete.TabIndex = 6;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.UseVisualStyleBackColor = false;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 140);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(97, 22);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Ngày sinh:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(18, 282);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(128, 22);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Ngày vào làm:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 235);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 22);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Chức vụ:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(19, 193);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 22);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Giới tính:";
+            // 
+            // lbName
+            // 
+            this.lbName.AutoSize = true;
+            this.lbName.Location = new System.Drawing.Point(18, 79);
+            this.lbName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(70, 22);
+            this.lbName.TabIndex = 0;
+            this.lbName.Text = "Họ tên:";
             // 
             // listView1
             // 
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(646, 34);
+            this.listView1.Location = new System.Drawing.Point(500, 28);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(668, 711);
+            this.listView1.Size = new System.Drawing.Size(486, 577);
             this.listView1.TabIndex = 22;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // fRevenue
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1314, 745);
+            this.ClientSize = new System.Drawing.Size(986, 605);
             this.Controls.Add(this.btnCloseFormRevenue);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fRevenue";
             this.Text = "fRevenue";
             this.Load += new System.EventHandler(this.fRevenue_Load);

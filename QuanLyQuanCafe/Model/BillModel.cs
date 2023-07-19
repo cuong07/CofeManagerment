@@ -18,6 +18,23 @@ namespace QuanLyQuanCafe.Model
         public float Price { get => price; set => price = value; }
         public float TotalPrice { get => totalPrice; set => totalPrice = value; }
     }
+
+    public class BillDetail
+    {
+        private int id;
+        private string tableName;
+        private DateTime? dateCheckIn;
+        private DateTime? dateCheckOut;
+        private float? totalPrice;
+
+        public int Id { get => id; set => id = value; }
+        public string TableName { get => tableName; set => tableName = value; }
+        public DateTime? DateCheckIn { get => dateCheckIn; set => dateCheckIn = value; }
+        public DateTime? DateCheckOut { get => dateCheckOut; set => dateCheckOut = value; }
+        public float? TotalPrice { get => totalPrice; set => totalPrice = value; }
+    }
+
+
     public class BillModel
     {
         public void InsertBill(int idTable)
@@ -84,6 +101,27 @@ namespace QuanLyQuanCafe.Model
         }
 
 
+        public List<Menu> GetListMenuBill(int idBill)
+        {
+            using (DataClasses2DataContext db = new DataClasses2DataContext())
+            {
+                var menuItems = from bi in db.BillInfos
+                                join b in db.Bills on bi.idBill equals b.id
+                                join f in db.Foods on bi.idFood equals f.id
+                                where b.id == idBill
+                                select new Menu
+                                {
+                                    Name = f.name,
+                                    Count = bi.count,
+                                    Price = (float)f.price,
+                                    TotalPrice = (float)(f.price * bi.count)
+                                };
+
+                return menuItems.ToList();
+            }
+        }
+
+
         public void CheckOut(int id)
         {
             using (DataClasses2DataContext db = new DataClasses2DataContext())
@@ -97,7 +135,45 @@ namespace QuanLyQuanCafe.Model
             }
         }
 
-
+        public List<BillDetail> GetAllBillCheckoutOfDate(DateTime selectedDateStart, DateTime? selectedDateEnd)
+        {
+            if(selectedDateStart != DateTime.Now)
+            {
+                using (DataClasses2DataContext db = new DataClasses2DataContext())
+                {
+                    var billDetails = from b in db.Bills
+                                      join tf in db.TableFoods on b.idTableFood equals tf.id
+                                      where b.status.Equals(1) && b.DateCheckIn >= selectedDateStart && b.DateCheckIn <= selectedDateEnd
+                                      select new BillDetail
+                                      {
+                                          Id = b.id,
+                                          TableName = tf.name,
+                                          DateCheckIn = b.DateCheckIn,
+                                          DateCheckOut = b.DateCheckOut,
+                                          TotalPrice = (float?)(b.BillInfos.Sum(bi => bi.count * (float)(bi.Food.price))) ?? 0
+                                      };
+                    return billDetails.ToList();
+                }
+            }
+            else
+            {
+                using (DataClasses2DataContext db = new DataClasses2DataContext())
+                {
+                    var billDetails = from b in db.Bills
+                                      join tf in db.TableFoods on b.idTableFood equals tf.id
+                                      where b.status.Equals(1) && b.DateCheckIn == selectedDateStart 
+                                      select new BillDetail
+                                      {
+                                          Id = b.id,
+                                          TableName = tf.name,
+                                          DateCheckIn = b.DateCheckIn,
+                                          DateCheckOut = b.DateCheckOut,
+                                          TotalPrice = (float?)(b.BillInfos.Sum(bi => bi.count * (float)(bi.Food.price))) ?? 0
+                                      };
+                    return billDetails.ToList();
+                }
+            }
+        }
 
     }
 }
