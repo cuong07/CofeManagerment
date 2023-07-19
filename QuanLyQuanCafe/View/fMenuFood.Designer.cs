@@ -36,7 +36,6 @@
             this.clhPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnDSMTop = new System.Windows.Forms.Panel();
             this.cbFilterDishes = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbFindFoodName = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnTop = new System.Windows.Forms.Panel();
@@ -56,27 +55,26 @@
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pnThemMon = new System.Windows.Forms.GroupBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtNewId = new System.Windows.Forms.TextBox();
-            this.txtNewImages = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtNewFoodName = new System.Windows.Forms.TextBox();
-            this.txtNewPrice = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.pnRight = new System.Windows.Forms.Panel();
+            this.txtNewId = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtNewPrice = new System.Windows.Forms.TextBox();
+            this.txtNewFoodName = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtNewImages = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.pnDSMTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnTop.SuspendLayout();
             this.pnLeft.SuspendLayout();
             this.grbEditFood.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnThemMon.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.pnRight.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -106,10 +104,10 @@
             this.lsvFood.FullRowSelect = true;
             this.lsvFood.GridLines = true;
             this.lsvFood.HideSelection = false;
-            this.lsvFood.Location = new System.Drawing.Point(3, 58);
+            this.lsvFood.Location = new System.Drawing.Point(3, 62);
             this.lsvFood.MultiSelect = false;
             this.lsvFood.Name = "lsvFood";
-            this.lsvFood.Size = new System.Drawing.Size(765, 652);
+            this.lsvFood.Size = new System.Drawing.Size(765, 648);
             this.lsvFood.TabIndex = 15;
             this.lsvFood.UseCompatibleStateImageBehavior = false;
             this.lsvFood.View = System.Windows.Forms.View.Details;
@@ -138,10 +136,9 @@
             // pnDSMTop
             // 
             this.pnDSMTop.Controls.Add(this.cbFilterDishes);
-            this.pnDSMTop.Controls.Add(this.pictureBox1);
             this.pnDSMTop.Controls.Add(this.cbFindFoodName);
             this.pnDSMTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnDSMTop.Location = new System.Drawing.Point(3, 22);
+            this.pnDSMTop.Location = new System.Drawing.Point(3, 26);
             this.pnDSMTop.Name = "pnDSMTop";
             this.pnDSMTop.Size = new System.Drawing.Size(765, 36);
             this.pnDSMTop.TabIndex = 25;
@@ -156,32 +153,23 @@
             "All"});
             this.cbFilterDishes.Location = new System.Drawing.Point(0, 0);
             this.cbFilterDishes.Name = "cbFilterDishes";
-            this.cbFilterDishes.Size = new System.Drawing.Size(190, 28);
+            this.cbFilterDishes.Size = new System.Drawing.Size(190, 33);
             this.cbFilterDishes.TabIndex = 17;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Image = global::QuanLyQuanCafe.Properties.Resources.fFoodMenu_icon_find;
-            this.pictureBox1.Location = new System.Drawing.Point(440, 0);
-            this.pictureBox1.MaximumSize = new System.Drawing.Size(36, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 33);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
+            this.cbFilterDishes.SelectedIndexChanged += new System.EventHandler(this.cbFilterDishes_SelectedIndexChanged);
             // 
             // cbFindFoodName
             // 
+            this.cbFindFoodName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbFindFoodName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbFindFoodName.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cbFindFoodName.Dock = System.Windows.Forms.DockStyle.Right;
             this.cbFindFoodName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbFindFoodName.FormattingEnabled = true;
             this.cbFindFoodName.Location = new System.Drawing.Point(476, 0);
             this.cbFindFoodName.Name = "cbFindFoodName";
-            this.cbFindFoodName.Size = new System.Drawing.Size(289, 28);
+            this.cbFindFoodName.Size = new System.Drawing.Size(289, 33);
             this.cbFindFoodName.TabIndex = 16;
+            this.cbFindFoodName.SelectedIndexChanged += new System.EventHandler(this.cbFindFoodName_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -277,7 +265,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(92, 45);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 18);
+            this.label7.Size = new System.Drawing.Size(103, 23);
             this.label7.TabIndex = 9;
             this.label7.Text = "Id món ăn:";
             // 
@@ -286,14 +274,14 @@
             this.txtId.Location = new System.Drawing.Point(211, 38);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(319, 26);
+            this.txtId.Size = new System.Drawing.Size(319, 30);
             this.txtId.TabIndex = 10;
             // 
             // txtImageName
             // 
             this.txtImageName.Location = new System.Drawing.Point(211, 126);
             this.txtImageName.Name = "txtImageName";
-            this.txtImageName.Size = new System.Drawing.Size(319, 26);
+            this.txtImageName.Size = new System.Drawing.Size(319, 30);
             this.txtImageName.TabIndex = 8;
             // 
             // label6
@@ -302,7 +290,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(67, 129);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 18);
+            this.label6.Size = new System.Drawing.Size(128, 23);
             this.label6.TabIndex = 7;
             this.label6.Text = "Image Name:";
             // 
@@ -337,7 +325,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(77, 88);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 18);
+            this.label2.Size = new System.Drawing.Size(119, 23);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên món ăn:";
             // 
@@ -355,14 +343,14 @@
             // 
             this.txtFoodName.Location = new System.Drawing.Point(211, 81);
             this.txtFoodName.Name = "txtFoodName";
-            this.txtFoodName.Size = new System.Drawing.Size(319, 26);
+            this.txtFoodName.Size = new System.Drawing.Size(319, 30);
             this.txtFoodName.TabIndex = 1;
             // 
             // txtPrice
             // 
             this.txtPrice.Location = new System.Drawing.Point(211, 172);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(319, 26);
+            this.txtPrice.Size = new System.Drawing.Size(319, 30);
             this.txtPrice.TabIndex = 3;
             // 
             // label3
@@ -371,7 +359,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(44, 175);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 18);
+            this.label3.Size = new System.Drawing.Size(152, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "Đơn giá vnđ/cái:";
             // 
@@ -389,91 +377,24 @@
             this.pnThemMon.TabStop = false;
             this.pnThemMon.Text = "Thêm món ăn";
             // 
-            // panel3
+            // pnRight
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.txtNewId);
-            this.panel3.Controls.Add(this.txtNewImages);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.txtNewFoodName);
-            this.panel3.Controls.Add(this.txtNewPrice);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.btnAdd);
-            this.panel3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.panel3.Location = new System.Drawing.Point(0, 29);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(664, 277);
-            this.panel3.TabIndex = 21;
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 23);
-            this.label4.TabIndex = 0;
+            this.pnRight.Controls.Add(this.grbEditFood);
+            this.pnRight.Controls.Add(this.pnThemMon);
+            this.pnRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnRight.Location = new System.Drawing.Point(771, 42);
+            this.pnRight.Name = "pnRight";
+            this.pnRight.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.pnRight.Size = new System.Drawing.Size(674, 723);
+            this.pnRight.TabIndex = 22;
             // 
             // txtNewId
             // 
-            this.txtNewId.Location = new System.Drawing.Point(0, 0);
+            this.txtNewId.Location = new System.Drawing.Point(209, 43);
             this.txtNewId.Name = "txtNewId";
-            this.txtNewId.Size = new System.Drawing.Size(100, 26);
+            this.txtNewId.ReadOnly = true;
+            this.txtNewId.Size = new System.Drawing.Size(317, 30);
             this.txtNewId.TabIndex = 1;
-            // 
-            // txtNewImages
-            // 
-            this.txtNewImages.Location = new System.Drawing.Point(209, 131);
-            this.txtNewImages.Name = "txtNewImages";
-            this.txtNewImages.Size = new System.Drawing.Size(319, 26);
-            this.txtNewImages.TabIndex = 16;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(65, 134);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 18);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Image Name:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(74, 89);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 18);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Tên món ăn:";
-            // 
-            // txtNewFoodName
-            // 
-            this.txtNewFoodName.Location = new System.Drawing.Point(209, 82);
-            this.txtNewFoodName.Name = "txtNewFoodName";
-            this.txtNewFoodName.Size = new System.Drawing.Size(319, 26);
-            this.txtNewFoodName.TabIndex = 12;
-            // 
-            // txtNewPrice
-            // 
-            this.txtNewPrice.Location = new System.Drawing.Point(209, 177);
-            this.txtNewPrice.Name = "txtNewPrice";
-            this.txtNewPrice.Size = new System.Drawing.Size(319, 26);
-            this.txtNewPrice.TabIndex = 14;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(42, 180);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(122, 18);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Đơn giá vnđ/cái:";
             // 
             // btnAdd
             // 
@@ -485,16 +406,86 @@
             this.btnAdd.Text = "Thêm món";
             this.btnAdd.UseVisualStyleBackColor = false;
             // 
-            // pnRight
+            // label9
             // 
-            this.pnRight.Controls.Add(this.grbEditFood);
-            this.pnRight.Controls.Add(this.pnThemMon);
-            this.pnRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnRight.Location = new System.Drawing.Point(771, 42);
-            this.pnRight.Name = "pnRight";
-            this.pnRight.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
-            this.pnRight.Size = new System.Drawing.Size(674, 723);
-            this.pnRight.TabIndex = 22;
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(42, 180);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(152, 23);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Đơn giá vnđ/cái:";
+            // 
+            // txtNewPrice
+            // 
+            this.txtNewPrice.Location = new System.Drawing.Point(209, 177);
+            this.txtNewPrice.Name = "txtNewPrice";
+            this.txtNewPrice.Size = new System.Drawing.Size(319, 30);
+            this.txtNewPrice.TabIndex = 14;
+            // 
+            // txtNewFoodName
+            // 
+            this.txtNewFoodName.Location = new System.Drawing.Point(209, 82);
+            this.txtNewFoodName.Name = "txtNewFoodName";
+            this.txtNewFoodName.Size = new System.Drawing.Size(319, 30);
+            this.txtNewFoodName.TabIndex = 12;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(74, 89);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(119, 23);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Tên món ăn:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(65, 134);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(128, 23);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Image Name:";
+            // 
+            // txtNewImages
+            // 
+            this.txtNewImages.Location = new System.Drawing.Point(209, 131);
+            this.txtNewImages.Name = "txtNewImages";
+            this.txtNewImages.Size = new System.Drawing.Size(319, 30);
+            this.txtNewImages.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(94, 46);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 23);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Next ID";
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.txtNewImages);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.txtNewFoodName);
+            this.panel3.Controls.Add(this.txtNewPrice);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.btnAdd);
+            this.panel3.Controls.Add(this.txtNewId);
+            this.panel3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.panel3.Location = new System.Drawing.Point(0, 29);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(664, 277);
+            this.panel3.TabIndex = 21;
             // 
             // fMenuFood
             // 
@@ -508,18 +499,18 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fMenuFood";
             this.Text = "fMenuFood";
+            this.Load += new System.EventHandler(this.fMenuFood_Load);
             this.groupBox1.ResumeLayout(false);
             this.pnDSMTop.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnTop.ResumeLayout(false);
             this.pnLeft.ResumeLayout(false);
             this.grbEditFood.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnThemMon.ResumeLayout(false);
+            this.pnRight.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.pnRight.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -527,7 +518,6 @@
         #endregion
         private System.Windows.Forms.Button btnCloseFormMenuFood;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cbFilterDishes;
         private System.Windows.Forms.ComboBox cbFindFoodName;
         private System.Windows.Forms.ListView lsvFood;
@@ -547,8 +537,6 @@
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox pnThemMon;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel pnRight;
         private System.Windows.Forms.Button btnEditExit;
         private System.Windows.Forms.ColumnHeader clhImage;
@@ -556,13 +544,15 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNewImages;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtNewFoodName;
         private System.Windows.Forms.TextBox txtNewPrice;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox txtNewId;
     }
 }
