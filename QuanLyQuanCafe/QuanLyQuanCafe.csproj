@@ -55,6 +55,7 @@
     <Compile Include="Controller\FoodController.cs" />
     <Compile Include="Controller\JobController.cs" />
     <Compile Include="Controller\TableController.cs" />
+    <Compile Include="Controller\TakeAwayController.cs" />
     <Compile Include="db.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -67,6 +68,7 @@
     <Compile Include="Model\FoodModel.cs" />
     <Compile Include="Model\JobModel.cs" />
     <Compile Include="Model\TableModel.cs" />
+    <Compile Include="Model\TakeAwayModel.cs" />
     <Compile Include="View\fBill.cs">
       <SubType>Form</SubType>
     </Compile>
