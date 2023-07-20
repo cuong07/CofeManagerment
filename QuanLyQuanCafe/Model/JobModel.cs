@@ -10,7 +10,11 @@ namespace QuanLyQuanCafe.Model
     {
         public List<Job> GetListJob()
         {
-            return new List<Job>();
+            using (DataClasses2DataContext db = new DataClasses2DataContext())
+            {
+                var listJob = db.Jobs.ToList();
+                return listJob;
+            }
         }
     }
 }

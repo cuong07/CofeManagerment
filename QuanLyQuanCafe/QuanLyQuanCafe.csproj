@@ -51,7 +51,9 @@
     <Compile Include="Controller\BillController.cs" />
     <Compile Include="Controller\BillInfoController.cs" />
     <Compile Include="Controller\CategoryController.cs" />
+    <Compile Include="Controller\EmployeesController.cs" />
     <Compile Include="Controller\FoodController.cs" />
+    <Compile Include="Controller\JobController.cs" />
     <Compile Include="Controller\TableController.cs" />
     <Compile Include="db.designer.cs">
       <AutoGen>True</AutoGen>
@@ -61,6 +63,7 @@
     <Compile Include="Model\BillInfoModel.cs" />
     <Compile Include="Model\BillModel.cs" />
     <Compile Include="Model\CategoryModel.cs" />
+    <Compile Include="Model\EmployeesModel.cs" />
     <Compile Include="Model\FoodModel.cs" />
     <Compile Include="Model\JobModel.cs" />
     <Compile Include="Model\TableModel.cs" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyQuanCafe.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,14 @@ namespace QuanLyQuanCafe
 {
     public partial class fRevenue : Form
     {
+        private JobController _jobController;
+        private EmployeesController _employeesController;
         public fRevenue()
         {
             InitializeComponent();
+            _jobController = new JobController(this);
+            _employeesController = new EmployeesController();
+            _jobController.LoadListJob();
         }
 
         private void btnCloseFormRevenue_Click(object sender, EventArgs e)
@@ -22,29 +28,27 @@ namespace QuanLyQuanCafe
             this.Close();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        public void LoadJob(List<Job> listJob)
         {
-
+            cbJobPosition.DataSource= listJob;
+            cbJobPosition.DisplayMember= "Name";
+            cbJobPosition.ValueMember = "Id";
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void rbtMale_CheckedChanged(object sender, EventArgs e)
-        {
-
+            Employee newEmployees = new Employee
+            {
+                firstName = txtFirstName.Text,
+                lastName = txtLastName.Text,
+                email = txtEmail.Text,
+                phoneNumber= txtPhoneNumber.Text,
+                dateStartWork = dtpDataStartWork.Value.Date,
+                jobId = (int)cbJobPosition.SelectedValue,
+                userName = txtUserName.Text,
+                password = txtPassword.Text,
+            };
+            _employeesController.addEmployees(newEmployees);
         }
     }
 }
