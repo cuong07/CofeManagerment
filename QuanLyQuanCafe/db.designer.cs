@@ -33,27 +33,30 @@ namespace QuanLyQuanCafe
     partial void InsertTakeawayItem(TakeawayItem instance);
     partial void UpdateTakeawayItem(TakeawayItem instance);
     partial void DeleteTakeawayItem(TakeawayItem instance);
-    partial void InsertTakeaway(Takeaway instance);
-    partial void UpdateTakeaway(Takeaway instance);
-    partial void DeleteTakeaway(Takeaway instance);
-    partial void InsertTableFood(TableFood instance);
-    partial void UpdateTableFood(TableFood instance);
-    partial void DeleteTableFood(TableFood instance);
-    partial void InsertFoodCategory(FoodCategory instance);
-    partial void UpdateFoodCategory(FoodCategory instance);
-    partial void DeleteFoodCategory(FoodCategory instance);
-    partial void InsertFood(Food instance);
-    partial void UpdateFood(Food instance);
-    partial void DeleteFood(Food instance);
-    partial void InsertBillInfo(BillInfo instance);
-    partial void UpdateBillInfo(BillInfo instance);
-    partial void DeleteBillInfo(BillInfo instance);
     partial void InsertBill(Bill instance);
     partial void UpdateBill(Bill instance);
     partial void DeleteBill(Bill instance);
-    partial void InsertAccount(Account instance);
-    partial void UpdateAccount(Account instance);
-    partial void DeleteAccount(Account instance);
+    partial void InsertBillInfo(BillInfo instance);
+    partial void UpdateBillInfo(BillInfo instance);
+    partial void DeleteBillInfo(BillInfo instance);
+    partial void InsertEmployee(Employee instance);
+    partial void UpdateEmployee(Employee instance);
+    partial void DeleteEmployee(Employee instance);
+    partial void InsertFood(Food instance);
+    partial void UpdateFood(Food instance);
+    partial void DeleteFood(Food instance);
+    partial void InsertFoodCategory(FoodCategory instance);
+    partial void UpdateFoodCategory(FoodCategory instance);
+    partial void DeleteFoodCategory(FoodCategory instance);
+    partial void InsertJob(Job instance);
+    partial void UpdateJob(Job instance);
+    partial void DeleteJob(Job instance);
+    partial void InsertTableFood(TableFood instance);
+    partial void UpdateTableFood(TableFood instance);
+    partial void DeleteTableFood(TableFood instance);
+    partial void InsertTakeaway(Takeaway instance);
+    partial void UpdateTakeaway(Takeaway instance);
+    partial void DeleteTakeaway(Takeaway instance);
     #endregion
 		
 		public DataClasses2DataContext() : 
@@ -94,35 +97,11 @@ namespace QuanLyQuanCafe
 			}
 		}
 		
-		public System.Data.Linq.Table<Takeaway> Takeaways
+		public System.Data.Linq.Table<Bill> Bills
 		{
 			get
 			{
-				return this.GetTable<Takeaway>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TableFood> TableFoods
-		{
-			get
-			{
-				return this.GetTable<TableFood>();
-			}
-		}
-		
-		public System.Data.Linq.Table<FoodCategory> FoodCategories
-		{
-			get
-			{
-				return this.GetTable<FoodCategory>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Food> Foods
-		{
-			get
-			{
-				return this.GetTable<Food>();
+				return this.GetTable<Bill>();
 			}
 		}
 		
@@ -134,19 +113,51 @@ namespace QuanLyQuanCafe
 			}
 		}
 		
-		public System.Data.Linq.Table<Bill> Bills
+		public System.Data.Linq.Table<Employee> Employees
 		{
 			get
 			{
-				return this.GetTable<Bill>();
+				return this.GetTable<Employee>();
 			}
 		}
 		
-		public System.Data.Linq.Table<Account> Accounts
+		public System.Data.Linq.Table<Food> Foods
 		{
 			get
 			{
-				return this.GetTable<Account>();
+				return this.GetTable<Food>();
+			}
+		}
+		
+		public System.Data.Linq.Table<FoodCategory> FoodCategories
+		{
+			get
+			{
+				return this.GetTable<FoodCategory>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Job> Jobs
+		{
+			get
+			{
+				return this.GetTable<Job>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TableFood> TableFoods
+		{
+			get
+			{
+				return this.GetTable<TableFood>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Takeaway> Takeaways
+		{
+			get
+			{
+				return this.GetTable<Takeaway>();
 			}
 		}
 	}
@@ -165,9 +176,9 @@ namespace QuanLyQuanCafe
 		
 		private int _count;
 		
-		private EntityRef<Takeaway> _Takeaway;
-		
 		private EntityRef<Food> _Food;
+		
+		private EntityRef<Takeaway> _Takeaway;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -185,8 +196,8 @@ namespace QuanLyQuanCafe
 		
 		public TakeawayItem()
 		{
-			this._Takeaway = default(EntityRef<Takeaway>);
 			this._Food = default(EntityRef<Food>);
+			this._Takeaway = default(EntityRef<Takeaway>);
 			OnCreated();
 		}
 		
@@ -278,40 +289,6 @@ namespace QuanLyQuanCafe
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Takeaway_TakeawayItem", Storage="_Takeaway", ThisKey="idTakeaway", OtherKey="id", IsForeignKey=true)]
-		public Takeaway Takeaway
-		{
-			get
-			{
-				return this._Takeaway.Entity;
-			}
-			set
-			{
-				Takeaway previousValue = this._Takeaway.Entity;
-				if (((previousValue != value) 
-							|| (this._Takeaway.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Takeaway.Entity = null;
-						previousValue.TakeawayItems.Remove(this);
-					}
-					this._Takeaway.Entity = value;
-					if ((value != null))
-					{
-						value.TakeawayItems.Add(this);
-						this._idTakeaway = value.id;
-					}
-					else
-					{
-						this._idTakeaway = default(int);
-					}
-					this.SendPropertyChanged("Takeaway");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Food_TakeawayItem", Storage="_Food", ThisKey="idFood", OtherKey="id", IsForeignKey=true)]
 		public Food Food
 		{
@@ -346,6 +323,40 @@ namespace QuanLyQuanCafe
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Takeaway_TakeawayItem", Storage="_Takeaway", ThisKey="idTakeaway", OtherKey="id", IsForeignKey=true)]
+		public Takeaway Takeaway
+		{
+			get
+			{
+				return this._Takeaway.Entity;
+			}
+			set
+			{
+				Takeaway previousValue = this._Takeaway.Entity;
+				if (((previousValue != value) 
+							|| (this._Takeaway.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Takeaway.Entity = null;
+						previousValue.TakeawayItems.Remove(this);
+					}
+					this._Takeaway.Entity = value;
+					if ((value != null))
+					{
+						value.TakeawayItems.Add(this);
+						this._idTakeaway = value.id;
+					}
+					else
+					{
+						this._idTakeaway = default(int);
+					}
+					this.SendPropertyChanged("Takeaway");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -367,19 +378,29 @@ namespace QuanLyQuanCafe
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Takeaway")]
-	public partial class Takeaway : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Bill")]
+	public partial class Bill : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _id;
 		
-		private System.Nullable<System.DateTime> _DateOrder;
+		private int _idTableFood;
+		
+		private System.Nullable<System.DateTime> _DateCheckIn;
+		
+		private System.Nullable<System.DateTime> _DateCheckOut;
 		
 		private System.Nullable<bool> _status;
 		
-		private EntitySet<TakeawayItem> _TakeawayItems;
+		private System.Nullable<int> _employeeId;
+		
+		private EntitySet<BillInfo> _BillInfos;
+		
+		private EntityRef<Employee> _Employee;
+		
+		private EntityRef<TableFood> _TableFood;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -387,15 +408,23 @@ namespace QuanLyQuanCafe
     partial void OnCreated();
     partial void OnidChanging(int value);
     partial void OnidChanged();
-    partial void OnDateOrderChanging(System.Nullable<System.DateTime> value);
-    partial void OnDateOrderChanged();
+    partial void OnidTableFoodChanging(int value);
+    partial void OnidTableFoodChanged();
+    partial void OnDateCheckInChanging(System.Nullable<System.DateTime> value);
+    partial void OnDateCheckInChanged();
+    partial void OnDateCheckOutChanging(System.Nullable<System.DateTime> value);
+    partial void OnDateCheckOutChanged();
     partial void OnstatusChanging(System.Nullable<bool> value);
     partial void OnstatusChanged();
+    partial void OnemployeeIdChanging(System.Nullable<int> value);
+    partial void OnemployeeIdChanged();
     #endregion
 		
-		public Takeaway()
+		public Bill()
 		{
-			this._TakeawayItems = new EntitySet<TakeawayItem>(new Action<TakeawayItem>(this.attach_TakeawayItems), new Action<TakeawayItem>(this.detach_TakeawayItems));
+			this._BillInfos = new EntitySet<BillInfo>(new Action<BillInfo>(this.attach_BillInfos), new Action<BillInfo>(this.detach_BillInfos));
+			this._Employee = default(EntityRef<Employee>);
+			this._TableFood = default(EntityRef<TableFood>);
 			OnCreated();
 		}
 		
@@ -419,22 +448,66 @@ namespace QuanLyQuanCafe
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateOrder", DbType="Date")]
-		public System.Nullable<System.DateTime> DateOrder
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idTableFood", DbType="Int NOT NULL")]
+		public int idTableFood
 		{
 			get
 			{
-				return this._DateOrder;
+				return this._idTableFood;
 			}
 			set
 			{
-				if ((this._DateOrder != value))
+				if ((this._idTableFood != value))
 				{
-					this.OnDateOrderChanging(value);
+					if (this._TableFood.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidTableFoodChanging(value);
 					this.SendPropertyChanging();
-					this._DateOrder = value;
-					this.SendPropertyChanged("DateOrder");
-					this.OnDateOrderChanged();
+					this._idTableFood = value;
+					this.SendPropertyChanged("idTableFood");
+					this.OnidTableFoodChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateCheckIn", DbType="Date")]
+		public System.Nullable<System.DateTime> DateCheckIn
+		{
+			get
+			{
+				return this._DateCheckIn;
+			}
+			set
+			{
+				if ((this._DateCheckIn != value))
+				{
+					this.OnDateCheckInChanging(value);
+					this.SendPropertyChanging();
+					this._DateCheckIn = value;
+					this.SendPropertyChanged("DateCheckIn");
+					this.OnDateCheckInChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateCheckOut", DbType="Date")]
+		public System.Nullable<System.DateTime> DateCheckOut
+		{
+			get
+			{
+				return this._DateCheckOut;
+			}
+			set
+			{
+				if ((this._DateCheckOut != value))
+				{
+					this.OnDateCheckOutChanging(value);
+					this.SendPropertyChanging();
+					this._DateCheckOut = value;
+					this.SendPropertyChanged("DateCheckOut");
+					this.OnDateCheckOutChanged();
 				}
 			}
 		}
@@ -459,16 +532,108 @@ namespace QuanLyQuanCafe
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Takeaway_TakeawayItem", Storage="_TakeawayItems", ThisKey="id", OtherKey="idTakeaway")]
-		public EntitySet<TakeawayItem> TakeawayItems
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_employeeId", DbType="Int")]
+		public System.Nullable<int> employeeId
 		{
 			get
 			{
-				return this._TakeawayItems;
+				return this._employeeId;
 			}
 			set
 			{
-				this._TakeawayItems.Assign(value);
+				if ((this._employeeId != value))
+				{
+					if (this._Employee.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnemployeeIdChanging(value);
+					this.SendPropertyChanging();
+					this._employeeId = value;
+					this.SendPropertyChanged("employeeId");
+					this.OnemployeeIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Bill_BillInfo", Storage="_BillInfos", ThisKey="id", OtherKey="idBill")]
+		public EntitySet<BillInfo> BillInfos
+		{
+			get
+			{
+				return this._BillInfos;
+			}
+			set
+			{
+				this._BillInfos.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Bill", Storage="_Employee", ThisKey="employeeId", OtherKey="id", IsForeignKey=true)]
+		public Employee Employee
+		{
+			get
+			{
+				return this._Employee.Entity;
+			}
+			set
+			{
+				Employee previousValue = this._Employee.Entity;
+				if (((previousValue != value) 
+							|| (this._Employee.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Employee.Entity = null;
+						previousValue.Bills.Remove(this);
+					}
+					this._Employee.Entity = value;
+					if ((value != null))
+					{
+						value.Bills.Add(this);
+						this._employeeId = value.id;
+					}
+					else
+					{
+						this._employeeId = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Employee");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TableFood_Bill", Storage="_TableFood", ThisKey="idTableFood", OtherKey="id", IsForeignKey=true)]
+		public TableFood TableFood
+		{
+			get
+			{
+				return this._TableFood.Entity;
+			}
+			set
+			{
+				TableFood previousValue = this._TableFood.Entity;
+				if (((previousValue != value) 
+							|| (this._TableFood.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TableFood.Entity = null;
+						previousValue.Bills.Remove(this);
+					}
+					this._TableFood.Entity = value;
+					if ((value != null))
+					{
+						value.Bills.Add(this);
+						this._idTableFood = value.id;
+					}
+					else
+					{
+						this._idTableFood = default(int);
+					}
+					this.SendPropertyChanged("TableFood");
+				}
 			}
 		}
 		
@@ -492,48 +657,291 @@ namespace QuanLyQuanCafe
 			}
 		}
 		
-		private void attach_TakeawayItems(TakeawayItem entity)
+		private void attach_BillInfos(BillInfo entity)
 		{
 			this.SendPropertyChanging();
-			entity.Takeaway = this;
+			entity.Bill = this;
 		}
 		
-		private void detach_TakeawayItems(TakeawayItem entity)
+		private void detach_BillInfos(BillInfo entity)
 		{
 			this.SendPropertyChanging();
-			entity.Takeaway = null;
+			entity.Bill = null;
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TableFood")]
-	public partial class TableFood : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BillInfo")]
+	public partial class BillInfo : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _id;
 		
-		private string _name;
+		private int _idBill;
 		
-		private System.Nullable<bool> _status;
+		private int _idFood;
+		
+		private int _count;
+		
+		private EntityRef<Bill> _Bill;
+		
+		private EntityRef<Food> _Food;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnidBillChanging(int value);
+    partial void OnidBillChanged();
+    partial void OnidFoodChanging(int value);
+    partial void OnidFoodChanged();
+    partial void OncountChanging(int value);
+    partial void OncountChanged();
+    #endregion
+		
+		public BillInfo()
+		{
+			this._Bill = default(EntityRef<Bill>);
+			this._Food = default(EntityRef<Food>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idBill", DbType="Int NOT NULL")]
+		public int idBill
+		{
+			get
+			{
+				return this._idBill;
+			}
+			set
+			{
+				if ((this._idBill != value))
+				{
+					if (this._Bill.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidBillChanging(value);
+					this.SendPropertyChanging();
+					this._idBill = value;
+					this.SendPropertyChanged("idBill");
+					this.OnidBillChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idFood", DbType="Int NOT NULL")]
+		public int idFood
+		{
+			get
+			{
+				return this._idFood;
+			}
+			set
+			{
+				if ((this._idFood != value))
+				{
+					if (this._Food.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidFoodChanging(value);
+					this.SendPropertyChanging();
+					this._idFood = value;
+					this.SendPropertyChanged("idFood");
+					this.OnidFoodChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Int NOT NULL")]
+		public int count
+		{
+			get
+			{
+				return this._count;
+			}
+			set
+			{
+				if ((this._count != value))
+				{
+					this.OncountChanging(value);
+					this.SendPropertyChanging();
+					this._count = value;
+					this.SendPropertyChanged("count");
+					this.OncountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Bill_BillInfo", Storage="_Bill", ThisKey="idBill", OtherKey="id", IsForeignKey=true)]
+		public Bill Bill
+		{
+			get
+			{
+				return this._Bill.Entity;
+			}
+			set
+			{
+				Bill previousValue = this._Bill.Entity;
+				if (((previousValue != value) 
+							|| (this._Bill.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Bill.Entity = null;
+						previousValue.BillInfos.Remove(this);
+					}
+					this._Bill.Entity = value;
+					if ((value != null))
+					{
+						value.BillInfos.Add(this);
+						this._idBill = value.id;
+					}
+					else
+					{
+						this._idBill = default(int);
+					}
+					this.SendPropertyChanged("Bill");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Food_BillInfo", Storage="_Food", ThisKey="idFood", OtherKey="id", IsForeignKey=true)]
+		public Food Food
+		{
+			get
+			{
+				return this._Food.Entity;
+			}
+			set
+			{
+				Food previousValue = this._Food.Entity;
+				if (((previousValue != value) 
+							|| (this._Food.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Food.Entity = null;
+						previousValue.BillInfos.Remove(this);
+					}
+					this._Food.Entity = value;
+					if ((value != null))
+					{
+						value.BillInfos.Add(this);
+						this._idFood = value.id;
+					}
+					else
+					{
+						this._idFood = default(int);
+					}
+					this.SendPropertyChanged("Food");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Employees")]
+	public partial class Employee : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _firstName;
+		
+		private string _lastName;
+		
+		private string _email;
+		
+		private string _phoneNumber;
+		
+		private System.Nullable<int> _jobId;
+		
+		private System.Nullable<System.DateTime> _dateStartWork;
+		
+		private string _userName;
+		
+		private string _password;
 		
 		private EntitySet<Bill> _Bills;
 		
+		private EntityRef<Job> _Job;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
     partial void OnidChanging(int value);
     partial void OnidChanged();
-    partial void OnnameChanging(string value);
-    partial void OnnameChanged();
-    partial void OnstatusChanging(System.Nullable<bool> value);
-    partial void OnstatusChanged();
+    partial void OnfirstNameChanging(string value);
+    partial void OnfirstNameChanged();
+    partial void OnlastNameChanging(string value);
+    partial void OnlastNameChanged();
+    partial void OnemailChanging(string value);
+    partial void OnemailChanged();
+    partial void OnphoneNumberChanging(string value);
+    partial void OnphoneNumberChanged();
+    partial void OnjobIdChanging(System.Nullable<int> value);
+    partial void OnjobIdChanged();
+    partial void OndateStartWorkChanging(System.Nullable<System.DateTime> value);
+    partial void OndateStartWorkChanged();
+    partial void OnuserNameChanging(string value);
+    partial void OnuserNameChanged();
+    partial void OnpasswordChanging(string value);
+    partial void OnpasswordChanged();
     #endregion
 		
-		public TableFood()
+		public Employee()
 		{
 			this._Bills = new EntitySet<Bill>(new Action<Bill>(this.attach_Bills), new Action<Bill>(this.detach_Bills));
+			this._Job = default(EntityRef<Job>);
 			OnCreated();
 		}
 		
@@ -557,47 +965,171 @@ namespace QuanLyQuanCafe
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string name
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_firstName", DbType="NVarChar(50)")]
+		public string firstName
 		{
 			get
 			{
-				return this._name;
+				return this._firstName;
 			}
 			set
 			{
-				if ((this._name != value))
+				if ((this._firstName != value))
 				{
-					this.OnnameChanging(value);
+					this.OnfirstNameChanging(value);
 					this.SendPropertyChanging();
-					this._name = value;
-					this.SendPropertyChanged("name");
-					this.OnnameChanged();
+					this._firstName = value;
+					this.SendPropertyChanged("firstName");
+					this.OnfirstNameChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_status", DbType="Bit")]
-		public System.Nullable<bool> status
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lastName", DbType="NVarChar(30)")]
+		public string lastName
 		{
 			get
 			{
-				return this._status;
+				return this._lastName;
 			}
 			set
 			{
-				if ((this._status != value))
+				if ((this._lastName != value))
 				{
-					this.OnstatusChanging(value);
+					this.OnlastNameChanging(value);
 					this.SendPropertyChanging();
-					this._status = value;
-					this.SendPropertyChanged("status");
-					this.OnstatusChanged();
+					this._lastName = value;
+					this.SendPropertyChanged("lastName");
+					this.OnlastNameChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TableFood_Bill", Storage="_Bills", ThisKey="id", OtherKey="idTableFood")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="VarChar(50)")]
+		public string email
+		{
+			get
+			{
+				return this._email;
+			}
+			set
+			{
+				if ((this._email != value))
+				{
+					this.OnemailChanging(value);
+					this.SendPropertyChanging();
+					this._email = value;
+					this.SendPropertyChanged("email");
+					this.OnemailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phoneNumber", DbType="VarChar(10)")]
+		public string phoneNumber
+		{
+			get
+			{
+				return this._phoneNumber;
+			}
+			set
+			{
+				if ((this._phoneNumber != value))
+				{
+					this.OnphoneNumberChanging(value);
+					this.SendPropertyChanging();
+					this._phoneNumber = value;
+					this.SendPropertyChanged("phoneNumber");
+					this.OnphoneNumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_jobId", DbType="Int")]
+		public System.Nullable<int> jobId
+		{
+			get
+			{
+				return this._jobId;
+			}
+			set
+			{
+				if ((this._jobId != value))
+				{
+					if (this._Job.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnjobIdChanging(value);
+					this.SendPropertyChanging();
+					this._jobId = value;
+					this.SendPropertyChanged("jobId");
+					this.OnjobIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dateStartWork", DbType="Date")]
+		public System.Nullable<System.DateTime> dateStartWork
+		{
+			get
+			{
+				return this._dateStartWork;
+			}
+			set
+			{
+				if ((this._dateStartWork != value))
+				{
+					this.OndateStartWorkChanging(value);
+					this.SendPropertyChanging();
+					this._dateStartWork = value;
+					this.SendPropertyChanged("dateStartWork");
+					this.OndateStartWorkChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userName", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
+		public string userName
+		{
+			get
+			{
+				return this._userName;
+			}
+			set
+			{
+				if ((this._userName != value))
+				{
+					this.OnuserNameChanging(value);
+					this.SendPropertyChanging();
+					this._userName = value;
+					this.SendPropertyChanged("userName");
+					this.OnuserNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_password", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string password
+		{
+			get
+			{
+				return this._password;
+			}
+			set
+			{
+				if ((this._password != value))
+				{
+					this.OnpasswordChanging(value);
+					this.SendPropertyChanging();
+					this._password = value;
+					this.SendPropertyChanged("password");
+					this.OnpasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Bill", Storage="_Bills", ThisKey="id", OtherKey="employeeId")]
 		public EntitySet<Bill> Bills
 		{
 			get
@@ -607,6 +1139,40 @@ namespace QuanLyQuanCafe
 			set
 			{
 				this._Bills.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Job_Employee", Storage="_Job", ThisKey="jobId", OtherKey="id", IsForeignKey=true)]
+		public Job Job
+		{
+			get
+			{
+				return this._Job.Entity;
+			}
+			set
+			{
+				Job previousValue = this._Job.Entity;
+				if (((previousValue != value) 
+							|| (this._Job.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Job.Entity = null;
+						previousValue.Employees.Remove(this);
+					}
+					this._Job.Entity = value;
+					if ((value != null))
+					{
+						value.Employees.Add(this);
+						this._jobId = value.id;
+					}
+					else
+					{
+						this._jobId = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Job");
+				}
 			}
 		}
 		
@@ -633,127 +1199,13 @@ namespace QuanLyQuanCafe
 		private void attach_Bills(Bill entity)
 		{
 			this.SendPropertyChanging();
-			entity.TableFood = this;
+			entity.Employee = this;
 		}
 		
 		private void detach_Bills(Bill entity)
 		{
 			this.SendPropertyChanging();
-			entity.TableFood = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.FoodCategory")]
-	public partial class FoodCategory : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _id;
-		
-		private string _name;
-		
-		private EntitySet<Food> _Foods;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidChanging(int value);
-    partial void OnidChanged();
-    partial void OnnameChanging(string value);
-    partial void OnnameChanged();
-    #endregion
-		
-		public FoodCategory()
-		{
-			this._Foods = new EntitySet<Food>(new Action<Food>(this.attach_Foods), new Action<Food>(this.detach_Foods));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id
-		{
-			get
-			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this.OnidChanging(value);
-					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string name
-		{
-			get
-			{
-				return this._name;
-			}
-			set
-			{
-				if ((this._name != value))
-				{
-					this.OnnameChanging(value);
-					this.SendPropertyChanging();
-					this._name = value;
-					this.SendPropertyChanged("name");
-					this.OnnameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FoodCategory_Food", Storage="_Foods", ThisKey="id", OtherKey="idCateGory")]
-		public EntitySet<Food> Foods
-		{
-			get
-			{
-				return this._Foods;
-			}
-			set
-			{
-				this._Foods.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Foods(Food entity)
-		{
-			this.SendPropertyChanging();
-			entity.FoodCategory = this;
-		}
-		
-		private void detach_Foods(Food entity)
-		{
-			this.SendPropertyChanging();
-			entity.FoodCategory = null;
+			entity.Employee = null;
 		}
 	}
 	
@@ -1012,23 +1464,17 @@ namespace QuanLyQuanCafe
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.BillInfo")]
-	public partial class BillInfo : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.FoodCategory")]
+	public partial class FoodCategory : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _id;
 		
-		private int _idBill;
+		private string _name;
 		
-		private int _idFood;
-		
-		private int _count;
-		
-		private EntityRef<Food> _Food;
-		
-		private EntityRef<Bill> _Bill;
+		private EntitySet<Food> _Foods;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1036,18 +1482,13 @@ namespace QuanLyQuanCafe
     partial void OnCreated();
     partial void OnidChanging(int value);
     partial void OnidChanged();
-    partial void OnidBillChanging(int value);
-    partial void OnidBillChanged();
-    partial void OnidFoodChanging(int value);
-    partial void OnidFoodChanged();
-    partial void OncountChanging(int value);
-    partial void OncountChanged();
+    partial void OnnameChanging(string value);
+    partial void OnnameChanged();
     #endregion
 		
-		public BillInfo()
+		public FoodCategory()
 		{
-			this._Food = default(EntityRef<Food>);
-			this._Bill = default(EntityRef<Bill>);
+			this._Foods = new EntitySet<Food>(new Action<Food>(this.attach_Foods), new Action<Food>(this.detach_Foods));
 			OnCreated();
 		}
 		
@@ -1071,139 +1512,36 @@ namespace QuanLyQuanCafe
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idBill", DbType="Int NOT NULL")]
-		public int idBill
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string name
 		{
 			get
 			{
-				return this._idBill;
+				return this._name;
 			}
 			set
 			{
-				if ((this._idBill != value))
+				if ((this._name != value))
 				{
-					if (this._Bill.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnidBillChanging(value);
+					this.OnnameChanging(value);
 					this.SendPropertyChanging();
-					this._idBill = value;
-					this.SendPropertyChanged("idBill");
-					this.OnidBillChanged();
+					this._name = value;
+					this.SendPropertyChanged("name");
+					this.OnnameChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idFood", DbType="Int NOT NULL")]
-		public int idFood
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FoodCategory_Food", Storage="_Foods", ThisKey="id", OtherKey="idCateGory")]
+		public EntitySet<Food> Foods
 		{
 			get
 			{
-				return this._idFood;
+				return this._Foods;
 			}
 			set
 			{
-				if ((this._idFood != value))
-				{
-					if (this._Food.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnidFoodChanging(value);
-					this.SendPropertyChanging();
-					this._idFood = value;
-					this.SendPropertyChanged("idFood");
-					this.OnidFoodChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_count", DbType="Int NOT NULL")]
-		public int count
-		{
-			get
-			{
-				return this._count;
-			}
-			set
-			{
-				if ((this._count != value))
-				{
-					this.OncountChanging(value);
-					this.SendPropertyChanging();
-					this._count = value;
-					this.SendPropertyChanged("count");
-					this.OncountChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Food_BillInfo", Storage="_Food", ThisKey="idFood", OtherKey="id", IsForeignKey=true)]
-		public Food Food
-		{
-			get
-			{
-				return this._Food.Entity;
-			}
-			set
-			{
-				Food previousValue = this._Food.Entity;
-				if (((previousValue != value) 
-							|| (this._Food.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Food.Entity = null;
-						previousValue.BillInfos.Remove(this);
-					}
-					this._Food.Entity = value;
-					if ((value != null))
-					{
-						value.BillInfos.Add(this);
-						this._idFood = value.id;
-					}
-					else
-					{
-						this._idFood = default(int);
-					}
-					this.SendPropertyChanged("Food");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Bill_BillInfo", Storage="_Bill", ThisKey="idBill", OtherKey="id", IsForeignKey=true)]
-		public Bill Bill
-		{
-			get
-			{
-				return this._Bill.Entity;
-			}
-			set
-			{
-				Bill previousValue = this._Bill.Entity;
-				if (((previousValue != value) 
-							|| (this._Bill.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Bill.Entity = null;
-						previousValue.BillInfos.Remove(this);
-					}
-					this._Bill.Entity = value;
-					if ((value != null))
-					{
-						value.BillInfos.Add(this);
-						this._idBill = value.id;
-					}
-					else
-					{
-						this._idBill = default(int);
-					}
-					this.SendPropertyChanged("Bill");
-				}
+				this._Foods.Assign(value);
 			}
 		}
 		
@@ -1226,27 +1564,33 @@ namespace QuanLyQuanCafe
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
+		
+		private void attach_Foods(Food entity)
+		{
+			this.SendPropertyChanging();
+			entity.FoodCategory = this;
+		}
+		
+		private void detach_Foods(Food entity)
+		{
+			this.SendPropertyChanging();
+			entity.FoodCategory = null;
+		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Bill")]
-	public partial class Bill : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Job")]
+	public partial class Job : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _id;
 		
-		private int _idTableFood;
+		private string _name;
 		
-		private System.Nullable<System.DateTime> _DateCheckIn;
+		private System.Nullable<int> _salary;
 		
-		private System.Nullable<System.DateTime> _DateCheckOut;
-		
-		private System.Nullable<bool> _status;
-		
-		private EntitySet<BillInfo> _BillInfos;
-		
-		private EntityRef<TableFood> _TableFood;
+		private EntitySet<Employee> _Employees;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1254,20 +1598,15 @@ namespace QuanLyQuanCafe
     partial void OnCreated();
     partial void OnidChanging(int value);
     partial void OnidChanged();
-    partial void OnidTableFoodChanging(int value);
-    partial void OnidTableFoodChanged();
-    partial void OnDateCheckInChanging(System.Nullable<System.DateTime> value);
-    partial void OnDateCheckInChanged();
-    partial void OnDateCheckOutChanging(System.Nullable<System.DateTime> value);
-    partial void OnDateCheckOutChanged();
-    partial void OnstatusChanging(System.Nullable<bool> value);
-    partial void OnstatusChanged();
+    partial void OnnameChanging(string value);
+    partial void OnnameChanged();
+    partial void OnsalaryChanging(System.Nullable<int> value);
+    partial void OnsalaryChanged();
     #endregion
 		
-		public Bill()
+		public Job()
 		{
-			this._BillInfos = new EntitySet<BillInfo>(new Action<BillInfo>(this.attach_BillInfos), new Action<BillInfo>(this.detach_BillInfos));
-			this._TableFood = default(EntityRef<TableFood>);
+			this._Employees = new EntitySet<Employee>(new Action<Employee>(this.attach_Employees), new Action<Employee>(this.detach_Employees));
 			OnCreated();
 		}
 		
@@ -1291,66 +1630,160 @@ namespace QuanLyQuanCafe
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idTableFood", DbType="Int NOT NULL")]
-		public int idTableFood
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string name
 		{
 			get
 			{
-				return this._idTableFood;
+				return this._name;
 			}
 			set
 			{
-				if ((this._idTableFood != value))
+				if ((this._name != value))
 				{
-					if (this._TableFood.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnidTableFoodChanging(value);
+					this.OnnameChanging(value);
 					this.SendPropertyChanging();
-					this._idTableFood = value;
-					this.SendPropertyChanged("idTableFood");
-					this.OnidTableFoodChanged();
+					this._name = value;
+					this.SendPropertyChanged("name");
+					this.OnnameChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateCheckIn", DbType="Date")]
-		public System.Nullable<System.DateTime> DateCheckIn
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_salary", DbType="Int")]
+		public System.Nullable<int> salary
 		{
 			get
 			{
-				return this._DateCheckIn;
+				return this._salary;
 			}
 			set
 			{
-				if ((this._DateCheckIn != value))
+				if ((this._salary != value))
 				{
-					this.OnDateCheckInChanging(value);
+					this.OnsalaryChanging(value);
 					this.SendPropertyChanging();
-					this._DateCheckIn = value;
-					this.SendPropertyChanged("DateCheckIn");
-					this.OnDateCheckInChanged();
+					this._salary = value;
+					this.SendPropertyChanged("salary");
+					this.OnsalaryChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateCheckOut", DbType="Date")]
-		public System.Nullable<System.DateTime> DateCheckOut
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Job_Employee", Storage="_Employees", ThisKey="id", OtherKey="jobId")]
+		public EntitySet<Employee> Employees
 		{
 			get
 			{
-				return this._DateCheckOut;
+				return this._Employees;
 			}
 			set
 			{
-				if ((this._DateCheckOut != value))
+				this._Employees.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Employees(Employee entity)
+		{
+			this.SendPropertyChanging();
+			entity.Job = this;
+		}
+		
+		private void detach_Employees(Employee entity)
+		{
+			this.SendPropertyChanging();
+			entity.Job = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TableFood")]
+	public partial class TableFood : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _id;
+		
+		private string _name;
+		
+		private System.Nullable<bool> _status;
+		
+		private EntitySet<Bill> _Bills;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(int value);
+    partial void OnidChanged();
+    partial void OnnameChanging(string value);
+    partial void OnnameChanged();
+    partial void OnstatusChanging(System.Nullable<bool> value);
+    partial void OnstatusChanged();
+    #endregion
+		
+		public TableFood()
+		{
+			this._Bills = new EntitySet<Bill>(new Action<Bill>(this.attach_Bills), new Action<Bill>(this.detach_Bills));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
 				{
-					this.OnDateCheckOutChanging(value);
+					this.OnidChanging(value);
 					this.SendPropertyChanging();
-					this._DateCheckOut = value;
-					this.SendPropertyChanged("DateCheckOut");
-					this.OnDateCheckOutChanged();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this.OnnameChanging(value);
+					this.SendPropertyChanging();
+					this._name = value;
+					this.SendPropertyChanged("name");
+					this.OnnameChanged();
 				}
 			}
 		}
@@ -1375,50 +1808,16 @@ namespace QuanLyQuanCafe
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Bill_BillInfo", Storage="_BillInfos", ThisKey="id", OtherKey="idBill")]
-		public EntitySet<BillInfo> BillInfos
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TableFood_Bill", Storage="_Bills", ThisKey="id", OtherKey="idTableFood")]
+		public EntitySet<Bill> Bills
 		{
 			get
 			{
-				return this._BillInfos;
+				return this._Bills;
 			}
 			set
 			{
-				this._BillInfos.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TableFood_Bill", Storage="_TableFood", ThisKey="idTableFood", OtherKey="id", IsForeignKey=true)]
-		public TableFood TableFood
-		{
-			get
-			{
-				return this._TableFood.Entity;
-			}
-			set
-			{
-				TableFood previousValue = this._TableFood.Entity;
-				if (((previousValue != value) 
-							|| (this._TableFood.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TableFood.Entity = null;
-						previousValue.Bills.Remove(this);
-					}
-					this._TableFood.Entity = value;
-					if ((value != null))
-					{
-						value.Bills.Add(this);
-						this._idTableFood = value.id;
-					}
-					else
-					{
-						this._idTableFood = default(int);
-					}
-					this.SendPropertyChanged("TableFood");
-				}
+				this._Bills.Assign(value);
 			}
 		}
 		
@@ -1442,36 +1841,32 @@ namespace QuanLyQuanCafe
 			}
 		}
 		
-		private void attach_BillInfos(BillInfo entity)
+		private void attach_Bills(Bill entity)
 		{
 			this.SendPropertyChanging();
-			entity.Bill = this;
+			entity.TableFood = this;
 		}
 		
-		private void detach_BillInfos(BillInfo entity)
+		private void detach_Bills(Bill entity)
 		{
 			this.SendPropertyChanging();
-			entity.Bill = null;
+			entity.TableFood = null;
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Account")]
-	public partial class Account : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Takeaway")]
+	public partial class Takeaway : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _id;
 		
-		private string _name;
+		private System.Nullable<System.DateTime> _DateOrder;
 		
-		private string _username;
+		private System.Nullable<bool> _status;
 		
-		private string _password;
-		
-		private System.Nullable<bool> _type;
-		
-		private System.Nullable<bool> _admin;
+		private EntitySet<TakeawayItem> _TakeawayItems;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1479,20 +1874,15 @@ namespace QuanLyQuanCafe
     partial void OnCreated();
     partial void OnidChanging(int value);
     partial void OnidChanged();
-    partial void OnnameChanging(string value);
-    partial void OnnameChanged();
-    partial void OnusernameChanging(string value);
-    partial void OnusernameChanged();
-    partial void OnpasswordChanging(string value);
-    partial void OnpasswordChanged();
-    partial void OntypeChanging(System.Nullable<bool> value);
-    partial void OntypeChanged();
-    partial void OnadminChanging(System.Nullable<bool> value);
-    partial void OnadminChanged();
+    partial void OnDateOrderChanging(System.Nullable<System.DateTime> value);
+    partial void OnDateOrderChanged();
+    partial void OnstatusChanging(System.Nullable<bool> value);
+    partial void OnstatusChanged();
     #endregion
 		
-		public Account()
+		public Takeaway()
 		{
+			this._TakeawayItems = new EntitySet<TakeawayItem>(new Action<TakeawayItem>(this.attach_TakeawayItems), new Action<TakeawayItem>(this.detach_TakeawayItems));
 			OnCreated();
 		}
 		
@@ -1516,103 +1906,56 @@ namespace QuanLyQuanCafe
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string name
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DateOrder", DbType="Date")]
+		public System.Nullable<System.DateTime> DateOrder
 		{
 			get
 			{
-				return this._name;
+				return this._DateOrder;
 			}
 			set
 			{
-				if ((this._name != value))
+				if ((this._DateOrder != value))
 				{
-					this.OnnameChanging(value);
+					this.OnDateOrderChanging(value);
 					this.SendPropertyChanging();
-					this._name = value;
-					this.SendPropertyChanged("name");
-					this.OnnameChanged();
+					this._DateOrder = value;
+					this.SendPropertyChanged("DateOrder");
+					this.OnDateOrderChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
-		public string username
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_status", DbType="Bit")]
+		public System.Nullable<bool> status
 		{
 			get
 			{
-				return this._username;
+				return this._status;
 			}
 			set
 			{
-				if ((this._username != value))
+				if ((this._status != value))
 				{
-					this.OnusernameChanging(value);
+					this.OnstatusChanging(value);
 					this.SendPropertyChanging();
-					this._username = value;
-					this.SendPropertyChanged("username");
-					this.OnusernameChanged();
+					this._status = value;
+					this.SendPropertyChanged("status");
+					this.OnstatusChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_password", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
-		public string password
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Takeaway_TakeawayItem", Storage="_TakeawayItems", ThisKey="id", OtherKey="idTakeaway")]
+		public EntitySet<TakeawayItem> TakeawayItems
 		{
 			get
 			{
-				return this._password;
+				return this._TakeawayItems;
 			}
 			set
 			{
-				if ((this._password != value))
-				{
-					this.OnpasswordChanging(value);
-					this.SendPropertyChanging();
-					this._password = value;
-					this.SendPropertyChanged("password");
-					this.OnpasswordChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_type", DbType="Bit")]
-		public System.Nullable<bool> type
-		{
-			get
-			{
-				return this._type;
-			}
-			set
-			{
-				if ((this._type != value))
-				{
-					this.OntypeChanging(value);
-					this.SendPropertyChanging();
-					this._type = value;
-					this.SendPropertyChanged("type");
-					this.OntypeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_admin", DbType="Bit")]
-		public System.Nullable<bool> admin
-		{
-			get
-			{
-				return this._admin;
-			}
-			set
-			{
-				if ((this._admin != value))
-				{
-					this.OnadminChanging(value);
-					this.SendPropertyChanging();
-					this._admin = value;
-					this.SendPropertyChanged("admin");
-					this.OnadminChanged();
-				}
+				this._TakeawayItems.Assign(value);
 			}
 		}
 		
@@ -1634,6 +1977,18 @@ namespace QuanLyQuanCafe
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_TakeawayItems(TakeawayItem entity)
+		{
+			this.SendPropertyChanging();
+			entity.Takeaway = this;
+		}
+		
+		private void detach_TakeawayItems(TakeawayItem entity)
+		{
+			this.SendPropertyChanging();
+			entity.Takeaway = null;
 		}
 	}
 }

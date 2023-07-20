@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyQuanCafe.Controller;
+using QuanLyQuanCafe.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,77 +14,52 @@ namespace QuanLyQuanCafe
 {
     public partial class fTakeaway : Form
     {
+        private TakeAwayController takeAwayController = new TakeAwayController();
         public fTakeaway()
         {
             InitializeComponent();
         }
-        int numberOfOrder;      //so luong don hang.
-        int numberOfDishes;    //so lượng loại món ăn trong id.
+
         private void btnCloseFormTakeaway_Click(object sender, EventArgs e)
         {
             this.Close();   
         }
 
 
-        private void lsbIDOrder_SelectedIndexChanged(object sender, EventArgs e)
+        private void fTakeaway_Load(object sender, EventArgs e)
         {
-            if (lsbIDOrder.SelectedItems.Count > 0)
+            List<Bill> listTABill = takeAwayController.GetListTakeAwaysBills();
+            cbIdTABill.DataSource = listTABill;     //load cb tìm kiếm theo id
+            cbIdTABill.DisplayMember = "id";
+            foreach (Bill bill in listTABill)
             {
-                btnDone.Visible = true;     //hiện nút hoàn thành lên khi đã chọn 1 hóa đơn.
-                btnDeleteOrder.Visible = true;
-                
-                lbIdAddress.Text = lsbIDOrder.SelectedItem.ToString();
-                lsbDetail.Items.Clear();
-                numberOfDishes = 5;
-                //dữ liệu load về từ database vào listbox "ID đang chờ"
-                string orderDetail = string.Empty;
-                string foodName = string.Empty;
-                int quantity = 0;
-                string note = "ghi chú từ database";
+                ListViewItem item = new ListViewItem(bill.id.ToString());
+                item.SubItems.Add(bill.idTableFood.ToString());
+                item.SubItems.Add(bill.DateCheckIn.ToString());
+                item.SubItems.Add(bill.DateCheckOut.ToString());
+                item.SubItems.Add(bill.status.ToString());
+                item.SubItems.Add(bill.employeeId.ToString());
+                lsvTABill.Items.Add(item);      //Load danh sach hóa đơn mang về
+            } 
+        }
 
-                rtbNote.Text = "Ghi chú: " + note;
-                for(int i = 1;i <= numberOfDishes;i++)
+        private void lsvTABill_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(lsvTABill.SelectedItems.Count == 1)
+            {
+                int idBillSelected = Convert.ToInt32(lsvTABill.SelectedItems[0].SubItems[0].Text);
+                List<BillDetailsCTL> listBillDetails = takeAwayController.GetListBillDetails(idBillSelected);
+
+                lsvBillDetail.Items.Clear();
+                foreach (BillDetailsCTL details in listBillDetails)
                 {
-                    foodName = "Load từ data " + i;
-                    quantity = i;
-                    orderDetail = i + ". " + foodName + "\t" + quantity;
-                    lsbDetail.Items.Add(orderDetail);
+                    ListViewItem item = new ListViewItem(details.BillId.ToString());
+                    item.SubItems.Add(details.FoodID.ToString());
+                    item.SubItems.Add(details.FoodName.ToString());
+                    item.SubItems.Add(details.Quantity.ToString());
+                    lsvBillDetail.Items.Add(item);
                 }
-            }    
-        }
-
-        private void btnDone_Click(object sender, EventArgs e)
-        {
-            Button bt = (Button)sender;
-            switch (bt.Text)
-            {
-                case "Hoàn thành":
-                    lsbIDOrder.Items.Remove(lsbIDOrder.SelectedItem);   //xóa item đã chọn
-                    numberOfOrder--;                                                   //load lại list
-                    lsbIDOrder.Items.Clear();
-                    string order = string.Empty;
-                    for (int i = 1; i <= numberOfOrder; i++)
-                    {
-                        order = "Dữ liệu từ Database "+i;
-                        lsbIDOrder.Items.Add(order);
-                    }
-                    break;
-                case "Hủy đơn":
-                    lsbIDOrder.Items.Remove(lsbIDOrder.SelectedItem);   //xóa item đã chọn
-                    numberOfOrder--;                                                   //load lại list
-                    lsbIDOrder.Items.Clear();
-                    for (int i = 1; i <= numberOfOrder; i++)
-                    {
-                        order = i + ". Dữ liệu từ Database";
-                        lsbIDOrder.Items.Add(order);
-                    }
-                    break;
             }
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
