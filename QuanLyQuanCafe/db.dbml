@@ -1,21 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="COFFEEMANAGER" Class="DataClasses2DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=MANH_CUONG;Initial Catalog=COFFEEMANAGER;Integrated Security=True" SettingsObjectName="QuanLyQuanCafe.Properties.Settings" SettingsPropertyName="db" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.TakeawayItem" Member="TakeawayItems">
-    <Type Name="TakeawayItem">
+  <Table Name="dbo.Bill" Member="Bills">
+    <Type Name="Bill">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="idTakeaway" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="idFood" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Takeaway_TakeawayItem" Member="Takeaway" ThisKey="idTakeaway" OtherKey="id" Type="Takeaway" IsForeignKey="true" />
-      <Association Name="Food_TakeawayItem" Member="Food" ThisKey="idFood" OtherKey="id" Type="Food" IsForeignKey="true" />
+      <Column Name="idTableFood" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateCheckIn" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DateCheckOut" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="employeeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Bill_BillInfo" Member="BillInfos" ThisKey="id" OtherKey="idBill" Type="BillInfo" />
+      <Association Name="Employee_Bill" Member="Employee" ThisKey="employeeId" OtherKey="id" Type="Employee" IsForeignKey="true" />
+      <Association Name="TableFood_Bill" Member="TableFood" ThisKey="idTableFood" OtherKey="id" Type="TableFood" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.Takeaway" Member="Takeaways">
-    <Type Name="Takeaway">
+  <Table Name="dbo.BillInfo" Member="BillInfos">
+    <Type Name="BillInfo">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="DateOrder" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Association Name="Takeaway_TakeawayItem" Member="TakeawayItems" ThisKey="id" OtherKey="idTakeaway" Type="TakeawayItem" />
+      <Column Name="idBill" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idFood" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Bill_BillInfo" Member="Bill" ThisKey="idBill" OtherKey="id" Type="Bill" IsForeignKey="true" />
+      <Association Name="Food_BillInfo" Member="Food" ThisKey="idFood" OtherKey="id" Type="Food" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employees" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="firstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lastName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="phoneNumber" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="jobId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dateStartWork" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="userName" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Employee_Bill" Member="Bills" ThisKey="id" OtherKey="employeeId" Type="Bill" />
+      <Association Name="Job_Employee" Member="Job" ThisKey="jobId" OtherKey="id" Type="Job" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Food" Member="Foods">
+    <Type Name="Food">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="images" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="idCateGory" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Food_BillInfo" Member="BillInfos" ThisKey="id" OtherKey="idFood" Type="BillInfo" />
+      <Association Name="FoodCategory_Food" Member="FoodCategory" ThisKey="idCateGory" OtherKey="id" Type="FoodCategory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FoodCategory" Member="FoodCategories">
+    <Type Name="FoodCategory">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="FoodCategory_Food" Member="Foods" ThisKey="id" OtherKey="idCateGory" Type="Food" />
     </Type>
   </Table>
   <Table Name="dbo.TableFood" Member="TableFoods">
@@ -26,54 +64,12 @@
       <Association Name="TableFood_Bill" Member="Bills" ThisKey="id" OtherKey="idTableFood" Type="Bill" />
     </Type>
   </Table>
-  <Table Name="dbo.FoodCategory" Member="FoodCategories">
-    <Type Name="FoodCategory">
+  <Table Name="dbo.Job" Member="Jobs">
+    <Type Name="Job">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Association Name="FoodCategory_Food" Member="Foods" ThisKey="id" OtherKey="idCateGory" Type="Food" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Food" Member="Foods">
-    <Type Name="Food">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
-      <Column Name="images" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
-      <Column Name="idCateGory" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Food_TakeawayItem" Member="TakeawayItems" ThisKey="id" OtherKey="idFood" Type="TakeawayItem" />
-      <Association Name="Food_BillInfo" Member="BillInfos" ThisKey="id" OtherKey="idFood" Type="BillInfo" />
-      <Association Name="FoodCategory_Food" Member="FoodCategory" ThisKey="idCateGory" OtherKey="id" Type="FoodCategory" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.BillInfo" Member="BillInfos">
-    <Type Name="BillInfo">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="idBill" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="idFood" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Food_BillInfo" Member="Food" ThisKey="idFood" OtherKey="id" Type="Food" IsForeignKey="true" />
-      <Association Name="Bill_BillInfo" Member="Bill" ThisKey="idBill" OtherKey="id" Type="Bill" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Bill" Member="Bills">
-    <Type Name="Bill">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="idTableFood" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="DateCheckIn" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="DateCheckOut" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Association Name="Bill_BillInfo" Member="BillInfos" ThisKey="id" OtherKey="idBill" Type="BillInfo" />
-      <Association Name="TableFood_Bill" Member="TableFood" ThisKey="idTableFood" OtherKey="id" Type="TableFood" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Account" Member="Accounts">
-    <Type Name="Account">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="username" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="password" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="type" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="admin" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="salary" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Job_Employee" Member="Employees" ThisKey="id" OtherKey="jobId" Type="Employee" />
     </Type>
   </Table>
 </Database>
