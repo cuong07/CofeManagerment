@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Linq;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QuanLyQuanCafe.Model
 {
@@ -174,6 +176,35 @@ namespace QuanLyQuanCafe.Model
                 }
             }
         }
+        public void DeleteTakeAwayBill(int idFB)
+        {
+            using (DataClasses2DataContext data = new DataClasses2DataContext())
+            {
+                try
+                {
+                    var billInForToDelete = data.BillInfos.SingleOrDefault(b => b.idBill == idFB);
+                    if (billInForToDelete != null)
+                    {
+                        data.BillInfos.DeleteOnSubmit(billInForToDelete);
+                        data.SubmitChanges();
+                    }
+                    //
+                    var billToDelete = data.Bills.SingleOrDefault(b => b.id == idFB);
+                    if (billToDelete != null)
+                    {
+                        data.Bills.DeleteOnSubmit(billToDelete);
+                        data.SubmitChanges();
+                        MessageBox.Show("Xóa bill thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (ChangeConflictException ex)
+                {
+                    MessageBox.Show("Xóa bill không thành công: " + ex.Message);
+                }
+            }
+
+        }
+        //xóa 1 đơn mang về (Công)
 
     }
 }

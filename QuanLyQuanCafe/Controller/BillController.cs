@@ -32,7 +32,11 @@ namespace QuanLyQuanCafe.Controller
             }
             _billModel = new BillModel();
         }
-
+        public BillController()
+        {
+            _billModel = new BillModel();
+        }
+        //hàm khởi tạo (Công)
         public int getUnCheckBill(int id)
         {
             return _billModel.GetUnCheckBillIDByTableId(id);
@@ -75,9 +79,12 @@ namespace QuanLyQuanCafe.Controller
             {
                 MessageBox.Show("Không có hóa đơn nào");
             }
-
-            
         }
+        public void DeleteTakeAwayBill(int idB)
+        {
+            _billModel.DeleteTakeAwayBill(idB);
+        }
+        //xóa 1 đơn mang về (Công)
 
     }
 }

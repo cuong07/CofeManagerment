@@ -79,6 +79,7 @@
             this.btnDone.TabIndex = 14;
             this.btnDone.Text = "Hoàn thành";
             this.btnDone.UseVisualStyleBackColor = false;
+            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // label3
             // 
@@ -118,6 +119,7 @@
             this.btnDeleteOrder.TabIndex = 16;
             this.btnDeleteOrder.Text = "Hủy đơn";
             this.btnDeleteOrder.UseVisualStyleBackColor = false;
+            this.btnDeleteOrder.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // rtbNote
             // 
@@ -266,7 +268,7 @@
             this.cbIdTABill.FormattingEnabled = true;
             this.cbIdTABill.Location = new System.Drawing.Point(271, 3);
             this.cbIdTABill.Name = "cbIdTABill";
-            this.cbIdTABill.Size = new System.Drawing.Size(243, 30);
+            this.cbIdTABill.Size = new System.Drawing.Size(243, 34);
             this.cbIdTABill.TabIndex = 12;
             // 
             // columnHeader1
@@ -330,6 +332,7 @@
             this.lsvTABill.TabIndex = 16;
             this.lsvTABill.UseCompatibleStateImageBehavior = false;
             this.lsvTABill.View = System.Windows.Forms.View.Details;
+            this.lsvTABill.SelectedIndexChanged += new System.EventHandler(this.lsvTABill_SelectedIndexChanged);
             // 
             // btnCloseFormTakeaway
             // 
@@ -344,6 +347,7 @@
             this.btnCloseFormTakeaway.TabIndex = 8;
             this.btnCloseFormTakeaway.Text = "X";
             this.btnCloseFormTakeaway.UseVisualStyleBackColor = false;
+            this.btnCloseFormTakeaway.Click += new System.EventHandler(this.btnCloseFormTakeaway_Click);
             // 
             // label1
             // 
@@ -383,6 +387,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fTakeaway";
             this.Text = "fTakeaway";
+            this.Load += new System.EventHandler(this.fTakeaway_Load);
             this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
