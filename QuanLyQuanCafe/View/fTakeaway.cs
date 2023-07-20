@@ -15,6 +15,7 @@ namespace QuanLyQuanCafe
     public partial class fTakeaway : Form
     {
         private TakeAwayController takeAwayController = new TakeAwayController();
+        private BillController billController = new BillController();
         public fTakeaway()
         {
             InitializeComponent();
@@ -27,6 +28,10 @@ namespace QuanLyQuanCafe
 
 
         private void fTakeaway_Load(object sender, EventArgs e)
+        {
+            LoadLsv_cbTakeAway();
+        }
+        public void LoadLsv_cbTakeAway()
         {
             List<Bill> listTABill = takeAwayController.GetListTakeAwaysBills();
             cbIdTABill.DataSource = listTABill;     //load cb tìm kiếm theo id
@@ -42,7 +47,6 @@ namespace QuanLyQuanCafe
                 lsvTABill.Items.Add(item);      //Load danh sach hóa đơn mang về
             }
         }
-
         private void lsvTABill_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lsvTABill.SelectedItems.Count == 1)
@@ -60,6 +64,35 @@ namespace QuanLyQuanCafe
                     lsvBillDetail.Items.Add(item);
                 }
             }
+        }
+
+        private void btnDone_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Button bt = (Button)sender;
+                int idBillSelected = Convert.ToInt32(lsvTABill.SelectedItems[0].SubItems[0].Text);
+                if (lsvTABill.SelectedItems.Count == 1)
+                {
+                    switch(bt.Text)
+                    {
+                        case "Hoàn thành":
+                            billController.checkOut(idBillSelected);
+                            break;
+                        case "Hủy đơn":
+                            billController.DeleteTakeAwayBill(idBillSelected);
+                            break;
+                    }    
+                    lsvBillDetail.Items.Clear();
+                    lsvTABill.Items.Clear();
+                    LoadLsv_cbTakeAway();
+                }    
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }
