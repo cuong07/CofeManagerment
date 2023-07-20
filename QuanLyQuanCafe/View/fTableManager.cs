@@ -74,7 +74,7 @@ namespace QuanLyQuanCafe
 
         private void btnRevenue_Click(object sender, EventArgs e)       //click vào button "doanh thu"
         {
-            OpenChildForm(new fRevenue());
+            OpenChildForm(new fEmployees());
             ChangeColorBtn(btnRevenua, btnBill, btnHome, btnMenu,  btnTakeAway, btnSetting);
         }
         
