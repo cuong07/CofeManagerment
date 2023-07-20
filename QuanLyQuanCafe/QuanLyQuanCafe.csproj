@@ -51,7 +51,9 @@
     <Compile Include="Controller\BillController.cs" />
     <Compile Include="Controller\BillInfoController.cs" />
     <Compile Include="Controller\CategoryController.cs" />
+    <Compile Include="Controller\EmployeesController.cs" />
     <Compile Include="Controller\FoodController.cs" />
+    <Compile Include="Controller\JobController.cs" />
     <Compile Include="Controller\TableController.cs" />
     <Compile Include="db.designer.cs">
       <AutoGen>True</AutoGen>
@@ -61,7 +63,9 @@
     <Compile Include="Model\BillInfoModel.cs" />
     <Compile Include="Model\BillModel.cs" />
     <Compile Include="Model\CategoryModel.cs" />
+    <Compile Include="Model\EmployeesModel.cs" />
     <Compile Include="Model\FoodModel.cs" />
+    <Compile Include="Model\JobModel.cs" />
     <Compile Include="Model\TableModel.cs" />
     <Compile Include="View\fBill.cs">
       <SubType>Form</SubType>
@@ -81,11 +85,11 @@
     <Compile Include="View\fMenuFood.Designer.cs">
       <DependentUpon>fMenuFood.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fRevenue.cs">
+    <Compile Include="View\fEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fRevenue.Designer.cs">
-      <DependentUpon>fRevenue.cs</DependentUpon>
+    <Compile Include="View\fEmployees.Designer.cs">
+      <DependentUpon>fEmployees.cs</DependentUpon>
     </Compile>
     <Compile Include="View\fSetting.cs">
       <SubType>Form</SubType>
@@ -122,8 +126,8 @@
     <EmbeddedResource Include="View\fMenuFood.resx">
       <DependentUpon>fMenuFood.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fRevenue.resx">
-      <DependentUpon>fRevenue.cs</DependentUpon>
+    <EmbeddedResource Include="View\fEmployees.resx">
+      <DependentUpon>fEmployees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\fSetting.resx">
       <DependentUpon>fSetting.cs</DependentUpon>
