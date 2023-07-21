@@ -61,11 +61,11 @@
             this.pnLeft.Controls.Add(this.btnSetting);
             this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnLeft.Location = new System.Drawing.Point(0, 0);
-            this.pnLeft.Margin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.pnLeft.MaximumSize = new System.Drawing.Size(149, 0);
-            this.pnLeft.MinimumSize = new System.Drawing.Size(45, 0);
+            this.pnLeft.Margin = new System.Windows.Forms.Padding(3, 2, 0, 2);
+            this.pnLeft.MaximumSize = new System.Drawing.Size(199, 0);
+            this.pnLeft.MinimumSize = new System.Drawing.Size(60, 0);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(45, 625);
+            this.pnLeft.Size = new System.Drawing.Size(60, 769);
             this.pnLeft.TabIndex = 4;
             // 
             // panel7
@@ -76,10 +76,10 @@
             this.panel7.Controls.Add(this.btnBill);
             this.panel7.Controls.Add(this.btnRevenua);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 72);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Location = new System.Drawing.Point(0, 88);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(45, 219);
+            this.panel7.Size = new System.Drawing.Size(60, 270);
             this.panel7.TabIndex = 6;
             // 
             // btnMenu
@@ -92,11 +92,11 @@
             this.btnMenu.ForeColor = System.Drawing.Color.White;
             this.btnMenu.Image = global::QuanLyQuanCafe.Properties.Resources.menu;
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.Location = new System.Drawing.Point(0, 87);
+            this.btnMenu.Location = new System.Drawing.Point(0, 108);
             this.btnMenu.Margin = new System.Windows.Forms.Padding(0);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnMenu.Size = new System.Drawing.Size(45, 44);
+            this.btnMenu.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnMenu.Size = new System.Drawing.Size(60, 54);
             this.btnMenu.TabIndex = 3;
             this.btnMenu.Text = "          Thực đơn";
             this.btnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -112,11 +112,11 @@
             this.btnTakeAway.ForeColor = System.Drawing.Color.White;
             this.btnTakeAway.Image = global::QuanLyQuanCafe.Properties.Resources.revenue;
             this.btnTakeAway.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTakeAway.Location = new System.Drawing.Point(0, 44);
+            this.btnTakeAway.Location = new System.Drawing.Point(0, 54);
             this.btnTakeAway.Margin = new System.Windows.Forms.Padding(0);
             this.btnTakeAway.Name = "btnTakeAway";
-            this.btnTakeAway.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnTakeAway.Size = new System.Drawing.Size(45, 44);
+            this.btnTakeAway.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnTakeAway.Size = new System.Drawing.Size(60, 54);
             this.btnTakeAway.TabIndex = 2;
             this.btnTakeAway.Text = "          Bán mang đi";
             this.btnTakeAway.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -136,8 +136,8 @@
             this.btnHome.Location = new System.Drawing.Point(0, 0);
             this.btnHome.Margin = new System.Windows.Forms.Padding(0);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(45, 44);
+            this.btnHome.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnHome.Size = new System.Drawing.Size(60, 54);
             this.btnHome.TabIndex = 2;
             this.btnHome.Text = "          Tại quán";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -154,11 +154,11 @@
             this.btnBill.ForeColor = System.Drawing.Color.White;
             this.btnBill.Image = global::QuanLyQuanCafe.Properties.Resources.bill;
             this.btnBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBill.Location = new System.Drawing.Point(0, 131);
+            this.btnBill.Location = new System.Drawing.Point(0, 162);
             this.btnBill.Margin = new System.Windows.Forms.Padding(0);
             this.btnBill.Name = "btnBill";
-            this.btnBill.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnBill.Size = new System.Drawing.Size(45, 44);
+            this.btnBill.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnBill.Size = new System.Drawing.Size(60, 54);
             this.btnBill.TabIndex = 4;
             this.btnBill.Text = "          Hóa đơn";
             this.btnBill.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -175,11 +175,11 @@
             this.btnRevenua.ForeColor = System.Drawing.Color.White;
             this.btnRevenua.Image = global::QuanLyQuanCafe.Properties.Resources.revenue;
             this.btnRevenua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRevenua.Location = new System.Drawing.Point(0, 175);
+            this.btnRevenua.Location = new System.Drawing.Point(0, 216);
             this.btnRevenua.Margin = new System.Windows.Forms.Padding(0);
             this.btnRevenua.Name = "btnRevenua";
-            this.btnRevenua.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnRevenua.Size = new System.Drawing.Size(45, 44);
+            this.btnRevenua.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnRevenua.Size = new System.Drawing.Size(60, 54);
             this.btnRevenua.TabIndex = 5;
             this.btnRevenua.Text = "          Doanh thu";
             this.btnRevenua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -193,18 +193,19 @@
             this.panel4.Controls.Add(this.ptbMenu);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(45, 72);
+            this.panel4.Size = new System.Drawing.Size(60, 88);
             this.panel4.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(53, 5);
+            this.label2.Location = new System.Drawing.Point(71, 6);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 65);
+            this.label2.Size = new System.Drawing.Size(124, 80);
             this.label2.TabIndex = 6;
             this.label2.Text = "MENU";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -213,7 +214,8 @@
             // 
             this.ptbMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbMenu.Image = global::QuanLyQuanCafe.Properties.Resources.menu_30;
-            this.ptbMenu.Location = new System.Drawing.Point(6, 20);
+            this.ptbMenu.Location = new System.Drawing.Point(8, 25);
+            this.ptbMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ptbMenu.Name = "ptbMenu";
             this.ptbMenu.Size = new System.Drawing.Size(30, 30);
             this.ptbMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -231,11 +233,11 @@
             this.btnSetting.ForeColor = System.Drawing.Color.White;
             this.btnSetting.Image = global::QuanLyQuanCafe.Properties.Resources.setting;
             this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.Location = new System.Drawing.Point(0, 576);
+            this.btnSetting.Location = new System.Drawing.Point(0, 709);
             this.btnSetting.Margin = new System.Windows.Forms.Padding(0);
             this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btnSetting.Size = new System.Drawing.Size(45, 49);
+            this.btnSetting.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.btnSetting.Size = new System.Drawing.Size(60, 60);
             this.btnSetting.TabIndex = 6;
             this.btnSetting.Text = "          Cài đặt";
             this.btnSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -247,26 +249,28 @@
             this.pnBody.BackgroundImage = global::QuanLyQuanCafe.Properties.Resources.bg;
             this.pnBody.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnBody.Location = new System.Drawing.Point(45, 0);
-            this.pnBody.Margin = new System.Windows.Forms.Padding(2);
+            this.pnBody.Location = new System.Drawing.Point(60, 0);
+            this.pnBody.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnBody.Name = "pnBody";
-            this.pnBody.Size = new System.Drawing.Size(1101, 625);
+            this.pnBody.Size = new System.Drawing.Size(1468, 769);
             this.pnBody.TabIndex = 8;
             // 
             // fTableManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1146, 625);
+            this.ClientSize = new System.Drawing.Size(1528, 769);
             this.Controls.Add(this.pnBody);
             this.Controls.Add(this.pnLeft);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "fTableManager";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Quản Lý Quán Cà Phê";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fTableManager_FormClosing);
             this.pnLeft.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
