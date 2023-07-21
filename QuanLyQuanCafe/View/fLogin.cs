@@ -20,11 +20,6 @@ namespace QuanLyQuanCafe
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             var userName = txtUsername.Text.Trim();
@@ -39,17 +34,21 @@ namespace QuanLyQuanCafe
             }
             if (loginController.LoginSuccess(userName, password))
             {
-                fTableManager f = new fTableManager();
-                this.Hide();
-                f.ShowDialog();
-                this.Show();
+                fTableManager.isSucces = true;
+                this.Close();
             }
             else
             {
                 MessageBox.Show("Tên đăng nhập hoặc mật khẩu sai");
             }
+        }
 
-            
+        private void fLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!fTableManager.isSucces)    //nếu thoát form trực tiếp => thoát chương trình
+            {
+                Application.Exit();
+            }
         }
     }
 }

@@ -93,7 +93,7 @@
             // 
             this.button1.Image = global::QuanLyQuanCafe.Properties.Resources.fSetting_icon_profile_32;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-2, 33);
+            this.button1.Location = new System.Drawing.Point(-2, 28);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -104,12 +104,15 @@
             // 
             // button3
             // 
-            this.button3.Image = global::QuanLyQuanCafe.Properties.Resources.close_25;
-            this.button3.Location = new System.Drawing.Point(170, 7);
+            this.button3.BackColor = System.Drawing.Color.Red;
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button3.Location = new System.Drawing.Point(162, -1);
+            this.button3.Margin = new System.Windows.Forms.Padding(0);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(33, 23);
+            this.button3.Size = new System.Drawing.Size(41, 29);
             this.button3.TabIndex = 6;
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Text = "X";
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // fSetting
@@ -117,7 +120,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(202, 261);
+            this.ClientSize = new System.Drawing.Size(202, 258);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button8);
@@ -128,6 +131,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "fSetting";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "fSetting";
             this.ResumeLayout(false);
 

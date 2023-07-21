@@ -8,15 +8,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace QuanLyQuanCafe
 {
     public partial class fTableManager : Form
     {
+        public static bool isSucces = false;
 
         public fTableManager()
         {
+            fLogin flg = new fLogin();
+            flg.ShowDialog();
+            if (!isSucces)
+            {
+                Application.Exit();
+            }
             InitializeComponent();
+
         }
 
         #region các handler sự kiện click
@@ -98,15 +107,25 @@ namespace QuanLyQuanCafe
         private void btnSetting_Click(object sender, EventArgs e)
         {
             fSetting f = new fSetting();
-            f.TopLevel = false;
-            pnBody.Controls.Add(f);
-            f.BringToFront();
-            f.Location = new Point(5, pnBody.Size.Height - 290);
-            f.Show();
+            fTableManager ftb = new fTableManager();
+            f.Location = new Point(20,500);
+            f.ShowDialog();
         }
+
+
         #endregion
 
-       
-       
+        private void fTableManager_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                DialogResult result = MessageBox.Show("Bạn có muốn thoát chương trình không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.No)
+                {
+                    e.Cancel = true; // Hủy sự kiện đóng form
+                }
+            }
+        }
     }
 }

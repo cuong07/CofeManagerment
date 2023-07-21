@@ -57,7 +57,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(17, 16);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.MaximumSize = new System.Drawing.Size(448, 496);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(448, 496);
@@ -70,7 +70,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLogin.Location = new System.Drawing.Point(125, 286);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(193, 46);
             this.btnLogin.TabIndex = 3;
@@ -83,7 +83,7 @@
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Location = new System.Drawing.Point(31, 176);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(413, 60);
             this.panel4.TabIndex = 2;
@@ -133,14 +133,13 @@
             this.label3.Size = new System.Drawing.Size(82, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Mật khẩu:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(31, 97);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(413, 60);
             this.panel2.TabIndex = 1;
@@ -210,9 +209,10 @@
             this.ClientSize = new System.Drawing.Size(1036, 527);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fLogin";
             this.Text = "Đăng nhập";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fLogin_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
