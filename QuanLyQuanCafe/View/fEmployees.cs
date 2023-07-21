@@ -50,5 +50,10 @@ namespace QuanLyQuanCafe
             };
             _employeesController.addEmployees(newEmployees);
         }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
