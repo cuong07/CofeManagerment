@@ -76,7 +76,6 @@ D:\PA\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.SuggestedBi
 D:\PA\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fBill.resources
 D:\PA\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fLogin.resources
 D:\PA\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fMenuFood.resources
-D:\PA\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fRevenue.resources
 D:\PA\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fSetting.resources
 D:\PA\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fTable.resources
 D:\PA\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fTableManager.resources
@@ -124,3 +123,4 @@ D:\OnGit\tl_Winform\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.cspr
 D:\OnGit\tl_Winform\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.CoreCompileInputs.cache
 D:\OnGit\tl_Winform\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.exe
 D:\OnGit\tl_Winform\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.pdb
+D:\PA\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fEmployees.resources
