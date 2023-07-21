@@ -11,9 +11,11 @@ namespace QuanLyQuanCafe.Controller
     public class EmployeesController
     {
         private EmployeesModel _employeesModel;
-        public EmployeesController()
+        private fEmployees _fEmployees;
+        public EmployeesController(fEmployees fEmployees)
         {
             _employeesModel = new EmployeesModel();
+            _fEmployees = fEmployees;
         }
 
         public void addEmployees(Employee newEmployee)
@@ -29,5 +31,22 @@ namespace QuanLyQuanCafe.Controller
             }
 
         }
+
+        public void loadListEmployees()
+        {
+            List<EmployeeDetail> listEmployees = _employeesModel.GetListEmployees();
+            _fEmployees.LoadEmployees(listEmployees);
+        }
+
+        public void updateEmployees(Employee newEmployees)
+        {
+            _employeesModel.UpdateEmployees(newEmployees);
+        }
+
+        public void removeEmployees(int idEmployees)
+        {
+            _employeesModel.RemoveEmployee(idEmployees);
+        }
+
     }
 }
