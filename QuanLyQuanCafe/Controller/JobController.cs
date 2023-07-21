@@ -23,5 +23,16 @@ namespace QuanLyQuanCafe.Controller
             _fEmployees.LoadJob(list);
         }
 
+        public Job getJobById(int id)
+        { 
+            Job job = _jobModel.GetJobById(id);
+            return job;
+        }
+        public Job getJobByName(string name)
+        {
+            Job job = _jobModel.GetJobByName(name);
+            return job;
+        }
+
     }
 }

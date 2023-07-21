@@ -48,6 +48,9 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -66,12 +69,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.lsvEmployees = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.firstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SĐT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.s = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Tên = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
@@ -83,6 +87,7 @@
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel16.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -178,6 +183,7 @@
             this.button3.TabIndex = 0;
             this.button3.Text = "Xóa";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -190,6 +196,7 @@
             this.button2.TabIndex = 0;
             this.button2.Text = "Sửa";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -202,12 +209,14 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Thêm";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.panel9);
             this.panel4.Controls.Add(this.panel10);
             this.panel4.Controls.Add(this.panel8);
+            this.panel4.Controls.Add(this.panel16);
             this.panel4.Controls.Add(this.panel12);
             this.panel4.Controls.Add(this.panel11);
             this.panel4.Controls.Add(this.panel7);
@@ -218,7 +227,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(518, 618);
             this.panel4.TabIndex = 2;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // panel9
             // 
@@ -308,6 +316,35 @@
             this.label5.Size = new System.Drawing.Size(48, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "SDT:";
+            // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.txtId);
+            this.panel16.Controls.Add(this.label12);
+            this.panel16.Location = new System.Drawing.Point(4, 279);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(381, 33);
+            this.panel16.TabIndex = 0;
+            // 
+            // txtId
+            // 
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtId.Location = new System.Drawing.Point(98, 6);
+            this.txtId.MaxLength = 8;
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(141, 20);
+            this.txtId.TabIndex = 1;
+            this.txtId.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(69, 8);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(25, 17);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "ID:";
             // 
             // panel12
             // 
@@ -489,12 +526,13 @@
             // lsvEmployees
             // 
             this.lsvEmployees.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6});
+            this.id,
+            this.firstName,
+            this.lastName,
+            this.Email,
+            this.SĐT,
+            this.s,
+            this.Tên});
             this.lsvEmployees.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lsvEmployees.FullRowSelect = true;
             this.lsvEmployees.GridLines = true;
@@ -506,36 +544,41 @@
             this.lsvEmployees.TabIndex = 2;
             this.lsvEmployees.UseCompatibleStateImageBehavior = false;
             this.lsvEmployees.View = System.Windows.Forms.View.Details;
+            this.lsvEmployees.SelectedIndexChanged += new System.EventHandler(this.lsvEmployees_SelectedIndexChanged);
             // 
-            // columnHeader1
+            // id
             // 
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 35;
+            this.id.Text = "ID";
+            this.id.Width = 35;
             // 
-            // columnHeader2
+            // firstName
             // 
-            this.columnHeader2.Text = "Họ tên";
-            this.columnHeader2.Width = 129;
+            this.firstName.Text = "Họ";
+            this.firstName.Width = 67;
             // 
-            // columnHeader3
+            // lastName
             // 
-            this.columnHeader3.Text = "Email";
-            this.columnHeader3.Width = 94;
+            this.lastName.Text = "Tên";
+            this.lastName.Width = 94;
             // 
-            // columnHeader4
+            // Email
             // 
-            this.columnHeader4.Text = "SĐT";
-            this.columnHeader4.Width = 99;
+            this.Email.Text = "Email";
+            this.Email.Width = 99;
             // 
-            // columnHeader5
+            // SĐT
             // 
-            this.columnHeader5.Text = "Vị trí";
-            this.columnHeader5.Width = 101;
+            this.SĐT.Text = "SĐT";
+            this.SĐT.Width = 101;
             // 
-            // columnHeader6
+            // s
             // 
-            this.columnHeader6.Text = "Ngày vào";
-            this.columnHeader6.Width = 123;
+            this.s.Text = "Vị trí";
+            this.s.Width = 128;
+            // 
+            // Tên
+            // 
+            this.Tên.Text = "Ngày vào";
             // 
             // panel14
             // 
@@ -590,6 +633,8 @@
             this.panel10.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel11.ResumeLayout(false);
@@ -646,14 +691,18 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.ListView lsvEmployees;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader id;
+        private System.Windows.Forms.ColumnHeader firstName;
+        private System.Windows.Forms.ColumnHeader lastName;
+        private System.Windows.Forms.ColumnHeader Email;
+        private System.Windows.Forms.ColumnHeader SĐT;
+        private System.Windows.Forms.ColumnHeader s;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ColumnHeader Tên;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label label12;
     }
 }

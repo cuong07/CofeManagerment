@@ -16,5 +16,28 @@ namespace QuanLyQuanCafe.Model
                 return listJob;
             }
         }
+
+        public Job GetJobById(int id)
+        {
+            using ( DataClasses2DataContext db = new DataClasses2DataContext())
+            {
+                var job = from j in db.Jobs
+                          where j.id == id 
+                          select j;
+                return job.FirstOrDefault();
+            }
+        }
+
+        public Job GetJobByName(string name)
+        {
+            using (DataClasses2DataContext db = new DataClasses2DataContext())
+            {
+                var job = from j in db.Jobs
+                          where j.name == name
+                          select j;
+                return job.FirstOrDefault();
+            }
+        }
+
     }
 }
