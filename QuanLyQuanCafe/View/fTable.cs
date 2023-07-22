@@ -51,6 +51,7 @@ namespace QuanLyQuanCafe
                 button.Text = table.name + Environment.NewLine + (table.status.HasValue ? (table.status.Value ? "Có khách" : "Trống") : "Không rõ");
                 button.Font = new Font("Arial", 10, FontStyle.Regular);
                 button.Tag = table;
+                button.Margin = new Padding(10);
                 button.Click += table_Click;
                 flpTable.Controls.Add(button);
                 if (table.status.HasValue)
@@ -101,7 +102,10 @@ namespace QuanLyQuanCafe
             int tableID = ((sender as Button).Tag as TableFood).id;
             lsvBill.Tag = (sender as Button).Tag;
             txtNameTable.Text = ((sender as Button).Tag as TableFood).name;
-            ShowBill(tableID);
+            if(tableID != 1)
+            {
+                ShowBill(tableID);
+            }
         }
 
         void ShowBill(int id)
@@ -131,16 +135,24 @@ namespace QuanLyQuanCafe
                 int idFood = (cbFood.SelectedItem as Food).id;
                 int count = (int)nmFoodCount.Value;
                 MessageBox.Show(idBill.ToString());
-                if (idBill == -1)
+                if(table.id == 1)
                 {
                     _billController.insertBill(table.id);
-                    _billInfoController.insertBillInfo(_billController.getMaxIdBill(), idFood,count);
+                    _billInfoController.insertBillInfo(_billController.getMaxIdBill(), idFood, count);
                 }
                 else
                 {
-                    _billInfoController.insertBillInfo(idBill, idFood, count);
+                    if (idBill == -1 && table.id != 1)
+                    {
+                        _billController.insertBill(table.id);
+                        _billInfoController.insertBillInfo(_billController.getMaxIdBill(), idFood, count);
+                    }
+                    else
+                    {
+                        _billInfoController.insertBillInfo(idBill, idFood, count);
+                    }
+                    ShowBill(table.id);
                 }
-                ShowBill(table.id);
             }
             else
             {

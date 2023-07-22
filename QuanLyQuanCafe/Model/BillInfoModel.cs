@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QuanLyQuanCafe.Model
 {
@@ -12,28 +13,35 @@ namespace QuanLyQuanCafe.Model
         {
             using (DataClasses2DataContext db = new DataClasses2DataContext())
             {
-                var existingBillInfo = db.BillInfos.FirstOrDefault(bi => bi.idBill == idBill && bi.idFood == idFood);
-
-                if (existingBillInfo != null)
+                try
                 {
-                    existingBillInfo.count += count;
-                    if (existingBillInfo.count <= 0)
+                    var existingBillInfo = db.BillInfos.FirstOrDefault(bi => bi.idBill == idBill && bi.idFood == idFood);
+
+                    if (existingBillInfo != null)
                     {
-                        db.BillInfos.DeleteOnSubmit(existingBillInfo);
+                        existingBillInfo.count += count;
+                        if (existingBillInfo.count <= 0)
+                        {
+                            db.BillInfos.DeleteOnSubmit(existingBillInfo);
+                        }
                     }
-                }
-                else
-                {
-                    BillInfo newBillInfo = new BillInfo()
+                    else
                     {
-                        idBill = idBill,
-                        idFood = idFood,
-                        count = count
-                    };
-                    db.BillInfos.InsertOnSubmit(newBillInfo);
-                }
+                        BillInfo newBillInfo = new BillInfo()
+                        {
+                            idBill = idBill,
+                            idFood = idFood,
+                            count = count
+                        };
+                        db.BillInfos.InsertOnSubmit(newBillInfo);
+                    }
 
-                db.SubmitChanges();
+                    db.SubmitChanges();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Đã xảy ra lỗi khi thêm hóa đơn");
+                }
             }
         }
 
