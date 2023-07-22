@@ -47,5 +47,15 @@ namespace QuanLyQuanCafe.Controller
         {
             _foodModel.DeleteFood(idFood);
         }
+        //
+        public bool FindFoodByName(string foodName)
+        {
+            return _foodModel.FindFoodByName(foodName);
+        }
+        //
+        public bool FindFoodByNameBeforUpdate(int fId, string fName)
+        {
+            return _foodModel.FindFoodByNameBeforUpdate(fId, fName);
+        }
     }
 }

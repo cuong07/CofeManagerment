@@ -112,6 +112,10 @@ namespace QuanLyQuanCafe
             try
             {
                 string nameFood = txtNewFoodName.Text;
+                if (foodController.FindFoodByName(nameFood))
+                {
+                    throw new Exception("Tên món ăn đã tồn tại.");
+                }    
                 string imageFood = string.Empty;
                 double priceFood = Convert.ToDouble(txtNewPrice.Text);
                 int idCategory = Convert.ToInt32(txtNewIdCategory.Text);
@@ -122,6 +126,7 @@ namespace QuanLyQuanCafe
                 txtNewIdCategory.Text = string.Empty;
                 Loadcategory();     
                 cbFilterDishes.Text = "All";        //Load lại form chính
+                MessageBox.Show("Thêm món thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -141,6 +146,10 @@ namespace QuanLyQuanCafe
                     case "Update":
                         int idFood = Convert.ToInt32(txtEditId.Text);
                         string nameFood = txtEditFoodName.Text;
+                        if (foodController.FindFoodByNameBeforUpdate(idFood,nameFood))
+                        {
+                            throw new Exception("Tên món ăn đã tồn tại.");
+                        }    
                         string imageFood = string.Empty;
                         double priceFood = Convert.ToDouble(txtEditPrice.Text);
                         int idCategory = Convert.ToInt32(txtEditIdCategory.Text);
@@ -152,6 +161,7 @@ namespace QuanLyQuanCafe
                         grbEditFood.Visible = false;
                         Loadcategory();
                         cbFilterDishes.Text = "All";
+                        MessageBox.Show("Update món thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
                     case "Xóa món":
                         int idDeleteFood = Convert.ToInt32(txtEditId.Text);
@@ -159,11 +169,9 @@ namespace QuanLyQuanCafe
                         grbEditFood.Visible = false;
                         Loadcategory();
                         cbFilterDishes.Text = "All";
+                        MessageBox.Show("Xóa món thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         break;
-
                 }
-
-                
             }
             catch(Exception ex)
             {
