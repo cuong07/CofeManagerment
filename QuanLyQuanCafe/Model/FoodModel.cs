@@ -62,11 +62,11 @@ namespace QuanLyQuanCafe.Model
                 {
                     data.Foods.InsertOnSubmit(food);
                     data.SubmitChanges();
-                    MessageBox.Show("Thêm món thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
                 }
                 catch (ChangeConflictException ex)
                 {
-                    MessageBox.Show("Thêm món không thành công: " + ex.Message);
+                    MessageBox.Show(ex.Message);
                 }
             }
         }
@@ -86,12 +86,11 @@ namespace QuanLyQuanCafe.Model
                         foodToUpdate.price = priceFood; // thay giá mới của món ăn
                         foodToUpdate.idCateGory = idCategory;
                         data.SubmitChanges();
-                        MessageBox.Show("Update món thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 catch (ChangeConflictException ex)
                 {
-                    MessageBox.Show("Update món không thành công: " + ex.Message);
+                    MessageBox.Show(ex.Message);
                 }
             }    
                 
@@ -108,16 +107,43 @@ namespace QuanLyQuanCafe.Model
                     {
                         data.Foods.DeleteOnSubmit(foodToDelete);
                         data.SubmitChanges();
-                        MessageBox.Show("Xóa món thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 catch (ChangeConflictException ex)
                 {
-                    MessageBox.Show("Xóa món không thành công: " + ex.Message);
+                    MessageBox.Show(ex.Message);
                 }
             }
-            
         }
-        
+        //xóa 1 món ăn theo id truyền vào
+        public bool FindFoodByName(string foodName)
+        {
+            using(DataClasses2DataContext data = new DataClasses2DataContext())
+            {
+                var food = data.Foods.Where(f => f.name == foodName).FirstOrDefault();
+                if (food != null)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+        //xác nhận tên món ăn mới đã tồn tại hay chưa
+        public bool FindFoodByNameBeforUpdate(int fId, string fName)
+        {
+            using (DataClasses2DataContext data = new DataClasses2DataContext())
+            {
+                var food = (from i in data.Foods
+                           where i.name == fName && i.id != fId
+                           select i).FirstOrDefault();
+                if (food != null)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+
+
     }
 }
