@@ -20,6 +20,10 @@ namespace QuanLyQuanCafe
         {
             InitializeComponent();
             _billController = new BillController(this);
+            if(fTableManager.currentEmployees.jobId == 3)
+            {
+                btnDelete.Enabled = true;
+            }
         }
 
         private void btnCloseFormBill_Click(object sender, EventArgs e)
@@ -66,6 +70,16 @@ namespace QuanLyQuanCafe
                     lsvItem.SubItems.Add(item.TotalPrice.ToString("c"));
                     lsvBillDetail.Items.Add(lsvItem);
                 }
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (result == DialogResult.OK)
+            {
+                int idBill = int.Parse(lsvBill.SelectedItems[0].Text);
+                _billController.removeBill(idBill);
             }
         }
     }

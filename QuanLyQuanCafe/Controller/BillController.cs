@@ -52,6 +52,11 @@ namespace QuanLyQuanCafe.Controller
             _billModel.InsertBill(idTable);
         }
 
+        public void removeBill(int idBill)
+        {
+            _billModel.RemoveBill(idBill);
+        }
+
         public List<QuanLyQuanCafe.Model.Menu> getListMenuTable(int id)
         {
             return _billModel.GetListMenuTable(id);
