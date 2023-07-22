@@ -39,7 +39,7 @@
             this.btnBill = new System.Windows.Forms.Button();
             this.btnRevenua = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbAccountName = new System.Windows.Forms.Label();
             this.ptbMenu = new System.Windows.Forms.PictureBox();
             this.btnSetting = new System.Windows.Forms.Button();
             this.pnBody = new System.Windows.Forms.Panel();
@@ -63,9 +63,9 @@
             this.pnLeft.Location = new System.Drawing.Point(0, 0);
             this.pnLeft.Margin = new System.Windows.Forms.Padding(3, 2, 0, 2);
             this.pnLeft.MaximumSize = new System.Drawing.Size(199, 0);
-            this.pnLeft.MinimumSize = new System.Drawing.Size(60, 0);
+            this.pnLeft.MinimumSize = new System.Drawing.Size(45, 0);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(60, 769);
+            this.pnLeft.Size = new System.Drawing.Size(199, 769);
             this.pnLeft.TabIndex = 4;
             // 
             // panel7
@@ -79,7 +79,7 @@
             this.panel7.Location = new System.Drawing.Point(0, 88);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(60, 270);
+            this.panel7.Size = new System.Drawing.Size(199, 270);
             this.panel7.TabIndex = 6;
             // 
             // btnMenu
@@ -96,12 +96,12 @@
             this.btnMenu.Margin = new System.Windows.Forms.Padding(0);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnMenu.Size = new System.Drawing.Size(60, 54);
+            this.btnMenu.Size = new System.Drawing.Size(199, 54);
             this.btnMenu.TabIndex = 3;
             this.btnMenu.Text = "          Thực đơn";
             this.btnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenu.UseVisualStyleBackColor = false;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            this.btnMenu.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnTakeAway
             // 
@@ -116,12 +116,12 @@
             this.btnTakeAway.Margin = new System.Windows.Forms.Padding(0);
             this.btnTakeAway.Name = "btnTakeAway";
             this.btnTakeAway.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnTakeAway.Size = new System.Drawing.Size(60, 54);
+            this.btnTakeAway.Size = new System.Drawing.Size(199, 54);
             this.btnTakeAway.TabIndex = 2;
-            this.btnTakeAway.Text = "          Bán mang đi";
+            this.btnTakeAway.Text = "          Mang đi";
             this.btnTakeAway.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTakeAway.UseVisualStyleBackColor = false;
-            this.btnTakeAway.Click += new System.EventHandler(this.btnTakeaway_Click);
+            this.btnTakeAway.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnHome
             // 
@@ -137,7 +137,7 @@
             this.btnHome.Margin = new System.Windows.Forms.Padding(0);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(60, 54);
+            this.btnHome.Size = new System.Drawing.Size(199, 54);
             this.btnHome.TabIndex = 2;
             this.btnHome.Text = "          Tại quán";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -158,12 +158,12 @@
             this.btnBill.Margin = new System.Windows.Forms.Padding(0);
             this.btnBill.Name = "btnBill";
             this.btnBill.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnBill.Size = new System.Drawing.Size(60, 54);
+            this.btnBill.Size = new System.Drawing.Size(199, 54);
             this.btnBill.TabIndex = 4;
             this.btnBill.Text = "          Hóa đơn";
             this.btnBill.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBill.UseVisualStyleBackColor = false;
-            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
+            this.btnBill.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnRevenua
             // 
@@ -179,43 +179,42 @@
             this.btnRevenua.Margin = new System.Windows.Forms.Padding(0);
             this.btnRevenua.Name = "btnRevenua";
             this.btnRevenua.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnRevenua.Size = new System.Drawing.Size(60, 54);
+            this.btnRevenua.Size = new System.Drawing.Size(199, 54);
             this.btnRevenua.TabIndex = 5;
-            this.btnRevenua.Text = "          Doanh thu";
+            this.btnRevenua.Text = "          Nhân sự";
             this.btnRevenua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRevenua.UseVisualStyleBackColor = false;
-            this.btnRevenua.Click += new System.EventHandler(this.btnRevenue_Click);
+            this.btnRevenua.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.lbAccountName);
             this.panel4.Controls.Add(this.ptbMenu);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(60, 88);
+            this.panel4.Size = new System.Drawing.Size(199, 88);
             this.panel4.TabIndex = 5;
             // 
-            // label2
+            // lbAccountName
             // 
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(71, 6);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 80);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "MENU";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbAccountName.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAccountName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbAccountName.Location = new System.Drawing.Point(71, 6);
+            this.lbAccountName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbAccountName.Name = "lbAccountName";
+            this.lbAccountName.Size = new System.Drawing.Size(124, 80);
+            this.lbAccountName.TabIndex = 6;
+            this.lbAccountName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ptbMenu
             // 
             this.ptbMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbMenu.Image = global::QuanLyQuanCafe.Properties.Resources.menu_30;
             this.ptbMenu.Location = new System.Drawing.Point(8, 25);
-            this.ptbMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ptbMenu.Margin = new System.Windows.Forms.Padding(4);
             this.ptbMenu.Name = "ptbMenu";
             this.ptbMenu.Size = new System.Drawing.Size(30, 30);
             this.ptbMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -237,22 +236,22 @@
             this.btnSetting.Margin = new System.Windows.Forms.Padding(0);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnSetting.Size = new System.Drawing.Size(60, 60);
+            this.btnSetting.Size = new System.Drawing.Size(199, 60);
             this.btnSetting.TabIndex = 6;
             this.btnSetting.Text = "          Cài đặt";
             this.btnSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSetting.UseVisualStyleBackColor = false;
-            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
+            this.btnSetting.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // pnBody
             // 
             this.pnBody.BackgroundImage = global::QuanLyQuanCafe.Properties.Resources.bg;
             this.pnBody.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnBody.Location = new System.Drawing.Point(60, 0);
+            this.pnBody.Location = new System.Drawing.Point(199, 0);
             this.pnBody.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnBody.Name = "pnBody";
-            this.pnBody.Size = new System.Drawing.Size(1468, 769);
+            this.pnBody.Size = new System.Drawing.Size(1329, 769);
             this.pnBody.TabIndex = 8;
             // 
             // fTableManager
@@ -266,11 +265,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fTableManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Quản Lý Quán Cà Phê";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fTableManager_FormClosing);
+            this.Load += new System.EventHandler(this.fTableManager_Load);
             this.pnLeft.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -284,7 +284,7 @@
         private System.Windows.Forms.Timer sidebarTimer;
         private System.Windows.Forms.Panel pnLeft;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbAccountName;
         private System.Windows.Forms.PictureBox ptbMenu;
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnMenu;
