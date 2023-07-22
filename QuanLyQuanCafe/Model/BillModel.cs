@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Linq;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -41,6 +42,7 @@ namespace QuanLyQuanCafe.Model
     {
         public void InsertBill(int idTable)
         {
+            
             using (DataClasses2DataContext db = new DataClasses2DataContext())
             {
                 Bill newBill = new Bill()

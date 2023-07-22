@@ -83,11 +83,18 @@ namespace QuanLyQuanCafe.Model
         {
             using (DataClasses2DataContext db = new DataClasses2DataContext())
             {
-                Employee employee = db.Employees.FirstOrDefault(e => e.id == id);
-                if (employee != null)
+                try
                 {
-                    db.Employees.DeleteOnSubmit(employee);
-                    db.SubmitChanges();
+                    Employee employee = db.Employees.FirstOrDefault(e => e.id == id);
+                    if (employee != null)
+                    {
+                        db.Employees.DeleteOnSubmit(employee);
+                        db.SubmitChanges();
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Đã xảy ra lỗi khi xóa nhân viên");
                 }
             }
         }
@@ -97,6 +104,7 @@ namespace QuanLyQuanCafe.Model
         {
             using (DataClasses2DataContext db = new DataClasses2DataContext())
             {
+              
                 var existEmployees = (from e in db.Employees
                                       where e.email == email
                                       select e).FirstOrDefault();
