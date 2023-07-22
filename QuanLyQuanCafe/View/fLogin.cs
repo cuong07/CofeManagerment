@@ -35,6 +35,7 @@ namespace QuanLyQuanCafe
             if (loginController.LoginSuccess(userName, password))
             {
                 fTableManager.isSucces = true;
+                fTableManager.accountName = userName;
                 this.Close();
             }
             else
