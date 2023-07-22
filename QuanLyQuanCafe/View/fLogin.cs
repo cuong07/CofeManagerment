@@ -36,6 +36,7 @@ namespace QuanLyQuanCafe
             {
                 fTableManager.isSucces = true;
                 fTableManager.accountName = userName;
+                fTableManager.currentEmployees = loginController.currentEmployees;
                 this.Close();
             }
             else

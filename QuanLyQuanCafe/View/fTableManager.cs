@@ -16,6 +16,7 @@ namespace QuanLyQuanCafe
     {
         public static bool isSucces = false;
         public static string accountName;
+        public static Employee currentEmployees;
 
         public fTableManager()
         {
