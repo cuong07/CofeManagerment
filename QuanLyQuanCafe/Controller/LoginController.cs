@@ -10,6 +10,7 @@ namespace QuanLyQuanCafe.Controller
     public class LoginController
     {
         private LoginModel _LoginModel;
+        public Employee currentEmployees;
 
         public LoginController (LoginModel loginModel)
         {
@@ -18,7 +19,7 @@ namespace QuanLyQuanCafe.Controller
         public bool LoginSuccess(string username, string password)
         {
             Employee user = _LoginModel.LoginSuccess(username, password);
-
+            currentEmployees = user;
             if (user != null)
             {
                 return true;
@@ -26,6 +27,7 @@ namespace QuanLyQuanCafe.Controller
 
             return false;
         }
+
     }
 }
 
