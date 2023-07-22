@@ -79,6 +79,7 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -160,6 +161,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.button4);
             this.panel5.Controls.Add(this.button3);
             this.panel5.Controls.Add(this.button2);
             this.panel5.Controls.Add(this.button1);
@@ -173,7 +175,7 @@
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(244, 11);
+            this.button3.Location = new System.Drawing.Point(199, 11);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(87, 42);
             this.button3.TabIndex = 0;
@@ -185,7 +187,7 @@
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(147, 11);
+            this.button2.Location = new System.Drawing.Point(102, 11);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(87, 42);
             this.button2.TabIndex = 0;
@@ -197,7 +199,7 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(50, 11);
+            this.button1.Location = new System.Drawing.Point(5, 11);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 42);
             this.button1.TabIndex = 0;
@@ -306,7 +308,7 @@
             this.panel16.Controls.Add(this.txtId);
             this.panel16.Controls.Add(this.label12);
             this.panel16.Location = new System.Drawing.Point(3, 278);
-            this.panel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel16.Margin = new System.Windows.Forms.Padding(2);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(379, 27);
             this.panel16.TabIndex = 0;
@@ -316,7 +318,7 @@
             // 
             this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtId.Location = new System.Drawing.Point(98, 4);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.MaxLength = 8;
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(106, 20);
@@ -577,6 +579,18 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "Danh sách nhân viên";
             // 
+            // button4
+            // 
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(295, 11);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(87, 42);
+            this.button4.TabIndex = 0;
+            this.button4.Text = "Làm mới";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // fEmployees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -670,5 +684,6 @@
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button4;
     }
 }

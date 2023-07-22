@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,7 @@ namespace QuanLyQuanCafe.Model
         private string email;
         private string phoneNumber;
         private string job;
+        private int idJob;
         private DateTime? dateStartWork;
         private string userName;
         private string password;
@@ -28,6 +30,7 @@ namespace QuanLyQuanCafe.Model
         public string LastName { get => lastName; set => lastName = value; }
         public string UserName { get => userName; set => userName = value; }
         public string Password { get => password; set => password = value; }
+        public int IdJob { get => idJob; set => idJob = value; }
     }
     public class EmployeesModel
     {
@@ -126,6 +129,7 @@ namespace QuanLyQuanCafe.Model
                                         Email= e.email,
                                         PhoneNumber=e.phoneNumber,
                                         Job = j.name,
+                                        IdJob = j.id,
                                         DateStartWork = e.dateStartWork,
                                         UserName=e.userName,
                                         Password = e.password,
