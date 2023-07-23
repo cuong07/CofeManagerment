@@ -20,24 +20,47 @@ namespace QuanLyQuanCafe
         private CategoryModel categoryModel = new CategoryModel();
         private FoodModel foodModel = new FoodModel();
         private FoodController foodController = new FoodController();
+        
         public fMenuFood()
         {
             InitializeComponent();
         }
         private void fMenuFood_Load(object sender, EventArgs e)
         {
+            LoadPermissionByIdJob();
             LoadFindFoddName();
             Loadcategory();
             cbFilterDishes.Text = "All";
-            
+
+            List<FoodCategory> listCategoty = categoryModel.GetListCategory();
+            listCategoty.RemoveAt(0);
+            cbAddCategory.DataSource = listCategoty;
+            cbAddCategory.DisplayMember = "Name";
+            cbAddCategory.ValueMember = "id";
+
+            cbEditCategory.DataSource = listCategoty;
+            cbEditCategory.DisplayMember = "Name";
+            cbEditCategory.ValueMember = "id";
         }
         //form load
         
-        
+        public void LoadPermissionByIdJob()
+        {
+            int jobId = (int)fTableManager.currentEmployees.jobId;
+            if(jobId == 1)  //nhân viên
+            {
+                btnAdd.Enabled = false;
+                btnUpdate.Enabled = false;
+                btnDelete.Enabled = false;
+            }
+            
+        }
         public void Loadcategory()
         {
-            cbFilterDishes.DataSource = categoryModel.GetListCategory();
+            List<FoodCategory> listCategoty = categoryModel.GetListCategory();
+            cbFilterDishes.DataSource = listCategoty;
             cbFilterDishes.DisplayMember = "Name";
+            cbFilterDishes.ValueMember = "id";
         }
         //Load danh sách foodcategory
         public void LoadLsvMenuFood(int id)
@@ -66,7 +89,7 @@ namespace QuanLyQuanCafe
                 txtEditFoodName.Text = lsvFood.SelectedItems[0].SubItems[1].Text;
                 txtEditImageName.Text = lsvFood.SelectedItems[0].SubItems[2].Text;
                 txtEditPrice.Text = lsvFood.SelectedItems[0].SubItems[3].Text;
-                txtEditIdCategory.Text = lsvFood.SelectedItems[0].SubItems[4].Text;
+                cbEditCategory.SelectedValue = Convert.ToInt32(lsvFood.SelectedItems[0].SubItems[4].Text);  //
             }
         }
         //Load item của SelectedItems vào form "chỉnh sửa"
@@ -101,6 +124,7 @@ namespace QuanLyQuanCafe
                     item.SubItems.Add(food.name.ToString());
                     item.SubItems.Add("Updating");
                     item.SubItems.Add(food.price.ToString());
+                    item.SubItems.Add(food.idCateGory.ToString());
                     lsvFood.Items.Add(item);
                 }
             }
@@ -118,12 +142,11 @@ namespace QuanLyQuanCafe
                 }    
                 string imageFood = string.Empty;
                 double priceFood = Convert.ToDouble(txtNewPrice.Text);
-                int idCategory = Convert.ToInt32(txtNewIdCategory.Text);
+                int idCategory = Convert.ToInt32(cbAddCategory.SelectedValue);
                 foodController.InsertFood(nameFood, imageFood, priceFood, idCategory);
                 //
                 txtNewFoodName.Text = string.Empty;
                 txtNewPrice.Text = string.Empty;
-                txtNewIdCategory.Text = string.Empty;
                 Loadcategory();     
                 cbFilterDishes.Text = "All";        //Load lại form chính
                 MessageBox.Show("Thêm món thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -152,12 +175,11 @@ namespace QuanLyQuanCafe
                         }    
                         string imageFood = string.Empty;
                         double priceFood = Convert.ToDouble(txtEditPrice.Text);
-                        int idCategory = Convert.ToInt32(txtEditIdCategory.Text);
+                        int idCategory = Convert.ToInt32(cbEditCategory.SelectedValue);
                         foodController.UpdateFood(idFood, nameFood, priceFood, idCategory);
                         //
                         txtEditFoodName.Text = string.Empty;
                         txtEditPrice.Text = string.Empty;
-                        txtEditIdCategory.Text = string.Empty;
                         grbEditFood.Visible = false;
                         Loadcategory();
                         cbFilterDishes.Text = "All";
