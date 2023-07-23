@@ -44,7 +44,7 @@
             this.pnLeft = new System.Windows.Forms.Panel();
             this.grbEditFood = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtEditIdCategory = new System.Windows.Forms.TextBox();
+            this.cbEditCategory = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtEditId = new System.Windows.Forms.TextBox();
@@ -59,7 +59,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pnThemMon = new System.Windows.Forms.GroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtNewIdCategory = new System.Windows.Forms.TextBox();
+            this.cbAddCategory = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtNewImages = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -252,7 +252,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.txtEditIdCategory);
+            this.panel1.Controls.Add(this.cbEditCategory);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.txtEditId);
@@ -271,12 +271,13 @@
             this.panel1.Size = new System.Drawing.Size(665, 335);
             this.panel1.TabIndex = 21;
             // 
-            // txtEditIdCategory
+            // cbEditCategory
             // 
-            this.txtEditIdCategory.Location = new System.Drawing.Point(211, 221);
-            this.txtEditIdCategory.Name = "txtEditIdCategory";
-            this.txtEditIdCategory.Size = new System.Drawing.Size(319, 30);
-            this.txtEditIdCategory.TabIndex = 12;
+            this.cbEditCategory.FormattingEnabled = true;
+            this.cbEditCategory.Location = new System.Drawing.Point(211, 224);
+            this.cbEditCategory.Name = "cbEditCategory";
+            this.cbEditCategory.Size = new System.Drawing.Size(319, 31);
+            this.cbEditCategory.TabIndex = 12;
             // 
             // label11
             // 
@@ -415,7 +416,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.txtNewIdCategory);
+            this.panel3.Controls.Add(this.cbAddCategory);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.txtNewImages);
             this.panel3.Controls.Add(this.label5);
@@ -430,22 +431,23 @@
             this.panel3.Size = new System.Drawing.Size(664, 277);
             this.panel3.TabIndex = 21;
             // 
-            // txtNewIdCategory
+            // cbAddCategory
             // 
-            this.txtNewIdCategory.Location = new System.Drawing.Point(209, 186);
-            this.txtNewIdCategory.Name = "txtNewIdCategory";
-            this.txtNewIdCategory.Size = new System.Drawing.Size(319, 30);
-            this.txtNewIdCategory.TabIndex = 18;
+            this.cbAddCategory.FormattingEnabled = true;
+            this.cbAddCategory.Location = new System.Drawing.Point(209, 189);
+            this.cbAddCategory.Name = "cbAddCategory";
+            this.cbAddCategory.Size = new System.Drawing.Size(319, 31);
+            this.cbAddCategory.TabIndex = 18;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(80, 189);
+            this.label10.Location = new System.Drawing.Point(97, 189);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(114, 23);
+            this.label10.Size = new System.Drawing.Size(97, 23);
             this.label10.TabIndex = 17;
-            this.label10.Text = "IdCategory:";
+            this.label10.Text = "Category:";
             // 
             // txtNewImages
             // 
@@ -586,10 +588,10 @@
         private System.Windows.Forms.TextBox txtNewPrice;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox txtNewIdCategory;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtEditIdCategory;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ColumnHeader clhIdCategory;
+        private System.Windows.Forms.ComboBox cbEditCategory;
+        private System.Windows.Forms.ComboBox cbAddCategory;
     }
 }
