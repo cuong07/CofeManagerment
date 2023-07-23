@@ -25,17 +25,12 @@ namespace QuanLyQuanCafe
         {
             this.Close();
         }
-
-
-        private void fTakeaway_Load(object sender, EventArgs e)
+        public void LoadLsv_cbTakeAway(ComboBox cb, ListView lsv, bool stt)
         {
-            LoadLsv_cbTakeAway();
-        }
-        public void LoadLsv_cbTakeAway()
-        {
-            List<Bill> listTABill = takeAwayController.GetListTakeAwaysBills();
-            cbIdTABill.DataSource = listTABill;     //load cb tìm kiếm theo id
-            cbIdTABill.DisplayMember = "id";
+            
+            lsv.Items.Clear();
+            List<Bill> listTABill = takeAwayController.GetListTakeAwaysBills(stt);
+            
             foreach (Bill bill in listTABill)
             {
                 ListViewItem item = new ListViewItem(bill.id.ToString());
@@ -44,8 +39,12 @@ namespace QuanLyQuanCafe
                 item.SubItems.Add(bill.DateCheckOut.ToString());
                 item.SubItems.Add(bill.status.ToString());
                 item.SubItems.Add(bill.employeeId.ToString());
-                lsvTABill.Items.Add(item);      //Load danh sach hóa đơn mang về
+                lsv.Items.Add(item);      //Load danh sach hóa đơn mang về
             }
+            cb.DataSource = null;
+            cb.DataSource = listTABill;     //load cb tìm kiếm theo id
+            cb.DisplayMember = "id";
+            cb.ValueMember = "id";
         }
         private void lsvTABill_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -81,11 +80,12 @@ namespace QuanLyQuanCafe
                             break;
                         case "Hủy đơn":
                             billController.DeleteTakeAwayBill(idBillSelected);
+                            MessageBox.Show("Đã hủy đơn hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             break;
                     }    
                     lsvBillDetail.Items.Clear();
                     lsvTABill.Items.Clear();
-                    LoadLsv_cbTakeAway();
+                    LoadLsv_cbTakeAway(cbIdTABill, lsvTABill, false);
                 }    
             }
             catch(Exception ex)
@@ -94,5 +94,27 @@ namespace QuanLyQuanCafe
             }
             
         }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(tabControl1.SelectedIndex == 0)
+            {
+                LoadLsv_cbTakeAway(cbIdTABill, lsvTABill, false);
+                pnRight.Visible = true;
+            }
+            else
+            {
+                LoadLsv_cbTakeAway(cbFindIdP2, lsvTADone, true);
+                pnRight.Visible = false;
+            }    
+        }
+
+        private void fTakeaway_Load(object sender, EventArgs e)
+        {
+            LoadLsv_cbTakeAway(cbIdTABill, lsvTABill, false);
+        }
+        
+
+        
     }
 }

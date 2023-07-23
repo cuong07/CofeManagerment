@@ -11,9 +11,9 @@ namespace QuanLyQuanCafe.Controller
     {
         private TakeAwayModel takeAwayModel = new TakeAwayModel();
 
-        public List<Bill> GetListTakeAwaysBills()
+        public List<Bill> GetListTakeAwaysBills(bool stt)
         {
-            return takeAwayModel.GetListBillofTakeAway();
+            return takeAwayModel.GetListBillofTakeAway(stt);
         }
         //lấy danh sach bill của takeAway
         public List<BillDetailsCTL> GetListBillDetails(int idB)
@@ -21,5 +21,9 @@ namespace QuanLyQuanCafe.Controller
             return takeAwayModel.GetBillDetail(idB);
         }
         //Lấy thông tin chi tiết của 1 đơn hàng dựa vào mã bill
+        public Bill GetBillbyID(int idB)
+        {
+            return takeAwayModel.GetBillbyID(idB);
+        }
     }
 }
