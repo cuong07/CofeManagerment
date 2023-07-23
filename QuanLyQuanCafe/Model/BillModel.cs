@@ -42,35 +42,28 @@ namespace QuanLyQuanCafe.Model
     {
         public void InsertBill(int idTable)
         {
-            
-            using (DataClasses2DataContext db = new DataClasses2DataContext())
-            {
-                Bill newBill = new Bill()
-                {
-                    DateCheckIn = DateTime.Now,
-                    DateCheckOut = null,
-                    idTableFood = idTable,
-                    status = false 
-                };
 
-                db.Bills.InsertOnSubmit(newBill);
-                db.SubmitChanges();
-            }
-        }
-
-        public void RemoveBill(int idBill)
-        {
             try
             {
                 using (DataClasses2DataContext db = new DataClasses2DataContext())
                 {
-                    Bill bill = db.Bills.FirstOrDefault(b => b.id == idBill);
-                    db.Bills.DeleteOnSubmit(bill);
-            };
+                    Bill newBill = new Bill()
+                    {
+                        DateCheckIn = DateTime.Now,
+                        DateCheckOut = null,
+                        idTableFood = idTable,
+                        employeeId = fTableManager.currentEmployees.id,
+                        status = false
+                    };
+
+                    db.Bills.InsertOnSubmit(newBill);
+                    db.SubmitChanges();
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Có lỗi xảy ra khi xóa hóa đơn " + ex.Message);
+                MessageBox.Show("Có lỗi xảy ra khi thêm hóa đơn " + ex.Message);
+                throw;
             }
         }
 

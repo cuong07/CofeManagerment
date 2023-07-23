@@ -13,7 +13,7 @@ namespace QuanLyQuanCafe.Controller
         private fTable _fTable;
         private fBill _fBill;
         private BillModel _billModel;
-
+        private List<BillDetail> listBill;
         public BillController(Form form)
         {
             if (form is fTable)
@@ -52,10 +52,6 @@ namespace QuanLyQuanCafe.Controller
             _billModel.InsertBill(idTable);
         }
 
-        public void removeBill(int idBill)
-        {
-            _billModel.RemoveBill(idBill);
-        }
 
         public List<QuanLyQuanCafe.Model.Menu> getListMenuTable(int id)
         {
@@ -72,18 +68,9 @@ namespace QuanLyQuanCafe.Controller
             _billModel.CheckOut(id);
         }
 
-        public void getListBillOfDate(DateTime selectedDateStart, DateTime selectedDateEnd )
+        public List<BillDetail> getListBillOfDate(DateTime selectedDateStart, DateTime selectedDateEnd )
         {
-            List<BillDetail> listBill =  _billModel.GetAllBillCheckoutOfDate(selectedDateStart.Date, selectedDateEnd.Date);
-
-            if (listBill != null && listBill.Count > 0)
-            {
-                _fBill.LoadBillOfDateSelect(listBill);
-            }
-            else
-            {
-                MessageBox.Show("Không có hóa đơn nào");
-            }
+            return _billModel.GetAllBillCheckoutOfDate(selectedDateStart.Date, selectedDateEnd.Date);
         }
         public void DeleteTakeAwayBill(int idB)
         {

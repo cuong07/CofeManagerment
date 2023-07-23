@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnCloseFormTable = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -65,6 +64,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -89,21 +89,6 @@
             this.btnCloseFormTable.Size = new System.Drawing.Size(39, 43);
             this.btnCloseFormTable.TabIndex = 0;
             this.btnCloseFormTable.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Yellow;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label3.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(232, 28);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Phục vụ tại cửa hàng";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -148,18 +133,19 @@
             // 
             this.panel9.Controls.Add(this.flpTable);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(0, 23);
+            this.panel9.Location = new System.Drawing.Point(0, 26);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(630, 536);
+            this.panel9.Size = new System.Drawing.Size(630, 514);
             this.panel9.TabIndex = 3;
             // 
             // flpTable
             // 
+            this.flpTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.flpTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flpTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpTable.Location = new System.Drawing.Point(0, 0);
             this.flpTable.Name = "flpTable";
-            this.flpTable.Size = new System.Drawing.Size(630, 536);
+            this.flpTable.Size = new System.Drawing.Size(630, 514);
             this.flpTable.TabIndex = 0;
             // 
             // panel8
@@ -171,15 +157,15 @@
             this.panel8.Controls.Add(this.txtTableCount);
             this.panel8.Controls.Add(this.label2);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel8.Location = new System.Drawing.Point(0, 559);
+            this.panel8.Location = new System.Drawing.Point(0, 540);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(630, 40);
+            this.panel8.Size = new System.Drawing.Size(630, 59);
             this.panel8.TabIndex = 2;
             // 
             // txtTableEmpty
             // 
             this.txtTableEmpty.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtTableEmpty.Location = new System.Drawing.Point(506, 11);
+            this.txtTableEmpty.Location = new System.Drawing.Point(526, 21);
             this.txtTableEmpty.Name = "txtTableEmpty";
             this.txtTableEmpty.ReadOnly = true;
             this.txtTableEmpty.Size = new System.Drawing.Size(68, 20);
@@ -190,7 +176,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(411, 14);
+            this.label5.Location = new System.Drawing.Point(431, 24);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 16);
             this.label5.TabIndex = 0;
@@ -199,7 +185,7 @@
             // txtTableActive
             // 
             this.txtTableActive.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtTableActive.Location = new System.Drawing.Point(289, 10);
+            this.txtTableActive.Location = new System.Drawing.Point(309, 20);
             this.txtTableActive.Name = "txtTableActive";
             this.txtTableActive.ReadOnly = true;
             this.txtTableActive.Size = new System.Drawing.Size(68, 20);
@@ -210,7 +196,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(174, 13);
+            this.label4.Location = new System.Drawing.Point(194, 23);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(117, 16);
             this.label4.TabIndex = 0;
@@ -219,7 +205,7 @@
             // txtTableCount
             // 
             this.txtTableCount.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtTableCount.Location = new System.Drawing.Point(65, 8);
+            this.txtTableCount.Location = new System.Drawing.Point(85, 18);
             this.txtTableCount.Name = "txtTableCount";
             this.txtTableCount.ReadOnly = true;
             this.txtTableCount.Size = new System.Drawing.Size(68, 20);
@@ -230,7 +216,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 11);
+            this.label2.Location = new System.Drawing.Point(31, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 0;
@@ -244,18 +230,19 @@
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(630, 23);
+            this.panel7.Size = new System.Drawing.Size(630, 26);
             this.panel7.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 2);
+            this.label1.Location = new System.Drawing.Point(272, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh sách bàn";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel4
             // 
@@ -371,13 +358,14 @@
             // 
             // btnCheckOut
             // 
-            this.btnCheckOut.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnCheckOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(201)))), ((int)(((byte)(206)))));
             this.btnCheckOut.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheckOut.ForeColor = System.Drawing.Color.White;
-            this.btnCheckOut.Location = new System.Drawing.Point(322, 0);
+            this.btnCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckOut.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCheckOut.Location = new System.Drawing.Point(299, 0);
             this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(95, 58);
+            this.btnCheckOut.Size = new System.Drawing.Size(118, 58);
             this.btnCheckOut.TabIndex = 5;
             this.btnCheckOut.Text = "Thanh toán";
             this.btnCheckOut.UseVisualStyleBackColor = false;
@@ -417,10 +405,10 @@
             // btnAddFood
             // 
             this.btnAddFood.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnAddFood.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnAddFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(201)))), ((int)(((byte)(206)))));
             this.btnAddFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddFood.ForeColor = System.Drawing.Color.White;
+            this.btnAddFood.ForeColor = System.Drawing.Color.Transparent;
             this.btnAddFood.Location = new System.Drawing.Point(217, 2);
             this.btnAddFood.Name = "btnAddFood";
             this.btnAddFood.Size = new System.Drawing.Size(128, 51);
@@ -451,9 +439,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel6);
-            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.btnCloseFormTable);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -476,6 +464,18 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(487, 602);
             this.panel6.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(468, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(203, 24);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "PHỤC VỤ TẠI QUÁN";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // fTable
             // 
@@ -512,7 +512,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnCloseFormTable;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
@@ -548,5 +547,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtNameTable;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -60,7 +60,7 @@ namespace QuanLyQuanCafe
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (fTableManager.currentEmployees.id == 2 || fTableManager.currentEmployees.id == 3)
+            if (fTableManager.currentEmployees.jobId == 2 || fTableManager.currentEmployees.jobId == 3)
             {
                 if (ValidateForm())
                 {
