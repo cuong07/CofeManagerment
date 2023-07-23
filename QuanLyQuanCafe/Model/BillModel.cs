@@ -58,6 +58,22 @@ namespace QuanLyQuanCafe.Model
             }
         }
 
+        public void RemoveBill(int idBill)
+        {
+            try
+            {
+                using (DataClasses2DataContext db = new DataClasses2DataContext())
+                {
+                    Bill bill = db.Bills.FirstOrDefault(b => b.id == idBill);
+                    db.Bills.DeleteOnSubmit(bill);
+            };
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi xảy ra khi xóa hóa đơn " + ex.Message);
+            }
+        }
+
         public int GetUnCheckBillIDByTableId(int tableId)
         {
             using (DataClasses2DataContext db = new DataClasses2DataContext())

@@ -163,6 +163,7 @@
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnDelete.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnDelete.Enabled = false;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -173,6 +174,7 @@
             this.btnDelete.TabIndex = 33;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // lsvBill
             // 
