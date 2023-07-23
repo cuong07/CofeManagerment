@@ -198,26 +198,18 @@ namespace QuanLyQuanCafe.Model
         {
             using (DataClasses2DataContext data = new DataClasses2DataContext())
             {
-                try
+                var billInForToDelete = data.BillInfos.SingleOrDefault(b => b.idBill == idFB);
+                if (billInForToDelete != null)
                 {
-                    var billInForToDelete = data.BillInfos.SingleOrDefault(b => b.idBill == idFB);
-                    if (billInForToDelete != null)
-                    {
-                        data.BillInfos.DeleteOnSubmit(billInForToDelete);
-                        data.SubmitChanges();
-                    }
-                    //
-                    var billToDelete = data.Bills.SingleOrDefault(b => b.id == idFB);
-                    if (billToDelete != null)
-                    {
-                        data.Bills.DeleteOnSubmit(billToDelete);
-                        data.SubmitChanges();
-                        MessageBox.Show("Xóa bill thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    data.BillInfos.DeleteOnSubmit(billInForToDelete);
+                    data.SubmitChanges();
                 }
-                catch (ChangeConflictException ex)
+                //
+                var billToDelete = data.Bills.SingleOrDefault(b => b.id == idFB);
+                if (billToDelete != null)
                 {
-                    MessageBox.Show("Xóa bill không thành công: " + ex.Message);
+                    data.Bills.DeleteOnSubmit(billToDelete);
+                    data.SubmitChanges();
                 }
             }
 

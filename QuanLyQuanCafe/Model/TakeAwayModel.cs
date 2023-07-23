@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
@@ -30,14 +31,13 @@ namespace QuanLyQuanCafe.Model
     }
     internal class TakeAwayModel
     {
-        //private BillDetailsCTL billDetailsCTL = new BillDetailsCTL();
-        public List<Bill> GetListBillofTakeAway()
+        public List<Bill> GetListBillofTakeAway(bool stt)
         {
             List<Bill> listFood;
             using (DataClasses2DataContext db = new DataClasses2DataContext())
             {
                 listFood = (from bill in db.Bills
-                            where bill.idTableFood == 1 && bill.status == false
+                            where bill.idTableFood == 1 && bill.status == stt
                             select bill).ToList();
             }
             return listFood;
@@ -69,5 +69,15 @@ namespace QuanLyQuanCafe.Model
             return listBillDetails;
         }
         //lấy danh sách chi tiết bill
+        public Bill GetBillbyID(int idB)
+        {
+            Bill bl;
+            using (DataClasses2DataContext db = new DataClasses2DataContext())
+            {
+                bl = db.Bills.Where(b => b.id == idB).FirstOrDefault();
+            }
+            return bl;
+        }
+        //Lay ra bill bằng id truyền vào;
     }
 }
