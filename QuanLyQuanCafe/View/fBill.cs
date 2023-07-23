@@ -31,10 +31,13 @@ namespace QuanLyQuanCafe
             this.Close();
         }
 
-        public void LoadBillOfDateSelect(List<BillDetail> listBill)
+        public void LoadBillOfDateSelect()
         {
+            DateTime selectedDateStart = dtpStart.Value.Date;
+            DateTime selectedDateEnd = dtpEnd.Value.Date;
             lsvBill.Items.Clear();
             float total = 0;
+            List<BillDetail> listBill = _billController.getListBillOfDate(selectedDateStart, selectedDateEnd);
             foreach (BillDetail billDetail in listBill)
             {
                 total += (float)billDetail.TotalPrice;
@@ -49,9 +52,7 @@ namespace QuanLyQuanCafe
 
         private void btnShow_Click_2(object sender, EventArgs e)
         {
-            DateTime selectedDateStart = dtpStart.Value.Date;
-            DateTime selectedDateEnd = dtpEnd.Value.Date;
-            _billController.getListBillOfDate(selectedDateStart, selectedDateEnd);
+            LoadBillOfDateSelect();
         }
 
         private void lsvBill_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -79,7 +80,8 @@ namespace QuanLyQuanCafe
             if (result == DialogResult.OK)
             {
                 int idBill = int.Parse(lsvBill.SelectedItems[0].Text);
-                _billController.removeBill(idBill);
+                _billController.DeleteTakeAwayBill(idBill);
+                LoadBillOfDateSelect();
             }
         }
     }
