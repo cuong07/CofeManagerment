@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fTableManager));
-            this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.pnLeft = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
@@ -48,10 +46,6 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMenu)).BeginInit();
             this.SuspendLayout();
-            // 
-            // sidebarTimer
-            // 
-            this.sidebarTimer.Interval = 10;
             // 
             // pnLeft
             // 
@@ -281,7 +275,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Timer sidebarTimer;
         private System.Windows.Forms.Panel pnLeft;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lbAccountName;

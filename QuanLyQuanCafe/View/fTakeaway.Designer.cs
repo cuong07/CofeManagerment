@@ -56,7 +56,6 @@
             this.clhStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnTopTab1 = new System.Windows.Forms.Panel();
-            this.cbIdTABill = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.lsvTADone = new System.Windows.Forms.ListView();
@@ -67,7 +66,6 @@
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cbFindIdP2 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pnLeft = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
@@ -345,17 +343,17 @@
             // clhIdTableFood
             // 
             this.clhIdTableFood.Text = "Table ID";
-            this.clhIdTableFood.Width = 90;
+            this.clhIdTableFood.Width = 70;
             // 
             // clhInDate
             // 
             this.clhInDate.Text = "CheckIn Date";
-            this.clhInDate.Width = 110;
+            this.clhInDate.Width = 150;
             // 
             // clhOutDate
             // 
             this.clhOutDate.Text = "Checout Date";
-            this.clhOutDate.Width = 110;
+            this.clhOutDate.Width = 150;
             // 
             // clhStatus
             // 
@@ -365,30 +363,16 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Employee ID";
+            this.columnHeader1.Width = 90;
             // 
             // pnTopTab1
             // 
-            this.pnTopTab1.Controls.Add(this.cbIdTABill);
             this.pnTopTab1.Controls.Add(this.label2);
             this.pnTopTab1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTopTab1.Location = new System.Drawing.Point(0, 0);
             this.pnTopTab1.Name = "pnTopTab1";
             this.pnTopTab1.Size = new System.Drawing.Size(593, 40);
             this.pnTopTab1.TabIndex = 0;
-            // 
-            // cbIdTABill
-            // 
-            this.cbIdTABill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbIdTABill.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbIdTABill.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbIdTABill.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.cbIdTABill.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbIdTABill.FormattingEnabled = true;
-            this.cbIdTABill.Location = new System.Drawing.Point(350, 3);
-            this.cbIdTABill.Margin = new System.Windows.Forms.Padding(0);
-            this.cbIdTABill.Name = "cbIdTABill";
-            this.cbIdTABill.Size = new System.Drawing.Size(243, 34);
-            this.cbIdTABill.TabIndex = 12;
             // 
             // label2
             // 
@@ -469,7 +453,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.cbFindIdP2);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 3);
@@ -477,20 +460,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(587, 40);
             this.panel2.TabIndex = 18;
-            // 
-            // cbFindIdP2
-            // 
-            this.cbFindIdP2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbFindIdP2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbFindIdP2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbFindIdP2.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.cbFindIdP2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbFindIdP2.FormattingEnabled = true;
-            this.cbFindIdP2.Location = new System.Drawing.Point(341, 2);
-            this.cbFindIdP2.Margin = new System.Windows.Forms.Padding(0);
-            this.cbFindIdP2.Name = "cbFindIdP2";
-            this.cbFindIdP2.Size = new System.Drawing.Size(243, 34);
-            this.cbFindIdP2.TabIndex = 12;
             // 
             // label4
             // 
@@ -567,7 +536,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbIdTABill;
         private System.Windows.Forms.Panel pnLeft;
         private System.Windows.Forms.ListView lsvTABill;
         private System.Windows.Forms.ColumnHeader clhId;
@@ -585,7 +553,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox cbFindIdP2;
         private System.Windows.Forms.Label label4;
     }
 }
