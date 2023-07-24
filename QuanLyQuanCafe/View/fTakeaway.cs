@@ -20,17 +20,13 @@ namespace QuanLyQuanCafe
         {
             InitializeComponent();
         }
-
-        private void btnCloseFormTakeaway_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        public void LoadLsv_cbTakeAway(ComboBox cb, ListView lsv, bool stt)
+        #region load
+        
+        public void LoadLsvTABill(ListView lsv, bool stt)
         {
             
             lsv.Items.Clear();
             List<Bill> listTABill = takeAwayController.GetListTakeAwaysBills(stt);
-            
             foreach (Bill bill in listTABill)
             {
                 ListViewItem item = new ListViewItem(bill.id.ToString());
@@ -41,11 +37,68 @@ namespace QuanLyQuanCafe
                 item.SubItems.Add(bill.employeeId.ToString());
                 lsv.Items.Add(item);      //Load danh sach hóa đơn mang về
             }
-            cb.DataSource = null;
-            cb.DataSource = listTABill;     //load cb tìm kiếm theo id
-            cb.DisplayMember = "id";
-            cb.ValueMember = "id";
         }
+        public void LoadPermissionByIdJob()
+        {
+            int jobId = (int)fTableManager.currentEmployees.jobId;
+            if (jobId == 1)  //nhân viên
+            {
+                btnDeleteOrder.Enabled = false;
+            }   
+        }
+        private void fTakeaway_Load(object sender, EventArgs e)
+        {
+            LoadLsvTABill(lsvTABill, false);
+            LoadPermissionByIdJob();
+        }
+        #endregion
+
+        private void btnDone_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Button bt = (Button)sender;
+                int idBillSelected = Convert.ToInt32(lsvTABill.SelectedItems[0].SubItems[0].Text);
+                if (lsvTABill.SelectedItems.Count == 1)
+                {
+                    switch(bt.Text)
+                    {
+                        case "Hoàn thành":
+                            billController.checkOut(idBillSelected);
+                            MessageBox.Show("Đã hoàn thành đơn hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            break;
+                        case "Hủy đơn":
+                            billController.DeleteTakeAwayBill(idBillSelected);
+                            MessageBox.Show("Đã hủy đơn hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            break;
+                    }    
+                    lsvBillDetail.Items.Clear();
+                    lsvTABill.Items.Clear();
+                    LoadLsvTABill(lsvTABill, false);
+                }    
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+        
+        //
+        #region Selected changed
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 0)
+            {
+                LoadLsvTABill(lsvTABill, false);
+                pnRight.Visible = true;
+            }
+            else
+            {
+                LoadLsvTABill(lsvTADone, true);
+                pnRight.Visible = false;
+            }
+        }   //Chuyển tabControl
         private void lsvTABill_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lsvTABill.SelectedItems.Count == 1)
@@ -63,58 +116,11 @@ namespace QuanLyQuanCafe
                     lsvBillDetail.Items.Add(item);
                 }
             }
-        }
-
-        private void btnDone_Click(object sender, EventArgs e)
+        }   //click vào lsvTABill
+        #endregion
+        private void btnCloseFormTakeaway_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Button bt = (Button)sender;
-                int idBillSelected = Convert.ToInt32(lsvTABill.SelectedItems[0].SubItems[0].Text);
-                if (lsvTABill.SelectedItems.Count == 1)
-                {
-                    switch(bt.Text)
-                    {
-                        case "Hoàn thành":
-                            billController.checkOut(idBillSelected);
-                            break;
-                        case "Hủy đơn":
-                            billController.DeleteTakeAwayBill(idBillSelected);
-                            MessageBox.Show("Đã hủy đơn hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            break;
-                    }    
-                    lsvBillDetail.Items.Clear();
-                    lsvTABill.Items.Clear();
-                    LoadLsv_cbTakeAway(cbIdTABill, lsvTABill, false);
-                }    
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            
+            this.Close();
         }
-
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(tabControl1.SelectedIndex == 0)
-            {
-                LoadLsv_cbTakeAway(cbIdTABill, lsvTABill, false);
-                pnRight.Visible = true;
-            }
-            else
-            {
-                LoadLsv_cbTakeAway(cbFindIdP2, lsvTADone, true);
-                pnRight.Visible = false;
-            }    
-        }
-
-        private void fTakeaway_Load(object sender, EventArgs e)
-        {
-            LoadLsv_cbTakeAway(cbIdTABill, lsvTABill, false);
-        }
-        
-
-        
     }
 }
