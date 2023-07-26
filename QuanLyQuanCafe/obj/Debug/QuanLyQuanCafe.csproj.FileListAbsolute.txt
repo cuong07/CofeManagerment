@@ -116,7 +116,6 @@ D:\OnGit\tl_Winform\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fMen
 D:\OnGit\tl_Winform\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fEmployees.resources
 D:\OnGit\tl_Winform\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fSetting.resources
 D:\OnGit\tl_Winform\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fTable.resources
-D:\OnGit\tl_Winform\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fTableManager.resources
 D:\OnGit\tl_Winform\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fTakeaway.resources
 D:\OnGit\tl_Winform\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.Properties.Resources.resources
 D:\OnGit\tl_Winform\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.GenerateResource.cache
@@ -126,3 +125,4 @@ D:\OnGit\tl_Winform\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.pdb
 D:\PA\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fEmployees.resources
 C:\Users\vocuo\Desktop\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.View.fAddTable.resources
 D:\OnGit\tl_Winform\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.View.fAddTable.resources
+D:\OnGit\tl_Winform\CofeManagerment\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fHome.resources

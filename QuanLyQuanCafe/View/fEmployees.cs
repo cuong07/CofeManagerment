@@ -60,7 +60,7 @@ namespace QuanLyQuanCafe
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (fTableManager.currentEmployees.jobId == 2 || fTableManager.currentEmployees.jobId == 3)
+            if (fHome.currentEmployees.jobId == 2 || fHome.currentEmployees.jobId == 3)
             {
                 if (ValidateForm())
                 {
@@ -120,8 +120,8 @@ namespace QuanLyQuanCafe
 
         private bool CheckInValidUser(string idEmployees)
         {
-            bool isAdmin = fTableManager.currentEmployees.jobId == 3;
-            bool isCurrentUser = fTableManager.currentEmployees.id.ToString() == idEmployees;
+            bool isAdmin = fHome.currentEmployees.jobId == 3;
+            bool isCurrentUser = fHome.currentEmployees.id.ToString() == idEmployees;
             if (isCurrentUser || isAdmin)
             {
                 return true;

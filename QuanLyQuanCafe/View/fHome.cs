@@ -12,13 +12,13 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace QuanLyQuanCafe
 {
-    public partial class fTableManager : Form
+    public partial class fHome : Form
     {
         public static bool isSucces = false;
         public static string accountName;
         public static Employee currentEmployees;
 
-        public fTableManager()
+        public fHome()
         {
             fLogin flg = new fLogin();
             flg.ShowDialog();

@@ -40,7 +40,7 @@ namespace QuanLyQuanCafe
         }
         public void LoadPermissionByIdJob()
         {
-            int jobId = (int)fTableManager.currentEmployees.jobId;
+            int jobId = (int)fHome.currentEmployees.jobId;
             if (jobId == 1)  //nhân viên
             {
                 btnDeleteOrder.Enabled = false;

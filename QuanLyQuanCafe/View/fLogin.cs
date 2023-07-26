@@ -34,9 +34,9 @@ namespace QuanLyQuanCafe
             }
             if (loginController.LoginSuccess(userName, password))
             {
-                fTableManager.isSucces = true;
-                fTableManager.accountName = userName;
-                fTableManager.currentEmployees = loginController.currentEmployees;
+                fHome.isSucces = true;
+                fHome.accountName = userName;
+                fHome.currentEmployees = loginController.currentEmployees;
                 this.Close();
             }
             else
@@ -47,7 +47,7 @@ namespace QuanLyQuanCafe
 
         private void fLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!fTableManager.isSucces)    //nếu thoát form trực tiếp => thoát chương trình
+            if (!fHome.isSucces)    //nếu thoát form trực tiếp => thoát chương trình
             {
                 Application.Exit();
             }
