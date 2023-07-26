@@ -226,8 +226,12 @@ namespace QuanLyQuanCafe
            fAddTable f = new fAddTable();
            f.ShowDialog();
         }
+
         #endregion
 
-
+        private void btnCloseFormTable_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fTakeaway));
             this.btnDone = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -55,7 +57,6 @@
             this.clhOutDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clhStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.pnTopTab1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.lsvTADone = new System.Windows.Forms.ListView();
@@ -65,8 +66,8 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pnLeft = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -75,9 +76,7 @@
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.pnTopTab1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.pnLeft.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,7 +84,7 @@
             // 
             this.btnDone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDone.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnDone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(201)))), ((int)(((byte)(206)))));
             this.btnDone.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDone.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDone.Location = new System.Drawing.Point(400, 2);
@@ -98,7 +97,7 @@
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.Font = new System.Drawing.Font("Arial", 14F);
@@ -270,7 +269,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1307, 44);
             this.label1.TabIndex = 19;
-            this.label1.Text = "Phục vụ mang về";
+            this.label1.Text = "PHỤC VỤ MANG VỀ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -290,6 +289,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.ImageList = this.imageList1;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl1.Name = "tabControl1";
@@ -302,8 +302,9 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.lsvTABill);
-            this.tabPage1.Controls.Add(this.pnTopTab1);
+            this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tabPage1.ImageIndex = 0;
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
@@ -326,10 +327,10 @@
             this.lsvTABill.FullRowSelect = true;
             this.lsvTABill.GridLines = true;
             this.lsvTABill.HideSelection = false;
-            this.lsvTABill.Location = new System.Drawing.Point(0, 40);
+            this.lsvTABill.Location = new System.Drawing.Point(0, 34);
             this.lsvTABill.MultiSelect = false;
             this.lsvTABill.Name = "lsvTABill";
-            this.lsvTABill.Size = new System.Drawing.Size(593, 632);
+            this.lsvTABill.Size = new System.Drawing.Size(593, 638);
             this.lsvTABill.TabIndex = 17;
             this.lsvTABill.UseCompatibleStateImageBehavior = false;
             this.lsvTABill.View = System.Windows.Forms.View.Details;
@@ -365,33 +366,27 @@
             this.columnHeader1.Text = "Employee ID";
             this.columnHeader1.Width = 90;
             // 
-            // pnTopTab1
-            // 
-            this.pnTopTab1.Controls.Add(this.label2);
-            this.pnTopTab1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnTopTab1.Location = new System.Drawing.Point(0, 0);
-            this.pnTopTab1.Name = "pnTopTab1";
-            this.pnTopTab1.Size = new System.Drawing.Size(593, 40);
-            this.pnTopTab1.TabIndex = 0;
-            // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Font = new System.Drawing.Font("Arial", 14F);
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(0, 2);
+            this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(262, 34);
+            this.label2.Size = new System.Drawing.Size(593, 34);
             this.label2.TabIndex = 10;
-            this.label2.Text = "ID đơn hàng đang chờ";
+            this.label2.Text = "Đơn hàng mang về đang chờ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.lsvTADone);
-            this.tabPage2.Controls.Add(this.panel2);
+            this.tabPage2.Controls.Add(this.label4);
+            this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tabPage2.ImageIndex = 1;
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -414,10 +409,10 @@
             this.lsvTADone.FullRowSelect = true;
             this.lsvTADone.GridLines = true;
             this.lsvTADone.HideSelection = false;
-            this.lsvTADone.Location = new System.Drawing.Point(3, 43);
+            this.lsvTADone.Location = new System.Drawing.Point(3, 37);
             this.lsvTADone.MultiSelect = false;
             this.lsvTADone.Name = "lsvTADone";
-            this.lsvTADone.Size = new System.Drawing.Size(587, 626);
+            this.lsvTADone.Size = new System.Drawing.Size(587, 632);
             this.lsvTADone.TabIndex = 17;
             this.lsvTADone.UseCompatibleStateImageBehavior = false;
             this.lsvTADone.View = System.Windows.Forms.View.Details;
@@ -451,29 +446,27 @@
             // 
             this.columnHeader11.Text = "Employee ID";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(587, 40);
-            this.panel2.TabIndex = 18;
-            // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
             this.label4.Font = new System.Drawing.Font("Arial", 14F);
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(0, 1);
+            this.label4.Location = new System.Drawing.Point(3, 3);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(314, 34);
+            this.label4.Size = new System.Drawing.Size(587, 34);
             this.label4.TabIndex = 10;
-            this.label4.Text = "ĐH mang về đã hoàn thành";
+            this.label4.Text = "Đơn hàng mang về đã hoàn thành";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "fTakeAway-icon-waiting.png");
+            this.imageList1.Images.SetKeyName(1, "fTakeAway-icon-finished.png");
             // 
             // pnLeft
             // 
@@ -504,9 +497,7 @@
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.pnTopTab1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.pnLeft.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -544,7 +535,6 @@
         private System.Windows.Forms.ColumnHeader clhOutDate;
         private System.Windows.Forms.ColumnHeader clhStatus;
         private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.Panel pnTopTab1;
         private System.Windows.Forms.ListView lsvTADone;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader4;
@@ -552,7 +542,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

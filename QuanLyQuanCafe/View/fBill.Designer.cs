@@ -62,12 +62,15 @@
             // btnCloseFormBill
             // 
             this.btnCloseFormBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCloseFormBill.BackColor = System.Drawing.Color.Transparent;
-            this.btnCloseFormBill.Image = global::QuanLyQuanCafe.Properties.Resources.close_25;
-            this.btnCloseFormBill.Location = new System.Drawing.Point(1022, 2);
+            this.btnCloseFormBill.BackColor = System.Drawing.Color.Black;
+            this.btnCloseFormBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnCloseFormBill.ForeColor = System.Drawing.Color.White;
+            this.btnCloseFormBill.Location = new System.Drawing.Point(1361, 0);
+            this.btnCloseFormBill.Margin = new System.Windows.Forms.Padding(4);
             this.btnCloseFormBill.Name = "btnCloseFormBill";
-            this.btnCloseFormBill.Size = new System.Drawing.Size(39, 33);
+            this.btnCloseFormBill.Size = new System.Drawing.Size(48, 44);
             this.btnCloseFormBill.TabIndex = 2;
+            this.btnCloseFormBill.Text = "X";
             this.btnCloseFormBill.UseVisualStyleBackColor = false;
             this.btnCloseFormBill.Click += new System.EventHandler(this.btnCloseFormBill_Click);
             // 
@@ -76,25 +79,25 @@
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1061, 50);
+            this.label1.Size = new System.Drawing.Size(1413, 48);
             this.label1.TabIndex = 20;
-            this.label1.Text = "Hóa đơn đã thanh toán";
+            this.label1.Text = "HÓA ĐƠN ĐÃ THANH TOÁN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnCloseFormBill);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1061, 52);
+            this.panel1.Size = new System.Drawing.Size(1415, 46);
             this.panel1.TabIndex = 21;
             // 
             // tableLayoutPanel1
@@ -108,14 +111,15 @@
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 52);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 46);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.84991F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 78.30018F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.68841F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1061, 553);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1415, 699);
             this.tableLayoutPanel1.TabIndex = 22;
             // 
             // panel3
@@ -126,10 +130,10 @@
             this.panel3.Controls.Add(this.btnDelete);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.panel3.Location = new System.Drawing.Point(2, 495);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Location = new System.Drawing.Point(3, 625);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(526, 56);
+            this.panel3.Size = new System.Drawing.Size(701, 72);
             this.panel3.TabIndex = 35;
             // 
             // txtTotal
@@ -137,11 +141,11 @@
             this.txtTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txtTotal.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtTotal.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTotal.Location = new System.Drawing.Point(101, 14);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTotal.Location = new System.Drawing.Point(135, 19);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(199, 29);
+            this.txtTotal.Size = new System.Drawing.Size(264, 34);
             this.txtTotal.TabIndex = 2;
             this.txtTotal.Text = "0";
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -150,27 +154,26 @@
             // 
             this.lbTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbTotal.AutoSize = true;
-            this.lbTotal.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbTotal.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbTotal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbTotal.Location = new System.Drawing.Point(6, 18);
-            this.lbTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbTotal.Location = new System.Drawing.Point(9, 26);
             this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(97, 23);
+            this.lbTotal.Size = new System.Drawing.Size(126, 27);
             this.lbTotal.TabIndex = 1;
             this.lbTotal.Text = "Tổng tiền:";
             // 
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnDelete.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnDelete.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnDelete.Enabled = false;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDelete.Location = new System.Drawing.Point(401, 4);
+            this.btnDelete.Location = new System.Drawing.Point(535, 7);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(0);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(123, 48);
+            this.btnDelete.Size = new System.Drawing.Size(164, 59);
             this.btnDelete.TabIndex = 33;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -188,10 +191,10 @@
             this.lsvBill.FullRowSelect = true;
             this.lsvBill.GridLines = true;
             this.lsvBill.HideSelection = false;
-            this.lsvBill.Location = new System.Drawing.Point(0, 60);
+            this.lsvBill.Location = new System.Drawing.Point(0, 75);
             this.lsvBill.Margin = new System.Windows.Forms.Padding(0);
             this.lsvBill.Name = "lsvBill";
-            this.lsvBill.Size = new System.Drawing.Size(530, 433);
+            this.lsvBill.Size = new System.Drawing.Size(707, 548);
             this.lsvBill.TabIndex = 36;
             this.lsvBill.UseCompatibleStateImageBehavior = false;
             this.lsvBill.View = System.Windows.Forms.View.Details;
@@ -232,10 +235,10 @@
             this.lsvBillDetail.FullRowSelect = true;
             this.lsvBillDetail.GridLines = true;
             this.lsvBillDetail.HideSelection = false;
-            this.lsvBillDetail.Location = new System.Drawing.Point(530, 60);
+            this.lsvBillDetail.Location = new System.Drawing.Point(707, 75);
             this.lsvBillDetail.Margin = new System.Windows.Forms.Padding(0);
             this.lsvBillDetail.Name = "lsvBillDetail";
-            this.lsvBillDetail.Size = new System.Drawing.Size(531, 433);
+            this.lsvBillDetail.Size = new System.Drawing.Size(708, 548);
             this.lsvBillDetail.TabIndex = 38;
             this.lsvBillDetail.UseCompatibleStateImageBehavior = false;
             this.lsvBillDetail.View = System.Windows.Forms.View.Details;
@@ -265,13 +268,14 @@
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(530, 0);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(707, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(531, 60);
+            this.label2.Size = new System.Drawing.Size(708, 75);
             this.label2.TabIndex = 37;
             this.label2.Text = "Thông tin chi tiết hóa đơn";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -288,7 +292,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(530, 60);
+            this.panel2.Size = new System.Drawing.Size(707, 75);
             this.panel2.TabIndex = 39;
             // 
             // dtpStart
@@ -296,10 +300,10 @@
             this.dtpStart.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dtpStart.CalendarFont = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.dtpStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpStart.Location = new System.Drawing.Point(79, 5);
-            this.dtpStart.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpStart.Location = new System.Drawing.Point(105, 6);
+            this.dtpStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpStart.Name = "dtpStart";
-            this.dtpStart.Size = new System.Drawing.Size(203, 23);
+            this.dtpStart.Size = new System.Drawing.Size(269, 26);
             this.dtpStart.TabIndex = 8;
             this.dtpStart.Tag = "";
             // 
@@ -308,24 +312,24 @@
             this.dtpEnd.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dtpEnd.CalendarFont = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.dtpEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpEnd.Location = new System.Drawing.Point(80, 32);
-            this.dtpEnd.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpEnd.Location = new System.Drawing.Point(107, 39);
+            this.dtpEnd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpEnd.Name = "dtpEnd";
-            this.dtpEnd.Size = new System.Drawing.Size(202, 23);
+            this.dtpEnd.Size = new System.Drawing.Size(268, 26);
             this.dtpEnd.TabIndex = 7;
             this.dtpEnd.Tag = "";
             // 
             // btnShow
             // 
             this.btnShow.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnShow.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnShow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(201)))), ((int)(((byte)(206)))));
             this.btnShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShow.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnShow.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnShow.Location = new System.Drawing.Point(388, 5);
-            this.btnShow.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShow.Location = new System.Drawing.Point(517, 6);
+            this.btnShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(132, 50);
+            this.btnShow.Size = new System.Drawing.Size(176, 62);
             this.btnShow.TabIndex = 9;
             this.btnShow.Text = "Xem";
             this.btnShow.UseVisualStyleBackColor = false;
@@ -335,11 +339,10 @@
             // 
             this.lbDayEnd.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbDayEnd.AutoSize = true;
-            this.lbDayEnd.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbDayEnd.Location = new System.Drawing.Point(4, 36);
-            this.lbDayEnd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbDayEnd.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbDayEnd.Location = new System.Drawing.Point(3, 41);
             this.lbDayEnd.Name = "lbDayEnd";
-            this.lbDayEnd.Size = new System.Drawing.Size(72, 16);
+            this.lbDayEnd.Size = new System.Drawing.Size(99, 23);
             this.lbDayEnd.TabIndex = 5;
             this.lbDayEnd.Text = "Đến ngày:";
             // 
@@ -347,22 +350,22 @@
             // 
             this.lbDayBegin.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbDayBegin.AutoSize = true;
-            this.lbDayBegin.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbDayBegin.Location = new System.Drawing.Point(10, 11);
-            this.lbDayBegin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbDayBegin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbDayBegin.Location = new System.Drawing.Point(12, 8);
             this.lbDayBegin.Name = "lbDayBegin";
-            this.lbDayBegin.Size = new System.Drawing.Size(64, 16);
+            this.lbDayBegin.Size = new System.Drawing.Size(89, 23);
             this.lbDayBegin.TabIndex = 6;
             this.lbDayBegin.Text = "Từ ngày:";
             // 
             // fBill
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1061, 605);
+            this.ClientSize = new System.Drawing.Size(1415, 745);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fBill";
             this.Text = "fBill";
             this.panel1.ResumeLayout(false);

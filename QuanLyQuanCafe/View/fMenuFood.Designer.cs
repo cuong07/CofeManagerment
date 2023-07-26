@@ -82,7 +82,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.groupBox1.Controls.Add(this.lsvFood);
             this.groupBox1.Controls.Add(this.pnDSMTop);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -90,7 +90,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(0, 10);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(771, 713);
+            this.groupBox1.Size = new System.Drawing.Size(771, 707);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách món ăn";
@@ -111,7 +111,7 @@
             this.lsvFood.Location = new System.Drawing.Point(3, 62);
             this.lsvFood.MultiSelect = false;
             this.lsvFood.Name = "lsvFood";
-            this.lsvFood.Size = new System.Drawing.Size(765, 648);
+            this.lsvFood.Size = new System.Drawing.Size(765, 642);
             this.lsvFood.TabIndex = 15;
             this.lsvFood.UseCompatibleStateImageBehavior = false;
             this.lsvFood.View = System.Windows.Forms.View.Details;
@@ -155,7 +155,7 @@
             // 
             // cbFilterDishes
             // 
-            this.cbFilterDishes.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.cbFilterDishes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(201)))), ((int)(((byte)(206)))));
             this.cbFilterDishes.Dock = System.Windows.Forms.DockStyle.Left;
             this.cbFilterDishes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbFilterDishes.FormattingEnabled = true;
@@ -171,7 +171,7 @@
             // 
             this.cbFindFoodName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbFindFoodName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbFindFoodName.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.cbFindFoodName.BackColor = System.Drawing.Color.LightSlateGray;
             this.cbFindFoodName.Dock = System.Windows.Forms.DockStyle.Right;
             this.cbFindFoodName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbFindFoodName.FormattingEnabled = true;
@@ -185,12 +185,12 @@
             // 
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1443, 40);
+            this.label1.Size = new System.Drawing.Size(1443, 46);
             this.label1.TabIndex = 21;
-            this.label1.Text = "Danh sách món";
+            this.label1.Text = "DANH SÁCH MÓN ĂN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnTop
@@ -201,7 +201,7 @@
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(0, 0);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(1445, 42);
+            this.pnTop.Size = new System.Drawing.Size(1445, 48);
             this.pnTop.TabIndex = 23;
             // 
             // btnCloseFormMenuFood
@@ -213,7 +213,7 @@
             this.btnCloseFormMenuFood.Location = new System.Drawing.Point(1384, 0);
             this.btnCloseFormMenuFood.Margin = new System.Windows.Forms.Padding(0);
             this.btnCloseFormMenuFood.Name = "btnCloseFormMenuFood";
-            this.btnCloseFormMenuFood.Size = new System.Drawing.Size(59, 40);
+            this.btnCloseFormMenuFood.Size = new System.Drawing.Size(59, 46);
             this.btnCloseFormMenuFood.TabIndex = 4;
             this.btnCloseFormMenuFood.Text = "X";
             this.btnCloseFormMenuFood.UseVisualStyleBackColor = false;
@@ -223,22 +223,22 @@
             // 
             this.pnLeft.Controls.Add(this.groupBox1);
             this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnLeft.Location = new System.Drawing.Point(0, 42);
+            this.pnLeft.Location = new System.Drawing.Point(0, 48);
             this.pnLeft.MinimumSize = new System.Drawing.Size(550, 0);
             this.pnLeft.Name = "pnLeft";
             this.pnLeft.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.pnLeft.Size = new System.Drawing.Size(771, 723);
+            this.pnLeft.Size = new System.Drawing.Size(771, 717);
             this.pnLeft.TabIndex = 24;
             // 
             // grbEditFood
             // 
             this.grbEditFood.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grbEditFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.grbEditFood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.grbEditFood.Controls.Add(this.panel1);
             this.grbEditFood.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.grbEditFood.ForeColor = System.Drawing.Color.White;
-            this.grbEditFood.Location = new System.Drawing.Point(8, 347);
+            this.grbEditFood.Location = new System.Drawing.Point(10, 347);
             this.grbEditFood.Name = "grbEditFood";
             this.grbEditFood.Size = new System.Drawing.Size(665, 364);
             this.grbEditFood.TabIndex = 20;
@@ -273,6 +273,7 @@
             // 
             // cbEditCategory
             // 
+            this.cbEditCategory.BackColor = System.Drawing.Color.LightSlateGray;
             this.cbEditCategory.FormattingEnabled = true;
             this.cbEditCategory.Location = new System.Drawing.Point(211, 224);
             this.cbEditCategory.Name = "cbEditCategory";
@@ -301,6 +302,7 @@
             // 
             // txtEditId
             // 
+            this.txtEditId.Enabled = false;
             this.txtEditId.Location = new System.Drawing.Point(211, 38);
             this.txtEditId.Name = "txtEditId";
             this.txtEditId.ReadOnly = true;
@@ -309,6 +311,7 @@
             // 
             // txtEditImageName
             // 
+            this.txtEditImageName.Enabled = false;
             this.txtEditImageName.Location = new System.Drawing.Point(211, 126);
             this.txtEditImageName.Name = "txtEditImageName";
             this.txtEditImageName.ReadOnly = true;
@@ -363,7 +366,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(201)))), ((int)(((byte)(206)))));
             this.btnUpdate.Location = new System.Drawing.Point(211, 286);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(113, 43);
@@ -398,7 +401,7 @@
             // 
             // pnThemMon
             // 
-            this.pnThemMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnThemMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.pnThemMon.Controls.Add(this.panel3);
             this.pnThemMon.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnThemMon.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -433,6 +436,7 @@
             // 
             // cbAddCategory
             // 
+            this.cbAddCategory.BackColor = System.Drawing.Color.LightSlateGray;
             this.cbAddCategory.FormattingEnabled = true;
             this.cbAddCategory.Location = new System.Drawing.Point(209, 189);
             this.cbAddCategory.Name = "cbAddCategory";
@@ -451,6 +455,7 @@
             // 
             // txtNewImages
             // 
+            this.txtNewImages.Enabled = false;
             this.txtNewImages.Location = new System.Drawing.Point(209, 103);
             this.txtNewImages.Name = "txtNewImages";
             this.txtNewImages.ReadOnly = true;
@@ -503,7 +508,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(201)))), ((int)(((byte)(206)))));
             this.btnAdd.Location = new System.Drawing.Point(300, 222);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(113, 43);
@@ -517,10 +522,10 @@
             this.pnRight.Controls.Add(this.grbEditFood);
             this.pnRight.Controls.Add(this.pnThemMon);
             this.pnRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnRight.Location = new System.Drawing.Point(771, 42);
+            this.pnRight.Location = new System.Drawing.Point(771, 48);
             this.pnRight.Name = "pnRight";
             this.pnRight.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
-            this.pnRight.Size = new System.Drawing.Size(674, 723);
+            this.pnRight.Size = new System.Drawing.Size(674, 717);
             this.pnRight.TabIndex = 22;
             // 
             // fMenuFood
