@@ -71,6 +71,12 @@
     <Compile Include="Model\LoginModel.cs" />
     <Compile Include="Model\TableModel.cs" />
     <Compile Include="Model\TakeAwayModel.cs" />
+    <Compile Include="View\fAddTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fAddTable.Designer.cs">
+      <DependentUpon>fAddTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\fBill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\fAddTable.resx">
+      <DependentUpon>fAddTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\fBill.resx">
       <DependentUpon>fBill.cs</DependentUpon>
     </EmbeddedResource>

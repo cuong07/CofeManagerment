@@ -62,9 +62,9 @@
             this.cbFood = new System.Windows.Forms.ComboBox();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -147,6 +147,7 @@
             this.flpTable.Name = "flpTable";
             this.flpTable.Size = new System.Drawing.Size(630, 514);
             this.flpTable.TabIndex = 0;
+            this.flpTable.MouseDown += new System.Windows.Forms.MouseEventHandler(this.flpTable_MouseDown);
             // 
             // panel8
             // 
@@ -449,6 +450,18 @@
             this.panel2.Size = new System.Drawing.Size(1061, 43);
             this.panel2.TabIndex = 0;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(468, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(203, 24);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "PHỤC VỤ TẠI QUÁN";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.DodgerBlue;
@@ -464,18 +477,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(487, 602);
             this.panel6.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(468, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(203, 24);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "PHỤC VỤ TẠI QUÁN";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // fTable
             // 
