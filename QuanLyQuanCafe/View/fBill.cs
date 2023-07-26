@@ -20,7 +20,7 @@ namespace QuanLyQuanCafe
         {
             InitializeComponent();
             _billController = new BillController(this);
-            if(fTableManager.currentEmployees.jobId == 3)
+            if(fHome.currentEmployees.jobId == 3)
             {
                 btnDelete.Enabled = true;
             }

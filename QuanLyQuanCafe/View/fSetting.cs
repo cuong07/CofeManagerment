@@ -44,7 +44,7 @@ namespace QuanLyQuanCafe
 
         private void fSetting_Load(object sender, EventArgs e)
         {
-            lbAcccountName.Text = fTableManager.accountName;
+            lbAcccountName.Text = fHome.accountName;
         }
     }
 }

@@ -52,7 +52,7 @@ namespace QuanLyQuanCafe.Model
                         DateCheckIn = DateTime.Now,
                         DateCheckOut = null,
                         idTableFood = idTable,
-                        employeeId = fTableManager.currentEmployees.id,
+                        employeeId = fHome.currentEmployees.id,
                         status = false
                     };
 
