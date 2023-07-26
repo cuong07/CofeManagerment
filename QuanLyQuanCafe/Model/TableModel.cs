@@ -17,7 +17,7 @@ namespace QuanLyQuanCafe.Model
             return listTable;
         }
 
-        private List<TableFood> GetListTableFromDatabase()
+        public List<TableFood> GetListTableFromDatabase()
         {
             List<TableFood> listTable;
             using (DataClasses2DataContext db = new DataClasses2DataContext())
@@ -26,6 +26,33 @@ namespace QuanLyQuanCafe.Model
             }
             return listTable;
         }
+
+        public bool AddTable(string nameTable)
+        {
+            try
+            {
+                using (DataClasses2DataContext db = new DataClasses2DataContext())
+                {
+                    TableFood table = new TableFood
+                    {
+                        name = nameTable,
+                        status = false
+                    };
+                    db.TableFoods.InsertOnSubmit(table);
+                    db.SubmitChanges();
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi khi thêm bàn" + ex);
+                return false;
+            }
+
+        }
+
+
+
     }
 
 }

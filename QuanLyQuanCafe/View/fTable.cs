@@ -1,6 +1,7 @@
 ﻿
 using QuanLyQuanCafe.Controller;
 using QuanLyQuanCafe.Model;
+using QuanLyQuanCafe.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,9 +25,7 @@ namespace QuanLyQuanCafe
         private readonly BillInfoController _billInfoController;
 
         #region Các biến dùng chung
-        int tableCount = 0;
-        int tableActive = 0;
-        int tableEmpty = 0;
+
         #endregion
 
         public fTable()
@@ -37,13 +36,23 @@ namespace QuanLyQuanCafe
             _foodController = new FoodController(this);
             _billController = new BillController(this);
             _billInfoController = new BillInfoController();
-
             _tableController.LoadTable();
             _categoryController.LoadCategory();
+
+
+            ContextMenuStrip contextMenuStrip = new ContextMenuStrip();
+            ToolStripMenuItem option1 = new ToolStripMenuItem("Thêm bàn");
+            option1.Click += AddTable_Click;
+            contextMenuStrip.Items.Add(option1);
+            this.ContextMenuStrip = contextMenuStrip;
         }
+        #region METHOD
         public void LoadTable(List<TableFood> listTable)
         {
             flpTable.Controls.Clear();
+            int tableCount = 0;
+            int tableActive = 0;
+            int tableEmpty = 0;
             tableCount = listTable.Count;
             foreach (TableFood table in listTable)
             {
@@ -53,6 +62,7 @@ namespace QuanLyQuanCafe
                 button.Tag = table;
                 button.Margin = new Padding(10);
                 button.Click += table_Click;
+                button.MouseDown += tableMouseDown;
                 flpTable.Controls.Add(button);
                 if (table.status.HasValue)
                 {
@@ -69,6 +79,20 @@ namespace QuanLyQuanCafe
                         tableEmpty++;
                     }
                 }
+                txtTableActive.Text = (tableCount - tableEmpty).ToString();
+                txtTableEmpty.Text = tableEmpty.ToString();
+                txtTableCount.Text = tableCount.ToString();
+            }
+        }
+
+        private void tableMouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                ContextMenuStrip contextMenuStrip = new ContextMenuStrip();
+                ToolStripMenuItem option1 = new ToolStripMenuItem("Thêm bàn");
+                contextMenuStrip.Items.Add(option1);
+                contextMenuStrip.Show(this, e.Location);
             }
         }
 
@@ -106,6 +130,7 @@ namespace QuanLyQuanCafe
             {
                 ShowBill(tableID);
             }
+
         }
 
         void ShowBill(int id)
@@ -125,7 +150,9 @@ namespace QuanLyQuanCafe
             _tableController.LoadTable();
             txtTotalPrice.Text = totalPrice.ToString("c");
         }
+        #endregion
 
+        #region EVENT
         private void btnAddFood_Click(object sender, EventArgs e)
         {
             TableFood table = lsvBill.Tag as TableFood;
@@ -182,9 +209,25 @@ namespace QuanLyQuanCafe
 
         private void fTable_Load(object sender, EventArgs e)
         {
-            txtTableActive.Text = (tableCount - tableEmpty).ToString();
-            txtTableEmpty.Text = tableEmpty.ToString();
-            txtTableCount.Text = tableCount.ToString();
+           
         }
+
+
+        private void flpTable_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                ContextMenuStrip.Show(this, e.Location);
+            }
+        }
+
+        private void AddTable_Click(object sender, EventArgs e)
+        {
+           fAddTable f = new fAddTable();
+           f.ShowDialog();
+        }
+        #endregion
+
+
     }
 }
