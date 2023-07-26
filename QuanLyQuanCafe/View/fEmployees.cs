@@ -234,6 +234,9 @@ namespace QuanLyQuanCafe
             return email.Contains("@") && email.Split('@')[1].Contains(".");
         }
 
-
+        private void btnCloseFormRevenue_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

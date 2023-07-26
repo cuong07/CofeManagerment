@@ -113,7 +113,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.Red;
+            this.btnClose.BackColor = System.Drawing.Color.Black;
             this.btnClose.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnClose.Location = new System.Drawing.Point(162, -1);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);

@@ -191,11 +191,14 @@ namespace QuanLyQuanCafe.Model
         {
             using (DataClasses2DataContext data = new DataClasses2DataContext())
             {
-                var billInForToDelete = data.BillInfos.SingleOrDefault(b => b.idBill == idFB);
+                var billInForToDelete = data.BillInfos.Where(b => b.idBill == idFB);
                 if (billInForToDelete != null)
                 {
-                    data.BillInfos.DeleteOnSubmit(billInForToDelete);
-                    data.SubmitChanges();
+                    foreach (BillInfo b in billInForToDelete)
+                    {
+                        data.BillInfos.DeleteOnSubmit(b);
+                        data.SubmitChanges();
+                    }    
                 }
                 //
                 var billToDelete = data.Bills.SingleOrDefault(b => b.id == idFB);
@@ -207,7 +210,7 @@ namespace QuanLyQuanCafe.Model
             }
 
         }
-        //xóa 1 đơn mang về (Công)
+        //xóa 1 đơn mang về (Công đã cập nhật)
 
     }
 }

@@ -255,6 +255,7 @@
     <None Include="assets\images\fSetting_icon_Thoat_32.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="assets\images\fTakeAway-icon-waiting.png" />
     <Content Include="assets\images\table-50.png" />
   </ItemGroup>
   <ItemGroup />
