@@ -256,6 +256,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\images\fTakeAway-icon-waiting.png" />
+    <None Include="assets\images\fHome-icon-delivery.png" />
+    <None Include="assets\images\fHome-icon-delivery1.png" />
+    <None Include="assets\images\fHome-icon-employee.png" />
+    <None Include="assets\images\fHome-icon-option.png" />
+    <None Include="assets\images\fHome-icon-table.png" />
+    <None Include="assets\images\fHome-icon-menuFoods.png" />
+    <None Include="assets\images\fHome-icon-bill.png" />
+    <None Include="assets\images\fHome-icon-settings.png" />
     <Content Include="assets\images\table-50.png" />
   </ItemGroup>
   <ItemGroup />
