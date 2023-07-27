@@ -161,7 +161,6 @@ namespace QuanLyQuanCafe
                 int idBill = _billController.getUnCheckBill(table.id);
                 int idFood = (cbFood.SelectedItem as Food).id;
                 int count = (int)nmFoodCount.Value;
-                MessageBox.Show(idBill.ToString());
 
                 if (idBill == -1)
                 {
@@ -182,28 +181,35 @@ namespace QuanLyQuanCafe
 
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
-            TableFood table = lsvBill.Tag as TableFood;
-            if(table != null)
+            try
             {
-                int idBill = _billController.getUnCheckBill((int)table.id);
-                float totalPrice = float.Parse(txtTotalPrice.Text.Split(',')[0]);
-                float finalTotalPrice = totalPrice;
-                if (idBill != -1 && table.id != 1)
+                TableFood table = lsvBill.Tag as TableFood;
+                if (table != null)
                 {
-                    if (MessageBox.Show($"Bạn có chắc thanh toán hóa đơn cho bàn {table.name}. \n Tổng tiền cần thanh toán là {finalTotalPrice}  ", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                    int idBill = _billController.getUnCheckBill((int)table.id);
+                    float totalPrice = float.Parse(txtTotalPrice.Text.Split(',')[0]);
+                    float finalTotalPrice = totalPrice;
+                    if (idBill != -1 && table.id != 1)
                     {
-                        _billController.checkOut(idBill);
+                        if (MessageBox.Show($"Bạn có chắc thanh toán hóa đơn cho bàn {table.name}. \n Tổng tiền cần thanh toán là {finalTotalPrice}  ", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                        {
+                            _billController.checkOut(idBill);
+                            ShowBill(table.id);
+                        }
+                    }
+                    else
+                    {
                         ShowBill(table.id);
                     }
                 }
                 else
                 {
-                    ShowBill(table.id);
+                    MessageBox.Show("Bàn không có hóa đơn nào cần thanh toán!");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Bàn không có hóa đơn nào cần thanh toán!");
+                MessageBox.Show(ex.Message);
             }
         }
 
