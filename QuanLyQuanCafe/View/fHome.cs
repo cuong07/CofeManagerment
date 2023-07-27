@@ -105,7 +105,7 @@ namespace QuanLyQuanCafe
             }
             else
             {
-                pnLeft.Size = new Size(45, pnLeft.Size.Height);
+                pnLeft.Size = new Size(50, pnLeft.Size.Height);
                 pnLeft_miniSize = true;
             }    
         }
