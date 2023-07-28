@@ -161,7 +161,6 @@ namespace QuanLyQuanCafe
                 int idBill = _billController.getUnCheckBill(table.id);
                 int idFood = (cbFood.SelectedItem as Food).id;
                 int count = (int)nmFoodCount.Value;
-                MessageBox.Show(idBill.ToString());
 
                 if (idBill == -1)
                 {
