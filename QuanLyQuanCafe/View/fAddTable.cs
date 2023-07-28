@@ -24,7 +24,6 @@ namespace QuanLyQuanCafe.View
         {
             string nameTable = txtAddTableName.Text;
             _tableController.addTable(nameTable);
-            _tableController.LoadTable();
         }
     }
 }

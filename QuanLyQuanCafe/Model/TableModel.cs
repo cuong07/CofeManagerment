@@ -5,26 +5,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QuanLyQuanCafe.Model
 {
     public class TableModel
     {
-        private List<TableFood> listTable;
         public List<TableFood> GetListTable()
         {
-            listTable = GetListTableFromDatabase();
-            return listTable;
-        }
-
-        public List<TableFood> GetListTableFromDatabase()
-        {
-            List<TableFood> listTable;
-            using (DataClasses2DataContext db = new DataClasses2DataContext())
+            try
             {
-                listTable = db.TableFoods.ToList();
+                using (DataClasses2DataContext db = new DataClasses2DataContext())
+                {
+                    List<TableFood> listTable = db.TableFoods.ToList();
+                    return listTable;
+                }
             }
-            return listTable;
+            catch (Exception ex )
+            {
+                MessageBox.Show("Có lỗi khi lấy danh sách bàn" + ex);
+                throw;
+            }
         }
 
         public bool AddTable(string nameTable)
