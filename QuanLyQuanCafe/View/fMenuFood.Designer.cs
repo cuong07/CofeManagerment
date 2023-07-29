@@ -274,6 +274,7 @@
             // cbEditCategory
             // 
             this.cbEditCategory.BackColor = System.Drawing.Color.LightSlateGray;
+            this.cbEditCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEditCategory.FormattingEnabled = true;
             this.cbEditCategory.Location = new System.Drawing.Point(211, 224);
             this.cbEditCategory.Name = "cbEditCategory";
@@ -437,6 +438,7 @@
             // cbAddCategory
             // 
             this.cbAddCategory.BackColor = System.Drawing.Color.LightSlateGray;
+            this.cbAddCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAddCategory.FormattingEnabled = true;
             this.cbAddCategory.Location = new System.Drawing.Point(209, 189);
             this.cbAddCategory.Name = "cbAddCategory";

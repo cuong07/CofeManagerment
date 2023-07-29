@@ -22,8 +22,15 @@ namespace QuanLyQuanCafe.View
 
         private void btnAddTable_Click(object sender, EventArgs e)
         {
-            string nameTable = txtAddTableName.Text;
-            _tableController.addTable(nameTable);
+            try
+            {
+                string nameTable = txtAddTableName.Text;
+                _tableController.addTable(nameTable);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

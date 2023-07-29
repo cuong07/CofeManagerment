@@ -27,20 +27,27 @@ namespace QuanLyQuanCafe
         }
         private void fMenuFood_Load(object sender, EventArgs e)
         {
-            LoadPermissionByIdJob();
-            LoadFindFoddName();
-            Loadcategory();
-            cbFilterDishes.Text = "All";
+            try
+            {
+                LoadPermissionByIdJob();
+                LoadFindFoddName();
+                Loadcategory();
+                cbFilterDishes.Text = "All";
 
-            List<FoodCategory> listCategoty = categoryModel.GetListCategory();
-            listCategoty.RemoveAt(0);
-            cbAddCategory.DataSource = listCategoty;
-            cbAddCategory.DisplayMember = "Name";
-            cbAddCategory.ValueMember = "id";
+                List<FoodCategory> listCategoty = categoryModel.GetListCategory();
+                listCategoty.RemoveAt(0);
+                cbAddCategory.DataSource = listCategoty;
+                cbAddCategory.DisplayMember = "Name";
+                cbAddCategory.ValueMember = "id";
 
-            cbEditCategory.DataSource = listCategoty;
-            cbEditCategory.DisplayMember = "Name";
-            cbEditCategory.ValueMember = "id";
+                cbEditCategory.DataSource = listCategoty;
+                cbEditCategory.DisplayMember = "Name";
+                cbEditCategory.ValueMember = "id";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         //form load
         
@@ -82,14 +89,21 @@ namespace QuanLyQuanCafe
         }
         private void lsvFood_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(lsvFood.SelectedItems.Count == 1)
+            try
             {
-                grbEditFood.Visible = true;     //hiện form chỉnh sửa.
-                txtEditId.Text = lsvFood.SelectedItems[0].SubItems[0].Text;
-                txtEditFoodName.Text = lsvFood.SelectedItems[0].SubItems[1].Text;
-                txtEditImageName.Text = lsvFood.SelectedItems[0].SubItems[2].Text;
-                txtEditPrice.Text = lsvFood.SelectedItems[0].SubItems[3].Text;
-                cbEditCategory.SelectedValue = Convert.ToInt32(lsvFood.SelectedItems[0].SubItems[4].Text);  //
+                if (lsvFood.SelectedItems.Count == 1)
+                {
+                    grbEditFood.Visible = true;     //hiện form chỉnh sửa.
+                    txtEditId.Text = lsvFood.SelectedItems[0].SubItems[0].Text;
+                    txtEditFoodName.Text = lsvFood.SelectedItems[0].SubItems[1].Text;
+                    txtEditImageName.Text = lsvFood.SelectedItems[0].SubItems[2].Text;
+                    txtEditPrice.Text = lsvFood.SelectedItems[0].SubItems[3].Text;
+                    cbEditCategory.SelectedValue = Convert.ToInt32(lsvFood.SelectedItems[0].SubItems[4].Text);  //
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
         //Load item của SelectedItems vào form "chỉnh sửa"
@@ -105,30 +119,44 @@ namespace QuanLyQuanCafe
         
         private void cbFilterDishes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int id = 9;
-            ComboBox cb = (ComboBox)sender;
-            FoodCategory cate = (FoodCategory)cb.SelectedItem;
-            id = cate.id;       //lấy Id của item hiện tại của cbFillerDishes
-            LoadLsvMenuFood(id);    //Load items của lsvMenuFood
+            try
+            {
+                int id = 9;
+                ComboBox cb = (ComboBox)sender;
+                FoodCategory cate = (FoodCategory)cb.SelectedItem;
+                id = cate.id;       //lấy Id của item hiện tại của cbFillerDishes
+                LoadLsvMenuFood(id);    //Load items của lsvMenuFood
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void cbFindFoodName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lsvFood.Items.Clear();
-            List<Food> listFood = foodModel.GetListFoodByCategoryFromDatabase(9);
-            foreach (Food food in listFood)
+            try
             {
-                if (food.name.Equals(cbFindFoodName.Text))
+                lsvFood.Items.Clear();
+                List<Food> listFood = foodModel.GetListFoodByCategoryFromDatabase(9);
+                foreach (Food food in listFood)
                 {
-                    ListViewItem item = new ListViewItem(food.id.ToString());
-                    item.SubItems.Add(food.name.ToString());
-                    item.SubItems.Add("Updating");
-                    item.SubItems.Add(food.price.ToString());
-                    item.SubItems.Add(food.idCateGory.ToString());
-                    lsvFood.Items.Add(item);
+                    if (food.name.Equals(cbFindFoodName.Text))
+                    {
+                        ListViewItem item = new ListViewItem(food.id.ToString());
+                        item.SubItems.Add(food.name.ToString());
+                        item.SubItems.Add("Updating");
+                        item.SubItems.Add(food.price.ToString());
+                        item.SubItems.Add(food.idCateGory.ToString());
+                        lsvFood.Items.Add(item);
+                    }
                 }
+                cbFilterDishes.Text = string.Empty;
             }
-            cbFilterDishes.Text = string.Empty;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         //Tìm kiếm món ăn theo tên
         private void btnAdd_Click(object sender, EventArgs e)
