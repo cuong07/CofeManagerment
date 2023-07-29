@@ -95,9 +95,9 @@ namespace QuanLyQuanCafe.Model
                         db.SubmitChanges();
                     }
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Đã xảy ra lỗi khi xóa nhân viên");
+                    MessageBox.Show("Đã xảy ra lỗi khi xóa nhân viên" + ex.Message);
                 }
             }
         }

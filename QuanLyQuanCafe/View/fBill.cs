@@ -57,31 +57,45 @@ namespace QuanLyQuanCafe
 
         private void lsvBill_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            if (lsvBill.SelectedItems.Count > 0)
+            try
             {
-                lsvBillDetail.Items.Clear();
-                ListViewItem selectedItem = lsvBill.SelectedItems[0];
-                string id = selectedItem.SubItems[0].Text;
-                List<QuanLyQuanCafe.Model.Menu> listBillInfo = _billController.getListMenuBill(int.Parse(id));
-                foreach (QuanLyQuanCafe.Model.Menu item in listBillInfo)
+                if (lsvBill.SelectedItems.Count > 0)
                 {
-                    ListViewItem lsvItem = new ListViewItem(item.Name.ToString());
-                    lsvItem.SubItems.Add(item.Count.ToString());
-                    lsvItem.SubItems.Add(item.Price.ToString("c"));
-                    lsvItem.SubItems.Add(item.TotalPrice.ToString("c"));
-                    lsvBillDetail.Items.Add(lsvItem);
+                    lsvBillDetail.Items.Clear();
+                    ListViewItem selectedItem = lsvBill.SelectedItems[0];
+                    string id = selectedItem.SubItems[0].Text;
+                    List<QuanLyQuanCafe.Model.Menu> listBillInfo = _billController.getListMenuBill(int.Parse(id));
+                    foreach (QuanLyQuanCafe.Model.Menu item in listBillInfo)
+                    {
+                        ListViewItem lsvItem = new ListViewItem(item.Name.ToString());
+                        lsvItem.SubItems.Add(item.Count.ToString());
+                        lsvItem.SubItems.Add(item.Price.ToString("c"));
+                        lsvItem.SubItems.Add(item.TotalPrice.ToString("c"));
+                        lsvBillDetail.Items.Add(lsvItem);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            if (result == DialogResult.OK)
+            try
             {
-                int idBill = int.Parse(lsvBill.SelectedItems[0].Text);
-                _billController.DeleteTakeAwayBill(idBill);
-                LoadBillOfDateSelect();
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if (result == DialogResult.OK)
+                {
+                    int idBill = int.Parse(lsvBill.SelectedItems[0].Text);
+                    _billController.DeleteTakeAwayBill(idBill);
+                    LoadBillOfDateSelect();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

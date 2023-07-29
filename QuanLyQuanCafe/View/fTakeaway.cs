@@ -22,11 +22,10 @@ namespace QuanLyQuanCafe
         }
         #region load
         
-        public void LoadLsvTABill(ListView lsv, bool stt)
+        public void LoadLsvTABill_Waitting()
         {
-            
-            lsv.Items.Clear();
-            List<Bill> listTABill = takeAwayController.GetListTakeAwaysBills(stt);
+            lsvTABill.Items.Clear();
+            List<Bill> listTABill = takeAwayController.GetListTakeAwaysBills_Waitting();
             foreach (Bill bill in listTABill)
             {
                 ListViewItem item = new ListViewItem(bill.id.ToString());
@@ -35,9 +34,26 @@ namespace QuanLyQuanCafe
                 item.SubItems.Add(bill.DateCheckOut.ToString());
                 item.SubItems.Add(bill.status.ToString());
                 item.SubItems.Add(bill.employeeId.ToString());
-                lsv.Items.Add(item);      //Load danh sach hóa đơn mang về
+                lsvTABill.Items.Add(item);      
             }
-        }
+        }       //Load danh sach hóa đơn mang về đang chờ
+
+        public void LoadLsvTABill_Finished()
+        {
+            lsvTADone.Items.Clear();
+            List<Bill> listTABill = takeAwayController.GetListTakeAwaysBills_Finished();
+            foreach (Bill bill in listTABill)
+            {
+                ListViewItem item = new ListViewItem(bill.id.ToString());
+                item.SubItems.Add(bill.idTableFood.ToString());
+                item.SubItems.Add(bill.DateCheckIn.ToString());
+                item.SubItems.Add(bill.DateCheckOut.ToString());
+                item.SubItems.Add(bill.status.ToString());
+                item.SubItems.Add(bill.employeeId.ToString());
+                lsvTADone.Items.Add(item);
+            }
+        }       //Load danh sach hóa đơn mang về đã hoàn thành.
+
         public void LoadPermissionByIdJob()
         {
             int jobId = (int)fHome.currentEmployees.jobId;
@@ -48,8 +64,15 @@ namespace QuanLyQuanCafe
         }
         private void fTakeaway_Load(object sender, EventArgs e)
         {
-            LoadLsvTABill(lsvTABill, false);
-            LoadPermissionByIdJob();
+            try
+            {
+                LoadLsvTABill_Waitting();
+                LoadPermissionByIdJob();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         #endregion
 
@@ -64,7 +87,7 @@ namespace QuanLyQuanCafe
                     switch(bt.Text)
                     {
                         case "Hoàn thành":
-                            billController.checkOut(idBillSelected);
+                            takeAwayController.CheckOutTABill(idBillSelected);
                             MessageBox.Show("Đã hoàn thành đơn hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             break;
                         case "Hủy đơn":
@@ -74,7 +97,7 @@ namespace QuanLyQuanCafe
                     }    
                     lsvBillDetail.Items.Clear();
                     lsvTABill.Items.Clear();
-                    LoadLsvTABill(lsvTABill, false);
+                    LoadLsvTABill_Waitting();
                 }    
             }
             catch(Exception ex)
@@ -88,34 +111,49 @@ namespace QuanLyQuanCafe
         #region Selected changed
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedIndex == 0)
+            try
             {
-                LoadLsvTABill(lsvTABill, false);
-                pnRight.Visible = true;
+                if (tabControl1.SelectedIndex == 0)
+                {
+                    LoadLsvTABill_Waitting();
+                    pnRight.Visible = true;
+                }
+                else
+                {
+                    LoadLsvTABill_Finished();
+                    pnRight.Visible = false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                LoadLsvTABill(lsvTADone, true);
-                pnRight.Visible = false;
+                MessageBox.Show(ex.Message);
             }
         }   //Chuyển tabControl
         private void lsvTABill_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lsvTABill.SelectedItems.Count == 1)
+            try
             {
-                int idBillSelected = Convert.ToInt32(lsvTABill.SelectedItems[0].SubItems[0].Text);
-                List<BillDetailsCTL> listBillDetails = takeAwayController.GetListBillDetails(idBillSelected);
-
-                lsvBillDetail.Items.Clear();
-                foreach (BillDetailsCTL details in listBillDetails)
+                if (lsvTABill.SelectedItems.Count > 0)
                 {
-                    ListViewItem item = new ListViewItem(details.BillId.ToString());
-                    item.SubItems.Add(details.FoodID.ToString());
-                    item.SubItems.Add(details.FoodName.ToString());
-                    item.SubItems.Add(details.Quantity.ToString());
-                    lsvBillDetail.Items.Add(item);
+                    int idBillSelected = Convert.ToInt32(lsvTABill.SelectedItems[0].SubItems[0].Text);
+                    List<BillDetailsCTL> listBillDetails = takeAwayController.GetListBillDetails(idBillSelected);
+
+                    lsvBillDetail.Items.Clear();
+                    foreach (BillDetailsCTL details in listBillDetails)
+                    {
+                        ListViewItem item = new ListViewItem(details.BillId.ToString());
+                        item.SubItems.Add(details.FoodID.ToString());
+                        item.SubItems.Add(details.FoodName.ToString());
+                        item.SubItems.Add(details.Quantity.ToString());
+                        lsvBillDetail.Items.Add(item);
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }   //click vào lsvTABill
         #endregion
         private void btnCloseFormTakeaway_Click(object sender, EventArgs e)

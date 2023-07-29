@@ -31,18 +31,28 @@ namespace QuanLyQuanCafe.Model
     }
     internal class TakeAwayModel
     {
-        public List<Bill> GetListBillofTakeAway(bool stt)
+        public List<Bill> GetListBillofTakeAway_Waitting()
         {
             List<Bill> listFood;
             using (DataClasses2DataContext db = new DataClasses2DataContext())
             {
                 listFood = (from bill in db.Bills
-                            where bill.idTableFood == 1 && bill.status == stt
+                            where bill.idTableFood == 1 && bill.DateCheckOut == null
                             select bill).ToList();
             }
             return listFood;
-        }
-        //lấy bill mang v
+        }//lấy bill mang về đang chờ.
+        public List<Bill> GetListBillofTakeAway_Finished()
+        {
+            List<Bill> listFood;
+            using (DataClasses2DataContext db = new DataClasses2DataContext())
+            {
+                listFood = (from bill in db.Bills
+                            where bill.idTableFood == 1 && bill.DateCheckOut != null
+                            select bill).ToList();
+            }
+            return listFood;
+        }//lấy bill mang về đã hoàn thành
         public List<BillDetailsCTL> GetBillDetail(int idB)
         {
             List<BillDetailsCTL> listBillDetails = new List<BillDetailsCTL>();
@@ -51,7 +61,7 @@ namespace QuanLyQuanCafe.Model
                 var varbillDetails = from bi in db.BillInfos
                                      join f in db.Foods on bi.idFood equals f.id
                                      join b in db.Bills on bi.idBill equals b.id
-                                     where b.idTableFood == 1 && b.status == false && b.id == idB
+                                     where b.idTableFood == 1 && b.id == idB
                                      group new { bi, f } by new { bi.idBill, f.id, f.name, bi.count } into g
                                      select new
                                      {
@@ -69,15 +79,17 @@ namespace QuanLyQuanCafe.Model
             return listBillDetails;
         }
         //lấy danh sách chi tiết bill
-        public Bill GetBillbyID(int idB)
+        public void CheckOutTABill(int id)
         {
-            Bill bl;
             using (DataClasses2DataContext db = new DataClasses2DataContext())
             {
-                bl = db.Bills.Where(b => b.id == idB).FirstOrDefault();
+                var bill = db.Bills.FirstOrDefault(b => b.id == id);
+                if (bill != null)
+                {
+                    bill.DateCheckOut = DateTime.Now;
+                    db.SubmitChanges();
+                }
             }
-            return bl;
         }
-        //Lay ra bill bằng id truyền vào;
     }
 }

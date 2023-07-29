@@ -49,39 +49,46 @@ namespace QuanLyQuanCafe
         #region METHOD
         public void LoadTable(List<TableFood> listTable)
         {
-            flpTable.Controls.Clear();
-            int tableCount = 0;
-            int tableActive = 0;
-            int tableEmpty = 0;
-            tableCount = listTable.Count;
-            foreach (TableFood table in listTable)
+            try
             {
-                Button button = new Button() { Width = 100, Height = 100 };
-                button.Text = table.name + Environment.NewLine + (table.status.HasValue ? (table.status.Value ? "Có khách" : "Trống") : "Không rõ");
-                button.Font = new Font("Arial", 10, FontStyle.Regular);
-                button.Tag = table;
-                button.Margin = new Padding(10);
-                button.Click += table_Click;
-                button.MouseDown += tableMouseDown;
-                flpTable.Controls.Add(button);
-                if (table.status.HasValue)
+                flpTable.Controls.Clear();
+                int tableCount = 0;
+                int tableActive = 0;
+                int tableEmpty = 0;
+                tableCount = listTable.Count;
+                foreach (TableFood table in listTable)
                 {
-                    bool status = table.status.Value;
-                    if (status)
+                    Button button = new Button() { Width = 100, Height = 100 };
+                    button.Text = table.name + Environment.NewLine + (table.status.HasValue ? (table.status.Value ? "Có khách" : "Trống") : "Không rõ");
+                    button.Font = new Font("Arial", 10, FontStyle.Regular);
+                    button.Tag = table;
+                    button.Margin = new Padding(10);
+                    button.Click += table_Click;
+                    button.MouseDown += tableMouseDown;
+                    flpTable.Controls.Add(button);
+                    if (table.status.HasValue)
                     {
-                        button.BackColor = Color.Green;
-                        button.ForeColor = Color.White;
-                        tableActive++;
+                        bool status = table.status.Value;
+                        if (status)
+                        {
+                            button.BackColor = Color.Green;
+                            button.ForeColor = Color.White;
+                            tableActive++;
+                        }
+                        else
+                        {
+                            button.BackColor = Color.White;
+                            tableEmpty++;
+                        }
                     }
-                    else
-                    {
-                        button.BackColor = Color.White;
-                        tableEmpty++;
-                    }
+                    txtTableActive.Text = (tableCount - tableEmpty).ToString();
+                    txtTableEmpty.Text = tableEmpty.ToString();
+                    txtTableCount.Text = tableCount.ToString();
                 }
-                txtTableActive.Text = (tableCount - tableEmpty).ToString();
-                txtTableEmpty.Text = tableEmpty.ToString();
-                txtTableCount.Text = tableCount.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -110,25 +117,37 @@ namespace QuanLyQuanCafe
 
         private void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int id = 0;
-            ComboBox cb = (ComboBox)sender;
-            if (cb.SelectedItem == null)
+            try
             {
-                return;
+                int id = 0;
+                ComboBox cb = (ComboBox)sender;
+                if (cb.SelectedItem == null)
+                {
+                    return;
+                }
+                FoodCategory selected = cb.SelectedItem as FoodCategory;
+                id = selected.id;
+                _foodController.GetListFoodByCategory(id);
             }
-            FoodCategory selected = cb.SelectedItem as FoodCategory;
-            id = selected.id;
-            _foodController.GetListFoodByCategory(id);
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         void table_Click(object sender, EventArgs e)
         {
-            int tableID = ((sender as Button).Tag as TableFood).id;
-            lsvBill.Tag = (sender as Button).Tag;
-            txtNameTable.Text = ((sender as Button).Tag as TableFood).name;
-            if(tableID != 1)
+            try
             {
-                ShowBill(tableID);
+                int tableID = ((sender as Button).Tag as TableFood).id;
+                lsvBill.Tag = (sender as Button).Tag;
+                txtNameTable.Text = ((sender as Button).Tag as TableFood).name;
+
+                ShowBill(tableID);  //(Công sửa).
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
 
         }
@@ -155,54 +174,64 @@ namespace QuanLyQuanCafe
         #region EVENT
         private void btnAddFood_Click(object sender, EventArgs e)
         {
-            TableFood table = lsvBill.Tag as TableFood;
-            if (table != null)
+            try
             {
-                int idBill = _billController.getUnCheckBill(table.id);
-                int idFood = (cbFood.SelectedItem as Food).id;
-                int count = (int)nmFoodCount.Value;
-
-                if (idBill == -1)
+                TableFood table = lsvBill.Tag as TableFood;
+                if (table != null)
                 {
-                    _billController.insertBill(table.id);
-                    _billInfoController.insertBillInfo(_billController.getMaxIdBill(), idFood, count);
+                    int idBill = _billController.getUnCheckBill(table.id);
+                    int idFood = (cbFood.SelectedItem as Food).id;
+                    int count = (int)nmFoodCount.Value;
+
+                    if (idBill == -1)
+                    {
+                        _billController.insertBill(table.id);
+                        _billInfoController.insertBillInfo(_billController.getMaxIdBill(), idFood, count);
+                    }
+                    else
+                    {
+                        _billInfoController.insertBillInfo(idBill, idFood, count);
+                    }
+                    ShowBill(table.id);
                 }
                 else
                 {
-                    _billInfoController.insertBillInfo(idBill, idFood, count);
+                    MessageBox.Show("Bạn chưa chọn bàn nào!");
                 }
-                ShowBill(table.id);
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Bạn chưa chọn bàn nào!");
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
-            TableFood table = lsvBill.Tag as TableFood;
-            if(table != null)
+            try
             {
-                int idBill = _billController.getUnCheckBill((int)table.id);
-                float totalPrice = float.Parse(txtTotalPrice.Text.Split(',')[0]);
-                float finalTotalPrice = totalPrice;
-                if (idBill != -1)
+                TableFood table = lsvBill.Tag as TableFood;
+                if (table != null)
                 {
-                    if (MessageBox.Show($"Bạn có chắc thanh toán hóa đơn cho bàn {table.name}. \n Tổng tiền cần thanh toán là {finalTotalPrice}  ", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                    int idBill = _billController.getUnCheckBill((int)table.id);
+                    //float totalPrice = float.Parse(txtTotalPrice.Text.Split(',')[0]);
+                   // float finalTotalPrice = totalPrice;
+                    if (idBill != -1)
                     {
-                        _billController.checkOut(idBill);
-                        ShowBill(table.id);
+                        if (MessageBox.Show($"Bạn có chắc thanh toán hóa đơn cho bàn {table.name}. \n Tổng tiền cần thanh toán là finalTotalPrice  ", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                        {
+                            _billController.checkOut(idBill);
+                            ShowBill(table.id);
+                        }
                     }
                 }
                 else
                 {
-                    ShowBill(table.id);
+                    MessageBox.Show("Bàn không có hóa đơn nào cần thanh toán!");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Bàn không có hóa đơn nào cần thanh toán!");
+                MessageBox.Show(ex.Message);
             }
         }
 

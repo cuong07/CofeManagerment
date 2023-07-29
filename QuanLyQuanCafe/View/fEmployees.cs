@@ -60,61 +60,75 @@ namespace QuanLyQuanCafe
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if (fHome.currentEmployees.jobId == 2 || fHome.currentEmployees.jobId == 3)
+            try
             {
-                if (ValidateForm())
+                if (fHome.currentEmployees.jobId == 2 || fHome.currentEmployees.jobId == 3)
                 {
-                    Employee newEmployees = new Employee
+                    if (ValidateForm())
                     {
-                        firstName = txtFirstName.Text,
-                        lastName = txtLastName.Text,
-                        email = txtEmail.Text,
-                        phoneNumber = txtPhoneNumber.Text,
-                        dateStartWork = dtpDataStartWork.Value.Date,
-                        jobId = (int)cbJobPosition.SelectedValue,
-                        userName = txtUserName.Text,
-                        password = txtPassword.Text,
-                    };
-                    DialogResult result = MessageBox.Show($"Bạn có chắc chắn muốn thêm {newEmployees.firstName} {newEmployees.lastName} vào vị trí {cbJobPosition.Text}?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                    if (result == DialogResult.OK)
-                    {
-                        _employeesController.addEmployees(newEmployees);
-                        _employeesController.loadListEmployees();
+                        Employee newEmployees = new Employee
+                        {
+                            firstName = txtFirstName.Text,
+                            lastName = txtLastName.Text,
+                            email = txtEmail.Text,
+                            phoneNumber = txtPhoneNumber.Text,
+                            dateStartWork = dtpDataStartWork.Value.Date,
+                            jobId = (int)cbJobPosition.SelectedValue,
+                            userName = txtUserName.Text,
+                            password = txtPassword.Text,
+                        };
+                        DialogResult result = MessageBox.Show($"Bạn có chắc chắn muốn thêm {newEmployees.firstName} {newEmployees.lastName} vào vị trí {cbJobPosition.Text}?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                        if (result == DialogResult.OK)
+                        {
+                            _employeesController.addEmployees(newEmployees);
+                            _employeesController.loadListEmployees();
+                        }
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Bạn không có quyền thêm nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Bạn không có quyền thêm nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void lsvEmployees_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lsvEmployees.SelectedItems.Count > 0)
+            try
             {
-                selectedListViewItem = lsvEmployees.SelectedItems[0];
-                txtId.Text = selectedListViewItem.SubItems[0].Text;
-                txtFirstName.Text = selectedListViewItem.SubItems[1].Text; 
-                txtLastName.Text = selectedListViewItem.SubItems[2].Text;
-                txtEmail.Text = selectedListViewItem.SubItems[3].Text;
-                txtPhoneNumber.Text = selectedListViewItem.SubItems[4].Text;
-                cbJobPosition.Text = selectedListViewItem.SubItems[5].Text;
-                dtpDataStartWork.Text = selectedListViewItem.SubItems[6].Text;
-                if(CheckInValidUser(selectedListViewItem.SubItems[0].Text))
+                if (lsvEmployees.SelectedItems.Count > 0)
                 {
-                    txtUserName.Text = selectedListViewItem.SubItems[7].Text;
-                    txtPassword.Text = selectedListViewItem.SubItems[8].Text;
-                    txtUserName.ReadOnly = false;
-                    txtPassword.ReadOnly = false;
+                    selectedListViewItem = lsvEmployees.SelectedItems[0];
+                    txtId.Text = selectedListViewItem.SubItems[0].Text;
+                    txtFirstName.Text = selectedListViewItem.SubItems[1].Text;
+                    txtLastName.Text = selectedListViewItem.SubItems[2].Text;
+                    txtEmail.Text = selectedListViewItem.SubItems[3].Text;
+                    txtPhoneNumber.Text = selectedListViewItem.SubItems[4].Text;
+                    cbJobPosition.Text = selectedListViewItem.SubItems[5].Text;
+                    dtpDataStartWork.Text = selectedListViewItem.SubItems[6].Text;
+                    if (CheckInValidUser(selectedListViewItem.SubItems[0].Text))
+                    {
+                        txtUserName.Text = selectedListViewItem.SubItems[7].Text;
+                        txtPassword.Text = selectedListViewItem.SubItems[8].Text;
+                        txtUserName.ReadOnly = false;
+                        txtPassword.ReadOnly = false;
+                    }
+                    else
+                    {
+                        txtUserName.Text = "Thông tin riêng tư";
+                        txtPassword.Text = "Thông tin riêng tư";
+                        txtUserName.ReadOnly = true;
+                        txtPassword.ReadOnly = true;
+                    }
                 }
-                else
-                {
-                    txtUserName.Text = "Thông tin riêng tư";
-                    txtPassword.Text = "Thông tin riêng tư";
-                    txtUserName.ReadOnly = true; 
-                    txtPassword.ReadOnly = true;
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -132,46 +146,60 @@ namespace QuanLyQuanCafe
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (ValidateForm())
+            try
             {
-                int jobiIdNew = _jobController.getJobByName(cbJobPosition.Text).id;
-                MessageBox.Show(jobiIdNew.ToString());
-                Employee newEmployees = new Employee
+                if (ValidateForm())
                 {
-                    id = int.Parse(txtId.Text),
-                    firstName = txtFirstName.Text,
-                    lastName = txtLastName.Text,
-                    email = txtEmail.Text,
-                    phoneNumber = txtPhoneNumber.Text,
-                    dateStartWork = dtpDataStartWork.Value,
-                    jobId = jobiIdNew,
-                    userName = txtUserName.Text,
-                    password = txtPassword.Text,
-                };
-                _employeesController.updateEmployees(newEmployees);
-                ResetForm();
-                _employeesController.loadListEmployees();
+                    int jobiIdNew = _jobController.getJobByName(cbJobPosition.Text).id;
+                    MessageBox.Show(jobiIdNew.ToString());
+                    Employee newEmployees = new Employee
+                    {
+                        id = int.Parse(txtId.Text),
+                        firstName = txtFirstName.Text,
+                        lastName = txtLastName.Text,
+                        email = txtEmail.Text,
+                        phoneNumber = txtPhoneNumber.Text,
+                        dateStartWork = dtpDataStartWork.Value,
+                        jobId = jobiIdNew,
+                        userName = txtUserName.Text,
+                        password = txtPassword.Text,
+                    };
+                    _employeesController.updateEmployees(newEmployees);
+                    ResetForm();
+                    _employeesController.loadListEmployees();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (CheckInValidUser(lsvEmployees.SelectedItems[0].SubItems[0].Text))
+            try
             {
-                if (lsvEmployees.SelectedItems.Count > 0)
+                if (CheckInValidUser(lsvEmployees.SelectedItems[0].SubItems[0].Text))
                 {
-                    DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
-                    if (result == DialogResult.OK)
+                    if (lsvEmployees.SelectedItems.Count > 0)
                     {
-                        int idEmployees = int.Parse(lsvEmployees.SelectedItems[0].SubItems[0].Text);
-                        _employeesController.removeEmployees(idEmployees);
-                        _employeesController.loadListEmployees();
+                        DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                        if (result == DialogResult.OK)
+                        {
+                            int idEmployees = int.Parse(lsvEmployees.SelectedItems[0].SubItems[0].Text);
+                            _employeesController.removeEmployees(idEmployees);
+                            _employeesController.loadListEmployees();
+                        }
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Bạn không có quyền xóa nhân viên này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Bạn không có quyền xóa nhân viên này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
             
         }

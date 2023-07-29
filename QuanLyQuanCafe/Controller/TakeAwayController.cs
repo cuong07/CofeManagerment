@@ -11,19 +11,24 @@ namespace QuanLyQuanCafe.Controller
     {
         private TakeAwayModel takeAwayModel = new TakeAwayModel();
 
-        public List<Bill> GetListTakeAwaysBills(bool stt)
+        public List<Bill> GetListTakeAwaysBills_Waitting()
         {
-            return takeAwayModel.GetListBillofTakeAway(stt);
+            return takeAwayModel.GetListBillofTakeAway_Waitting();
         }
-        //lấy danh sach bill của takeAway
+        //lấy danh sach bill của đơn hàng mang về đang chờ
+        public List<Bill> GetListTakeAwaysBills_Finished()
+        {
+            return takeAwayModel.GetListBillofTakeAway_Finished();
+        }
+        //lấy danh sach bill của đơn hàng mang về đã hoàn thành
         public List<BillDetailsCTL> GetListBillDetails(int idB)
         {
             return takeAwayModel.GetBillDetail(idB);
         }
         //Lấy thông tin chi tiết của 1 đơn hàng dựa vào mã bill
-        public Bill GetBillbyID(int idB)
+        public void CheckOutTABill(int id)
         {
-            return takeAwayModel.GetBillbyID(idB);
+            takeAwayModel.CheckOutTABill(id);
         }
     }
 }
