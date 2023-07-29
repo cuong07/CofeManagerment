@@ -187,7 +187,7 @@ namespace QuanLyQuanCafe
                 int idBill = _billController.getUnCheckBill((int)table.id);
                 float totalPrice = float.Parse(txtTotalPrice.Text.Split(',')[0]);
                 float finalTotalPrice = totalPrice;
-                if (idBill != -1 && table.id != 1)
+                if (idBill != -1)
                 {
                     if (MessageBox.Show($"Bạn có chắc thanh toán hóa đơn cho bàn {table.name}. \n Tổng tiền cần thanh toán là {finalTotalPrice}  ", "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                     {

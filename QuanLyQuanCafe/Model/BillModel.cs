@@ -140,7 +140,13 @@ namespace QuanLyQuanCafe.Model
             using (DataClasses2DataContext db = new DataClasses2DataContext())
             {
                 var bill = db.Bills.FirstOrDefault(b => b.id == id);
-                if (bill != null)
+                if (bill != null && bill.idTableFood != 1)
+                {
+                    bill.status = true;
+                    bill.DateCheckOut = DateTime.Now;
+                    db.SubmitChanges();
+                }
+                else
                 {
                     bill.status = true;
                     db.SubmitChanges();
