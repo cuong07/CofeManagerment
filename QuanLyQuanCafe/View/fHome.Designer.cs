@@ -31,16 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fHome));
             this.pnLeft = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lbAccountName = new System.Windows.Forms.Label();
-            this.pnBody = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
             this.btnTakeAway = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnBill = new System.Windows.Forms.Button();
             this.btnRevenua = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lbAccountName = new System.Windows.Forms.Label();
             this.ptbMenu = new System.Windows.Forms.PictureBox();
             this.btnSetting = new System.Windows.Forms.Button();
+            this.pnBody = new System.Windows.Forms.Panel();
             this.pnLeft.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -55,11 +55,11 @@
             this.pnLeft.Controls.Add(this.btnSetting);
             this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnLeft.Location = new System.Drawing.Point(0, 0);
-            this.pnLeft.Margin = new System.Windows.Forms.Padding(3, 2, 0, 2);
-            this.pnLeft.MaximumSize = new System.Drawing.Size(199, 0);
-            this.pnLeft.MinimumSize = new System.Drawing.Size(50, 0);
+            this.pnLeft.Margin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.pnLeft.MaximumSize = new System.Drawing.Size(149, 0);
+            this.pnLeft.MinimumSize = new System.Drawing.Size(38, 0);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(199, 769);
+            this.pnLeft.Size = new System.Drawing.Size(50, 625);
             this.pnLeft.TabIndex = 4;
             // 
             // panel7
@@ -70,45 +70,11 @@
             this.panel7.Controls.Add(this.btnBill);
             this.panel7.Controls.Add(this.btnRevenua);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 88);
-            this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel7.Location = new System.Drawing.Point(0, 72);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(199, 270);
+            this.panel7.Size = new System.Drawing.Size(50, 219);
             this.panel7.TabIndex = 6;
-            // 
-            // panel4
-            // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.lbAccountName);
-            this.panel4.Controls.Add(this.ptbMenu);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(199, 88);
-            this.panel4.TabIndex = 5;
-            // 
-            // lbAccountName
-            // 
-            this.lbAccountName.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbAccountName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbAccountName.Location = new System.Drawing.Point(71, 6);
-            this.lbAccountName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbAccountName.Name = "lbAccountName";
-            this.lbAccountName.Size = new System.Drawing.Size(124, 80);
-            this.lbAccountName.TabIndex = 6;
-            this.lbAccountName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pnBody
-            // 
-            this.pnBody.BackgroundImage = global::QuanLyQuanCafe.Properties.Resources.bg;
-            this.pnBody.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnBody.Location = new System.Drawing.Point(199, 0);
-            this.pnBody.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnBody.Name = "pnBody";
-            this.pnBody.Size = new System.Drawing.Size(1329, 769);
-            this.pnBody.TabIndex = 8;
             // 
             // btnMenu
             // 
@@ -120,11 +86,11 @@
             this.btnMenu.ForeColor = System.Drawing.Color.White;
             this.btnMenu.Image = global::QuanLyQuanCafe.Properties.Resources.fHome_icon_menuFoods;
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.Location = new System.Drawing.Point(0, 108);
+            this.btnMenu.Location = new System.Drawing.Point(0, 87);
             this.btnMenu.Margin = new System.Windows.Forms.Padding(0);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnMenu.Size = new System.Drawing.Size(199, 54);
+            this.btnMenu.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.btnMenu.Size = new System.Drawing.Size(50, 44);
             this.btnMenu.TabIndex = 3;
             this.btnMenu.Text = "          Thực đơn";
             this.btnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -140,11 +106,11 @@
             this.btnTakeAway.ForeColor = System.Drawing.Color.White;
             this.btnTakeAway.Image = global::QuanLyQuanCafe.Properties.Resources.fHome_icon_delivery1;
             this.btnTakeAway.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTakeAway.Location = new System.Drawing.Point(0, 54);
+            this.btnTakeAway.Location = new System.Drawing.Point(0, 44);
             this.btnTakeAway.Margin = new System.Windows.Forms.Padding(0);
             this.btnTakeAway.Name = "btnTakeAway";
-            this.btnTakeAway.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnTakeAway.Size = new System.Drawing.Size(199, 54);
+            this.btnTakeAway.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.btnTakeAway.Size = new System.Drawing.Size(50, 44);
             this.btnTakeAway.TabIndex = 2;
             this.btnTakeAway.Text = "          Mang đi";
             this.btnTakeAway.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -164,8 +130,8 @@
             this.btnHome.Location = new System.Drawing.Point(0, 0);
             this.btnHome.Margin = new System.Windows.Forms.Padding(0);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(199, 54);
+            this.btnHome.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.btnHome.Size = new System.Drawing.Size(50, 44);
             this.btnHome.TabIndex = 2;
             this.btnHome.Text = "          Tại quán";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -182,11 +148,11 @@
             this.btnBill.ForeColor = System.Drawing.Color.White;
             this.btnBill.Image = global::QuanLyQuanCafe.Properties.Resources.fHome_icon_bill;
             this.btnBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBill.Location = new System.Drawing.Point(0, 162);
+            this.btnBill.Location = new System.Drawing.Point(0, 131);
             this.btnBill.Margin = new System.Windows.Forms.Padding(0);
             this.btnBill.Name = "btnBill";
-            this.btnBill.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnBill.Size = new System.Drawing.Size(199, 54);
+            this.btnBill.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.btnBill.Size = new System.Drawing.Size(50, 44);
             this.btnBill.TabIndex = 4;
             this.btnBill.Text = "          Hóa đơn";
             this.btnBill.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -203,26 +169,48 @@
             this.btnRevenua.ForeColor = System.Drawing.Color.White;
             this.btnRevenua.Image = global::QuanLyQuanCafe.Properties.Resources.fHome_icon_employee;
             this.btnRevenua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRevenua.Location = new System.Drawing.Point(0, 216);
+            this.btnRevenua.Location = new System.Drawing.Point(0, 175);
             this.btnRevenua.Margin = new System.Windows.Forms.Padding(0);
             this.btnRevenua.Name = "btnRevenua";
-            this.btnRevenua.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnRevenua.Size = new System.Drawing.Size(199, 54);
+            this.btnRevenua.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.btnRevenua.Size = new System.Drawing.Size(50, 44);
             this.btnRevenua.TabIndex = 5;
             this.btnRevenua.Text = "          Nhân sự";
             this.btnRevenua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRevenua.UseVisualStyleBackColor = false;
             this.btnRevenua.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.lbAccountName);
+            this.panel4.Controls.Add(this.ptbMenu);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(50, 72);
+            this.panel4.TabIndex = 5;
+            // 
+            // lbAccountName
+            // 
+            this.lbAccountName.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbAccountName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbAccountName.Location = new System.Drawing.Point(53, 5);
+            this.lbAccountName.Name = "lbAccountName";
+            this.lbAccountName.Size = new System.Drawing.Size(93, 65);
+            this.lbAccountName.TabIndex = 6;
+            this.lbAccountName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // ptbMenu
             // 
             this.ptbMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ptbMenu.ErrorImage = null;
             this.ptbMenu.Image = global::QuanLyQuanCafe.Properties.Resources.fHome_icon_option;
-            this.ptbMenu.Location = new System.Drawing.Point(8, 25);
-            this.ptbMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.ptbMenu.Location = new System.Drawing.Point(6, 20);
             this.ptbMenu.Name = "ptbMenu";
-            this.ptbMenu.Size = new System.Drawing.Size(32, 32);
+            this.ptbMenu.Padding = new System.Windows.Forms.Padding(4, 0, 0, 0);
+            this.ptbMenu.Size = new System.Drawing.Size(36, 32);
             this.ptbMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.ptbMenu.TabIndex = 6;
             this.ptbMenu.TabStop = false;
@@ -238,29 +226,39 @@
             this.btnSetting.ForeColor = System.Drawing.Color.White;
             this.btnSetting.Image = global::QuanLyQuanCafe.Properties.Resources.fHome_icon_settings;
             this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.Location = new System.Drawing.Point(0, 709);
+            this.btnSetting.Location = new System.Drawing.Point(0, 576);
             this.btnSetting.Margin = new System.Windows.Forms.Padding(0);
             this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnSetting.Size = new System.Drawing.Size(199, 60);
+            this.btnSetting.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnSetting.Size = new System.Drawing.Size(50, 49);
             this.btnSetting.TabIndex = 6;
             this.btnSetting.Text = "          Cài đặt";
             this.btnSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSetting.UseVisualStyleBackColor = false;
             this.btnSetting.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // pnBody
+            // 
+            this.pnBody.BackgroundImage = global::QuanLyQuanCafe.Properties.Resources.bg;
+            this.pnBody.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnBody.Location = new System.Drawing.Point(50, 0);
+            this.pnBody.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnBody.Name = "pnBody";
+            this.pnBody.Size = new System.Drawing.Size(1096, 625);
+            this.pnBody.TabIndex = 8;
+            // 
             // fHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1528, 769);
+            this.ClientSize = new System.Drawing.Size(1146, 625);
             this.Controls.Add(this.pnBody);
             this.Controls.Add(this.pnLeft);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Quản Lý Quán Cà Phê";
