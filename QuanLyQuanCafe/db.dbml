@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="COFFEEMANAGER" Class="DataClasses2DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MANH_CUONG;Initial Catalog=COFFEEMANAGER;Integrated Security=True" SettingsObjectName="QuanLyQuanCafe.Properties.Settings" SettingsPropertyName="db" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Bill" Member="Bills">
+    <Type Name="Bill">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DateCheckIn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateCheckOut" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="idTableFood" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="employeeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Bill_BillInfo" Member="BillInfos" ThisKey="id" OtherKey="idBill" Type="BillInfo" />
+      <Association Name="Bill_BillInfo1" Member="BillInfos1" ThisKey="id" OtherKey="idBill" Type="BillInfo" />
+      <Association Name="Employee_Bill" Member="Employee" ThisKey="employeeId" OtherKey="id" Type="Employee" IsForeignKey="true" />
+      <Association Name="TableFood_Bill" Member="TableFood" ThisKey="idTableFood" OtherKey="id" Type="TableFood" IsForeignKey="true" />
+      <Association Name="TableFood_Bill1" Member="TableFood1" ThisKey="idTableFood" OtherKey="id" Type="TableFood" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BillInfo" Member="BillInfos">
+    <Type Name="BillInfo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idBill" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idFood" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="count" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Bill_BillInfo" Member="Bill" ThisKey="idBill" OtherKey="id" Type="Bill" IsForeignKey="true" />
+      <Association Name="Bill_BillInfo1" Member="Bill1" ThisKey="idBill" OtherKey="id" Type="Bill" IsForeignKey="true" />
+      <Association Name="Food_BillInfo" Member="Food" ThisKey="idFood" OtherKey="id" Type="Food" IsForeignKey="true" />
+      <Association Name="Food_BillInfo1" Member="Food1" ThisKey="idFood" OtherKey="id" Type="Food" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employees" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="firstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lastName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="phoneNumber" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="jobId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dateStartWork" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="userName" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="Employee_Bill" Member="Bills" ThisKey="id" OtherKey="employeeId" Type="Bill" />
+      <Association Name="Job_Employee" Member="Job" ThisKey="jobId" OtherKey="id" Type="Job" IsForeignKey="true" />
+      <Association Name="Job_Employee1" Member="Job1" ThisKey="jobId" OtherKey="id" Type="Job" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Food" Member="Foods">
+    <Type Name="Food">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="images" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="idCateGory" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Food_BillInfo" Member="BillInfos" ThisKey="id" OtherKey="idFood" Type="BillInfo" />
+      <Association Name="Food_BillInfo1" Member="BillInfos1" ThisKey="id" OtherKey="idFood" Type="BillInfo" />
+      <Association Name="FoodCategory_Food" Member="FoodCategory" ThisKey="idCateGory" OtherKey="id" Type="FoodCategory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FoodCategory" Member="FoodCategories">
+    <Type Name="FoodCategory">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="FoodCategory_Food" Member="Foods" ThisKey="id" OtherKey="idCateGory" Type="Food" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Job" Member="Jobs">
+    <Type Name="Job">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="salary" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Job_Employee" Member="Employees" ThisKey="id" OtherKey="jobId" Type="Employee" />
+      <Association Name="Job_Employee1" Member="Employees1" ThisKey="id" OtherKey="jobId" Type="Employee" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TableFood" Member="TableFoods">
+    <Type Name="TableFood">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TableFood_Bill" Member="Bills" ThisKey="id" OtherKey="idTableFood" Type="Bill" />
+      <Association Name="TableFood_Bill1" Member="Bills1" ThisKey="id" OtherKey="idTableFood" Type="Bill" />
+    </Type>
+  </Table>
+</Database>

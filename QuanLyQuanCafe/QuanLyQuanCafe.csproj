@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,91 +48,110 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\BillDAO.cs" />
-    <Compile Include="DAO\BillInfoDAO.cs" />
-    <Compile Include="DAO\CategoryDAO.cs" />
-    <Compile Include="DAO\DataProvider.cs" />
-    <Compile Include="DAO\MenuDAO.cs" />
-    <Compile Include="DAO\MenuFoodDAO.cs" />
-    <Compile Include="DAO\TableDAO.cs" />
-    <Compile Include="DTO\Bill.cs" />
-    <Compile Include="DTO\BillInfo.cs" />
-    <Compile Include="DTO\Category.cs" />
-    <Compile Include="DTO\Menu.cs" />
-    <Compile Include="DTO\MenuFood.cs" />
-    <Compile Include="DTO\Table.cs" />
-    <Compile Include="fBill.cs">
+    <Compile Include="Controller\BillController.cs" />
+    <Compile Include="Controller\BillInfoController.cs" />
+    <Compile Include="Controller\CategoryController.cs" />
+    <Compile Include="Controller\EmployeesController.cs" />
+    <Compile Include="Controller\FoodController.cs" />
+    <Compile Include="Controller\JobController.cs" />
+    <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\TableController.cs" />
+    <Compile Include="Controller\TakeAwayController.cs" />
+    <Compile Include="db.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BillInfoModel.cs" />
+    <Compile Include="Model\BillModel.cs" />
+    <Compile Include="Model\CategoryModel.cs" />
+    <Compile Include="Model\EmployeesModel.cs" />
+    <Compile Include="Model\FoodModel.cs" />
+    <Compile Include="Model\JobModel.cs" />
+    <Compile Include="Model\LoginModel.cs" />
+    <Compile Include="Model\TableModel.cs" />
+    <Compile Include="Model\TakeAwayModel.cs" />
+    <Compile Include="View\fAddTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fBill.Designer.cs">
+    <Compile Include="View\fAddTable.Designer.cs">
+      <DependentUpon>fAddTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\fBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fBill.Designer.cs">
       <DependentUpon>fBill.cs</DependentUpon>
     </Compile>
-    <Compile Include="fLogin.cs">
+    <Compile Include="View\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fLogin.Designer.cs">
+    <Compile Include="View\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="fMenuFood.cs">
+    <Compile Include="View\fMenuFood.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fMenuFood.Designer.cs">
+    <Compile Include="View\fMenuFood.Designer.cs">
       <DependentUpon>fMenuFood.cs</DependentUpon>
     </Compile>
-    <Compile Include="fRevenue.cs">
+    <Compile Include="View\fEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fRevenue.Designer.cs">
-      <DependentUpon>fRevenue.cs</DependentUpon>
+    <Compile Include="View\fEmployees.Designer.cs">
+      <DependentUpon>fEmployees.cs</DependentUpon>
     </Compile>
-    <Compile Include="fSetting.cs">
+    <Compile Include="View\fSetting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fSetting.Designer.cs">
+    <Compile Include="View\fSetting.Designer.cs">
       <DependentUpon>fSetting.cs</DependentUpon>
     </Compile>
-    <Compile Include="fTable.cs">
+    <Compile Include="View\fTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fTable.Designer.cs">
+    <Compile Include="View\fTable.Designer.cs">
       <DependentUpon>fTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="fTableManager.cs">
+    <Compile Include="View\fHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fTableManager.Designer.cs">
-      <DependentUpon>fTableManager.cs</DependentUpon>
+    <Compile Include="View\fHome.Designer.cs">
+      <DependentUpon>fHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="fTakeaway.cs">
+    <Compile Include="View\fTakeaway.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fTakeaway.Designer.cs">
+    <Compile Include="View\fTakeaway.Designer.cs">
       <DependentUpon>fTakeaway.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="fBill.resx">
+    <EmbeddedResource Include="View\fAddTable.resx">
+      <DependentUpon>fAddTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fBill.resx">
       <DependentUpon>fBill.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fLogin.resx">
+    <EmbeddedResource Include="View\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fMenuFood.resx">
+    <EmbeddedResource Include="View\fMenuFood.resx">
       <DependentUpon>fMenuFood.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fRevenue.resx">
-      <DependentUpon>fRevenue.cs</DependentUpon>
+    <EmbeddedResource Include="View\fEmployees.resx">
+      <DependentUpon>fEmployees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fSetting.resx">
+    <EmbeddedResource Include="View\fSetting.resx">
       <DependentUpon>fSetting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fTable.resx">
+    <EmbeddedResource Include="View\fTable.resx">
       <DependentUpon>fTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fTableManager.resx">
-      <DependentUpon>fTableManager.cs</DependentUpon>
+    <EmbeddedResource Include="View\fHome.resx">
+      <DependentUpon>fHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fTakeaway.resx">
+    <EmbeddedResource Include="View\fTakeaway.resx">
       <DependentUpon>fTakeaway.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -139,6 +159,14 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="db.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>db.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db.dbml.layout">
+      <DependentUpon>db.dbml</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -227,7 +255,20 @@
     <None Include="assets\images\fSetting_icon_Thoat_32.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="assets\images\fTakeAway-icon-waiting.png" />
+    <None Include="assets\images\fHome-icon-delivery.png" />
+    <None Include="assets\images\fHome-icon-delivery1.png" />
+    <None Include="assets\images\fHome-icon-employee.png" />
+    <None Include="assets\images\fHome-icon-option.png" />
+    <None Include="assets\images\fHome-icon-table.png" />
+    <None Include="assets\images\fHome-icon-menuFoods.png" />
+    <None Include="assets\images\fHome-icon-bill.png" />
+    <None Include="assets\images\fHome-icon-settings.png" />
     <Content Include="assets\images\table-50.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

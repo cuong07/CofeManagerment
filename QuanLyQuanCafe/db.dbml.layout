@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 10.375" name="DataClasses2">
+  <DataContextMoniker Name="/DataClasses2DataContext" />
+  <nestedChildShapes>
+    <classShape Id="bdf72db7-0284-4884-971c-a093e632aee2" absoluteBounds="6.25, 1.25, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/DataClasses2DataContext/Bill" />
+      <nestedChildShapes>
+        <elementListCompartment Id="11cffd03-1d2d-44a4-be73-4d151e5b224c" absoluteBounds="6.265, 1.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3adac360-c143-4f47-9d28-829dd636d888" absoluteBounds="9, 1.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClasses2DataContext/BillInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a40a0676-b1dd-4dfa-b564-62be12f2101c" absoluteBounds="9.015, 1.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8d6bb92c-750d-456f-a3ed-3a0ae2b80a99" absoluteBounds="3.5, 1, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/DataClasses2DataContext/Employee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="14805108-dfa6-4fc7-9195-a4b2cea4c2e5" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c9c9f17b-b85d-401e-9592-708725f5db21" absoluteBounds="6.25, 8.375, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/DataClasses2DataContext/Food" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e3d49efc-65d0-4f4f-ad9a-a610bd18a4e0" absoluteBounds="6.265, 8.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="04d29587-df48-45ba-80fe-7fe02a704725" absoluteBounds="3.5, 8.625, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DataClasses2DataContext/FoodCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b76d7ca3-f71f-4c9b-b426-c6659c2028ab" absoluteBounds="3.515, 9.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2b7070d6-094c-44f7-92c3-367e674bda61" absoluteBounds="0.75, 1.5, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/DataClasses2DataContext/Job" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d65a73bc-55d0-49fb-9f41-e77c15df990c" absoluteBounds="0.765, 1.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c0ed68cd-72fd-4acc-becd-86828f9877c2" absoluteBounds="3.5, 5.5, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DataClasses2DataContext/TableFood" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8d746173-a28d-4071-b4e5-2793f520239f" absoluteBounds="3.515, 5.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 2.16429768880208); (9 : 2.16429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses2DataContext/Bill/Bill_BillInfo" />
+      <nodes>
+        <classShapeMoniker Id="bdf72db7-0284-4884-971c-a093e632aee2" />
+        <classShapeMoniker Id="3adac360-c143-4f47-9d28-829dd636d888" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 1.70714884440104); (9 : 1.70714884440104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses2DataContext/Bill/Bill_BillInfo1" />
+      <nodes>
+        <classShapeMoniker Id="bdf72db7-0284-4884-971c-a093e632aee2" />
+        <classShapeMoniker Id="3adac360-c143-4f47-9d28-829dd636d888" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.23159912109375); (6.25 : 2.23159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses2DataContext/Employee/Employee_Bill" />
+      <nodes>
+        <classShapeMoniker Id="8d6bb92c-750d-456f-a3ed-3a0ae2b80a99" />
+        <classShapeMoniker Id="bdf72db7-0284-4884-971c-a093e632aee2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 9.26044840494792); (10 : 9.26044840494792); (10 : 2.95359537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses2DataContext/Food/Food_BillInfo" />
+      <nodes>
+        <classShapeMoniker Id="c9c9f17b-b85d-401e-9592-708725f5db21" />
+        <classShapeMoniker Id="3adac360-c143-4f47-9d28-829dd636d888" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 8.78647170247396); (9.4687475 : 8.78647170247396); (9.4687475 : 2.95359537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses2DataContext/Food/Food_BillInfo1" />
+      <nodes>
+        <classShapeMoniker Id="c9c9f17b-b85d-401e-9592-708725f5db21" />
+        <classShapeMoniker Id="3adac360-c143-4f47-9d28-829dd636d888" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.22199625651042); (6.25 : 9.22199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses2DataContext/FoodCategory/FoodCategory_Food" />
+      <nodes>
+        <classShapeMoniker Id="04d29587-df48-45ba-80fe-7fe02a704725" />
+        <classShapeMoniker Id="c9c9f17b-b85d-401e-9592-708725f5db21" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.19314697265625); (3.5 : 2.19314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses2DataContext/Job/Job_Employee" />
+      <nodes>
+        <classShapeMoniker Id="2b7070d6-094c-44f7-92c3-367e674bda61" />
+        <classShapeMoniker Id="8d6bb92c-750d-456f-a3ed-3a0ae2b80a99" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.78407348632813); (3.5 : 1.78407348632813)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses2DataContext/Job/Job_Employee1" />
+      <nodes>
+        <classShapeMoniker Id="2b7070d6-094c-44f7-92c3-367e674bda61" />
+        <classShapeMoniker Id="8d6bb92c-750d-456f-a3ed-3a0ae2b80a99" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.19314697265625); (7.25 : 6.19314697265625); (7.25 : 3.2131982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses2DataContext/TableFood/TableFood_Bill" />
+      <nodes>
+        <classShapeMoniker Id="c0ed68cd-72fd-4acc-becd-86828f9877c2" />
+        <classShapeMoniker Id="bdf72db7-0284-4884-971c-a093e632aee2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.81532098632812); (6.7187475 : 5.81532098632812); (6.7187475 : 3.2131982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses2DataContext/TableFood/TableFood_Bill1" />
+      <nodes>
+        <classShapeMoniker Id="c0ed68cd-72fd-4acc-becd-86828f9877c2" />
+        <classShapeMoniker Id="bdf72db7-0284-4884-971c-a093e632aee2" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

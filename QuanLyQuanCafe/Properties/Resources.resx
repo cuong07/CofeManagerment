@@ -118,64 +118,91 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="fSetting_icon_settting" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\images\fSetting_icon_settting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="password-15" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\images\password-15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bill" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\images\bill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="revenue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\images\revenue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="fSetting_icon_Language_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\images\fSetting_icon_Language_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fSetting_icon_Exit_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\images\fSetting_icon_Exit_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="setting" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\images\setting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\images\bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fSetting_icon_profile_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\images\fSetting_icon_profile_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="close-25" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\images\close-25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bglogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\images\bglogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user-15" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\images\user-15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fSetting_icon_settting_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\images\fSetting_icon_settting_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fFoodMenu_img_find" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\images\fFoodMenu_img_find.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\images\home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fSetting_icon_settting_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\images\fSetting_icon_settting_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="setting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\setting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fFoodMenu_icon_find" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\images\fFoodMenu_icon_find.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="menu-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\assets\images\menu-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="password-15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\password-15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\images\menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="menu-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\menu-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fSetting_icon_settting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\fSetting_icon_settting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bglogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\bglogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fSetting_icon_Exit_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\fSetting_icon_Exit_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fHome-icon-employee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\fHome-icon-employee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fTakeAway-icon-waiting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\fTakeAway-icon-waiting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fHome-icon-menuFoods" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\fHome-icon-menuFoods.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fHome-icon-delivery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\fHome-icon-delivery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fHome-icon-option" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\fHome-icon-option.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="revenue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\revenue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fSetting_icon_settting_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\fSetting_icon_settting_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fHome-icon-bill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\fHome-icon-bill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user-15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\user-15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fHome-icon-table" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\fHome-icon-table.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\bill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fFoodMenu_icon_find" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\fFoodMenu_icon_find.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fHome-icon-delivery1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\fHome-icon-delivery1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fSetting_icon_Thoat_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\images\fSetting_icon_Thoat_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close-25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\close-25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fFoodMenu_img_find" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\fFoodMenu_img_find.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fSetting_icon_settting_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\fSetting_icon_settting_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fSetting_icon_profile_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\fSetting_icon_profile_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fHome-icon-settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\assets\images\fHome-icon-settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
